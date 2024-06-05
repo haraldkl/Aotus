@@ -33,6 +33,7 @@
 ### by the waflib/extras/fc_* tools.
 ### * BGXLF (XLF on BlueGene)
 ### * CRAY (Cray Compiler)
+### * FLANG (LLVM Compiler)
 ### * GFORTRAN (Gnu Fortran Compiler from the GCC)
 ### * IFORT (Intel Fortran Compiler)
 ### * NAG (NAG Fortran Compiler)
@@ -82,6 +83,19 @@ fcopts['GFORTRAN', 'pre'] = ['-cpp']
 fcopts['GFORTRAN', 'profile'] = ['-pg']
 fcopts['GFORTRAN', 'fixform'] = ['-ffixed-form']
 fcopts['GFORTRAN', 'freeform'] = ['-ffree-form']
+
+fcopts['FLANG', 'warn'] = ['-Wall' ]
+fcopts['FLANG', 'w2e'] = ['-Werror']
+fcopts['FLANG', 'standard'] = ['-std=f2008']
+fcopts['FLANG', 'double'] = ['-fdefault-real-8']
+fcopts['FLANG', 'debug'] = ['-O0', '-g']
+fcopts['FLANG', 'optimize'] = ['-O3', '-march=native']
+fcopts['FLANG', 'openmp'] = ['-fopenmp']
+fcopts['FLANG', 'noomp'] = []
+fcopts['FLANG', 'pre'] = ['-cpp']
+fcopts['FLANG', 'profile'] = ['-pg']
+fcopts['FLANG', 'fixform'] = ['-ffixed-form']
+fcopts['FLANG', 'freeform'] = ['-ffree-form']
 
 fcopts['IFORT', 'warn'] = '-warn all,noexternal'.split()
 fcopts['IFORT', 'w2e'] = '-warn stderrors'.split()
