@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+1.0.3
+-----
+
+ * Update waf to 2.1.1+flang support
+
+1.0.2
+-----
+ * Update Lua to 5.4.7
+
 1.0.1
 -----
 
