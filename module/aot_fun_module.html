@@ -1,0 +1,2340 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_fun_module &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_fun_module
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 3.6% of total for modules and submodules.">162 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_fun_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_fun_module.f90.html'>aot_fun_module.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_fun_module</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/aot_fun_module.html#interface-aot_fun_open">aot_fun_open</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#interface-aot_fun_put~3">aot_fun_put</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_top">aot_fun_top</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_id">aot_fun_id</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_close">aot_fun_close</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_do">aot_fun_do</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_table">aot_fun_table</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_ref">aot_fun_ref</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_put_top">aot_fun_put_top</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_put_double">aot_fun_put_double</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_put_single">aot_fun_put_single</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_put_double_v">aot_fun_put_double_v</a>
+            <a class="list-group-item" href="../module/aot_fun_module.html#proc-aot_fun_put_single_v">aot_fun_put_single_v</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This module provides access to Lua functions</p>
+<p>Intented usage:</p>
+<ul>
+<li>First open a function with <a href="../interface/aot_fun_open.html">aot_fun_open</a>.</li>
+<li>Then put required parameters into it with <a href="../interface/aot_fun_put~3.html">aot_fun_put</a>.</li>
+<li>Execute the function with <a href="../proc/aot_fun_do.html">aot_fun_do</a>.</li>
+<li>Retrieve the possibly multiple results with <a href="../interface/aot_top_get_val.html">aot_top_get_val</a>.
+  If there are multiple results to be retrieved from the function
+  repeat calling <a href="../interface/aot_top_get_val.html">aot_top_get_val</a> for each of them. Keep in mind that they
+  will be in reversed order on the stack!</li>
+<li>Repeat putting and retrieving as needed (for multiple function
+  evaluations).</li>
+<li>Close the function finally with <a href="../proc/aot_fun_close.html">aot_fun_close</a>.</li>
+</ul>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='flu_binding.html'>flu_binding</a></li>
+                  <li class="list-inline-item"><a href='aot_references_module.html'>aot_references_module</a></li>
+                  <li class="list-inline-item"><a href='aot_fun_declaration_module.html'>aot_fun_declaration_module</a></li>
+                  <li class="list-inline-item"><a href='aot_extdouble_fun_module.html'>aot_extdouble_fun_module</a></li>
+                  <li class="list-inline-item"><a href='aot_top_module.html'>aot_top_module</a></li>
+                  <li class="list-inline-item"><a href='aot_table_module.html'>aot_table_module</a></li>
+                  <li class="list-inline-item"><a href='aot_quadruple_fun_module.html'>aot_quadruple_fun_module</a></li>
+                  <li class="list-inline-item"><a href='flu_kinds_module.html'>flu_kinds_module</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~aot_fun_module~~UsesGraph Pages: 1 -->
+<svg id="moduleaot_fun_moduleUsesGraph" width="641pt" height="238pt"
+ viewBox="0.00 0.00 641.00 237.52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~aot_fun_module~~UsesGraph" class="graph" transform="scale(0.34 0.34) rotate(0) translate(4 686.71)">
+<title>module~~aot_fun_module~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-686.71 1860,-686.71 1860,4 -4,4"/>
+<!-- module~aot_fun_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node1" class="node">
+<title>module~aot_fun_module</title>
+<polygon fill="none" stroke="black" points="1856,-314 1758,-314 1758,-290 1856,-290 1856,-314"/>
+<text text-anchor="middle" x="1807" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_module</text>
+</g>
+<!-- module~aot_extdouble_fun_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node2" class="node">
+<title>module~aot_extdouble_fun_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node2"><a xlink:href="../module/aot_extdouble_fun_module.html" xlink:title="aot_extdouble_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1721,-293 1565,-293 1565,-269 1721,-269 1721,-293"/>
+<text text-anchor="middle" x="1643" y="-278.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge1" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1757.83,-295.76C1749.34,-294.66 1740.27,-293.48 1731.09,-292.29"/>
+<polygon fill="#000000" stroke="#000000" points="1731.48,-288.81 1721.11,-291 1730.58,-295.75 1731.48,-288.81"/>
+</g>
+<!-- module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node3" class="node">
+<title>module~aot_fun_declaration_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node3"><a xlink:href="../module/aot_fun_declaration_module.html" xlink:title="aot_fun_declaration_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1528,-598 1364,-598 1364,-574 1528,-574 1528,-598"/>
+<text text-anchor="middle" x="1446" y="-583.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_declaration_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge2" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1805.47,-314.25C1802.32,-369.21 1781.16,-593.47 1644,-664"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1642,-664C1580.2,-695.78 1502.34,-637.01 1466.58,-604.9"/>
+<polygon fill="#000000" stroke="#000000" points="1468.95,-602.32 1459.22,-598.12 1464.21,-607.47 1468.95,-602.32"/>
+</g>
+<!-- module~aot_quadruple_fun_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node4" class="node">
+<title>module~aot_quadruple_fun_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node4"><a xlink:href="../module/aot_quadruple_fun_module.html" xlink:title="aot_quadruple_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1722,-335 1564,-335 1564,-311 1722,-311 1722,-335"/>
+<text text-anchor="middle" x="1643" y="-320.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge3" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1757.83,-308.24C1749.63,-309.31 1740.89,-310.44 1732.04,-311.59"/>
+<polygon fill="#000000" stroke="#000000" points="1731.49,-308.13 1722.02,-312.89 1732.39,-315.07 1731.49,-308.13"/>
+</g>
+<!-- module~aot_references_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node5" class="node">
+<title>module~aot_references_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node5"><a xlink:href="../module/aot_references_module.html" xlink:title="aot_references_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1312.5,-24 1175.5,-24 1175.5,0 1312.5,0 1312.5,-24"/>
+<text text-anchor="middle" x="1244" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_references_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge4" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_references_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1804.79,-289.98C1798.91,-239.13 1768.32,-42.95 1644,-14"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1642,-14C1557.59,5.66 1533.58,-10.15 1447,-14"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1445,-14C1404.73,-15.79 1359.86,-15.55 1322.84,-14.74"/>
+<polygon fill="#000000" stroke="#000000" points="1322.69,-11.24 1312.61,-14.5 1322.53,-18.24 1322.69,-11.24"/>
+</g>
+<!-- module~aot_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node6" class="node">
+<title>module~aot_table_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node6"><a xlink:href="../module/aot_table_module.html" xlink:title="aot_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1500,-293 1392,-293 1392,-269 1500,-269 1500,-293"/>
+<text text-anchor="middle" x="1446" y="-278.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge5" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1642,-14C1522.85,13.75 1466.93,-189.78 1451.55,-258.72"/>
+<polygon fill="#000000" stroke="#000000" points="1448.04,-258.4 1449.35,-268.91 1454.88,-259.88 1448.04,-258.4"/>
+</g>
+<!-- module~aot_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node7" class="node">
+<title>module~aot_top_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node7"><a xlink:href="../module/aot_top_module.html" xlink:title="aot_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="956,-446 858,-446 858,-422 956,-422 956,-446"/>
+<text text-anchor="middle" x="907" y="-431.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge6" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1642,-664C1564.93,-703.64 1533.57,-668.06 1447,-664"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1445,-664C1227.93,-653.81 1188.01,-573.83 992,-480 975.49,-472.1 972.05,-468.8 956,-460 950.68,-457.08 945.01,-453.99 939.51,-451.01"/>
+<polygon fill="#000000" stroke="#000000" points="940.95,-447.81 930.49,-446.12 937.62,-453.96 940.95,-447.81"/>
+</g>
+<!-- module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_node8" class="node">
+<title>module~flu_binding</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node8"><a xlink:href="../module/flu_binding.html" xlink:title="flu_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="495,-176 424,-176 424,-152 495,-152 495,-176"/>
+<text text-anchor="middle" x="459.5" y="-161.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge7" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1445,-14C1354.61,-18.02 1335.27,-58.08 1245,-52"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243,-52C1093.49,-41.93 1054.01,-56.32 908,-90"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-90C865.21,-98.84 860.19,-115.16 822,-132 788.02,-146.99 780.29,-154.08 744,-162"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742,-162C707.14,-169.61 698.63,-172.43 664,-181 626.85,-190.2 618.28,-208.11 580.5,-202"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M578.5,-202C551.29,-197.6 521.78,-188.09 499.08,-179.69"/>
+<polygon fill="#000000" stroke="#000000" points="500.07,-176.32 489.47,-176.05 497.59,-182.87 500.07,-176.32"/>
+</g>
+<!-- module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node9" class="node">
+<title>module~flu_kinds_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node9"><a xlink:href="../module/flu_kinds_module.html" xlink:title="flu_kinds_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="388,-371 283,-371 283,-347 388,-347 388,-371"/>
+<text text-anchor="middle" x="335.5" y="-356.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_kinds_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge8" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1445,-664C1356.29,-658.31 1333.79,-659.83 1245,-664"/>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge10" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1574.53,-293.15C1570.63,-295.61 1567.06,-298.53 1564,-302 1487.38,-388.8 1602.53,-471.41 1528,-560 1525.22,-563.31 1522.02,-566.2 1518.52,-568.72"/>
+<polygon fill="#000000" stroke="#000000" points="1516.62,-565.78 1509.91,-573.98 1520.27,-571.75 1516.62,-565.78"/>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge11" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1564.93,-281C1546.78,-281 1527.63,-281 1510.17,-281"/>
+<polygon fill="#000000" stroke="#000000" points="1510.11,-277.5 1500.11,-281 1510.11,-284.5 1510.11,-277.5"/>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge12" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1638.82,-268.96C1628.85,-233.66 1594.89,-129.61 1528,-76 1498.7,-52.52 1481.75,-66.21 1447,-52"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1445,-52C1362.73,-18.35 1333.89,-52 1245,-52"/>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge13" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1587.91,-293.11C1579.74,-295.63 1571.54,-298.59 1564,-302 1449.23,-353.94 1441.07,-403.45 1328,-459 1271.36,-486.82 1115.52,-521.93 1059,-550"/>
+</g>
+<!-- module~aot_extdouble_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node13" class="node">
+<title>module~aot_extdouble_top_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node13"><a xlink:href="../module/aot_extdouble_top_module.html" xlink:title="aot_extdouble_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="821,-214 665,-214 665,-190 821,-190 821,-214"/>
+<text text-anchor="middle" x="743" y="-199.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge9" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1445,-52C1414.83,-39.83 966.18,-147.64 802.87,-187.53"/>
+<polygon fill="#000000" stroke="#000000" points="801.88,-184.17 793,-189.94 803.54,-190.97 801.88,-184.17"/>
+</g>
+<!-- module~aot_fun_declaration_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge14" class="edge">
+<title>module~aot_fun_declaration_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1392.02,-598.06C1302.09,-618.29 1123.11,-657.52 1059,-664"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1057,-664C990.85,-667.02 973.86,-657.07 908,-664"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge15" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1639.7,-335.13C1631.7,-373.9 1601.51,-495.98 1528,-560 1523.82,-563.64 1519.13,-566.77 1514.17,-569.46"/>
+<polygon fill="#000000" stroke="#000000" points="1512.5,-566.38 1504.99,-573.85 1515.52,-572.69 1512.5,-566.38"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge17" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1586.12,-310.96C1562.38,-305.85 1534.59,-299.87 1510.11,-294.59"/>
+<polygon fill="#000000" stroke="#000000" points="1510.72,-291.14 1500.2,-292.46 1509.24,-297.99 1510.72,-291.14"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge18" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1582.07,-310.89C1575.73,-308.45 1569.58,-305.52 1564,-302 1543.2,-288.89 1546.02,-276.72 1528,-260 1413.57,-153.83 1401.1,-52 1245,-52"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge19" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1641.1,-335.02C1637.1,-379.06 1617.04,-532.93 1528,-607 1503.34,-627.51 1277.04,-662.5 1245,-664"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243,-664C1161.31,-667.83 1140.69,-660.27 1059,-664"/>
+</g>
+<!-- module~aot_quadruple_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node15" class="node">
+<title>module~aot_quadruple_top_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node15"><a xlink:href="../module/aot_quadruple_top_module.html" xlink:title="aot_quadruple_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="822,-370 664,-370 664,-346 822,-346 822,-370"/>
+<text text-anchor="middle" x="743" y="-355.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge16" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1563.93,-323.91C1441.87,-325.5 1198.42,-329.39 992,-337 932.4,-339.2 917.41,-338.81 858,-344 849.65,-344.73 840.96,-345.6 832.28,-346.54"/>
+<polygon fill="#000000" stroke="#000000" points="831.66,-343.09 822.11,-347.67 832.44,-350.04 831.66,-343.09"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge21" class="edge">
+<title>module~aot_references_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M578.5,-164C554.48,-167.81 527.37,-168.08 505.19,-167.28"/>
+<polygon fill="#000000" stroke="#000000" points="505.21,-163.78 495.06,-166.83 504.89,-170.77 505.21,-163.78"/>
+</g>
+<!-- module~aot_table_ops_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node16" class="node">
+<title>module~aot_table_ops_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node16"><a xlink:href="../module/aot_table_ops_module.html" xlink:title="aot_table_ops_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1124,-370 992,-370 992,-346 1124,-346 1124,-370"/>
+<text text-anchor="middle" x="1058" y="-355.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge20" class="edge">
+<title>module~aot_references_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1236.45,-24.31C1209.23,-75.5 1104.85,-271.78 1070.23,-336.88"/>
+<polygon fill="#000000" stroke="#000000" points="1067.08,-335.36 1065.47,-345.83 1073.26,-338.65 1067.08,-335.36"/>
+</g>
+<!-- module~lua_parameters -->
+<g id="module~~aot_fun_module~~UsesGraph_node19" class="node">
+<title>module~lua_parameters</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node19"><a xlink:href="../module/lua_parameters.html" xlink:title="lua_parameters">
+<polygon fill="#337ab7" stroke="#337ab7" points="232,-137 135,-137 135,-113 232,-113 232,-137"/>
+<text text-anchor="middle" x="183.5" y="-122.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_parameters</text>
+</a>
+</g>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~lua_parameters -->
+<g id="module~~aot_fun_module~~UsesGraph_edge22" class="edge">
+<title>module~aot_references_module&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1175.42,-15.82C1124.63,-19.45 1053.52,-26.18 992,-38 804.16,-74.08 769.41,-134.07 580.5,-164"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M578.5,-164C540.29,-166.09 532.63,-149.96 495,-143 425.23,-130.1 407.24,-129.43 336.5,-124"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M334.5,-124C304.16,-120.84 270.19,-120.78 242.26,-121.64"/>
+<polygon fill="#000000" stroke="#000000" points="242.13,-118.15 232.26,-122 242.38,-125.14 242.13,-118.15"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge27" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1436.65,-293.15C1419.1,-317.9 1376.03,-374.73 1328,-409 1295.27,-432.36 1280.9,-426.89 1245,-445"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243,-445C1149.6,-492.12 1022.18,-467.64 954.58,-448.88"/>
+<polygon fill="#000000" stroke="#000000" points="955.23,-445.43 944.65,-446.05 953.31,-452.16 955.23,-445.43"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge28" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1424.51,-268.99C1401.65,-256.03 1363.23,-235.57 1328,-223 1292.36,-210.29 1281.03,-215.58 1245,-204"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243,-204C1093.27,-155.89 1061.92,-57.7 908,-90"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge29" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243,-445C1187.63,-475.55 1179.89,-493.41 1124,-523 1096.35,-537.64 1087.02,-536.09 1059,-550"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1057,-550C982.32,-587.08 991.37,-662.9 908,-664"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-664C696.81,-666.77 648.21,-604.38 460.5,-512"/>
+</g>
+<!-- module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node11" class="node">
+<title>module~aot_err_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node11"><a xlink:href="../module/aot_err_module.html" xlink:title="aot_err_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="628,-292 531,-292 531,-268 628,-268 628,-292"/>
+<text text-anchor="middle" x="579.5" y="-277.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge23" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243,-204C1029.42,-141.92 963.14,-203.96 744,-242"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742,-242C706,-248.14 666.05,-257.51 634.89,-265.42"/>
+<polygon fill="#000000" stroke="#000000" points="633.92,-262.05 625.1,-267.93 635.65,-268.84 633.92,-262.05"/>
+</g>
+<!-- module~aot_extdouble_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node12" class="node">
+<title>module~aot_extdouble_table_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node12"><a xlink:href="../module/aot_extdouble_table_module.html" xlink:title="aot_extdouble_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1327,-256 1161,-256 1161,-232 1327,-232 1327,-256"/>
+<text text-anchor="middle" x="1244" y="-241.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_extdouble_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge24" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_extdouble_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1391.93,-271.18C1369.96,-267.12 1344.07,-262.33 1320.2,-257.91"/>
+<polygon fill="#000000" stroke="#000000" points="1320.58,-254.42 1310.11,-256.05 1319.31,-261.31 1320.58,-254.42"/>
+</g>
+<!-- module~aot_quadruple_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node14" class="node">
+<title>module~aot_quadruple_table_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node14"><a xlink:href="../module/aot_quadruple_table_module.html" xlink:title="aot_quadruple_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1328,-400 1160,-400 1160,-376 1328,-376 1328,-400"/>
+<text text-anchor="middle" x="1244" y="-385.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_quadruple_table_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge25" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_quadruple_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1422.45,-293.07C1386.72,-312.18 1317,-349.48 1276.4,-371.2"/>
+<polygon fill="#000000" stroke="#000000" points="1274.64,-368.17 1267.47,-375.98 1277.94,-374.35 1274.64,-368.17"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge26" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1391.73,-291.63C1323.45,-305.25 1204.86,-328.9 1129.25,-343.99"/>
+<polygon fill="#000000" stroke="#000000" points="1128.45,-340.58 1119.33,-345.96 1129.82,-347.44 1128.45,-340.58"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge33" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742,-398C673.04,-378.08 643.91,-431.63 580.5,-398"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge34" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M857.8,-434.83C825.58,-435.32 782.25,-435.88 744,-436"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge30" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M857.75,-424.92C825.33,-418.42 781.78,-408.91 744,-398"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742,-398C707.72,-388.1 694.33,-397.79 664,-379 632.25,-359.33 606.54,-323.51 592.41,-300.77"/>
+<polygon fill="#000000" stroke="#000000" points="595.4,-298.95 587.24,-292.2 589.41,-302.57 595.4,-298.95"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge31" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M893.99,-421.75C883.07,-409.95 867.27,-391.1 858,-372 829.19,-312.65 866.82,-276.4 822,-228 818.86,-224.61 815.27,-221.66 811.39,-219.1"/>
+<polygon fill="#000000" stroke="#000000" points="812.92,-215.94 802.49,-214.07 809.48,-222.04 812.92,-215.94"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge32" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M888.26,-421.91C871.67,-410.97 845.92,-394.95 822,-384 813.52,-380.12 804.28,-376.52 795.23,-373.32"/>
+<polygon fill="#000000" stroke="#000000" points="796.12,-369.93 785.53,-370.01 793.86,-376.55 796.12,-369.93"/>
+</g>
+<!-- module~flu_binding&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge37" class="edge">
+<title>module~flu_binding&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M450.87,-176.2C430.54,-208.69 374.92,-297.6 349.49,-338.24"/>
+<polygon fill="#000000" stroke="#000000" points="346.47,-336.47 344.13,-346.81 352.4,-340.19 346.47,-336.47"/>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_node10" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node10"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-117 0,-117 0,-93 84,-93 84,-117"/>
+<text text-anchor="middle" x="42" y="-102.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;iso_c_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge35" class="edge">
+<title>module~flu_binding&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M334.5,-85C252.71,-55.23 149.62,-74.35 90.51,-90.2"/>
+<polygon fill="#000000" stroke="#000000" points="89.42,-86.87 80.71,-92.9 91.28,-93.62 89.42,-86.87"/>
+</g>
+<!-- module~dump_lua_fif_module -->
+<g id="module~~aot_fun_module~~UsesGraph_node17" class="node">
+<title>module~dump_lua_fif_module</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node17"><a xlink:href="../module/dump_lua_fif_module.html" xlink:title="dump_lua_fif_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="247,-57 120,-57 120,-33 247,-33 247,-57"/>
+<text text-anchor="middle" x="183.5" y="-42.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dump_lua_fif_module</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~dump_lua_fif_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge36" class="edge">
+<title>module~flu_binding&#45;&gt;module~dump_lua_fif_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M444.53,-151.94C430.73,-140.36 408.73,-122.79 388,-110 366.35,-96.64 360.41,-93.7 336.5,-85"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M334.5,-85C306.99,-74.99 275.82,-66.27 249.05,-59.55"/>
+<polygon fill="#000000" stroke="#000000" points="249.57,-56.08 239.02,-57.08 247.89,-62.87 249.57,-56.08"/>
+</g>
+<!-- module~lua_fif -->
+<g id="module~~aot_fun_module~~UsesGraph_node18" class="node">
+<title>module~lua_fif</title>
+<g id="a_module~~aot_fun_module~~UsesGraph_node18"><a xlink:href="../module/lua_fif.html" xlink:title="lua_fif">
+<polygon fill="#337ab7" stroke="#337ab7" points="362.5,-176 308.5,-176 308.5,-152 362.5,-152 362.5,-176"/>
+<text text-anchor="middle" x="335.5" y="-161.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_fif</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_fif -->
+<g id="module~~aot_fun_module~~UsesGraph_edge38" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_fif</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M423.87,-164C407.92,-164 388.99,-164 372.84,-164"/>
+<polygon fill="#000000" stroke="#000000" points="372.68,-160.5 362.68,-164 372.68,-167.5 372.68,-160.5"/>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_parameters -->
+<g id="module~~aot_fun_module~~UsesGraph_edge39" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M433.53,-151.88C409.37,-141.12 371.39,-126.68 336.5,-124"/>
+</g>
+<!-- module~aot_err_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge40" class="edge">
+<title>module~aot_err_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M565.87,-267.59C545.38,-247.44 504.72,-207.47 480.34,-183.5"/>
+<polygon fill="#000000" stroke="#000000" points="482.62,-180.84 473.04,-176.32 477.71,-185.83 482.62,-180.84"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge44" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1187.6,-256C1134.08,-269.48 1052.45,-295.11 992,-337 976.11,-348.01 943.16,-388.67 923.59,-413.72"/>
+<polygon fill="#000000" stroke="#000000" points="920.64,-411.81 917.27,-421.85 926.17,-416.1 920.64,-411.81"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge45" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1197.3,-231.99C1091.18,-204.81 830.49,-142.46 744,-162"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge46" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1235.03,-256.21C1210.92,-293.02 1139.45,-401.04 1124,-412 1042.54,-469.79 1007.64,-467.06 908,-474"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge41" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-242C834.21,-236.45 814.94,-229.69 744,-242"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge42" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1160.66,-246.01C1092.79,-247.07 994.06,-247.23 908,-242"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-242C865.3,-238.85 820.32,-227.05 788.1,-217.07"/>
+<polygon fill="#000000" stroke="#000000" points="789.12,-213.72 778.53,-214.05 787.01,-220.4 789.12,-213.72"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge43" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1184.85,-256.1C1175.95,-259.62 1167.31,-264.16 1160,-270 1135.11,-289.89 1148.11,-311.17 1124,-332 1119.86,-335.58 1115.17,-338.7 1110.25,-341.42"/>
+<polygon fill="#000000" stroke="#000000" points="1108.62,-338.31 1101.21,-345.88 1111.72,-344.59 1108.62,-338.31"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge48" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M664.61,-207.98C637.77,-208.48 607.61,-207.27 580.5,-202"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge47" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M699.6,-214.13C687.85,-218.02 675.24,-222.72 664,-228 643.53,-237.62 621.88,-251.21 605.76,-262.08"/>
+<polygon fill="#000000" stroke="#000000" points="603.69,-259.26 597.42,-267.8 607.64,-265.04 603.69,-259.26"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge52" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1057,-398C1020.07,-398.75 979.38,-409.27 949.87,-418.74"/>
+<polygon fill="#000000" stroke="#000000" points="948.71,-415.44 940.31,-421.9 950.9,-422.09 948.71,-415.44"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge53" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1210.57,-400C1194.12,-407.22 1174.58,-417.61 1160,-431 1137.93,-451.26 1149.92,-472.96 1124,-488 1019.44,-548.68 687.54,-568.2 580.5,-512"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M578.5,-512C465.82,-439.1 458.65,-251.01 459.67,-186.28"/>
+<polygon fill="#000000" stroke="#000000" points="463.18,-186.09 459.92,-176 456.18,-185.92 463.18,-186.09"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge54" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M578.5,-512C534.47,-483.51 507.55,-535.16 460.5,-512"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge49" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1159.69,-393.73C1128.17,-395.58 1091.94,-397.33 1059,-398"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1057,-398C988.45,-399.39 975.33,-370.96 908,-358"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-358C868.21,-350.73 859.39,-346.09 822,-337 759.14,-321.73 686.94,-304.76 637.98,-293.34"/>
+<polygon fill="#000000" stroke="#000000" points="638.73,-289.92 628.2,-291.06 637.14,-296.74 638.73,-289.92"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge50" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-358C882.32,-353.44 856.32,-351.94 832.23,-351.95"/>
+<polygon fill="#000000" stroke="#000000" points="831.99,-348.45 822.03,-352.05 832.06,-355.45 831.99,-348.45"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge51" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1169.22,-375.97C1157.7,-374.09 1145.78,-372.15 1134.23,-370.26"/>
+<polygon fill="#000000" stroke="#000000" points="1134.62,-366.78 1124.19,-368.63 1133.49,-373.69 1134.62,-366.78"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge56" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704.41,-370.09C660.2,-383.88 591.44,-403.8 580.5,-398"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M578.5,-398C497.97,-355.29 471.21,-236.11 463.39,-186.31"/>
+<polygon fill="#000000" stroke="#000000" points="466.83,-185.66 461.92,-176.27 459.9,-186.67 466.83,-185.66"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge55" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M699.6,-345.87C687.85,-341.98 675.24,-337.28 664,-332 643.53,-322.38 621.88,-308.79 605.76,-297.92"/>
+<polygon fill="#000000" stroke="#000000" points="607.64,-294.96 597.42,-292.2 603.69,-300.74 607.64,-294.96"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~aot_top_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge57" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.83,-370.11C1013.48,-374.2 1002.13,-379 992,-384 972.54,-393.61 951.56,-406.1 935.43,-416.19"/>
+<polygon fill="#000000" stroke="#000000" points="933.12,-413.51 926.55,-421.81 936.87,-419.42 933.12,-413.51"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge58" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.74,-345.91C930.88,-312.35 669.79,-219.36 580.5,-202"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_module~~UsesGraph_edge59" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1013.86,-370.14C1005.98,-373.71 998.28,-378.26 992,-384 965.9,-407.88 982.15,-431.16 956,-455 939.04,-470.46 930.89,-472.41 908,-474"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906,-474C832.22,-479.14 817.95,-435.76 744,-436"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742,-436C725.8,-436.05 475.3,-518.58 460.5,-512"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M458.5,-512C401.63,-484.01 362.85,-415.55 346,-380.47"/>
+<polygon fill="#000000" stroke="#000000" points="349.05,-378.73 341.66,-371.14 342.7,-381.68 349.05,-378.73"/>
+</g>
+<!-- module~dump_lua_fif_module&#45;&gt;iso_c_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge60" class="edge">
+<title>module~dump_lua_fif_module&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M153.19,-57.04C142.7,-61.39 130.8,-66.37 120,-71 106.73,-76.69 92.23,-83.05 79.43,-88.72"/>
+<polygon fill="#000000" stroke="#000000" points="77.74,-85.64 70.02,-92.9 80.58,-92.04 77.74,-85.64"/>
+</g>
+<!-- module~lua_fif&#45;&gt;iso_c_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge61" class="edge">
+<title>module~lua_fif&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M308.46,-165.15C267.47,-166.22 185.78,-165.38 120,-146 102.24,-140.77 83.89,-131.19 69.56,-122.6"/>
+<polygon fill="#000000" stroke="#000000" points="71.11,-119.45 60.77,-117.16 67.43,-125.4 71.11,-119.45"/>
+</g>
+<!-- module~lua_fif&#45;&gt;module~lua_parameters -->
+<g id="module~~aot_fun_module~~UsesGraph_edge62" class="edge">
+<title>module~lua_fif&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M308.37,-157.21C289.72,-152.36 263.92,-145.65 240.69,-139.61"/>
+<polygon fill="#000000" stroke="#000000" points="241.48,-136.2 230.92,-137.07 239.72,-142.97 241.48,-136.2"/>
+</g>
+<!-- module~lua_parameters&#45;&gt;iso_c_binding -->
+<g id="module~~aot_fun_module~~UsesGraph_edge63" class="edge">
+<title>module~lua_parameters&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M134.88,-118.17C121.8,-116.3 107.56,-114.26 94.28,-112.35"/>
+<polygon fill="#000000" stroke="#000000" points="94.74,-108.88 84.35,-110.93 93.75,-115.81 94.74,-108.88"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduleaot_fun_moduleUsesGraph = svgPanZoom('#moduleaot_fun_moduleUsesGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~aot_fun_module~~UsedByGraph Pages: 1 -->
+<svg id="moduleaot_fun_moduleUsedByGraph" width="247pt" height="32pt"
+ viewBox="0.00 0.00 247.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~aot_fun_module~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~aot_fun_module~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 243,-28 243,4 -4,4"/>
+<!-- module~aot_fun_module -->
+<g id="module~~aot_fun_module~~UsedByGraph_node1" class="node">
+<title>module~aot_fun_module</title>
+<polygon fill="none" stroke="black" points="98,-24 0,-24 0,0 98,0 98,-24"/>
+<text text-anchor="middle" x="49" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_module</text>
+</g>
+<!-- module~aot_path_module -->
+<g id="module~~aot_fun_module~~UsedByGraph_node2" class="node">
+<title>module~aot_path_module</title>
+<g id="a_module~~aot_fun_module~~UsedByGraph_node2"><a xlink:href="../module/aot_path_module.html" xlink:title="aot_path_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="239,-24 134,-24 134,0 239,0 239,-24"/>
+<text text-anchor="middle" x="186.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_fun_module -->
+<g id="module~~aot_fun_module~~UsedByGraph_edge1" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M133.89,-12C125.59,-12 116.95,-12 108.51,-12"/>
+<polygon fill="#000000" stroke="#000000" points="108.35,-8.5 98.35,-12 108.35,-15.5 108.35,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-aot_fun_open"></span>
+      <h3>public        interface <a href='../interface/aot_fun_open.html'>aot_fun_open</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p>Open a Lua function for evaluation.</p>
+<p>After it is opened, arguments might be put into the function, and it might
+be executed.
+Execution might be repeated for an arbitrary number of iterations, to
+retrieve more than one evaluation of a single function, before closing it
+again with <a href="../proc/aot_fun_close.html">aot_fun_close</a>.</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_table.html'>aot_fun_table</a>(L, parent, fun, key, pos)  
+
+    </h3>
+    
+  <p>Get a function defined as component of a table.</p>
+<p>Functions in tables might be retrieved by position or key.
+If both optional parameters are provided, the key is attempted to be read
+first. Only when that fails, the position will be tested.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~179"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-parent~2"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>parent</strong></td>
+            <td>
+<p>Handle to the table to look in for the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~8"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Returned handle, providing access to the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-key~43"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>key</strong></td>
+            <td>
+<p>Name of the function to look up in the table.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pos~43"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pos</strong></td>
+            <td>
+<p>Position of the function to look up in the table.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_ref.html'>aot_fun_ref</a>(L, fun, ref)  
+
+    </h3>
+    
+  <p>Get a function from a previously defned Lua reference.</p>
+<p>Use a previously (with <a href="../proc/aot_reference_for.html">aot_reference_for</a>) defined reference to get a
+function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~180"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~9"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Returned handle, providing access to the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ref~4"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ref</strong></td>
+            <td>
+<p>Lua reference to the function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-aot_fun_put~3"></span>
+      <h3>public        interface <a href='../interface/aot_fun_put~3.html'>aot_fun_put</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p>Put an argument into the lua function.</p>
+<p>Arguments have to be in order, first put the first argument then the second
+and so on.
+Currently only real number arguments are supported.</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_put_top.html'>aot_fun_put_top</a>(L, fun)  
+
+    </h3>
+    
+  <p>Put the top of the stack as argument into the list of arguments for the
+function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~182"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~11"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_put_double.html'>aot_fun_put_double</a>(L, fun, arg)  
+
+    </h3>
+    
+  <p>Put an argument of type double into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~183"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~12"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~5"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong></td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_put_single.html'>aot_fun_put_single</a>(L, fun, arg)  
+
+    </h3>
+    
+  <p>Put an argument of type single into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~184"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~13"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~6"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong></td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_put_double_v.html'>aot_fun_put_double_v</a>(L, fun, arg)  
+
+    </h3>
+    
+  <p>Put an array of doubles into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~185"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~14"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~7"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/aot_fun_put_single_v.html'>aot_fun_put_single_v</a>(L, fun, arg)  
+
+    </h3>
+    
+  <p>Put an array of singles into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~186"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~15"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~8"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_top"></span> <h3>public  function <a href='../proc/aot_fun_top.html'>aot_fun_top</a>(L) result(fun)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return the stack of the top as a function.</p><a href="../proc/aot_fun_top.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~178"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)</small>
+    </h4>
+    <p>Handle to the function on the top of the stack.</p>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_id"></span> <h3>public  function <a href='../proc/aot_fun_id.html'>aot_fun_id</a>(fun) result(id)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A string identifying the function uniquely in the Lua script.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~17"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Function to identify.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(len=32)</small>
+    </h4>
+    <p>Identification of the function as a string.</p>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_close"></span> <h3>public  subroutine <a href='../proc/aot_fun_close.html'>aot_fun_close</a>(L, fun)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Close the function again (pop everything above from the stack).</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~181"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~10"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle to the function to close.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_do"></span> <h3>public  subroutine <a href='../proc/aot_fun_do.html'>aot_fun_do</a>(L, fun, nresults, ErrCode, ErrString)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Execute a given function and put its results on the stack, where it is
+retrievable with <a href="../interface/aot_top_get_val.html">aot_top_get_val</a>.</p><a href="../proc/aot_fun_do.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~187"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~16"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle to the function to execute.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nresults~3"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nresults</strong></td>
+            <td>
+<p>Number of resulting values the caller wants to obtain from the Lua
+function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errcode~57"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrCode</strong></td>
+            <td>
+<p>Error code returned by Lua during execution of the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errstring~7"></span>
+              character(len=*),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrString</strong></td>
+            <td>
+<p>Obtained error string from the Lua stack if an error occured.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_table"></span> <h3>private  subroutine <a href='../proc/aot_fun_table.html'>aot_fun_table</a>(L, parent, fun, key, pos)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Get a function defined as component of a table.</p><a href="../proc/aot_fun_table.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~179"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-parent~2"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>parent</strong></td>
+            <td>
+<p>Handle to the table to look in for the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~8"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Returned handle, providing access to the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-key~43"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>key</strong></td>
+            <td>
+<p>Name of the function to look up in the table.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pos~43"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pos</strong></td>
+            <td>
+<p>Position of the function to look up in the table.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_ref"></span> <h3>private  subroutine <a href='../proc/aot_fun_ref.html'>aot_fun_ref</a>(L, fun, ref)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Get a function from a previously defned Lua reference.</p><a href="../proc/aot_fun_ref.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~180"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~9"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Returned handle, providing access to the function.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ref~4"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ref</strong></td>
+            <td>
+<p>Lua reference to the function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_top"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_top.html'>aot_fun_put_top</a>(L, fun)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put the top of the stack as argument into the list of arguments for the
+function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~182"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~11"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_double"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_double.html'>aot_fun_put_double</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an argument of type double into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~183"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~12"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~5"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong></td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_single"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_single.html'>aot_fun_put_single</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an argument of type single into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~184"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~13"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~6"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong></td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_double_v"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_double_v.html'>aot_fun_put_double_v</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an array of doubles into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~185"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~14"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~7"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_single_v"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_single_v.html'>aot_fun_put_single_v</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an array of singles into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~186"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~15"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~8"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

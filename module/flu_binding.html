@@ -1,0 +1,5233 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>flu_binding &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>flu_binding
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="12.5% of total for modules and submodules.">560 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/flu_binding.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/flu_binding.f90.html'>flu_binding.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">flu_binding</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tnone">FLU_TNONE</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tnil">FLU_TNIL</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tboolean">FLU_TBOOLEAN</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tlightuserdata">FLU_TLIGHTUSERDATA</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tnumber">FLU_TNUMBER</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tstring">FLU_TSTRING</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_ttable">FLU_TTABLE</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tfunction">FLU_TFUNCTION</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tuserdata">FLU_TUSERDATA</a>
+            <a class="list-group-item" href="../module/flu_binding.html#variable-flu_tthread">FLU_TTHREAD</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_binding.html#interface-flu_pushnumber">flu_pushnumber</a>
+            <a class="list-group-item" href="../module/flu_binding.html#interface-flu_pushinteger">flu_pushinteger</a>
+            <a class="list-group-item" href="../module/flu_binding.html#interface-flu_dump">flu_dump</a>
+            <a class="list-group-item" href="../module/flu_binding.html#interface-c_free">c_free</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#absints-0"
+         aria-expanded="false" aria-controls="absints-0">
+         <h4 class="card-header bg-primary text-white">Abstract Interfaces</h4>
+      </a>
+      <div id="absints-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_binding.html#interface-lua_function">lua_Function</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_binding.html#type-flu_state">flu_State</a>
+            <a class="list-group-item" href="../module/flu_binding.html#type-cbuf_type">cbuf_type</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_getfield">flu_getfield</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_getglobal">flu_getglobal</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_gettable">flu_gettable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_gettop">flu_gettop</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isboolean">flu_isBoolean</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isfunction">flu_isFunction</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isnumber">flu_isnumber</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isstring">flu_isString</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_istable">flu_isTable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isnoneornil">flu_isNoneOrNil</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isnil">flu_isNil</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isnone">flu_isNone</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_islightuserdata">flu_islightuserdata</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_next">flu_next</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pcall">flu_pcall</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_rawgeti">flu_rawgeti</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_tolstring">flu_tolstring</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_todouble">flu_todouble</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_tonumber">flu_tonumber</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_toboolean">flu_toBoolean</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_touserdata">flu_touserdata</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_topointer">flu_topointer</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_type">flu_type</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_getmetatable">flu_getmetatable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_loadfile">fluL_loadfile</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_loadbuffer">fluL_loadbuffer</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_loadstring">fluL_loadstring</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_newstate">fluL_newstate</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_newmetatable">fluL_newmetatable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_ref">fluL_ref</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_copyptr">flu_copyptr</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_isopen">flu_isopen</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_close">flu_close</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_createtable">flu_createtable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_insert">flu_insert</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pop">flu_pop</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushboolean">flu_pushboolean</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushstring">flu_pushstring</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushnil">flu_pushnil</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushvalue">flu_pushvalue</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushlightuserdata">flu_pushlightuserdata</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_settable">flu_settable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_settop">flu_settop</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_setfield">flu_setfield</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_setglobal">flu_setglobal</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushcclosure">flu_pushcclosure</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_register">flu_register</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_openlibs">fluL_openlibs</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flul_setmetatable">fluL_setmetatable</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_free_cbuf">flu_free_cbuf</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushint">flu_pushint</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushlong">flu_pushlong</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushreal">flu_pushreal</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_pushdouble">flu_pushdouble</a>
+            <a class="list-group-item" href="../module/flu_binding.html#proc-flu_dump_tobuf">flu_dump_toBuf</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This module provides the Fortran Lua interface.</p>
+<p>It defines a flu_state which encapsulates the
+Lua state and is used to reference a Lua script.
+The main content are then the wrapper implementations
+which ease the usage of the Lua functions declared
+in the lua_fif module.</p>
+<p>Naming follows the Lua API, but replaces the <code>lua_</code> prefix
+by <code>flu_</code>.</p>
+<div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Documentation of the actual C functions can be found by replacing
+      the <code>flu_</code> prefix here by <code>lua_</code> and refering to the
+      <a href="http://www.lua.org/manual/5.3/manual.html#4.8">Lua API documentation</a>.</p>
+</div>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='lua_fif.html'>lua_fif</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+                  <li class="list-inline-item"><a href='dump_lua_fif_module.html'>dump_lua_fif_module</a></li>
+                  <li class="list-inline-item"><a href='lua_parameters.html'>lua_parameters</a></li>
+                  <li class="list-inline-item"><a href='flu_kinds_module.html'>flu_kinds_module</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~flu_binding~~UsesGraph Pages: 1 -->
+<svg id="moduleflu_bindingUsesGraph" width="503pt" height="149pt"
+ viewBox="0.00 0.00 503.00 148.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~flu_binding~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 144.5)">
+<title>module~~flu_binding~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-144.5 499,-144.5 499,4 -4,4"/>
+<!-- module~flu_binding -->
+<g id="module~~flu_binding~~UsesGraph_node1" class="node">
+<title>module~flu_binding</title>
+<polygon fill="none" stroke="black" points="495,-83 424,-83 424,-59 495,-59 495,-83"/>
+<text text-anchor="middle" x="459.5" y="-68.6" font-family="Helvetica,sans-Serif" font-size="10.50">flu_binding</text>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~flu_binding~~UsesGraph_node2" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~flu_binding~~UsesGraph_node2"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-84 0,-84 0,-60 84,-60 84,-84"/>
+<text text-anchor="middle" x="42" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;iso_c_binding -->
+<g id="module~~flu_binding~~UsesGraph_edge1" class="edge">
+<title>module~flu_binding&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M334.5,-132C240.06,-147.55 211.74,-140.26 120,-113 102.26,-107.73 83.9,-98.14 69.57,-89.57"/>
+<polygon fill="#000000" stroke="#000000" points="71.12,-86.41 60.77,-84.13 67.44,-92.37 71.12,-86.41"/>
+</g>
+<!-- module~dump_lua_fif_module -->
+<g id="module~~flu_binding~~UsesGraph_node3" class="node">
+<title>module~dump_lua_fif_module</title>
+<g id="a_module~~flu_binding~~UsesGraph_node3"><a xlink:href="../module/dump_lua_fif_module.html" xlink:title="dump_lua_fif_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="247,-104 120,-104 120,-80 247,-80 247,-104"/>
+<text text-anchor="middle" x="183.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dump_lua_fif_module</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~dump_lua_fif_module -->
+<g id="module~~flu_binding~~UsesGraph_edge2" class="edge">
+<title>module~flu_binding&#45;&gt;module~dump_lua_fif_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M442.25,-83.16C419.87,-98.94 377.62,-125.23 336.5,-132"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M334.5,-132C313.87,-135.4 263.16,-119.99 226.4,-107.32"/>
+<polygon fill="#000000" stroke="#000000" points="227.51,-104 216.91,-104 225.2,-110.6 227.51,-104"/>
+</g>
+<!-- module~flu_kinds_module -->
+<g id="module~~flu_binding~~UsesGraph_node4" class="node">
+<title>module~flu_kinds_module</title>
+<g id="a_module~~flu_binding~~UsesGraph_node4"><a xlink:href="../module/flu_kinds_module.html" xlink:title="flu_kinds_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="388,-104 283,-104 283,-80 388,-80 388,-104"/>
+<text text-anchor="middle" x="335.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_kinds_module</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_binding~~UsesGraph_edge3" class="edge">
+<title>module~flu_binding&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M423.87,-76.96C415.78,-78.35 406.93,-79.88 398.06,-81.4"/>
+<polygon fill="#000000" stroke="#000000" points="397.34,-77.98 388.08,-83.12 398.53,-84.87 397.34,-77.98"/>
+</g>
+<!-- module~lua_fif -->
+<g id="module~~flu_binding~~UsesGraph_node5" class="node">
+<title>module~lua_fif</title>
+<g id="a_module~~flu_binding~~UsesGraph_node5"><a xlink:href="../module/lua_fif.html" xlink:title="lua_fif">
+<polygon fill="#337ab7" stroke="#337ab7" points="362.5,-62 308.5,-62 308.5,-38 362.5,-38 362.5,-62"/>
+<text text-anchor="middle" x="335.5" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_fif</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_fif -->
+<g id="module~~flu_binding~~UsesGraph_edge4" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_fif</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M423.87,-65.04C407.92,-62.29 388.99,-59.04 372.84,-56.25"/>
+<polygon fill="#000000" stroke="#000000" points="373.13,-52.75 362.68,-54.51 371.94,-59.65 373.13,-52.75"/>
+</g>
+<!-- module~lua_parameters -->
+<g id="module~~flu_binding~~UsesGraph_node6" class="node">
+<title>module~lua_parameters</title>
+<g id="a_module~~flu_binding~~UsesGraph_node6"><a xlink:href="../module/lua_parameters.html" xlink:title="lua_parameters">
+<polygon fill="#337ab7" stroke="#337ab7" points="232,-24 135,-24 135,0 232,0 232,-24"/>
+<text text-anchor="middle" x="183.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_parameters</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_parameters -->
+<g id="module~~flu_binding~~UsesGraph_edge5" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M442.99,-58.91C429.33,-49 408.49,-35.57 388,-29 340.54,-13.78 283.83,-10.15 242.35,-9.97"/>
+<polygon fill="#000000" stroke="#000000" points="242.14,-6.47 232.15,-9.99 242.16,-13.47 242.14,-6.47"/>
+</g>
+<!-- module~dump_lua_fif_module&#45;&gt;iso_c_binding -->
+<g id="module~~flu_binding~~UsesGraph_edge6" class="edge">
+<title>module~dump_lua_fif_module&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M119.69,-82.99C111.25,-81.78 102.67,-80.55 94.46,-79.38"/>
+<polygon fill="#000000" stroke="#000000" points="94.68,-75.87 84.28,-77.92 93.69,-82.8 94.68,-75.87"/>
+</g>
+<!-- module~lua_fif&#45;&gt;iso_c_binding -->
+<g id="module~~flu_binding~~UsesGraph_edge7" class="edge">
+<title>module~lua_fif&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M308.37,-51.97C260.26,-55.6 156.83,-63.41 94.26,-68.13"/>
+<polygon fill="#000000" stroke="#000000" points="93.91,-64.65 84.2,-68.89 94.44,-71.63 93.91,-64.65"/>
+</g>
+<!-- module~lua_fif&#45;&gt;module~lua_parameters -->
+<g id="module~~flu_binding~~UsesGraph_edge8" class="edge">
+<title>module~lua_fif&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M308.37,-43.38C290.09,-38.75 264.95,-32.38 242.1,-26.59"/>
+<polygon fill="#000000" stroke="#000000" points="242.68,-23.13 232.13,-24.07 240.96,-29.91 242.68,-23.13"/>
+</g>
+<!-- module~lua_parameters&#45;&gt;iso_c_binding -->
+<g id="module~~flu_binding~~UsesGraph_edge9" class="edge">
+<title>module~lua_parameters&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M153.19,-24.04C142.7,-28.39 130.8,-33.37 120,-38 106.73,-43.69 92.23,-50.05 79.43,-55.72"/>
+<polygon fill="#000000" stroke="#000000" points="77.74,-52.64 70.02,-59.9 80.58,-59.04 77.74,-52.64"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~flu_binding~~UsedByGraph Pages: 1 -->
+<svg id="moduleflu_bindingUsedByGraph" width="641pt" height="257pt"
+ viewBox="0.00 0.00 641.00 257.23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~flu_binding~~UsedByGraph" class="graph" transform="scale(0.4 0.4) rotate(0) translate(4 637.68)">
+<title>module~~flu_binding~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-637.68 1595,-637.68 1595,4 -4,4"/>
+<!-- module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_node1" class="node">
+<title>module~flu_binding</title>
+<polygon fill="none" stroke="black" points="71,-267.36 0,-267.36 0,-243.36 71,-243.36 71,-267.36"/>
+<text text-anchor="middle" x="35.5" y="-252.96" font-family="Helvetica,sans-Serif" font-size="10.50">flu_binding</text>
+</g>
+<!-- module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_node2" class="node">
+<title>module~aot_err_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node2"><a xlink:href="../module/aot_err_module.html" xlink:title="aot_err_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="204,-287.36 107,-287.36 107,-263.36 204,-263.36 204,-287.36"/>
+<text text-anchor="middle" x="155.5" y="-272.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_err_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge1" class="edge">
+<title>module~aot_err_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M106.85,-267.28C98.39,-265.85 89.61,-264.36 81.23,-262.94"/>
+<polygon fill="#000000" stroke="#000000" points="81.71,-259.47 71.27,-261.25 80.54,-266.37 81.71,-259.47"/>
+</g>
+<!-- module~aot_extdouble_fun_module -->
+<g id="module~~flu_binding~~UsedByGraph_node3" class="node">
+<title>module~aot_extdouble_fun_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node3"><a xlink:href="../module/aot_extdouble_fun_module.html" xlink:title="aot_extdouble_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1315,-597.36 1159,-597.36 1159,-573.36 1315,-573.36 1315,-597.36"/>
+<text text-anchor="middle" x="1237" y="-582.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge2" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1192.17,-597.38C1157.93,-606.35 1109.01,-618.24 1065.5,-625.36"/>
+</g>
+<!-- module~aot_extdouble_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_node5" class="node">
+<title>module~aot_extdouble_top_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node5"><a xlink:href="../module/aot_extdouble_top_module.html" xlink:title="aot_extdouble_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="397,-329.36 241,-329.36 241,-305.36 397,-305.36 397,-329.36"/>
+<text text-anchor="middle" x="319" y="-314.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge27" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1158.86,-586.05C1087.64,-586.62 978.94,-587.36 884.5,-587.36 884.5,-587.36 884.5,-587.36 693,-587.36 567.76,-587.36 531.63,-554.79 434,-476.36 385.29,-437.22 347.71,-372.22 330.43,-338.74"/>
+<polygon fill="#000000" stroke="#000000" points="333.36,-336.77 325.72,-329.43 327.11,-339.93 333.36,-336.77"/>
+</g>
+<!-- module~aot_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_node14" class="node">
+<title>module~aot_table_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node14"><a xlink:href="../module/aot_table_module.html" xlink:title="aot_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1118.5,-487.36 1010.5,-487.36 1010.5,-463.36 1118.5,-463.36 1118.5,-487.36"/>
+<text text-anchor="middle" x="1064.5" y="-472.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge43" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1209.73,-573.3C1194.3,-565.87 1174.62,-555.8 1158,-545.36 1132.86,-529.56 1106,-508.75 1087.74,-493.93"/>
+<polygon fill="#000000" stroke="#000000" points="1089.94,-491.21 1079.99,-487.58 1085.51,-496.63 1089.94,-491.21"/>
+</g>
+<!-- module~aot_extdouble_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_node4" class="node">
+<title>module~aot_extdouble_table_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node4"><a xlink:href="../module/aot_extdouble_table_module.html" xlink:title="aot_extdouble_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="966.5,-487.36 800.5,-487.36 800.5,-463.36 966.5,-463.36 966.5,-487.36"/>
+<text text-anchor="middle" x="883.5" y="-472.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge3" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M874.18,-487.49C850.72,-520.24 780.17,-609.11 695,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M693,-625.36C614.85,-640.26 593.35,-631.12 514,-625.36"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge19" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M838.22,-487.37C800.49,-496.76 744.65,-508.66 695,-511.36"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge29" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M800.29,-478.37C688.75,-481.18 496.23,-481.1 434,-450.36 384.55,-425.92 347.95,-369.35 330.81,-338.44"/>
+<polygon fill="#000000" stroke="#000000" points="333.76,-336.53 325.94,-329.39 327.59,-339.85 333.76,-336.53"/>
+</g>
+<!-- module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_node15" class="node">
+<title>module~aot_table_ops_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node15"><a xlink:href="../module/aot_table_ops_module.html" xlink:title="aot_table_ops_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="760,-249.36 628,-249.36 628,-225.36 760,-225.36 760,-249.36"/>
+<text text-anchor="middle" x="694" y="-234.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge48" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M808.43,-463.23C803.94,-460.76 799.73,-457.83 796,-454.36 757.44,-418.42 782.14,-389.19 760,-341.36 745.82,-310.72 724.27,-278.14 709.92,-257.78"/>
+<polygon fill="#000000" stroke="#000000" points="712.73,-255.69 704.07,-249.59 707.04,-259.76 712.73,-255.69"/>
+</g>
+<!-- module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_node16" class="node">
+<title>module~aot_top_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node16"><a xlink:href="../module/aot_top_module.html" xlink:title="aot_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="562,-249.36 464,-249.36 464,-225.36 562,-225.36 562,-249.36"/>
+<text text-anchor="middle" x="513" y="-234.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge55" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M814.71,-463.32C808.16,-460.86 801.8,-457.91 796,-454.36 775.04,-441.5 777.29,-429.84 760,-412.36 732.98,-385.03 728.98,-373.29 695,-355.36"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge4" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M258.07,-305.25C251.73,-302.8 245.58,-299.87 240,-296.36 219.2,-283.24 223.99,-268.67 204,-254.36 185.51,-241.12 179.17,-233.59 156.5,-235.36"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge20" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M271.72,-305.32C253.31,-300.53 231.95,-294.98 212.66,-289.96"/>
+<polygon fill="#000000" stroke="#000000" points="213.35,-286.52 202.79,-287.39 211.58,-293.3 213.35,-286.52"/>
+</g>
+<!-- module~aot_extdouble_vector_module -->
+<g id="module~~flu_binding~~UsedByGraph_node6" class="node">
+<title>module~aot_extdouble_vector_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node6"><a xlink:href="../module/aot_extdouble_vector_module.html" xlink:title="aot_extdouble_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="969.5,-133.36 797.5,-133.36 797.5,-109.36 969.5,-109.36 969.5,-133.36"/>
+<text text-anchor="middle" x="883.5" y="-118.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge5" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M797.18,-131.29C784.71,-132.69 772.03,-134.08 760,-135.36 650.76,-146.93 621.81,-138.25 514,-159.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M512,-159.36C429.23,-180.11 401.93,-135.48 320,-159.36"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge30" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M512,-159.36C469.86,-167.61 461.04,-183 434,-216.36 409.44,-246.64 427.68,-271.08 398,-296.36 396.44,-297.69 394.8,-298.93 393.1,-300.1"/>
+<polygon fill="#000000" stroke="#000000" points="391.03,-297.26 384.15,-305.31 394.55,-303.31 391.03,-297.26"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge49" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M865.93,-133.61C833.13,-157.86 762.83,-209.79 760,-211.36 753.5,-214.97 746.39,-218.34 739.34,-221.38"/>
+<polygon fill="#000000" stroke="#000000" points="737.73,-218.25 729.82,-225.3 740.4,-224.72 737.73,-218.25"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge56" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M832.01,-133.45C819.91,-137.18 807.25,-141.8 796,-147.36 778.3,-156.1 777.42,-164.07 760,-173.36 732.82,-187.84 724.97,-190.29 695,-197.36"/>
+</g>
+<!-- module~aot_fun_module -->
+<g id="module~~flu_binding~~UsedByGraph_node7" class="node">
+<title>module~aot_fun_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node7"><a xlink:href="../module/aot_fun_module.html" xlink:title="aot_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1450,-543.36 1352,-543.36 1352,-519.36 1450,-519.36 1450,-543.36"/>
+<text text-anchor="middle" x="1401" y="-528.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge6" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1389.94,-543.49C1375.38,-560.23 1346.8,-590.17 1316,-606.36 1284.42,-622.96 1273.33,-620.39 1238,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1236,-625.36C1160.96,-635.9 1140.28,-613.12 1065.5,-625.36"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge25" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1363.64,-543.47C1340.09,-551.33 1309.21,-561.62 1283.96,-570.04"/>
+<polygon fill="#000000" stroke="#000000" points="1282.61,-566.79 1274.23,-573.28 1284.83,-573.44 1282.61,-566.79"/>
+</g>
+<!-- module~aot_quadruple_fun_module -->
+<g id="module~~flu_binding~~UsedByGraph_node9" class="node">
+<title>module~aot_quadruple_fun_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node9"><a xlink:href="../module/aot_quadruple_fun_module.html" xlink:title="aot_quadruple_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1316,-503.36 1158,-503.36 1158,-479.36 1316,-479.36 1316,-503.36"/>
+<text text-anchor="middle" x="1237" y="-488.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge34" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1351.83,-519.46C1334.52,-515.19 1314.8,-510.32 1296.69,-505.85"/>
+<polygon fill="#000000" stroke="#000000" points="1297.37,-502.41 1286.82,-503.41 1295.69,-509.21 1297.37,-502.41"/>
+</g>
+<!-- module~aot_references_module -->
+<g id="module~~flu_binding~~UsedByGraph_node13" class="node">
+<title>module~aot_references_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node13"><a xlink:href="../module/aot_references_module.html" xlink:title="aot_references_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="952,-289.36 815,-289.36 815,-265.36 952,-265.36 952,-289.36"/>
+<text text-anchor="middle" x="883.5" y="-274.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_references_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge42" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_references_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1063.5,-277.36C1030.32,-275.53 993.63,-275.23 962.15,-275.5"/>
+<polygon fill="#000000" stroke="#000000" points="962.09,-272 952.12,-275.6 962.16,-279 962.09,-272"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge44" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1351.59,-531.82C1302.27,-531.3 1223.87,-527.74 1158,-512.36 1138.01,-507.69 1116.67,-499.39 1099.53,-491.84"/>
+<polygon fill="#000000" stroke="#000000" points="1100.52,-488.44 1089.96,-487.51 1097.63,-494.82 1100.52,-488.44"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge57" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1388.14,-519.34C1338.52,-469.55 1146.32,-281.81 1065.5,-277.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1063.5,-277.36C973.54,-246.7 749.06,-184.61 695,-197.36"/>
+</g>
+<!-- module~aot_path_module -->
+<g id="module~~flu_binding~~UsedByGraph_node8" class="node">
+<title>module~aot_path_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node8"><a xlink:href="../module/aot_path_module.html" xlink:title="aot_path_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1591,-543.36 1486,-543.36 1486,-519.36 1591,-519.36 1591,-543.36"/>
+<text text-anchor="middle" x="1538.5" y="-528.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge7" class="edge">
+<title>module~aot_path_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1509.73,-543.49C1457.67,-565.44 1341.35,-610.84 1238,-625.36"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_fun_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge33" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1485.89,-531.36C1477.59,-531.36 1468.95,-531.36 1460.51,-531.36"/>
+<polygon fill="#000000" stroke="#000000" points="1460.35,-527.86 1450.35,-531.36 1460.35,-534.86 1460.35,-527.86"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge45" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1400,-451.36C1309.54,-386.02 1167.04,-431.97 1101.12,-459.19"/>
+<polygon fill="#000000" stroke="#000000" points="1099.44,-456.1 1091.59,-463.22 1102.17,-462.55 1099.44,-456.1"/>
+</g>
+<!-- module~aotus_module -->
+<g id="module~~flu_binding~~UsedByGraph_node18" class="node">
+<title>module~aotus_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node18"><a xlink:href="../module/aotus_module.html" xlink:title="aotus_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1281,-173.36 1193,-173.36 1193,-149.36 1281,-149.36 1281,-173.36"/>
+<text text-anchor="middle" x="1237" y="-158.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aotus_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge65" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aotus_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1514.16,-519.28C1486.49,-504.59 1439.43,-478.39 1402,-451.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1400,-451.36C1325.81,-397.78 1362.78,-342.01 1316,-263.36 1297.95,-233.01 1272.38,-201.17 1255.5,-181.3"/>
+<polygon fill="#000000" stroke="#000000" points="1258.02,-178.86 1248.85,-173.56 1252.71,-183.43 1258.02,-178.86"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge8" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1222.3,-503.39C1185.3,-535.71 1084.82,-622.19 1065.5,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1063.5,-625.36C984.99,-638.2 962.53,-609.83 884.5,-625.36"/>
+</g>
+<!-- module~aot_quadruple_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_node11" class="node">
+<title>module~aot_quadruple_top_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node11"><a xlink:href="../module/aot_quadruple_top_module.html" xlink:title="aot_quadruple_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="398,-287.36 240,-287.36 240,-263.36 398,-263.36 398,-287.36"/>
+<text text-anchor="middle" x="319" y="-272.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge36" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1200.18,-479.3C1177.79,-471.87 1148.3,-462.28 1122,-454.36 1055.3,-434.27 1038.57,-429.27 971,-412.36 877.8,-389.03 854.23,-384.08 760,-365.36 651.14,-343.73 622.76,-344.51 514,-322.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M512,-322.36C467.88,-311.16 417.93,-298.95 380.04,-289.78"/>
+<polygon fill="#000000" stroke="#000000" points="380.73,-286.34 370.19,-287.4 379.08,-293.15 380.73,-286.34"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge46" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1157.74,-484.01C1148.09,-483.11 1138.33,-482.19 1128.94,-481.31"/>
+<polygon fill="#000000" stroke="#000000" points="1129.22,-477.82 1118.93,-480.37 1128.56,-484.79 1129.22,-477.82"/>
+</g>
+<!-- module~aot_quadruple_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_node10" class="node">
+<title>module~aot_quadruple_table_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node10"><a xlink:href="../module/aot_quadruple_table_module.html" xlink:title="aot_quadruple_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="967.5,-445.36 799.5,-445.36 799.5,-421.36 967.5,-421.36 967.5,-445.36"/>
+<text text-anchor="middle" x="883.5" y="-430.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge9" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M810.74,-445.37C805.48,-447.84 800.48,-450.81 796,-454.36 768.26,-476.32 786.04,-501.4 760,-525.36 673.15,-605.27 631.39,-613.17 514,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M512,-625.36C282.6,-644.24 96.24,-357.27 48.42,-276.31"/>
+<polygon fill="#000000" stroke="#000000" points="51.34,-274.37 43.29,-267.49 45.3,-277.89 51.34,-274.37"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge21" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M823.19,-445.45C813.96,-447.99 804.62,-450.95 796,-454.36 748.06,-473.28 746.31,-506.44 695,-511.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M693,-511.36C577.37,-522.44 542.03,-519.04 434,-476.36 335.59,-437.47 325.35,-400.89 240,-338.36 219.79,-323.55 197.12,-306.41 180.5,-293.74"/>
+<polygon fill="#000000" stroke="#000000" points="182.48,-290.85 172.41,-287.57 178.23,-296.42 182.48,-290.85"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge38" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M824.71,-421.33C772.68,-409.91 694.41,-391.27 628,-369.36 575.96,-352.18 567.61,-333.73 514,-322.36"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge50" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M870.77,-421.1C839.2,-388.1 752.23,-297.18 713.75,-256.95"/>
+<polygon fill="#000000" stroke="#000000" points="716.17,-254.42 706.72,-249.61 711.11,-259.26 716.17,-254.42"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge58" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M830.96,-421.26C819.14,-417.57 806.87,-412.97 796,-407.36 777.99,-398.06 777.72,-389.2 760,-379.36 733.08,-364.39 722.24,-369.73 695,-355.36"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge10" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M281.02,-263.31C241.21,-250.87 180.4,-233.5 156.5,-235.36"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge22" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M239.62,-275.36C231.14,-275.36 222.63,-275.36 214.46,-275.36"/>
+<polygon fill="#000000" stroke="#000000" points="214.32,-271.86 204.32,-275.36 214.32,-278.86 214.32,-271.86"/>
+</g>
+<!-- module~aot_quadruple_vector_module -->
+<g id="module~~flu_binding~~UsedByGraph_node12" class="node">
+<title>module~aot_quadruple_vector_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node12"><a xlink:href="../module/aot_quadruple_vector_module.html" xlink:title="aot_quadruple_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="971,-91.36 796,-91.36 796,-67.36 971,-67.36 971,-91.36"/>
+<text text-anchor="middle" x="883.5" y="-76.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge11" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M795.9,-83.53C720.61,-88.51 608.99,-99.14 514,-121.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M512,-121.36C429.07,-147.6 403.52,-135.02 320,-159.36"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge39" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M512,-121.36C476.68,-129.62 462.09,-122.41 434,-145.36 408.12,-166.49 419.31,-185.62 398,-211.36 383.3,-229.12 363.09,-245.53 346.93,-257.29"/>
+<polygon fill="#000000" stroke="#000000" points="344.56,-254.68 338.43,-263.32 348.61,-260.39 344.56,-254.68"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge51" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M808.45,-91.51C803.95,-93.97 799.74,-96.89 796,-100.36 757.97,-135.62 795.43,-173.48 760,-211.36 756.83,-214.74 753.16,-217.7 749.22,-220.27"/>
+<polygon fill="#000000" stroke="#000000" points="747.22,-217.38 740.21,-225.33 750.64,-223.49 747.22,-217.38"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge59" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M816.39,-91.47C809.3,-93.91 802.36,-96.84 796,-100.36 768.76,-115.4 725.29,-190.21 695,-197.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M693,-197.36C652.8,-206.83 607.39,-216.97 572.37,-224.67"/>
+<polygon fill="#000000" stroke="#000000" points="571.33,-221.32 562.31,-226.88 572.83,-228.16 571.33,-221.32"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge12" class="edge">
+<title>module~aot_references_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M814.79,-275.93C726.9,-273.74 568.82,-268.69 434,-258.36 417.95,-257.13 414.03,-255.88 398,-254.36 290.82,-244.19 263.84,-227 156.5,-235.36"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge52" class="edge">
+<title>module~aot_references_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M826.24,-265.35C805.85,-261 782.62,-256.05 761.43,-251.53"/>
+<polygon fill="#000000" stroke="#000000" points="762.05,-248.08 751.54,-249.42 760.59,-254.93 762.05,-248.08"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge13" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1055.7,-487.46C1033.69,-520.16 967.21,-608.9 884.5,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M882.5,-625.36C800.77,-641.62 776.86,-609.75 695,-625.36"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge23" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1017.67,-487.37C1002.87,-490.81 986.33,-494.21 971,-496.36 849.33,-513.35 817.67,-504.7 695,-511.36"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_extdouble_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge26" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_extdouble_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1010.28,-475.36C999.68,-475.36 988.26,-475.36 976.78,-475.36"/>
+<polygon fill="#000000" stroke="#000000" points="976.7,-471.86 966.7,-475.36 976.7,-478.86 976.7,-471.86"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_quadruple_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge35" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_quadruple_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1012.21,-463.32C991.42,-458.44 967.25,-452.77 945.57,-447.68"/>
+<polygon fill="#000000" stroke="#000000" points="946.34,-444.27 935.8,-445.39 944.74,-451.08 946.34,-444.27"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge53" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1054.4,-463.35C1039.01,-443.69 1006.07,-404.32 971,-379.36 901.18,-329.65 871.68,-338.57 796,-298.36 770.43,-284.77 742.3,-267.59 722.24,-254.93"/>
+<polygon fill="#000000" stroke="#000000" points="723.95,-251.86 713.63,-249.45 720.19,-257.77 723.95,-251.86"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge60" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1049.49,-463.17C1032.22,-448.8 1001.41,-425.24 971,-412.36 967.4,-410.83 698.46,-357.18 695,-355.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M693,-355.36C635,-324.69 572.02,-280.32 538.41,-255.65"/>
+<polygon fill="#000000" stroke="#000000" points="540.25,-252.66 530.12,-249.53 536.09,-258.29 540.25,-252.66"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge14" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M647.33,-225.31C554.8,-201.26 351.27,-150.35 320,-159.36"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge61" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M627.87,-237.36C609.74,-237.36 590.16,-237.36 572.44,-237.36"/>
+<polygon fill="#000000" stroke="#000000" points="572.24,-233.86 562.24,-237.36 572.24,-240.86 572.24,-233.86"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge15" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M467.95,-225.28C420.55,-212.81 348.19,-195.41 320,-197.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M318,-197.36C244.44,-202.42 230.02,-229.63 156.5,-235.36"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge24" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M318,-197.36C304.14,-198.31 231.16,-235.82 188.2,-258.47"/>
+<polygon fill="#000000" stroke="#000000" points="186.46,-255.42 179.26,-263.19 189.73,-261.61 186.46,-255.42"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge31" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M492.02,-249.38C469.73,-262.39 432.28,-283.05 398,-296.36 392.56,-298.47 386.82,-300.45 381.03,-302.29"/>
+<polygon fill="#000000" stroke="#000000" points="379.83,-298.99 371.28,-305.24 381.86,-305.69 379.83,-298.99"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge40" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M463.55,-246.94C441.48,-251.31 414.93,-256.57 390.7,-261.36"/>
+<polygon fill="#000000" stroke="#000000" points="389.96,-257.94 380.83,-263.32 391.32,-264.81 389.96,-257.94"/>
+</g>
+<!-- module~aot_vector_module -->
+<g id="module~~flu_binding~~UsedByGraph_node17" class="node">
+<title>module~aot_vector_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node17"><a xlink:href="../module/aot_vector_module.html" xlink:title="aot_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1122,-51.36 1007,-51.36 1007,-27.36 1122,-27.36 1122,-51.36"/>
+<text text-anchor="middle" x="1064.5" y="-36.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge16" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1006.88,-36.11C971.58,-34.88 925.26,-34.74 884.5,-39.36"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge32" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1048.73,-51.45C1031.21,-65.22 1000.63,-87.46 971,-100.36 966.04,-102.51 960.82,-104.48 955.5,-106.25"/>
+<polygon fill="#000000" stroke="#000000" points="954.37,-102.94 945.86,-109.26 956.45,-109.62 954.37,-102.94"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge41" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1009.79,-51.36C990.5,-55.67 968.55,-60.57 948.47,-65.06"/>
+<polygon fill="#000000" stroke="#000000" points="947.47,-61.7 938.48,-67.29 949,-68.53 947.47,-61.7"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge54" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1058.94,-51.42C1048.12,-78.3 1018.22,-143.24 971,-175.36 911.31,-215.95 829.17,-230.37 770.04,-235.29"/>
+<polygon fill="#000000" stroke="#000000" points="769.72,-231.8 760.02,-236.05 770.25,-238.78 769.72,-231.8"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge62" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1056.31,-51.43C1042.63,-73.28 1010.66,-119.24 971,-142.36 936.99,-162.17 922.57,-151.37 884.5,-161.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M882.5,-161.36C844.83,-171.23 834.26,-168.1 796,-175.36 750.86,-183.92 739.72,-186.81 695,-197.36"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge17" class="edge">
+<title>module~aotus_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1230.83,-149.1C1217.73,-119.86 1180.07,-46.33 1122,-18.36 1026.53,27.63 989.79,-27.43 884.5,-39.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M882.5,-39.36C681.88,-59.31 627.24,-49.86 434,-107.36 380.62,-123.24 373.47,-143.78 320,-159.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M318,-159.36C283.01,-168.9 271.47,-165.33 240,-183.36 221.17,-194.14 222.38,-204.8 204,-216.36 184.75,-228.46 179.18,-233.7 156.5,-235.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M154.5,-235.36C130.08,-237.14 103.14,-241.52 81.17,-245.72"/>
+<polygon fill="#000000" stroke="#000000" points="80.28,-242.33 71.14,-247.7 81.63,-249.2 80.28,-242.33"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge47" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229.32,-173.66C1203.48,-221.25 1109.95,-393.49 1077.05,-454.09"/>
+<polygon fill="#000000" stroke="#000000" points="1073.83,-452.67 1072.14,-463.13 1079.99,-456.01 1073.83,-452.67"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge63" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1192.91,-154.45C1125.72,-145.2 992.52,-133.04 884.5,-161.36"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_vector_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge64" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1219.03,-149.21C1188.9,-127.65 1125.94,-82.6 1090.72,-57.4"/>
+<polygon fill="#000000" stroke="#000000" points="1092.57,-54.42 1082.4,-51.45 1088.5,-60.12 1092.57,-54.42"/>
+</g>
+<!-- program~test -->
+<g id="module~~flu_binding~~UsedByGraph_node19" class="node">
+<title>program~test</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node19"><a xlink:href="../program/test.html" xlink:title="test">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="182.5,-207.36 128.5,-207.36 128.5,-183.36 182.5,-183.36 182.5,-207.36"/>
+<text text-anchor="middle" x="155.5" y="-192.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test</text>
+</a>
+</g>
+</g>
+<!-- program~test&#45;&gt;module~flu_binding -->
+<g id="module~~flu_binding~~UsedByGraph_edge18" class="edge">
+<title>program~test&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M130.62,-207.5C113.03,-216.44 88.88,-228.72 69.45,-238.6"/>
+<polygon fill="#000000" stroke="#000000" points="67.67,-235.58 60.34,-243.23 70.84,-241.82 67.67,-235.58"/>
+</g>
+<!-- module~aot_extdouble_out_module -->
+<g id="module~~flu_binding~~UsedByGraph_node20" class="node">
+<title>module~aot_extdouble_out_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node20"><a xlink:href="../module/aot_extdouble_out_module.html" xlink:title="aot_extdouble_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="591,-441.36 435,-441.36 435,-417.36 591,-417.36 591,-441.36"/>
+<text text-anchor="middle" x="513" y="-426.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge28" class="edge">
+<title>module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M473,-417.22C460.24,-412.63 446.22,-406.92 434,-400.36 399.57,-381.88 363.76,-354.18 341.67,-335.94"/>
+<polygon fill="#000000" stroke="#000000" points="343.83,-333.18 333.91,-329.45 339.34,-338.55 343.83,-333.18"/>
+</g>
+<!-- module~aot_quadruple_out_module -->
+<g id="module~~flu_binding~~UsedByGraph_node21" class="node">
+<title>module~aot_quadruple_out_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node21"><a xlink:href="../module/aot_quadruple_out_module.html" xlink:title="aot_quadruple_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="592,-391.36 434,-391.36 434,-367.36 592,-367.36 592,-391.36"/>
+<text text-anchor="middle" x="513" y="-376.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge37" class="edge">
+<title>module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M484.99,-367.26C469.31,-359.58 449.62,-348.76 434,-336.36 415.27,-321.49 418.38,-308.87 398,-296.36 395.04,-294.54 391.93,-292.88 388.71,-291.36"/>
+<polygon fill="#000000" stroke="#000000" points="390.01,-288.11 379.44,-287.44 387.29,-294.56 390.01,-288.11"/>
+</g>
+<!-- module~aot_out_module -->
+<g id="module~~flu_binding~~UsedByGraph_node22" class="node">
+<title>module~aot_out_module</title>
+<g id="a_module~~flu_binding~~UsedByGraph_node22"><a xlink:href="../module/aot_out_module.html" xlink:title="aot_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="743,-445.36 645,-445.36 645,-421.36 743,-421.36 743,-445.36"/>
+<text text-anchor="middle" x="694" y="-430.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_extdouble_out_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge66" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_extdouble_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M644.56,-432.27C631.18,-431.97 616.25,-431.64 601.39,-431.31"/>
+<polygon fill="#000000" stroke="#000000" points="601.21,-427.8 591.13,-431.08 601.05,-434.8 601.21,-427.8"/>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_quadruple_out_module -->
+<g id="module~~flu_binding~~UsedByGraph_edge67" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_quadruple_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M652.83,-421.24C626.46,-413.28 591.78,-402.82 563.68,-394.34"/>
+<polygon fill="#000000" stroke="#000000" points="564.62,-390.97 554.04,-391.43 562.6,-397.67 564.62,-390.97"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduleflu_bindingUsedByGraph = svgPanZoom('#moduleflu_bindingUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tnone"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TNONE</strong></td>
+<td> =</td>
+                <td>int(LUA_TNONE)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tnil"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TNIL</strong></td>
+<td> =</td>
+                <td>int(LUA_TNIL)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tboolean"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TBOOLEAN</strong></td>
+<td> =</td>
+                <td>int(LUA_TBOOLEAN)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tlightuserdata"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TLIGHTUSERDATA</strong></td>
+<td> =</td>
+                <td>int(LUA_TLIGHTUSERDATA)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tnumber"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TNUMBER</strong></td>
+<td> =</td>
+                <td>int(LUA_TNUMBER)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tstring"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TSTRING</strong></td>
+<td> =</td>
+                <td>int(LUA_TSTRING)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_ttable"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TTABLE</strong></td>
+<td> =</td>
+                <td>int(LUA_TTABLE)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tfunction"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TFUNCTION</strong></td>
+<td> =</td>
+                <td>int(LUA_TFUNCTION)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tuserdata"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TUSERDATA</strong></td>
+<td> =</td>
+                <td>int(LUA_TUSERDATA)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flu_tthread"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>FLU_TTHREAD</strong></td>
+<td> =</td>
+                <td>int(LUA_TTHREAD)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-flu_pushnumber"></span>
+      <h3>public        interface <a href='../interface/flu_pushnumber.html'>flu_pushnumber</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/flu_pushreal.html'>flu_pushreal</a>(L, n)  
+
+    </h3>
+    
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~120"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~10"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/flu_pushdouble.html'>flu_pushdouble</a>(L, n)  
+
+    </h3>
+    
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~121"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~11"></span>
+              real(kind=c_double)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-flu_pushinteger"></span>
+      <h3>public        interface <a href='../interface/flu_pushinteger.html'>flu_pushinteger</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/flu_pushint.html'>flu_pushint</a>(L, n)  
+
+    </h3>
+    
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~116"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~8"></span>
+              integer(kind=int_k)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/flu_pushlong.html'>flu_pushlong</a>(L, n)  
+
+    </h3>
+    
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~117"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~9"></span>
+              integer(kind=long_k)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-flu_dump"></span>
+      <h3>public        interface <a href='../interface/flu_dump.html'>flu_dump</a> 
+      </h3>
+    </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/flu_dump_tobuf.html'>flu_dump_toBuf</a>(L, buf, length, iError)  
+
+    </h3>
+    
+  <p>Dump to a buffer and return the pointer to the resulting string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~149"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-buf"></span>
+              type(<a href='../type/cbuf_type.html'>cbuf_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>buf</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-length~4"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>length</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ierror"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iError</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-c_free"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    private  subroutine c_free(ptr) bind(c, name="free")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ptr~3"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>ptr</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Abstract Interfaces</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="interface-lua_function"></span><h3>abstract interface
+        
+    </h3></div>
+      <div class="card-body">
+        
+        <p>Interoperable interface required for a function that is callable from Lua.</p>
+      </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+            <h3>
+    public  function lua_Function(s) result(val) bind(c)  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-s~2"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>s</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+      </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-flu_state"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/flu_state.html'>flu_State</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>Encapsulation of the Lua state.</p><a href="../type/flu_state.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-state"></span>
+              type(c_ptr),
+            </td>
+              <td>private</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>state</strong></td>
+<td> =</td>
+                <td>c_null_ptr</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-opened_libs"></span>
+              logical,
+            </td>
+              <td>private</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>opened_libs</strong></td>
+<td> =</td>
+                <td>.false.</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-cbuf_type"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/cbuf_type.html'>cbuf_type</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ptr~2"></span>
+              type(c_ptr),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ptr</strong></td>
+<td> =</td>
+                <td>c_null_ptr</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-buffer~5"></span>
+              character(len=1),
+            </td>
+              <td>public,</td>
+            <td>
+              pointer
+            </td>
+            <td>::</td>
+            <td><strong>buffer</strong>(:)</td>
+<td>=&gt; </td>
+                <td>NULL()</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_getfield"></span> <h3>public  function <a href='../proc/flu_getfield.html'>flu_getfield</a>(L, index, k) result(luatype)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~99"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~18"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~6"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_getglobal"></span> <h3>public  function <a href='../proc/flu_getglobal.html'>flu_getglobal</a>(L, k) result(luatype)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~100"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~7"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_gettable"></span> <h3>public  function <a href='../proc/flu_gettable.html'>flu_gettable</a>(L, index) result(luatype)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~101"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~19"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_gettop"></span> <h3>public  function <a href='../proc/flu_gettop.html'>flu_gettop</a>(L) result(stacktop)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~102"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isboolean"></span> <h3>public  function <a href='../proc/flu_isboolean.html'>flu_isBoolean</a>(L, index) result(is_boolean)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Only defined as a Macro, using lua_type:</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~104"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~21"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isfunction"></span> <h3>public  function <a href='../proc/flu_isfunction.html'>flu_isFunction</a>(L, index) result(is_function)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~105"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~22"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isnumber"></span> <h3>public  function <a href='../proc/flu_isnumber.html'>flu_isnumber</a>(L, index) result(is_number)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~106"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~23"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isstring"></span> <h3>public  function <a href='../proc/flu_isstring.html'>flu_isString</a>(L, index) result(is_string)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~107"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~24"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_istable"></span> <h3>public  function <a href='../proc/flu_istable.html'>flu_isTable</a>(L, index) result(is_Table)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~108"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~25"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isnoneornil"></span> <h3>public  function <a href='../proc/flu_isnoneornil.html'>flu_isNoneOrNil</a>(L, index) result(is_NoneOrNil)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~109"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~26"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isnil"></span> <h3>public  function <a href='../proc/flu_isnil.html'>flu_isNil</a>(L, index) result(is_Nil)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~110"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~27"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isnone"></span> <h3>public  function <a href='../proc/flu_isnone.html'>flu_isNone</a>(L, index) result(is_None)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~111"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~28"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_islightuserdata"></span> <h3>public  function <a href='../proc/flu_islightuserdata.html'>flu_islightuserdata</a>(L, index) result(is_lightuserdata)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~112"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~29"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_next"></span> <h3>public  function <a href='../proc/flu_next.html'>flu_next</a>(L, index) result(exists)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~113"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~30"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pcall"></span> <h3>public  function <a href='../proc/flu_pcall.html'>flu_pcall</a>(L, nargs, nresults, errfunc) result(errcode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~114"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nargs~2"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nargs</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nresults~2"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nresults</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errfunc~2"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>errfunc</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_rawgeti"></span> <h3>public  function <a href='../proc/flu_rawgeti.html'>flu_rawgeti</a>(L, index, n) result(luatype)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~125"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~32"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~12"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_tolstring"></span> <h3>public  function <a href='../proc/flu_tolstring.html'>flu_tolstring</a>(L, index, len) result(string)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~130"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~34"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-len~3"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>len</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(len=1), pointer, dimension(:)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_todouble"></span> <h3>public  function <a href='../proc/flu_todouble.html'>flu_todouble</a>(L, index) result(number)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~131"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~35"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=c_double)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_tonumber"></span> <h3>public  function <a href='../proc/flu_tonumber.html'>flu_tonumber</a>(L, index) result(number)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~132"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~36"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_toboolean"></span> <h3>public  function <a href='../proc/flu_toboolean.html'>flu_toBoolean</a>(L, index) result(bool)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~133"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~37"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_touserdata"></span> <h3>public  function <a href='../proc/flu_touserdata.html'>flu_touserdata</a>(L, index) result(ptr)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~134"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~38"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(c_ptr)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_topointer"></span> <h3>public  function <a href='../proc/flu_topointer.html'>flu_topointer</a>(L, index) result(intptr)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~135"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~39"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=long_k)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_type"></span> <h3>public  function <a href='../proc/flu_type.html'>flu_type</a>(L, index) result(flut)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~136"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~40"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_getmetatable"></span> <h3>public  function <a href='../proc/flu_getmetatable.html'>flu_getmetatable</a>(L, index) result(errcode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~139"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~41"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_loadfile"></span> <h3>public  function <a href='../proc/flul_loadfile.html'>fluL_loadfile</a>(L, filename) result(errcode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~140"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-filename~4"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>filename</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_loadbuffer"></span> <h3>public  function <a href='../proc/flul_loadbuffer.html'>fluL_loadbuffer</a>(L, buffer, bufName) result(errcode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~141"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-buffer~6"></span>
+              character(len=1)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>buffer</strong>(:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bufname~2"></span>
+              character(len=*),
+            </td>
+<td></td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>bufName</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_loadstring"></span> <h3>public  function <a href='../proc/flul_loadstring.html'>fluL_loadstring</a>(L, string) result(errcode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~142"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-string~5"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>string</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_newstate"></span> <h3>public  function <a href='../proc/flul_newstate.html'>fluL_newstate</a>() result(new_state)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+    <h4>
+    Return Value
+    <small>type(<a href='../type/flu_state.html'>flu_State</a>)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_newmetatable"></span> <h3>public  function <a href='../proc/flul_newmetatable.html'>fluL_newmetatable</a>(L, tname) result(errcode)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~145"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tname~4"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tname</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_ref"></span> <h3>public  function <a href='../proc/flul_ref.html'>fluL_ref</a>(L, t) result(ref)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~146"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t~2"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>t</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_copyptr"></span> <h3>public  function <a href='../proc/flu_copyptr.html'>flu_copyptr</a>(lua_state) result(L)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Copy an existing Lua state.</p><a href="../proc/flu_copyptr.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_state"></span>
+              type(c_ptr),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>lua_state</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(<a href='../type/flu_state.html'>flu_State</a>)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_isopen"></span> <h3>public  function <a href='../proc/flu_isopen.html'>flu_isopen</a>(L) result(is_open)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~148"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_close"></span> <h3>public  subroutine <a href='../proc/flu_close.html'>flu_close</a>(L)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Close a previously opened Lua script.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~97"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle to the Lua state to close.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_createtable"></span> <h3>public  subroutine <a href='../proc/flu_createtable.html'>flu_createtable</a>(L, narr, nrec)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~98"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-narr~2"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>narr</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nrec~2"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nrec</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_insert"></span> <h3>public  subroutine <a href='../proc/flu_insert.html'>flu_insert</a>(L, index)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~103"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~20"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pop"></span> <h3>public  subroutine <a href='../proc/flu_pop.html'>flu_pop</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Wrapper for lua_pop that pops n elements from the Lua API stack.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~115"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle to the Lua script</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~7"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+<p>Number of elements to pop from the Lua API stack, defaults to 1.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushboolean"></span> <h3>public  subroutine <a href='../proc/flu_pushboolean.html'>flu_pushboolean</a>(L, b)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~118"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b"></span>
+              logical
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>b</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushstring"></span> <h3>public  subroutine <a href='../proc/flu_pushstring.html'>flu_pushstring</a>(L, string)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~119"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-string~3"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>string</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushnil"></span> <h3>public  subroutine <a href='../proc/flu_pushnil.html'>flu_pushnil</a>(L)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~122"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushvalue"></span> <h3>public  subroutine <a href='../proc/flu_pushvalue.html'>flu_pushvalue</a>(L, index)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~123"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~31"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushlightuserdata"></span> <h3>public  subroutine <a href='../proc/flu_pushlightuserdata.html'>flu_pushlightuserdata</a>(L, ptr)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~124"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ptr~4"></span>
+              type(c_ptr)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ptr</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_settable"></span> <h3>public  subroutine <a href='../proc/flu_settable.html'>flu_settable</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~126"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~13"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_settop"></span> <h3>public  subroutine <a href='../proc/flu_settop.html'>flu_settop</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~127"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~14"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_setfield"></span> <h3>public  subroutine <a href='../proc/flu_setfield.html'>flu_setfield</a>(L, index, k)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~128"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~33"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~8"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_setglobal"></span> <h3>public  subroutine <a href='../proc/flu_setglobal.html'>flu_setglobal</a>(L, k)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~129"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~9"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushcclosure"></span> <h3>public  subroutine <a href='../proc/flu_pushcclosure.html'>flu_pushcclosure</a>(L, fn, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~137"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fn"></span>
+              procedure(<a href='../interface/lua_function.html'>lua_Function</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~15"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_register"></span> <h3>public  subroutine <a href='../proc/flu_register.html'>flu_register</a>(L, fn_name, fn)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~138"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fn_name"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fn_name</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fn~2"></span>
+              procedure(<a href='../interface/lua_function.html'>lua_Function</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fn</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_openlibs"></span> <h3>public  subroutine <a href='../proc/flul_openlibs.html'>fluL_openlibs</a>(L)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~143"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flul_setmetatable"></span> <h3>public  subroutine <a href='../proc/flul_setmetatable.html'>fluL_setmetatable</a>(L, tname)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~144"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tname~3"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tname</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_free_cbuf"></span> <h3>public  subroutine <a href='../proc/flu_free_cbuf.html'>flu_free_cbuf</a>(buf)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Free an allocated cbuf.</p><a href="../proc/flu_free_cbuf.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-buf~2"></span>
+              type(<a href='../type/cbuf_type.html'>cbuf_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>buf</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushint"></span> <h3>private  subroutine <a href='../proc/flu_pushint.html'>flu_pushint</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~116"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~8"></span>
+              integer(kind=int_k)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushlong"></span> <h3>private  subroutine <a href='../proc/flu_pushlong.html'>flu_pushlong</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~117"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~9"></span>
+              integer(kind=long_k)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushreal"></span> <h3>private  subroutine <a href='../proc/flu_pushreal.html'>flu_pushreal</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~120"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~10"></span>
+              real
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_pushdouble"></span> <h3>private  subroutine <a href='../proc/flu_pushdouble.html'>flu_pushdouble</a>(L, n)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~121"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~11"></span>
+              real(kind=c_double)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-flu_dump_tobuf"></span> <h3>private  subroutine <a href='../proc/flu_dump_tobuf.html'>flu_dump_toBuf</a>(L, buf, length, iError)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Dump to a buffer and return the pointer to the resulting string.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~149"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-buf"></span>
+              type(<a href='../type/cbuf_type.html'>cbuf_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>buf</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-length~4"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>length</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ierror"></span>
+              integer
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iError</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

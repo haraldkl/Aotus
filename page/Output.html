@@ -1,0 +1,278 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Output &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>Output</h1>
+    <div class="container p-2 mb-4 bg-light border rounded-3">
+      <div class="row align-items-center justify-content-between">
+        <div class="col">
+          <ul class="list-inline" style="margin-bottom:0px; display:inline">
+          </ul>
+        </div>
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='index.html'>Overview</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Output</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-3">
+        <div class="card card-body bg-light" id="sidebar-toc">
+          <ul class="nav flex-column align-items">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Overview</a>
+            </li>
+          </ul>
+          <hr>
+          <nav class="nav nav-pills flex-column">
+              <a class="nav-link" href="CompilerSupport.html">Compiler Support</a>
+              <a class="nav-link" href="FortranInLua.html">Using Fortran in Lua</a>
+              <a class="nav-link active disabled" href="Output.html">Output</a>
+          </nav>
+        </div>
+      </div>
+
+    <div class="col-9" id='text'>
+      <p>The <a href="../module/aot_out_module.html">aot_out_module</a> provides some convenience functions to
+output data into nested Lua tables.
+It purely relies on Fortran formatted IO, and therefore could also be used
+without the Lua library.
+Despite its high independence from the rest of the library it can be considered
+as a counter part to the reading functions.
+That is Aotus allows you to use Lua as a closed system, where you store values
+from one Fortran application in a script and read it back in another Fortran
+application using Lua.
+This yields a great flexibility and allows you to design easily extendable and
+portable file exchanges.</p>
+<h2>Writing a Lua Script</h2>
+<p>The output mechanism relies on a file-handle described by the <strong>aot_out_type</strong>.
+It is initialized with:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_out_open</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">outUnit</span><span class="p">,</span><span class="w"> </span><span class="n">indentation</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>put_conf</strong>: is the handle to the opened output file</li>
+<li><em>optional</em> <strong>filename</strong>: name of the file to write to</li>
+<li><em>optional</em> <strong>outUnit</strong>: Pre-Connected file unit to write to</li>
+<li><em>optional</em> <strong>indentation</strong>: Number of spaces to use for indentation
+   (defaults to 4).</li>
+</ul>
+<p>You either have to state the <strong>filename</strong> or the <strong>outUnit</strong>, if both are given,
+the filename will be used and outUnit ignored.
+When you specify a filename to open, the according file will be replaced, if it
+exists and opened for writing.</p>
+<p>After putting all values into the script, the output has to be finished with</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_out_close</span><span class="p">(</span><span class="n">put_conf</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This will close the given handle and, if the file was opened it is closed as
+well.</p>
+<p>The concept of writing into the Lua script is very similar to the reading.
+Values are written by calling <a href="../interface/aot_out_val.html">aot_out_val</a>, which is a generic interface for
+the various intrinsic types in Fortran, except complex numbers.
+The interface for scalar values looks like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_out_val</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">vname</span><span class="p">,</span><span class="w"> </span><span class="n">advance_previous</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>put_conf</strong>: is the handle to the output file</li>
+<li><strong>val</strong>: value to write</li>
+<li><em>optional</em> <strong>vname</strong>: A name to assign to this value.</li>
+<li><em>optional</em> <strong>advance_previous</strong>: Flag if the value should be put on a new
+   line.</li>
+</ul>
+<p>Arrays will be put into tables internally, and the interface looks slightly
+different:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_out_val</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">vname</span><span class="p">,</span><span class="w"> </span><span class="n">advance_previous</span><span class="p">,</span><span class="w"> </span><span class="n">max_per_line</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where all parameters have the same meaning as in the scalar interface, and the
+additional optional parameter <strong>max_per_line</strong> indicates how many entries of
+the array should be put on a common line. If none is provided some default
+depending on the data type will be used.
+The opening bracket of the table will always be on the same line as the first
+entry, and the closing bracket on the same line as the last entry.</p>
+<h2>Writing to Tables</h2>
+<p>To put values into arbitrarily nested tables, there are opening and closing
+calls for the tables, all values in between these two calls will be put into
+this table.
+Again this handling of tables is similar to the interface used in the input
+routines.
+Opening a table is done with:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_out_open_table</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">tname</span><span class="p">,</span><span class="w"> </span><span class="n">advance_previous</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>put_conf</strong>: is the handle to the script to write into</li>
+<li><em>optional</em> <strong>tname</strong>: Optionally a name might be assigned to the table</li>
+<li><em>optional</em> <strong>advance_previous</strong>: A flag to indicate if this table should be
+   started on a new line (default = .true.)</li>
+</ul>
+<p>To close the table again the following call has to be used:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_out_close_table</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">advance_previous</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>put_conf</strong>: is the handle to the script to write into</li>
+<li><em>optional</em> <strong>advance_previous</strong>: A flag to indicate the closing bracket
+   should be put on a new line (default = .true.)</li>
+</ul>
+<h2>Example</h2>
+<p>Here is a short example how this could be used in Fortran:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">program </span><span class="n">aot_out_test</span>
+<span class="w">  </span><span class="k">use </span><span class="n">aot_out_module</span>
+
+<span class="w">  </span><span class="k">implicit none</span>
+
+<span class="k">  type</span><span class="p">(</span><span class="n">aot_out_type</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dummyOut</span>
+
+
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_open</span><span class="p">(</span><span class="n">put_conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dummyOut</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;dummy.lua&#39;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_open_table</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;screen&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="c">! Screen table</span>
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_val</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">,</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;width&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_val</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">,</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;height&#39;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_val</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span><span class="w"> </span><span class="n">vname</span><span class="o">=</span><span class="s1">&#39;origin&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="c">! End of screen table</span>
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_close_table</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_val</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">vname</span><span class="o">=</span><span class="s1">&#39;testarray&#39;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">call </span><span class="n">aot_out_close</span><span class="p">(</span><span class="n">dummyOut</span><span class="p">)</span>
+<span class="k">end program </span><span class="n">aot_out_test</span>
+</code></pre></div>
+
+<p>And here is the resulting Lua script:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">screen</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">123</span><span class="p">,</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">456</span><span class="p">,</span>
+    <span class="n">origin</span> <span class="o">=</span> <span class="p">{</span> <span class="mf">100.00000000</span><span class="p">,</span> <span class="mf">0.00000000</span> <span class="p">}</span> 
+<span class="p">}</span>
+<span class="n">testarray</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">}</span>
+</code></pre></div>
+    </div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

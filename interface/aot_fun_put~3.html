@@ -1,0 +1,1132 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_fun_put &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_fun_put
+      <small>Interface</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="<p> 0.1% of total for procedures.</p>Including implementation: 87 statements,  0.9% of total for procedures.">7 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_fun_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_fun_module.f90.html'>aot_fun_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_fun_module.html'>aot_fun_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_fun_put</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#modprocs-0"
+         aria-expanded="false" aria-controls="modprocs-0">
+         <h4 class="card-header bg-primary text-white">Module Procedures</h4>
+      </a>
+      <div id="modprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../interface/aot_fun_put~3.html#moduleprocedure-aot_fun_put_top">aot_fun_put_top</a>
+            <a class="list-group-item" href="../interface/aot_fun_put~3.html#moduleprocedure-aot_fun_put_double">aot_fun_put_double</a>
+            <a class="list-group-item" href="../interface/aot_fun_put~3.html#moduleprocedure-aot_fun_put_single">aot_fun_put_single</a>
+            <a class="list-group-item" href="../interface/aot_fun_put~3.html#moduleprocedure-aot_fun_put_double_v">aot_fun_put_double_v</a>
+            <a class="list-group-item" href="../interface/aot_fun_put~3.html#moduleprocedure-aot_fun_put_single_v">aot_fun_put_single_v</a>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <h2>public interface aot_fun_put</h2>
+      <p>Put an argument into the lua function.</p>
+<p>Arguments have to be in order, first put the first argument then the second
+and so on.
+Currently only real number arguments are supported.</p>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Calls</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: interface~~aot_fun_put~3~~CallsGraph Pages: 1 -->
+<svg id="interfaceaot_fun_put3CallsGraph" width="641pt" height="179pt"
+ viewBox="0.00 0.00 641.00 179.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="interface~~aot_fun_put~3~~CallsGraph" class="graph" transform="scale(0.63 0.63) rotate(0) translate(4 280)">
+<title>interface~~aot_fun_put~3~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-280 1013,-280 1013,4 -4,4"/>
+<!-- interface~aot_fun_put~3 -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node1" class="node">
+<title>interface~aot_fun_put~3</title>
+<polygon fill="none" stroke="black" points="75,-149 0,-149 0,-125 75,-125 75,-149"/>
+<text text-anchor="middle" x="37.5" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_put</text>
+</g>
+<!-- proc~aot_fun_put_double -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node2" class="node">
+<title>proc~aot_fun_put_double</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node2"><a xlink:href="../proc/aot_fun_put_double.html" xlink:title="aot_fun_put_double">
+<polygon fill="#d9534f" stroke="#d9534f" points="233.5,-191 116.5,-191 116.5,-167 233.5,-167 233.5,-191"/>
+<text text-anchor="middle" x="175" y="-176.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_put_double</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_double -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge1" class="edge">
+<title>interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_double</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M75.17,-148.37C90.49,-153.11 108.51,-158.7 124.94,-163.79"/>
+<polygon fill="#000000" stroke="#000000" points="124.34,-167.27 134.93,-166.89 126.41,-160.59 124.34,-167.27"/>
+</g>
+<!-- proc~aot_fun_put_double_v -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node3" class="node">
+<title>proc~aot_fun_put_double_v</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node3"><a xlink:href="../proc/aot_fun_put_double_v.html" xlink:title="aot_fun_put_double_v">
+<polygon fill="#d9534f" stroke="#d9534f" points="239,-107 111,-107 111,-83 239,-83 239,-107"/>
+<text text-anchor="middle" x="175" y="-92.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_put_double_v</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_double_v -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge2" class="edge">
+<title>interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_double_v</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M75.17,-125.63C90.49,-120.89 108.51,-115.3 124.94,-110.21"/>
+<polygon fill="#000000" stroke="#000000" points="126.41,-113.41 134.93,-107.11 124.34,-106.73 126.41,-113.41"/>
+</g>
+<!-- proc~aot_fun_put_single -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node4" class="node">
+<title>proc~aot_fun_put_single</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node4"><a xlink:href="../proc/aot_fun_put_single.html" xlink:title="aot_fun_put_single">
+<polygon fill="#d9534f" stroke="#d9534f" points="231,-233 119,-233 119,-209 231,-209 231,-233"/>
+<text text-anchor="middle" x="175" y="-218.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_put_single</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_single -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge3" class="edge">
+<title>interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_single</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M49.69,-149.29C63.05,-163.32 86.67,-186.12 111,-200 114.19,-201.82 117.57,-203.51 121.03,-205.08"/>
+<polygon fill="#000000" stroke="#000000" points="119.75,-208.34 130.33,-208.95 122.43,-201.88 119.75,-208.34"/>
+</g>
+<!-- proc~aot_fun_put_single_v -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node5" class="node">
+<title>proc~aot_fun_put_single_v</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node5"><a xlink:href="../proc/aot_fun_put_single_v.html" xlink:title="aot_fun_put_single_v">
+<polygon fill="#d9534f" stroke="#d9534f" points="236.5,-149 113.5,-149 113.5,-125 236.5,-125 236.5,-149"/>
+<text text-anchor="middle" x="175" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_put_single_v</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_single_v -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge4" class="edge">
+<title>interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_single_v</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M75.17,-137C83.89,-137 93.5,-137 103.18,-137"/>
+<polygon fill="#000000" stroke="#000000" points="103.28,-140.5 113.28,-137 103.28,-133.5 103.28,-140.5"/>
+</g>
+<!-- proc~aot_fun_put_top -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node6" class="node">
+<title>proc~aot_fun_put_top</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node6"><a xlink:href="../proc/aot_fun_put_top.html" xlink:title="aot_fun_put_top">
+<polygon fill="#d9534f" stroke="#d9534f" points="223.5,-64 126.5,-64 126.5,-40 223.5,-40 223.5,-64"/>
+<text text-anchor="middle" x="175" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_put_top</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_top -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge5" class="edge">
+<title>interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_top</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M49.72,-124.77C63.12,-110.8 86.77,-88.06 111,-74 114.82,-71.78 118.91,-69.74 123.09,-67.86"/>
+<polygon fill="#000000" stroke="#000000" points="124.44,-71.09 132.33,-64.03 121.75,-64.62 124.44,-71.09"/>
+</g>
+<!-- interface~flu_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node8" class="node">
+<title>interface~flu_pushnumber</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node8"><a xlink:href="../interface/flu_pushnumber.html" xlink:title="flu_pushnumber">
+<polygon fill="#a7506f" stroke="#a7506f" points="740,-234 641,-234 641,-210 740,-210 740,-234"/>
+<text text-anchor="middle" x="690.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushnumber</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_double&#45;&gt;interface~flu_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge6" class="edge">
+<title>proc~aot_fun_put_double&#45;&gt;interface~flu_pushnumber</title>
+<path fill="none" stroke="#000000" d="M225.34,-191.05C241.12,-194.47 258.71,-197.85 275,-200 400.81,-216.58 549.66,-220.76 630.33,-221.75"/>
+<polygon fill="#000000" stroke="#000000" points="630.74,-225.26 640.78,-221.87 630.82,-218.26 630.74,-225.26"/>
+</g>
+<!-- proc~flu_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node11" class="node">
+<title>proc~flu_pushvalue</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node11"><a xlink:href="../proc/flu_pushvalue.html" xlink:title="flu_pushvalue">
+<polygon fill="#d9534f" stroke="#d9534f" points="388.5,-149 302.5,-149 302.5,-125 388.5,-125 388.5,-149"/>
+<text text-anchor="middle" x="345.5" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushvalue</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_double&#45;&gt;proc~flu_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge7" class="edge">
+<title>proc~aot_fun_put_double&#45;&gt;proc~flu_pushvalue</title>
+<path fill="none" stroke="#000000" d="M224.29,-166.96C245.62,-161.65 270.75,-155.38 292.49,-149.96"/>
+<polygon fill="#000000" stroke="#000000" points="293.37,-153.35 302.22,-147.54 291.67,-146.56 293.37,-153.35"/>
+</g>
+<!-- proc~flu_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node12" class="node">
+<title>proc~flu_settop</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node12"><a xlink:href="../proc/flu_settop.html" xlink:title="flu_settop">
+<polygon fill="#d9534f" stroke="#d9534f" points="377.5,-191 313.5,-191 313.5,-167 377.5,-167 377.5,-191"/>
+<text text-anchor="middle" x="345.5" y="-176.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_double&#45;&gt;proc~flu_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge8" class="edge">
+<title>proc~aot_fun_put_double&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M233.52,-179C256.35,-179 282.11,-179 303.06,-179"/>
+<polygon fill="#000000" stroke="#000000" points="303.23,-182.5 313.23,-179 303.23,-175.5 303.23,-182.5"/>
+</g>
+<!-- interface~aot_table_from_1darray~3 -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node7" class="node">
+<title>interface~aot_table_from_1darray~3</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node7"><a xlink:href="../interface/aot_table_from_1darray~3.html" xlink:title="aot_table_from_1Darray">
+<polygon fill="#a7506f" stroke="#a7506f" points="416,-107 275,-107 275,-83 416,-83 416,-107"/>
+<text text-anchor="middle" x="345.5" y="-92.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_from_1Darray</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_double_v&#45;&gt;interface~aot_table_from_1darray~3 -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge9" class="edge">
+<title>proc~aot_fun_put_double_v&#45;&gt;interface~aot_table_from_1darray~3</title>
+<path fill="none" stroke="#000000" d="M239.22,-95C247.61,-95 256.3,-95 264.92,-95"/>
+<polygon fill="#000000" stroke="#000000" points="264.99,-98.5 274.99,-95 264.99,-91.5 264.99,-98.5"/>
+</g>
+<!-- proc~aot_fun_put_double_v&#45;&gt;proc~flu_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge10" class="edge">
+<title>proc~aot_fun_put_double_v&#45;&gt;proc~flu_pushvalue</title>
+<path fill="none" stroke="#000000" d="M224.29,-107.04C245.62,-112.35 270.75,-118.62 292.49,-124.04"/>
+<polygon fill="#000000" stroke="#000000" points="291.67,-127.44 302.22,-126.46 293.37,-120.65 291.67,-127.44"/>
+</g>
+<!-- proc~aot_fun_put_double_v&#45;&gt;proc~flu_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge11" class="edge">
+<title>proc~aot_fun_put_double_v&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M222.12,-107.1C228.04,-109.58 233.83,-112.53 239,-116 259.4,-129.72 254.41,-144.57 275,-158 283.63,-163.63 293.84,-167.8 303.73,-170.88"/>
+<polygon fill="#000000" stroke="#000000" points="302.88,-174.28 313.45,-173.6 304.77,-167.53 302.88,-174.28"/>
+</g>
+<!-- proc~aot_fun_put_single&#45;&gt;interface~flu_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge12" class="edge">
+<title>proc~aot_fun_put_single&#45;&gt;interface~flu_pushnumber</title>
+<path fill="none" stroke="#000000" d="M231.14,-228.88C245.39,-230.59 260.74,-232.14 275,-233 421.4,-241.84 458.64,-242.49 605,-233 613.38,-232.46 622.2,-231.61 630.86,-230.63"/>
+<polygon fill="#000000" stroke="#000000" points="631.39,-234.09 640.9,-229.42 630.55,-227.14 631.39,-234.09"/>
+</g>
+<!-- proc~aot_fun_put_single&#45;&gt;proc~flu_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge13" class="edge">
+<title>proc~aot_fun_put_single&#45;&gt;proc~flu_pushvalue</title>
+<path fill="none" stroke="#000000" d="M222.12,-208.9C228.04,-206.42 233.83,-203.47 239,-200 259.4,-186.28 254.41,-171.43 275,-158 280.4,-154.48 286.43,-151.52 292.6,-149.05"/>
+<polygon fill="#000000" stroke="#000000" points="294.14,-152.22 302.37,-145.55 291.77,-145.63 294.14,-152.22"/>
+</g>
+<!-- proc~aot_fun_put_single&#45;&gt;proc~flu_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge14" class="edge">
+<title>proc~aot_fun_put_single&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M224.29,-208.96C249.39,-202.71 279.73,-195.14 303.66,-189.18"/>
+<polygon fill="#000000" stroke="#000000" points="304.63,-192.55 313.48,-186.73 302.93,-185.75 304.63,-192.55"/>
+</g>
+<!-- proc~aot_fun_put_single_v&#45;&gt;interface~aot_table_from_1darray~3 -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge15" class="edge">
+<title>proc~aot_fun_put_single_v&#45;&gt;interface~aot_table_from_1darray~3</title>
+<path fill="none" stroke="#000000" d="M224.29,-124.96C243.67,-120.13 266.19,-114.52 286.46,-109.47"/>
+<polygon fill="#000000" stroke="#000000" points="287.35,-112.85 296.21,-107.04 285.66,-106.06 287.35,-112.85"/>
+</g>
+<!-- proc~aot_fun_put_single_v&#45;&gt;proc~flu_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge16" class="edge">
+<title>proc~aot_fun_put_single_v&#45;&gt;proc~flu_pushvalue</title>
+<path fill="none" stroke="#000000" d="M236.83,-137C255.04,-137 274.82,-137 292.41,-137"/>
+<polygon fill="#000000" stroke="#000000" points="292.48,-140.5 302.48,-137 292.48,-133.5 292.48,-140.5"/>
+</g>
+<!-- proc~aot_fun_put_single_v&#45;&gt;proc~flu_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge17" class="edge">
+<title>proc~aot_fun_put_single_v&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M224.29,-149.04C249.39,-155.29 279.73,-162.86 303.66,-168.82"/>
+<polygon fill="#000000" stroke="#000000" points="302.93,-172.25 313.48,-171.27 304.63,-165.45 302.93,-172.25"/>
+</g>
+<!-- proc~flu_gettop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node9" class="node">
+<title>proc~flu_gettop</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node9"><a xlink:href="../proc/flu_gettop.html" xlink:title="flu_gettop">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="723.5,-24 657.5,-24 657.5,0 723.5,0 723.5,-24"/>
+<text text-anchor="middle" x="690.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_gettop</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_top&#45;&gt;proc~flu_gettop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge18" class="edge">
+<title>proc~aot_fun_put_top&#45;&gt;proc~flu_gettop</title>
+<path fill="none" stroke="#000000" d="M223.57,-40.27C239.79,-36.71 258.1,-33.17 275,-31 410.29,-13.67 572.2,-11.58 647.35,-11.67"/>
+<polygon fill="#000000" stroke="#000000" points="647.35,-15.17 657.36,-11.69 647.37,-8.17 647.35,-15.17"/>
+</g>
+<!-- proc~flu_insert -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node10" class="node">
+<title>proc~flu_insert</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node10"><a xlink:href="../proc/flu_insert.html" xlink:title="flu_insert">
+<polygon fill="#d9534f" stroke="#d9534f" points="376,-64 315,-64 315,-40 376,-40 376,-64"/>
+<text text-anchor="middle" x="345.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_insert</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_top&#45;&gt;proc~flu_insert -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge19" class="edge">
+<title>proc~aot_fun_put_top&#45;&gt;proc~flu_insert</title>
+<path fill="none" stroke="#000000" d="M223.83,-52C249.35,-52 280.37,-52 304.58,-52"/>
+<polygon fill="#000000" stroke="#000000" points="304.83,-55.5 314.83,-52 304.83,-48.5 304.83,-55.5"/>
+</g>
+<!-- proc~create_1darray_extdouble -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node17" class="node">
+<title>proc~create_1darray_extdouble</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node17"><a xlink:href="../proc/create_1darray_extdouble.html" xlink:title="create_1Darray_extdouble">
+<polygon fill="#d9534f" stroke="#d9534f" points="605,-107 452,-107 452,-83 605,-83 605,-107"/>
+<text text-anchor="middle" x="528.5" y="-92.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">create_1Darray_extdouble</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_table_from_1darray~3&#45;&gt;proc~create_1darray_extdouble -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge20" class="edge">
+<title>interface~aot_table_from_1darray~3&#45;&gt;proc~create_1darray_extdouble</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M416.22,-95C424.6,-95 433.22,-95 441.79,-95"/>
+<polygon fill="#000000" stroke="#000000" points="441.8,-98.5 451.8,-95 441.8,-91.5 441.8,-98.5"/>
+</g>
+<!-- proc~flu_pushdouble -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node18" class="node">
+<title>proc~flu_pushdouble</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node18"><a xlink:href="../proc/flu_pushdouble.html" xlink:title="flu_pushdouble">
+<polygon fill="#d9534f" stroke="#d9534f" points="870.5,-276 776.5,-276 776.5,-252 870.5,-252 870.5,-276"/>
+<text text-anchor="middle" x="823.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushdouble</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushnumber&#45;&gt;proc~flu_pushdouble -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge21" class="edge">
+<title>interface~flu_pushnumber&#45;&gt;proc~flu_pushdouble</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M729.04,-234.04C743.43,-238.65 760.03,-243.97 775.22,-248.84"/>
+<polygon fill="#000000" stroke="#000000" points="774.36,-252.24 784.96,-251.96 776.5,-245.58 774.36,-252.24"/>
+</g>
+<!-- proc~flu_pushreal -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node19" class="node">
+<title>proc~flu_pushreal</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node19"><a xlink:href="../proc/flu_pushreal.html" xlink:title="flu_pushreal">
+<polygon fill="#d9534f" stroke="#d9534f" points="862,-234 785,-234 785,-210 862,-210 862,-234"/>
+<text text-anchor="middle" x="823.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushreal</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushnumber&#45;&gt;proc~flu_pushreal -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge22" class="edge">
+<title>interface~flu_pushnumber&#45;&gt;proc~flu_pushreal</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M740.28,-222C751.53,-222 763.49,-222 774.69,-222"/>
+<polygon fill="#000000" stroke="#000000" points="774.74,-225.5 784.74,-222 774.74,-218.5 774.74,-225.5"/>
+</g>
+<!-- interface~lua_gettop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node13" class="node">
+<title>interface~lua_gettop</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node13"><a xlink:href="../interface/lua_gettop.html" xlink:title="lua_gettop">
+<polygon fill="#a7506f" stroke="#a7506f" points="858,-24 789,-24 789,0 858,0 858,-24"/>
+<text text-anchor="middle" x="823.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_gettop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_gettop&#45;&gt;interface~lua_gettop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge23" class="edge">
+<title>proc~flu_gettop&#45;&gt;interface~lua_gettop</title>
+<path fill="none" stroke="#000000" d="M723.55,-12C740.21,-12 760.83,-12 778.93,-12"/>
+<polygon fill="#000000" stroke="#000000" points="778.96,-15.5 788.96,-12 778.96,-8.5 778.96,-15.5"/>
+</g>
+<!-- interface~lua_rotate -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node15" class="node">
+<title>interface~lua_rotate</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node15"><a xlink:href="../interface/lua_rotate.html" xlink:title="lua_rotate">
+<polygon fill="#a7506f" stroke="#a7506f" points="561.5,-64 495.5,-64 495.5,-40 561.5,-40 561.5,-64"/>
+<text text-anchor="middle" x="528.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_rotate</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_insert&#45;&gt;interface~lua_rotate -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge24" class="edge">
+<title>proc~flu_insert&#45;&gt;interface~lua_rotate</title>
+<path fill="none" stroke="#000000" d="M376.39,-52C406.02,-52 451.68,-52 485.06,-52"/>
+<polygon fill="#000000" stroke="#000000" points="485.43,-55.5 495.43,-52 485.43,-48.5 485.43,-55.5"/>
+</g>
+<!-- interface~lua_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node14" class="node">
+<title>interface~lua_pushvalue</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node14"><a xlink:href="../interface/lua_pushvalue.html" xlink:title="lua_pushvalue">
+<polygon fill="#a7506f" stroke="#a7506f" points="573,-149 484,-149 484,-125 573,-125 573,-149"/>
+<text text-anchor="middle" x="528.5" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushvalue</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushvalue&#45;&gt;interface~lua_pushvalue -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge25" class="edge">
+<title>proc~flu_pushvalue&#45;&gt;interface~lua_pushvalue</title>
+<path fill="none" stroke="#000000" d="M388.94,-137C414.23,-137 446.58,-137 473.66,-137"/>
+<polygon fill="#000000" stroke="#000000" points="473.76,-140.5 483.76,-137 473.76,-133.5 473.76,-140.5"/>
+</g>
+<!-- interface~lua_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node16" class="node">
+<title>interface~lua_settop</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node16"><a xlink:href="../interface/lua_settop.html" xlink:title="lua_settop">
+<polygon fill="#a7506f" stroke="#a7506f" points="562,-191 495,-191 495,-167 562,-167 562,-191"/>
+<text text-anchor="middle" x="528.5" y="-176.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_settop&#45;&gt;interface~lua_settop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge26" class="edge">
+<title>proc~flu_settop&#45;&gt;interface~lua_settop</title>
+<path fill="none" stroke="#000000" d="M377.62,-179C407.17,-179 451.84,-179 484.73,-179"/>
+<polygon fill="#000000" stroke="#000000" points="484.96,-182.5 494.96,-179 484.96,-175.5 484.96,-182.5"/>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;interface~flu_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge28" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;interface~flu_pushnumber</title>
+<path fill="none" stroke="#000000" d="M587.64,-107.08C593.75,-109.53 599.67,-112.47 605,-116 609.49,-118.97 650.71,-171.83 673.88,-201.75"/>
+<polygon fill="#000000" stroke="#000000" points="671.27,-204.11 680.16,-209.88 676.81,-199.82 671.27,-204.11"/>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;proc~flu_gettop -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge30" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;proc~flu_gettop</title>
+<path fill="none" stroke="#000000" d="M584.28,-83C591.53,-80.29 598.64,-76.99 605,-73 625.25,-60.28 621.58,-46.96 641,-33 643.34,-31.32 645.84,-29.73 648.41,-28.25"/>
+<polygon fill="#000000" stroke="#000000" points="650.14,-31.29 657.39,-23.57 646.9,-25.09 650.14,-31.29"/>
+</g>
+<!-- interface~flu_pushinteger -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node20" class="node">
+<title>interface~flu_pushinteger</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node20"><a xlink:href="../interface/flu_pushinteger.html" xlink:title="flu_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="738,-150 643,-150 643,-126 738,-126 738,-150"/>
+<text text-anchor="middle" x="690.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;interface~flu_pushinteger -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge27" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;interface~flu_pushinteger</title>
+<path fill="none" stroke="#000000" d="M574.49,-107.09C593.31,-112.15 615.35,-118.07 635.07,-123.37"/>
+<polygon fill="#000000" stroke="#000000" points="634.28,-126.78 644.84,-126 636.09,-120.02 634.28,-126.78"/>
+</g>
+<!-- proc~flu_createtable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node22" class="node">
+<title>proc~flu_createtable</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node22"><a xlink:href="../proc/flu_createtable.html" xlink:title="flu_createtable">
+<polygon fill="#d9534f" stroke="#d9534f" points="736.5,-108 644.5,-108 644.5,-84 736.5,-84 736.5,-108"/>
+<text text-anchor="middle" x="690.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_createtable</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;proc~flu_createtable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge29" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;proc~flu_createtable</title>
+<path fill="none" stroke="#000000" d="M605.28,-95.47C615.02,-95.53 624.85,-95.6 634.18,-95.65"/>
+<polygon fill="#000000" stroke="#000000" points="634.45,-99.16 644.47,-95.72 634.49,-92.16 634.45,-99.16"/>
+</g>
+<!-- proc~flu_settable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node23" class="node">
+<title>proc~flu_settable</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node23"><a xlink:href="../proc/flu_settable.html" xlink:title="flu_settable">
+<polygon fill="#d9534f" stroke="#d9534f" points="727.5,-66 653.5,-66 653.5,-42 727.5,-42 727.5,-66"/>
+<text text-anchor="middle" x="690.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_settable</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;proc~flu_settable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge31" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;proc~flu_settable</title>
+<path fill="none" stroke="#000000" d="M576.64,-82.92C597.71,-77.52 622.46,-71.18 643.41,-65.81"/>
+<polygon fill="#000000" stroke="#000000" points="644.54,-69.13 653.36,-63.26 642.8,-62.35 644.54,-69.13"/>
+</g>
+<!-- interface~lua_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node21" class="node">
+<title>interface~lua_pushnumber</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node21"><a xlink:href="../interface/lua_pushnumber.html" xlink:title="lua_pushnumber">
+<polygon fill="#a7506f" stroke="#a7506f" points="1009,-244 907,-244 907,-220 1009,-220 1009,-244"/>
+<text text-anchor="middle" x="958" y="-229.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushnumber</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushdouble&#45;&gt;interface~lua_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge32" class="edge">
+<title>proc~flu_pushdouble&#45;&gt;interface~lua_pushnumber</title>
+<path fill="none" stroke="#000000" d="M870.84,-252.81C879.41,-250.74 888.47,-248.55 897.36,-246.4"/>
+<polygon fill="#000000" stroke="#000000" points="898.4,-249.75 907.3,-244 896.76,-242.95 898.4,-249.75"/>
+</g>
+<!-- proc~flu_pushreal&#45;&gt;interface~lua_pushnumber -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge33" class="edge">
+<title>proc~flu_pushreal&#45;&gt;interface~lua_pushnumber</title>
+<path fill="none" stroke="#000000" d="M862.11,-224.84C872.88,-225.65 884.9,-226.56 896.67,-227.45"/>
+<polygon fill="#000000" stroke="#000000" points="896.68,-230.96 906.91,-228.22 897.21,-223.98 896.68,-230.96"/>
+</g>
+<!-- proc~flu_pushint -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node26" class="node">
+<title>proc~flu_pushint</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node26"><a xlink:href="../proc/flu_pushint.html" xlink:title="flu_pushint">
+<polygon fill="#d9534f" stroke="#d9534f" points="858.5,-192 788.5,-192 788.5,-168 858.5,-168 858.5,-192"/>
+<text text-anchor="middle" x="823.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushint</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushint -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge34" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushint</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M729.04,-150.04C744.44,-154.97 762.38,-160.73 778.41,-165.86"/>
+<polygon fill="#000000" stroke="#000000" points="777.5,-169.25 788.09,-168.97 779.64,-162.58 777.5,-169.25"/>
+</g>
+<!-- proc~flu_pushlong -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node27" class="node">
+<title>proc~flu_pushlong</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node27"><a xlink:href="../proc/flu_pushlong.html" xlink:title="flu_pushlong">
+<polygon fill="#d9534f" stroke="#d9534f" points="863.5,-150 783.5,-150 783.5,-126 863.5,-126 863.5,-150"/>
+<text text-anchor="middle" x="823.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushlong</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushlong -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge35" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushlong</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M738.05,-138C749.43,-138 761.64,-138 773.14,-138"/>
+<polygon fill="#000000" stroke="#000000" points="773.45,-141.5 783.45,-138 773.45,-134.5 773.45,-141.5"/>
+</g>
+<!-- interface~lua_createtable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node24" class="node">
+<title>interface~lua_createtable</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node24"><a xlink:href="../interface/lua_createtable.html" xlink:title="lua_createtable">
+<polygon fill="#a7506f" stroke="#a7506f" points="871,-108 776,-108 776,-84 871,-84 871,-108"/>
+<text text-anchor="middle" x="823.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_createtable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_createtable&#45;&gt;interface~lua_createtable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge36" class="edge">
+<title>proc~flu_createtable&#45;&gt;interface~lua_createtable</title>
+<path fill="none" stroke="#000000" d="M736.58,-96C746.03,-96 756.11,-96 765.91,-96"/>
+<polygon fill="#000000" stroke="#000000" points="766,-99.5 776,-96 766,-92.5 766,-99.5"/>
+</g>
+<!-- interface~lua_settable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node25" class="node">
+<title>interface~lua_settable</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node25"><a xlink:href="../interface/lua_settable.html" xlink:title="lua_settable">
+<polygon fill="#a7506f" stroke="#a7506f" points="862,-66 785,-66 785,-42 862,-42 862,-66"/>
+<text text-anchor="middle" x="823.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_settable&#45;&gt;interface~lua_settable -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge37" class="edge">
+<title>proc~flu_settable&#45;&gt;interface~lua_settable</title>
+<path fill="none" stroke="#000000" d="M727.64,-54C742.04,-54 758.83,-54 774.24,-54"/>
+<polygon fill="#000000" stroke="#000000" points="774.65,-57.5 784.65,-54 774.65,-50.5 774.65,-57.5"/>
+</g>
+<!-- interface~lua_pushinteger -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_node28" class="node">
+<title>interface~lua_pushinteger</title>
+<g id="a_interface~~aot_fun_put~3~~CallsGraph_node28"><a xlink:href="../interface/lua_pushinteger.html" xlink:title="lua_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="1007,-181 909,-181 909,-157 1007,-157 1007,-181"/>
+<text text-anchor="middle" x="958" y="-166.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushint&#45;&gt;interface~lua_pushinteger -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge38" class="edge">
+<title>proc~flu_pushint&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M858.62,-177.17C870.78,-176.16 884.85,-174.99 898.47,-173.86"/>
+<polygon fill="#000000" stroke="#000000" points="899.09,-177.32 908.76,-173 898.51,-170.34 899.09,-177.32"/>
+</g>
+<!-- proc~flu_pushlong&#45;&gt;interface~lua_pushinteger -->
+<g id="interface~~aot_fun_put~3~~CallsGraph_edge39" class="edge">
+<title>proc~flu_pushlong&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M863.54,-147.13C874.63,-149.73 886.95,-152.61 898.92,-155.41"/>
+<polygon fill="#000000" stroke="#000000" points="898.31,-158.86 908.85,-157.73 899.91,-152.05 898.31,-158.86"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var paninterfaceaot_fun_put3CallsGraph = svgPanZoom('#interfaceaot_fun_put3CallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+
+
+        <h2>Module Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_top"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_top.html'>aot_fun_put_top</a>(L, fun)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put the top of the stack as argument into the list of arguments for the
+function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~182"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~11"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_double"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_double.html'>aot_fun_put_double</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an argument of type double into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~183"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~12"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~5"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong></td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_single"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_single.html'>aot_fun_put_single</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an argument of type single into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~184"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~13"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~6"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong></td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_double_v"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_double_v.html'>aot_fun_put_double_v</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an array of doubles into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~185"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~14"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~7"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_fun_put_single_v"></span> <h3>private  subroutine <a href='../proc/aot_fun_put_single_v.html'>aot_fun_put_single_v</a>(L, fun, arg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Put an array of singles into the list of arguments for the function.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~186"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~15"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~8"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+<p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+</div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

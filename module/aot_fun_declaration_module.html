@@ -1,0 +1,593 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_fun_declaration_module &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_fun_declaration_module
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for modules and submodules.">11 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_fun_declaration_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_fun_declaration_module.f90.html'>aot_fun_declaration_module.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_fun_declaration_module</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/aot_fun_declaration_module.html#type-aot_fun_type">aot_fun_type</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>Helping module to define the aot_fun_type without causing dependency locks.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='flu_kinds_module.html'>flu_kinds_module</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~aot_fun_declaration_module~~UsesGraph Pages: 1 -->
+<svg id="moduleaot_fun_declaration_moduleUsesGraph" width="313pt" height="32pt"
+ viewBox="0.00 0.00 313.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~aot_fun_declaration_module~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~aot_fun_declaration_module~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 309,-28 309,4 -4,4"/>
+<!-- module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_declaration_module~~UsesGraph_node1" class="node">
+<title>module~aot_fun_declaration_module</title>
+<polygon fill="none" stroke="black" points="305,-24 141,-24 141,0 305,0 305,-24"/>
+<text text-anchor="middle" x="223" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_declaration_module</text>
+</g>
+<!-- module~flu_kinds_module -->
+<g id="module~~aot_fun_declaration_module~~UsesGraph_node2" class="node">
+<title>module~flu_kinds_module</title>
+<g id="a_module~~aot_fun_declaration_module~~UsesGraph_node2"><a xlink:href="../module/flu_kinds_module.html" xlink:title="flu_kinds_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="105,-24 0,-24 0,0 105,0 105,-24"/>
+<text text-anchor="middle" x="52.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_kinds_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_declaration_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~aot_fun_declaration_module~~UsesGraph_edge1" class="edge">
+<title>module~aot_fun_declaration_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M140.71,-12C132.19,-12 123.63,-12 115.38,-12"/>
+<polygon fill="#000000" stroke="#000000" points="115.11,-8.5 105.11,-12 115.11,-15.5 115.11,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~aot_fun_declaration_module~~UsedByGraph Pages: 1 -->
+<svg id="moduleaot_fun_declaration_moduleUsedByGraph" width="641pt" height="89pt"
+ viewBox="0.00 0.00 641.00 88.85" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~aot_fun_declaration_module~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 84.85)">
+<title>module~~aot_fun_declaration_module~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-84.85 637,-84.85 637,4 -4,4"/>
+<!-- module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_node1" class="node">
+<title>module~aot_fun_declaration_module</title>
+<polygon fill="none" stroke="black" points="164,-66 0,-66 0,-42 164,-42 164,-66"/>
+<text text-anchor="middle" x="82" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_declaration_module</text>
+</g>
+<!-- module~aot_extdouble_fun_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_node2" class="node">
+<title>module~aot_extdouble_fun_module</title>
+<g id="a_module~~aot_fun_declaration_module~~UsedByGraph_node2"><a xlink:href="../module/aot_extdouble_fun_module.html" xlink:title="aot_extdouble_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="357,-66 201,-66 201,-42 357,-42 357,-66"/>
+<text text-anchor="middle" x="279" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_edge1" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M200.93,-54C192.19,-54 183.22,-54 174.32,-54"/>
+<polygon fill="#000000" stroke="#000000" points="174.32,-50.5 164.32,-54 174.32,-57.5 174.32,-50.5"/>
+</g>
+<!-- module~aot_fun_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_node3" class="node">
+<title>module~aot_fun_module</title>
+<g id="a_module~~aot_fun_declaration_module~~UsedByGraph_node3"><a xlink:href="../module/aot_fun_module.html" xlink:title="aot_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="492,-66 394,-66 394,-42 492,-42 492,-66"/>
+<text text-anchor="middle" x="443" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_edge2" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M402.21,-66.07C388.36,-69.7 372.62,-73.2 358,-75 288.3,-83.58 269.95,-81.23 200,-75 183.23,-73.51 165.27,-70.83 148.58,-67.88"/>
+<polygon fill="#000000" stroke="#000000" points="148.84,-64.37 138.37,-66.02 147.58,-71.26 148.84,-64.37"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_edge4" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M393.83,-54C385.43,-54 376.46,-54 367.38,-54"/>
+<polygon fill="#000000" stroke="#000000" points="367.11,-50.5 357.11,-54 367.11,-57.5 367.11,-50.5"/>
+</g>
+<!-- module~aot_quadruple_fun_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_node4" class="node">
+<title>module~aot_quadruple_fun_module</title>
+<g id="a_module~~aot_fun_declaration_module~~UsedByGraph_node4"><a xlink:href="../module/aot_quadruple_fun_module.html" xlink:title="aot_quadruple_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="358,-24 200,-24 200,0 358,0 358,-24"/>
+<text text-anchor="middle" x="279" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_edge6" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M395.58,-41.96C377.11,-37.18 355.68,-31.62 336.33,-26.6"/>
+<polygon fill="#000000" stroke="#000000" points="336.99,-23.16 326.43,-24.04 335.23,-29.93 336.99,-23.16"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_edge3" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M222.12,-24.04C199.27,-28.96 172.67,-34.69 148.89,-39.81"/>
+<polygon fill="#000000" stroke="#000000" points="147.93,-36.44 138.89,-41.96 149.4,-43.28 147.93,-36.44"/>
+</g>
+<!-- module~aot_path_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_node5" class="node">
+<title>module~aot_path_module</title>
+<g id="a_module~~aot_fun_declaration_module~~UsedByGraph_node5"><a xlink:href="../module/aot_path_module.html" xlink:title="aot_path_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="633,-66 528,-66 528,-42 633,-42 633,-66"/>
+<text text-anchor="middle" x="580.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_fun_module -->
+<g id="module~~aot_fun_declaration_module~~UsedByGraph_edge5" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M527.89,-54C519.59,-54 510.95,-54 502.51,-54"/>
+<polygon fill="#000000" stroke="#000000" points="502.35,-50.5 492.35,-54 502.35,-57.5 502.35,-50.5"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduleaot_fun_declaration_moduleUsedByGraph = svgPanZoom('#moduleaot_fun_declaration_moduleUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-aot_fun_type"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/aot_fun_type.html'>aot_fun_type</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-handle"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>handle</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg_count"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg_count</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id"></span>
+              integer(kind=long_k),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>id</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

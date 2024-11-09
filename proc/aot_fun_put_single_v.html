@@ -1,0 +1,856 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_fun_put_single_v &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_fun_put_single_v
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for procedures.">17 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_fun_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_fun_module.f90.html'>aot_fun_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_fun_module.html'>aot_fun_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_fun_put_single_v</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/aot_fun_put_single_v.html#src">aot_fun_put_single_v</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private  subroutine aot_fun_put_single_v(L, fun, arg)  
+</h2>
+    
+
+    <p>Put an array of singles into the list of arguments for the function.</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~186"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                <p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~15"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+                <p>Handle of the function, this argument should be put into.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-arg~8"></span>
+              real(kind=single_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>arg</strong>(:)</td>
+            <td>
+                <p>Actual argument to hand over to the Lua function.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~aot_fun_put_single_v~~CallsGraph Pages: 1 -->
+<svg id="procaot_fun_put_single_vCallsGraph" width="641pt" height="202pt"
+ viewBox="0.00 0.00 641.00 202.05" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~aot_fun_put_single_v~~CallsGraph" class="graph" transform="scale(0.71 0.71) rotate(0) translate(4 280)">
+<title>proc~~aot_fun_put_single_v~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-280 897,-280 897,4 -4,4"/>
+<!-- proc~aot_fun_put_single_v -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node1" class="node">
+<title>proc~aot_fun_put_single_v</title>
+<polygon fill="none" stroke="black" points="123,-66 0,-66 0,-42 123,-42 123,-66"/>
+<text text-anchor="middle" x="61.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_put_single_v</text>
+</g>
+<!-- interface~aot_table_from_1darray~3 -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node2" class="node">
+<title>interface~aot_table_from_1darray~3</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node2"><a xlink:href="../interface/aot_table_from_1darray~3.html" xlink:title="aot_table_from_1Darray">
+<polygon fill="#a7506f" stroke="#a7506f" points="300,-108 159,-108 159,-84 300,-84 300,-108"/>
+<text text-anchor="middle" x="229.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_from_1Darray</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_single_v&#45;&gt;interface~aot_table_from_1darray~3 -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge1" class="edge">
+<title>proc~aot_fun_put_single_v&#45;&gt;interface~aot_table_from_1darray~3</title>
+<path fill="none" stroke="#000000" d="M110.07,-66.04C129.08,-70.85 151.15,-76.43 171.05,-81.46"/>
+<polygon fill="#000000" stroke="#000000" points="170.37,-84.9 180.92,-83.96 172.09,-78.12 170.37,-84.9"/>
+</g>
+<!-- proc~flu_pushvalue -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node3" class="node">
+<title>proc~flu_pushvalue</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node3"><a xlink:href="../proc/flu_pushvalue.html" xlink:title="flu_pushvalue">
+<polygon fill="#d9534f" stroke="#d9534f" points="272.5,-66 186.5,-66 186.5,-42 272.5,-42 272.5,-66"/>
+<text text-anchor="middle" x="229.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushvalue</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_single_v&#45;&gt;proc~flu_pushvalue -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge2" class="edge">
+<title>proc~aot_fun_put_single_v&#45;&gt;proc~flu_pushvalue</title>
+<path fill="none" stroke="#000000" d="M123.37,-54C140.69,-54 159.39,-54 176.16,-54"/>
+<polygon fill="#000000" stroke="#000000" points="176.31,-57.5 186.31,-54 176.31,-50.5 176.31,-57.5"/>
+</g>
+<!-- proc~flu_settop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node4" class="node">
+<title>proc~flu_settop</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node4"><a xlink:href="../proc/flu_settop.html" xlink:title="flu_settop">
+<polygon fill="#d9534f" stroke="#d9534f" points="261.5,-24 197.5,-24 197.5,0 261.5,0 261.5,-24"/>
+<text text-anchor="middle" x="229.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_put_single_v&#45;&gt;proc~flu_settop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge3" class="edge">
+<title>proc~aot_fun_put_single_v&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M110.07,-41.96C134.52,-35.78 164.03,-28.31 187.47,-22.38"/>
+<polygon fill="#000000" stroke="#000000" points="188.6,-25.7 197.44,-19.86 186.89,-18.92 188.6,-25.7"/>
+</g>
+<!-- proc~create_1darray_extdouble -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node7" class="node">
+<title>proc~create_1darray_extdouble</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node7"><a xlink:href="../proc/create_1darray_extdouble.html" xlink:title="create_1Darray_extdouble">
+<polygon fill="#d9534f" stroke="#d9534f" points="489,-108 336,-108 336,-84 489,-84 489,-108"/>
+<text text-anchor="middle" x="412.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">create_1Darray_extdouble</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_table_from_1darray~3&#45;&gt;proc~create_1darray_extdouble -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge4" class="edge">
+<title>interface~aot_table_from_1darray~3&#45;&gt;proc~create_1darray_extdouble</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M300.22,-96C308.6,-96 317.22,-96 325.79,-96"/>
+<polygon fill="#000000" stroke="#000000" points="325.8,-99.5 335.8,-96 325.8,-92.5 325.8,-99.5"/>
+</g>
+<!-- interface~lua_pushvalue -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node5" class="node">
+<title>interface~lua_pushvalue</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node5"><a xlink:href="../interface/lua_pushvalue.html" xlink:title="lua_pushvalue">
+<polygon fill="#a7506f" stroke="#a7506f" points="457,-66 368,-66 368,-42 457,-42 457,-66"/>
+<text text-anchor="middle" x="412.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushvalue</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushvalue&#45;&gt;interface~lua_pushvalue -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge5" class="edge">
+<title>proc~flu_pushvalue&#45;&gt;interface~lua_pushvalue</title>
+<path fill="none" stroke="#000000" d="M272.94,-54C298.23,-54 330.58,-54 357.66,-54"/>
+<polygon fill="#000000" stroke="#000000" points="357.76,-57.5 367.76,-54 357.76,-50.5 357.76,-57.5"/>
+</g>
+<!-- interface~lua_settop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node6" class="node">
+<title>interface~lua_settop</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node6"><a xlink:href="../interface/lua_settop.html" xlink:title="lua_settop">
+<polygon fill="#a7506f" stroke="#a7506f" points="446,-24 379,-24 379,0 446,0 446,-24"/>
+<text text-anchor="middle" x="412.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_settop&#45;&gt;interface~lua_settop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge6" class="edge">
+<title>proc~flu_settop&#45;&gt;interface~lua_settop</title>
+<path fill="none" stroke="#000000" d="M261.62,-12C291.17,-12 335.84,-12 368.73,-12"/>
+<polygon fill="#000000" stroke="#000000" points="368.96,-15.5 378.96,-12 368.96,-8.5 368.96,-15.5"/>
+</g>
+<!-- interface~flu_pushinteger -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node8" class="node">
+<title>interface~flu_pushinteger</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node8"><a xlink:href="../interface/flu_pushinteger.html" xlink:title="flu_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="622,-234 527,-234 527,-210 622,-210 622,-234"/>
+<text text-anchor="middle" x="574.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;interface~flu_pushinteger -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge7" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;interface~flu_pushinteger</title>
+<path fill="none" stroke="#000000" d="M428.84,-108.08C456.84,-130.13 516.41,-177.04 549.71,-203.27"/>
+<polygon fill="#000000" stroke="#000000" points="547.95,-206.33 557.97,-209.77 552.28,-200.83 547.95,-206.33"/>
+</g>
+<!-- interface~flu_pushnumber -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node9" class="node">
+<title>interface~flu_pushnumber</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node9"><a xlink:href="../interface/flu_pushnumber.html" xlink:title="flu_pushnumber">
+<polygon fill="#a7506f" stroke="#a7506f" points="624,-150 525,-150 525,-126 624,-126 624,-150"/>
+<text text-anchor="middle" x="574.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushnumber</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;interface~flu_pushnumber -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge8" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;interface~flu_pushnumber</title>
+<path fill="none" stroke="#000000" d="M459.35,-108.04C477.59,-112.82 498.75,-118.38 517.86,-123.4"/>
+<polygon fill="#000000" stroke="#000000" points="517.08,-126.81 527.64,-125.96 518.86,-120.04 517.08,-126.81"/>
+</g>
+<!-- proc~flu_createtable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node10" class="node">
+<title>proc~flu_createtable</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node10"><a xlink:href="../proc/flu_createtable.html" xlink:title="flu_createtable">
+<polygon fill="#d9534f" stroke="#d9534f" points="620.5,-108 528.5,-108 528.5,-84 620.5,-84 620.5,-108"/>
+<text text-anchor="middle" x="574.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_createtable</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;proc~flu_createtable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge9" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;proc~flu_createtable</title>
+<path fill="none" stroke="#000000" d="M489.28,-96C499.02,-96 508.85,-96 518.18,-96"/>
+<polygon fill="#000000" stroke="#000000" points="518.47,-99.5 528.47,-96 518.47,-92.5 518.47,-99.5"/>
+</g>
+<!-- proc~flu_gettop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node11" class="node">
+<title>proc~flu_gettop</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node11"><a xlink:href="../proc/flu_gettop.html" xlink:title="flu_gettop">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="607.5,-66 541.5,-66 541.5,-42 607.5,-42 607.5,-66"/>
+<text text-anchor="middle" x="574.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_gettop</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;proc~flu_gettop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge10" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;proc~flu_gettop</title>
+<path fill="none" stroke="#000000" d="M459.35,-83.96C482.09,-77.99 509.37,-70.83 531.55,-65.01"/>
+<polygon fill="#000000" stroke="#000000" points="532.57,-68.36 541.35,-62.44 530.79,-61.59 532.57,-68.36"/>
+</g>
+<!-- proc~flu_settable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node12" class="node">
+<title>proc~flu_settable</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node12"><a xlink:href="../proc/flu_settable.html" xlink:title="flu_settable">
+<polygon fill="#d9534f" stroke="#d9534f" points="611.5,-24 537.5,-24 537.5,0 611.5,0 611.5,-24"/>
+<text text-anchor="middle" x="574.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_settable</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_extdouble&#45;&gt;proc~flu_settable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge11" class="edge">
+<title>proc~create_1darray_extdouble&#45;&gt;proc~flu_settable</title>
+<path fill="none" stroke="#000000" d="M471.12,-83.88C477.39,-81.44 483.49,-78.51 489,-75 509.74,-61.8 505.21,-47.59 525,-33 526.86,-31.63 528.82,-30.32 530.85,-29.09"/>
+<polygon fill="#000000" stroke="#000000" points="532.93,-31.94 540.04,-24.08 529.59,-25.79 532.93,-31.94"/>
+</g>
+<!-- proc~flu_pushint -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node17" class="node">
+<title>proc~flu_pushint</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node17"><a xlink:href="../proc/flu_pushint.html" xlink:title="flu_pushint">
+<polygon fill="#d9534f" stroke="#d9534f" points="742.5,-276 672.5,-276 672.5,-252 742.5,-252 742.5,-276"/>
+<text text-anchor="middle" x="707.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushint</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushint -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge12" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushint</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M613.04,-234.04C628.44,-238.97 646.38,-244.73 662.41,-249.86"/>
+<polygon fill="#000000" stroke="#000000" points="661.5,-253.25 672.09,-252.97 663.64,-246.58 661.5,-253.25"/>
+</g>
+<!-- proc~flu_pushlong -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node18" class="node">
+<title>proc~flu_pushlong</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node18"><a xlink:href="../proc/flu_pushlong.html" xlink:title="flu_pushlong">
+<polygon fill="#d9534f" stroke="#d9534f" points="747.5,-234 667.5,-234 667.5,-210 747.5,-210 747.5,-234"/>
+<text text-anchor="middle" x="707.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushlong</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushlong -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge13" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushlong</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M622.05,-222C633.43,-222 645.64,-222 657.14,-222"/>
+<polygon fill="#000000" stroke="#000000" points="657.45,-225.5 667.45,-222 657.45,-218.5 657.45,-225.5"/>
+</g>
+<!-- proc~flu_pushdouble -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node16" class="node">
+<title>proc~flu_pushdouble</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node16"><a xlink:href="../proc/flu_pushdouble.html" xlink:title="flu_pushdouble">
+<polygon fill="#d9534f" stroke="#d9534f" points="754.5,-192 660.5,-192 660.5,-168 754.5,-168 754.5,-192"/>
+<text text-anchor="middle" x="707.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushdouble</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushnumber&#45;&gt;proc~flu_pushdouble -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge14" class="edge">
+<title>interface~flu_pushnumber&#45;&gt;proc~flu_pushdouble</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M613.04,-150.04C627.43,-154.65 644.03,-159.97 659.22,-164.84"/>
+<polygon fill="#000000" stroke="#000000" points="658.36,-168.24 668.96,-167.96 660.5,-161.58 658.36,-168.24"/>
+</g>
+<!-- proc~flu_pushreal -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node19" class="node">
+<title>proc~flu_pushreal</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node19"><a xlink:href="../proc/flu_pushreal.html" xlink:title="flu_pushreal">
+<polygon fill="#d9534f" stroke="#d9534f" points="746,-150 669,-150 669,-126 746,-126 746,-150"/>
+<text text-anchor="middle" x="707.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushreal</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushnumber&#45;&gt;proc~flu_pushreal -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge15" class="edge">
+<title>interface~flu_pushnumber&#45;&gt;proc~flu_pushreal</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M624.28,-138C635.53,-138 647.49,-138 658.69,-138"/>
+<polygon fill="#000000" stroke="#000000" points="658.74,-141.5 668.74,-138 658.74,-134.5 658.74,-141.5"/>
+</g>
+<!-- interface~lua_createtable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node13" class="node">
+<title>interface~lua_createtable</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node13"><a xlink:href="../interface/lua_createtable.html" xlink:title="lua_createtable">
+<polygon fill="#a7506f" stroke="#a7506f" points="755,-108 660,-108 660,-84 755,-84 755,-108"/>
+<text text-anchor="middle" x="707.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_createtable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_createtable&#45;&gt;interface~lua_createtable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge16" class="edge">
+<title>proc~flu_createtable&#45;&gt;interface~lua_createtable</title>
+<path fill="none" stroke="#000000" d="M620.58,-96C630.03,-96 640.11,-96 649.91,-96"/>
+<polygon fill="#000000" stroke="#000000" points="650,-99.5 660,-96 650,-92.5 650,-99.5"/>
+</g>
+<!-- interface~lua_gettop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node14" class="node">
+<title>interface~lua_gettop</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node14"><a xlink:href="../interface/lua_gettop.html" xlink:title="lua_gettop">
+<polygon fill="#a7506f" stroke="#a7506f" points="742,-66 673,-66 673,-42 742,-42 742,-66"/>
+<text text-anchor="middle" x="707.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_gettop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_gettop&#45;&gt;interface~lua_gettop -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge17" class="edge">
+<title>proc~flu_gettop&#45;&gt;interface~lua_gettop</title>
+<path fill="none" stroke="#000000" d="M607.55,-54C624.21,-54 644.83,-54 662.93,-54"/>
+<polygon fill="#000000" stroke="#000000" points="662.96,-57.5 672.96,-54 662.96,-50.5 662.96,-57.5"/>
+</g>
+<!-- interface~lua_settable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node15" class="node">
+<title>interface~lua_settable</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node15"><a xlink:href="../interface/lua_settable.html" xlink:title="lua_settable">
+<polygon fill="#a7506f" stroke="#a7506f" points="746,-24 669,-24 669,0 746,0 746,-24"/>
+<text text-anchor="middle" x="707.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_settable&#45;&gt;interface~lua_settable -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge18" class="edge">
+<title>proc~flu_settable&#45;&gt;interface~lua_settable</title>
+<path fill="none" stroke="#000000" d="M611.64,-12C626.04,-12 642.83,-12 658.24,-12"/>
+<polygon fill="#000000" stroke="#000000" points="658.65,-15.5 668.65,-12 658.65,-8.5 658.65,-15.5"/>
+</g>
+<!-- interface~lua_pushnumber -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node21" class="node">
+<title>interface~lua_pushnumber</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node21"><a xlink:href="../interface/lua_pushnumber.html" xlink:title="lua_pushnumber">
+<polygon fill="#a7506f" stroke="#a7506f" points="893,-181 791,-181 791,-157 893,-157 893,-181"/>
+<text text-anchor="middle" x="842" y="-166.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushnumber</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushdouble&#45;&gt;interface~lua_pushnumber -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge19" class="edge">
+<title>proc~flu_pushdouble&#45;&gt;interface~lua_pushnumber</title>
+<path fill="none" stroke="#000000" d="M754.84,-176.15C763.21,-175.46 772.04,-174.72 780.74,-174"/>
+<polygon fill="#000000" stroke="#000000" points="781.17,-177.48 790.85,-173.16 780.59,-170.5 781.17,-177.48"/>
+</g>
+<!-- interface~lua_pushinteger -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_node20" class="node">
+<title>interface~lua_pushinteger</title>
+<g id="a_proc~~aot_fun_put_single_v~~CallsGraph_node20"><a xlink:href="../interface/lua_pushinteger.html" xlink:title="lua_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="891,-244 793,-244 793,-220 891,-220 891,-244"/>
+<text text-anchor="middle" x="842" y="-229.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushint&#45;&gt;interface~lua_pushinteger -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge20" class="edge">
+<title>proc~flu_pushint&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M742.62,-255.76C754.9,-252.79 769.12,-249.36 782.87,-246.04"/>
+<polygon fill="#000000" stroke="#000000" points="783.86,-249.4 792.76,-243.65 782.22,-242.6 783.86,-249.4"/>
+</g>
+<!-- proc~flu_pushlong&#45;&gt;interface~lua_pushinteger -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge21" class="edge">
+<title>proc~flu_pushlong&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M747.54,-224.95C758.52,-225.78 770.71,-226.69 782.56,-227.59"/>
+<polygon fill="#000000" stroke="#000000" points="782.61,-231.1 792.85,-228.37 783.14,-224.12 782.61,-231.1"/>
+</g>
+<!-- proc~flu_pushreal&#45;&gt;interface~lua_pushnumber -->
+<g id="proc~~aot_fun_put_single_v~~CallsGraph_edge22" class="edge">
+<title>proc~flu_pushreal&#45;&gt;interface~lua_pushnumber</title>
+<path fill="none" stroke="#000000" d="M746.11,-146.8C756.99,-149.35 769.15,-152.19 781.03,-154.97"/>
+<polygon fill="#000000" stroke="#000000" points="780.38,-158.41 790.91,-157.28 781.97,-151.6 780.38,-158.41"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprocaot_fun_put_single_vCallsGraph = svgPanZoom('#procaot_fun_put_single_vCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~aot_fun_put_single_v~~CalledByGraph Pages: 1 -->
+<svg id="procaot_fun_put_single_vCalledByGraph" width="242pt" height="32pt"
+ viewBox="0.00 0.00 242.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~aot_fun_put_single_v~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~aot_fun_put_single_v~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 238,-28 238,4 -4,4"/>
+<!-- proc~aot_fun_put_single_v -->
+<g id="proc~~aot_fun_put_single_v~~CalledByGraph_node1" class="node">
+<title>proc~aot_fun_put_single_v</title>
+<polygon fill="none" stroke="black" points="234,-24 111,-24 111,0 234,0 234,-24"/>
+<text text-anchor="middle" x="172.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_fun_put_single_v</text>
+</g>
+<!-- interface~aot_fun_put~3 -->
+<g id="proc~~aot_fun_put_single_v~~CalledByGraph_node2" class="node">
+<title>interface~aot_fun_put~3</title>
+<g id="a_proc~~aot_fun_put_single_v~~CalledByGraph_node2"><a xlink:href="../interface/aot_fun_put~3.html" xlink:title="aot_fun_put">
+<polygon fill="#a7506f" stroke="#a7506f" points="75,-24 0,-24 0,0 75,0 75,-24"/>
+<text text-anchor="middle" x="37.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_put</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_single_v -->
+<g id="proc~~aot_fun_put_single_v~~CalledByGraph_edge1" class="edge">
+<title>interface~aot_fun_put~3&#45;&gt;proc~aot_fun_put_single_v</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M75.19,-12C83.24,-12 92.02,-12 100.89,-12"/>
+<polygon fill="#000000" stroke="#000000" points="100.92,-15.5 110.92,-12 100.92,-8.5 100.92,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_fun_put_single_v</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">arg</span><span class="p">)</span>
+<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_state</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="c">!! Handle for the Lua script.</span>
+
+<span class="w">    </span><span class="c">!&gt; Handle of the function, this argument should be put into.</span>
+<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_fun_type</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fun</span>
+
+<span class="w">    </span><span class="c">!&gt; Actual argument to hand over to the Lua function.</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">single_k</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">arg</span><span class="p">(:)</span>
+
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">double_k</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">locarg</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
+
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">thandle</span>
+
+<span class="w">    </span><span class="c">! Only do something, if the function is actually properly defined.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fun</span><span class="p">%</span><span class="n">handle</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">      </span><span class="n">locarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span><span class="w"> </span><span class="nb">kind</span><span class="o">=</span><span class="n">double_k</span><span class="p">)</span>
+
+<span class="w">      </span><span class="c">! If the function was executed before this call, it has to be</span>
+<span class="w">      </span><span class="c">! reset.</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fun</span><span class="p">%</span><span class="n">arg_count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="c">! Set the top of the stack to the reference of the function.</span>
+<span class="w">        </span><span class="c">! Discarding anything above it.</span>
+<span class="w">        </span><span class="k">call </span><span class="n">flu_settop</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">%</span><span class="n">handle</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! Push a copy of the function itself on the stack again, before</span>
+<span class="w">        </span><span class="c">! adding arguments, to savely survive popping of the function</span>
+<span class="w">        </span><span class="c">! upon execution.</span>
+<span class="w">        </span><span class="k">call </span><span class="n">flu_pushvalue</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">%</span><span class="n">handle</span><span class="p">)</span>
+<span class="w">        </span><span class="c">! Increase the argument count to 0 again (really start counting</span>
+<span class="w">        </span><span class="c">! arguments afterwards.</span>
+<span class="w">        </span><span class="n">fun</span><span class="p">%</span><span class="n">arg_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fun</span><span class="p">%</span><span class="n">arg_count</span><span class="o">+</span><span class="mi">1</span>
+<span class="w">      </span><span class="k">end if</span>
+
+<span class="k">      call </span><span class="n">aot_table_from_1Darray</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">locarg</span><span class="p">)</span>
+<span class="w">      </span><span class="n">fun</span><span class="p">%</span><span class="n">arg_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fun</span><span class="p">%</span><span class="n">arg_count</span><span class="o">+</span><span class="mi">1</span>
+<span class="w">    </span><span class="k">end if</span>
+
+<span class="k">  end subroutine </span><span class="n">aot_fun_put_single_v</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

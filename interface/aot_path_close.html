@@ -1,0 +1,619 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_path_close &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_path_close
+      <small>Interface</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="<p> 0.0% of total for procedures.</p>Including implementation: 25 statements,  0.2% of total for procedures.">4 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_path_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_path_module.f90.html'>aot_path_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_path_module.html'>aot_path_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_path_close</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#modprocs-0"
+         aria-expanded="false" aria-controls="modprocs-0">
+         <h4 class="card-header bg-primary text-white">Module Procedures</h4>
+      </a>
+      <div id="modprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../interface/aot_path_close.html#moduleprocedure-aot_path_close_fun">aot_path_close_fun</a>
+            <a class="list-group-item" href="../interface/aot_path_close.html#moduleprocedure-aot_path_close_table">aot_path_close_table</a>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <h2>public interface aot_path_close</h2>
+      
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Calls</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: interface~~aot_path_close~~CallsGraph Pages: 1 -->
+<svg id="interfaceaot_path_closeCallsGraph" width="641pt" height="98pt"
+ viewBox="0.00 0.00 641.00 98.09" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="interface~~aot_path_close~~CallsGraph" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 110)">
+<title>interface~~aot_path_close~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-110 741,-110 741,4 -4,4"/>
+<!-- interface~aot_path_close -->
+<g id="interface~~aot_path_close~~CallsGraph_node1" class="node">
+<title>interface~aot_path_close</title>
+<polygon fill="none" stroke="black" points="92,-46 0,-46 0,-22 92,-22 92,-46"/>
+<text text-anchor="middle" x="46" y="-31.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_path_close</text>
+</g>
+<!-- proc~aot_path_close_fun -->
+<g id="interface~~aot_path_close~~CallsGraph_node2" class="node">
+<title>proc~aot_path_close_fun</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node2"><a xlink:href="../proc/aot_path_close_fun.html" xlink:title="aot_path_close_fun">
+<polygon fill="#d9534f" stroke="#d9534f" points="243,-26 128,-26 128,-2 243,-2 243,-26"/>
+<text text-anchor="middle" x="185.5" y="-11.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_close_fun</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_path_close&#45;&gt;proc~aot_path_close_fun -->
+<g id="interface~~aot_path_close~~CallsGraph_edge1" class="edge">
+<title>interface~aot_path_close&#45;&gt;proc~aot_path_close_fun</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M92.02,-27.45C100.24,-26.26 108.98,-24.99 117.67,-23.72"/>
+<polygon fill="#000000" stroke="#000000" points="118.43,-27.15 127.82,-22.24 117.42,-20.22 118.43,-27.15"/>
+</g>
+<!-- proc~aot_path_close_table -->
+<g id="interface~~aot_path_close~~CallsGraph_node3" class="node">
+<title>proc~aot_path_close_table</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node3"><a xlink:href="../proc/aot_path_close_table.html" xlink:title="aot_path_close_table">
+<polygon fill="#d9534f" stroke="#d9534f" points="403,-66 279,-66 279,-42 403,-42 403,-66"/>
+<text text-anchor="middle" x="341" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_close_table</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_path_close&#45;&gt;proc~aot_path_close_table -->
+<g id="interface~~aot_path_close~~CallsGraph_edge2" class="edge">
+<title>interface~aot_path_close&#45;&gt;proc~aot_path_close_table</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M92.14,-37.08C139.21,-40.29 213.67,-45.38 268.71,-49.13"/>
+<polygon fill="#000000" stroke="#000000" points="268.53,-52.63 278.74,-49.82 269.01,-45.65 268.53,-52.63"/>
+</g>
+<!-- proc~aot_path_close_fun&#45;&gt;proc~aot_path_close_table -->
+<g id="interface~~aot_path_close~~CallsGraph_edge4" class="edge">
+<title>proc~aot_path_close_fun&#45;&gt;proc~aot_path_close_table</title>
+<path fill="none" stroke="#000000" d="M232.56,-26C248.72,-30.21 267.06,-34.99 283.96,-39.4"/>
+<polygon fill="#000000" stroke="#000000" points="283.15,-42.8 293.71,-41.94 284.92,-36.03 283.15,-42.8"/>
+</g>
+<!-- proc~aot_fun_close -->
+<g id="interface~~aot_path_close~~CallsGraph_node4" class="node">
+<title>proc~aot_fun_close</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node4"><a xlink:href="../proc/aot_fun_close.html" xlink:title="aot_fun_close">
+<polygon fill="#d9534f" stroke="#d9534f" points="383.5,-24 298.5,-24 298.5,0 383.5,0 383.5,-24"/>
+<text text-anchor="middle" x="341" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_close</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_path_close_fun&#45;&gt;proc~aot_fun_close -->
+<g id="interface~~aot_path_close~~CallsGraph_edge3" class="edge">
+<title>proc~aot_path_close_fun&#45;&gt;proc~aot_fun_close</title>
+<path fill="none" stroke="#000000" d="M243.22,-13.26C257.93,-13.07 273.69,-12.86 288.13,-12.68"/>
+<polygon fill="#000000" stroke="#000000" points="288.43,-16.17 298.38,-12.54 288.34,-9.17 288.43,-16.17"/>
+</g>
+<!-- proc~aot_table_close -->
+<g id="interface~~aot_path_close~~CallsGraph_node5" class="node">
+<title>proc~aot_table_close</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node5"><a xlink:href="../proc/aot_table_close.html" xlink:title="aot_table_close">
+<polygon fill="#d9534f" stroke="#d9534f" points="534,-64 439,-64 439,-40 534,-40 534,-64"/>
+<text text-anchor="middle" x="486.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_close</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_path_close_table&#45;&gt;proc~aot_table_close -->
+<g id="interface~~aot_path_close~~CallsGraph_edge5" class="edge">
+<title>proc~aot_path_close_table&#45;&gt;proc~aot_table_close</title>
+<path fill="none" stroke="#000000" d="M403.27,-53.15C411.72,-53.03 420.37,-52.91 428.73,-52.79"/>
+<polygon fill="#000000" stroke="#000000" points="428.81,-56.29 438.76,-52.65 428.71,-49.29 428.81,-56.29"/>
+</g>
+<!-- proc~close_config -->
+<g id="interface~~aot_path_close~~CallsGraph_node6" class="node">
+<title>proc~close_config</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node6"><a xlink:href="../proc/close_config.html" xlink:title="close_config">
+<polygon fill="#d9534f" stroke="#d9534f" points="526,-106 447,-106 447,-82 526,-82 526,-106"/>
+<text text-anchor="middle" x="486.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">close_config</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_path_close_table&#45;&gt;proc~close_config -->
+<g id="interface~~aot_path_close~~CallsGraph_edge6" class="edge">
+<title>proc~aot_path_close_table&#45;&gt;proc~close_config</title>
+<path fill="none" stroke="#000000" d="M385.05,-66C401.48,-70.58 420.31,-75.83 437.19,-80.53"/>
+<polygon fill="#000000" stroke="#000000" points="436.3,-83.92 446.87,-83.23 438.18,-77.18 436.3,-83.92"/>
+</g>
+<!-- proc~flu_settop -->
+<g id="interface~~aot_path_close~~CallsGraph_node8" class="node">
+<title>proc~flu_settop</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node8"><a xlink:href="../proc/flu_settop.html" xlink:title="flu_settop">
+<polygon fill="#d9534f" stroke="#d9534f" points="634,-44 570,-44 570,-20 634,-20 634,-44"/>
+<text text-anchor="middle" x="602" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_fun_close&#45;&gt;proc~flu_settop -->
+<g id="interface~~aot_path_close~~CallsGraph_edge7" class="edge">
+<title>proc~aot_fun_close&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M383.61,-15.21C431.97,-18.95 511.29,-25.07 559.57,-28.8"/>
+<polygon fill="#000000" stroke="#000000" points="559.43,-32.3 569.67,-29.58 559.97,-25.32 559.43,-32.3"/>
+</g>
+<!-- proc~aot_table_close&#45;&gt;proc~flu_settop -->
+<g id="interface~~aot_path_close~~CallsGraph_edge8" class="edge">
+<title>proc~aot_table_close&#45;&gt;proc~flu_settop</title>
+<path fill="none" stroke="#000000" d="M534.32,-43.75C542.83,-42.25 551.65,-40.7 559.97,-39.23"/>
+<polygon fill="#000000" stroke="#000000" points="560.59,-42.67 569.83,-37.49 559.38,-35.78 560.59,-42.67"/>
+</g>
+<!-- proc~flu_close -->
+<g id="interface~~aot_path_close~~CallsGraph_node7" class="node">
+<title>proc~flu_close</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node7"><a xlink:href="../proc/flu_close.html" xlink:title="flu_close">
+<polygon fill="#d9534f" stroke="#d9534f" points="631.5,-106 572.5,-106 572.5,-82 631.5,-82 631.5,-106"/>
+<text text-anchor="middle" x="602" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_close</text>
+</a>
+</g>
+</g>
+<!-- proc~close_config&#45;&gt;proc~flu_close -->
+<g id="interface~~aot_path_close~~CallsGraph_edge9" class="edge">
+<title>proc~close_config&#45;&gt;proc~flu_close</title>
+<path fill="none" stroke="#000000" d="M526.24,-94C537.85,-94 550.57,-94 562.18,-94"/>
+<polygon fill="#000000" stroke="#000000" points="562.46,-97.5 572.46,-94 562.46,-90.5 562.46,-97.5"/>
+</g>
+<!-- interface~lua_close -->
+<g id="interface~~aot_path_close~~CallsGraph_node9" class="node">
+<title>interface~lua_close</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node9"><a xlink:href="../interface/lua_close.html" xlink:title="lua_close">
+<polygon fill="#a7506f" stroke="#a7506f" points="734.5,-106 672.5,-106 672.5,-82 734.5,-82 734.5,-106"/>
+<text text-anchor="middle" x="703.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_close</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_close&#45;&gt;interface~lua_close -->
+<g id="interface~~aot_path_close~~CallsGraph_edge10" class="edge">
+<title>proc~flu_close&#45;&gt;interface~lua_close</title>
+<path fill="none" stroke="#000000" d="M631.51,-94C641.07,-94 651.92,-94 662.21,-94"/>
+<polygon fill="#000000" stroke="#000000" points="662.25,-97.5 672.25,-94 662.25,-90.5 662.25,-97.5"/>
+</g>
+<!-- interface~lua_settop -->
+<g id="interface~~aot_path_close~~CallsGraph_node10" class="node">
+<title>interface~lua_settop</title>
+<g id="a_interface~~aot_path_close~~CallsGraph_node10"><a xlink:href="../interface/lua_settop.html" xlink:title="lua_settop">
+<polygon fill="#a7506f" stroke="#a7506f" points="737,-44 670,-44 670,-20 737,-20 737,-44"/>
+<text text-anchor="middle" x="703.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_settop&#45;&gt;interface~lua_settop -->
+<g id="interface~~aot_path_close~~CallsGraph_edge11" class="edge">
+<title>proc~flu_settop&#45;&gt;interface~lua_settop</title>
+<path fill="none" stroke="#000000" d="M634.21,-32C642.23,-32 651.01,-32 659.51,-32"/>
+<polygon fill="#000000" stroke="#000000" points="659.68,-35.5 669.68,-32 659.68,-28.5 659.68,-35.5"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var paninterfaceaot_path_closeCallsGraph = svgPanZoom('#interfaceaot_path_closeCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+
+
+        <h2>Module Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_path_close_fun"></span> <h3>private  subroutine <a href='../proc/aot_path_close_fun.html'>aot_path_close_fun</a>(me, conf, fun, closeLua)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This routine closes function and all other tables opened along the path.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-me~7"></span>
+              type(<a href='../type/aot_path_type.html'>aot_path_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>me</strong></td>
+            <td>
+<p>The path object to open as a function</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conf~3"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>conf</strong></td>
+            <td>
+<p>The flu_state handle, which is either opened according to
+the path, or used to open the path in.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fun~4"></span>
+              type(<a href='../type/aot_fun_type.html'>aot_fun_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fun</strong></td>
+            <td>
+<p>The opened function</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-closelua"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>closeLua</strong></td>
+            <td>
+<p>A flag to indicate, wether to close the Lua script, default
+is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_path_close_table"></span> <h3>private  subroutine <a href='../proc/aot_path_close_table.html'>aot_path_close_table</a>(me, conf, closeLua)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This routine closes all the table opened in aot_path_open_table.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-me~8"></span>
+              type(<a href='../type/aot_path_type.html'>aot_path_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>me</strong></td>
+            <td>
+<p>The path object to open as a function</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conf~4"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>conf</strong></td>
+            <td>
+<p>The flu_state handle, which is either opened according to
+the path, or used to open the path in.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-closelua~2"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>closeLua</strong></td>
+            <td>
+<p>A flag to indicate, wether to close the Lua script, default
+is false.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+</div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

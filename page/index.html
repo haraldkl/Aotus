@@ -1,0 +1,444 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Overview &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>Overview</h1>
+    <div class="container p-2 mb-4 bg-light border rounded-3">
+      <div class="row align-items-center justify-content-between">
+        <div class="col">
+          <ul class="list-inline" style="margin-bottom:0px; display:inline">
+          </ul>
+        </div>
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-end mb-0">
+              <li class="breadcrumb-item active" aria-current="page">Overview</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-3">
+        <div class="card card-body bg-light" id="sidebar-toc">
+          <ul class="nav flex-column align-items">
+            <li class="nav-item">
+              <a class="nav-link active disabled" href="index.html">Overview</a>
+            </li>
+          </ul>
+          <hr>
+          <nav class="nav nav-pills flex-column">
+              <a class="nav-link" href="CompilerSupport.html">Compiler Support</a>
+              <a class="nav-link" href="FortranInLua.html">Using Fortran in Lua</a>
+              <a class="nav-link" href="Output.html">Output</a>
+          </nav>
+        </div>
+      </div>
+
+    <div class="col-9" id='text'>
+      <p><em>Avanced Options in Tables and Universal Scripting</em></p>
+<p><img alt="Aotus" src="logo.svg"></p>
+<p>This is a Fortran wrapper for the <a href="http://www.lua.org">Lua</a> scripting language,
+dedicated to enable flexible configuration of Fortran applications with this
+full fledged scripting language.
+Aotus is also the <a href="http://en.wikipedia.org/wiki/Night_monkey">Night monkey</a>
+(living in south america).
+Thus, it can be understood to be interacting with the moon (Lua, provided by
+Pontifical Catholic University of Rio de Janeiro in Brazil) and providing the
+means to retrieve data from its scripts.</p>
+<p><img alt="Powered by Lua" src="powered-by-lua.gif"></p>
+<p>The most prominent data structure in Lua are tables, which provide the
+possibility to store complex data structures.
+Thus, the configuration is usually done by global variables in the Lua script or
+tables.</p>
+<p>Aotus provides several layers, encapsulating the bare Lua C-API:</p>
+<ul>
+<li><a href="../module/lua_fif.html">lua_fif</a>: this just provides the ISO_C_BINDING interface declarations to
+   the Lua API</li>
+<li><a href="../module/flu_binding.html">flu_binding</a>: this is the actual Fortran binding wrapped around lua_fif,
+   to provide a more Fortran like interface. Especially the <strong>flu_state</strong> type
+   is declared, which maintains the handle for the Lua context.</li>
+<li><a href="../module/aot_table_module.html">aot_table_module</a>: provides some convenience functions to work on Lua
+   tables in Fortran</li>
+<li><a href="../module/aot_fun_module.html">aot_fun_module</a>: provides some convenience functions to work with Lua
+   functions in Fortran</li>
+<li><a href="../module/aotus_module.html">aotus_module</a>: provides the high end level to easily retrieve data from a
+   Lua script</li>
+</ul>
+<p>On top of those there is an additional <a href="../module/aot_vector_module.html">aot_vector_module</a> that allows the
+direct reading of values into arrays of rank 1.</p>
+<p>Finally, there is an additional module which allows <a href="Output.html">output</a> of
+Fortran values into nested Lua tables.</p>
+<p>The library can be compiled by various modern Fortran compilers as outlined in
+<a href="CompilerSupport.html">Compiler Support</a>.</p>
+<p><strong>An example, showing the usage of this library in a Fortran application, is
+given in aotus_sample.f90. You can find it in the <em>build</em> directory. The
+corresponding Lua script is given in config.lua, which you can find in the
+<em>sample</em> directory</strong></p>
+<p>Note on usage in parallel environments: Aotus itself is not providing parallel
+facilities. But it can be nicely used in parallel aswell. However, for
+massively parallel systems, it is advisable to minimize the access to config
+files. To avoid excessive filesystem meta accesses it is recommended to
+load required files only on one process.
+An implementation of this for MPI can be found in TreElMs
+<a href="https://geb.inf.tu-dresden.de/doxy/treelm/proc/tem_open_distconf_array.html">distconf</a>.</p>
+<h2>Reading a Lua Script</h2>
+<p>You need a handle for the Lua context of type <a href="../type/flu_state.html">flu_State</a>. You can get that by
+opening and processing a Lua script with <a href="../proc/open_config_file.html">open_config_file</a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">open_config_file</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">errCode</span><span class="p">,</span><span class="w"> </span><span class="n">errString</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Instead of reading a script from a file, you can also execute a string directly
+by using <a href="../proc/open_config_chunk.html">open_config_chunk</a> with the same interface, but replacing the
+filename with the chunk of Lua code to be executed.
+The arguments errCode and errString are optional and return errors, which might
+occur while loading or executing the Lua code.</p>
+<p>It is also possible to load already processed scripts in byte code by using the
+<a href="../proc/open_config_buffer.html">open_config_buffer</a> routine, which expects an array of characters with the
+script in byte code.</p>
+<p>In the end, after getting all configuration values, close it again with
+<a href="../proc/close_config.html">close_config</a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">close_config</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</code></pre></div>
+
+<h2>Retrieving Variables from the Script</h2>
+<p>From configuration files you usually want to obtain some parameters to steer
+your application. The most important interface for this functionality is
+<a href="../interface/aot_get_val.html">aot_get_val</a>, it is a generic interface to different functions, which allow
+you to obtain global values, values within tables and complete vectors as
+tables. Sometimes, especially in the context of evaluating functions, you might
+also need <a href="../interface/aot_top_get_val.html">aot_top_get_val</a>, which always tries to obtain the topmost value
+on the Lua stack.</p>
+<p>The <a href="../interface/aot_get_val.html">aot_get_val</a> interface is provided by the <a href="../module/aotus_module.html">aotus_module</a> and
+generically looks like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_get_val</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">errCode</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>val</strong>: is the variable the value should be stored in, all intrinsic
+  data types should be supported, reals with kind single and double precision</li>
+<li><strong>errCode</strong>: Returns an error code with various bits set for different errors,
+  which might happen while retrieving the variable.
+  They can be checked by btest, and the different error codes are encoded in
+  parameters:<ul>
+<li><strong>aoterr_fatal</strong>: Something went irrecoverably wrong</li>
+<li><strong>aoterr_nonExistent</strong>: The requested variable is not set in the Lua script</li>
+<li><strong>aoterr_wrongType</strong>: The requested variable in the Lua script does not meet
+  the requested data type</li>
+<li>For example you can check for a fatal error by using
+  <em>btest(errCode, aoterr_fatal)</em></li>
+</ul>
+</li>
+<li><strong>L</strong>: is the Lua context of type flu_state</li>
+<li><strong>key</strong>: is a string identifying the variable you want to retrieve</li>
+<li><em>optional</em> <strong>default</strong>: A default value to put into the variable, if the
+  variable is not provided in the Lua script</li>
+</ul>
+<p>In general we get the following shape for the interface:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_</span><span class="err">{</span><span class="n">top</span><span class="err">}_</span><span class="n">get_val</span><span class="p">(</span><span class="o">&lt;</span><span class="n">outputs</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">id</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where <em>outputs</em> is: <strong>val</strong> and <strong>errCode</strong> and <em>id</em> is at least the Lua
+context (<strong>L</strong>) for the <em>aot_top</em> variant. For global variables there has
+to be a <strong>key</strong> in the <em>id</em> and for tables there has to be a <strong>thandle</strong>.
+In tables the <strong>key</strong> might be replaced by a <strong>pos</strong> argument.</p>
+<h3>Tables</h3>
+<p>The interface to work with tables is trying to resemble IO, thus you could think
+of a table as a file, which you can open and read values out of by
+referencing its unit (handle).
+Opening and closing tables is provided by the <a href="../module/aot_table_module.html">aot_table_module</a>.</p>
+<p>To work with a table, you first need to get a handle to identify the table.
+For globally defined tables this can be done by using</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_table_open</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>L</strong>: is the Lua context of type flu_state</li>
+<li><strong>thandle</strong>: a handle to reference this table</li>
+<li><strong>key</strong>: is the name of the globally defined table to retrieve</li>
+</ul>
+<p>For a table within an already opened table use:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_table_open</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where the additional arguments are:</p>
+<ul>
+<li><strong>parent</strong>: the handle of the table, which this table should be looked up in</li>
+<li><em>optional</em> <strong>pos</strong>: Referring to the table to retrieve by position instead of
+  name, it is optional as well as the <strong>key</strong>, and one of them has to be present</li>
+</ul>
+<p>The handle will be 0, if the variable does not exist, or is not a table.
+After you have the handle to the table, you can access its components with</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_table_get_val</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">errCode</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Which is essentially the same interface as for global variables, except for
+the optional argument <strong>pos</strong>, by which the unnamed entries in the table are
+accessible by their position and the handle to the table, where the component
+is to be looked up.
+Both <strong>pos</strong> and <strong>key</strong> are optional, providing the ability to access the
+variables either purely by their order, or their name.
+If both are provided, the key takes precedence.
+The handling of positional or named addressing is a little bit similar to
+the Fortran convention, that is, as soon as there is a named component in the
+table, all following components should also be named. Positional references are
+only valid up to this position.</p>
+<p>After all values are read from the table, the table should be closed again by
+calling</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_table_close</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>Type dependent actions</h3>
+<p>Sometimes there might be different types possible for a given setting, and
+different actions need to be taken for each possible type.
+In this case you might first want to check the type of a given variable
+before proceeding and reading the actual value.
+This can be achieve by <a href="../proc/aot_type_of.html">aot_type_of</a>, which is a function that will
+put the requested variable onto the top of the stack and return the
+Lua data type of it:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">luatype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aot_type_of</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+
+<p>With:</p>
+<ul>
+<li><strong>L</strong>: is the Lua context</li>
+<li><strong>thandle</strong>: handle of the parent table</li>
+<li><strong>key</strong>: name of the Lua variable to get to the top of the stack</li>
+<li><strong>pos</strong>: positional addressing of the variable inside thandle</li>
+</ul>
+<p>Afterwards, the actual value can then be read by the corrsponding
+<a href="../interface/aot_top_get_val.html">aot_top_get_val</a>.</p>
+<h3>Functions</h3>
+<p>Again functions try to resemble the usage of files, however in this case its
+slightly more complicated, as you first need to "write" the input parameters
+into the function, then execute it and finally retrieve the results.</p>
+<p>To use a function, that is globally defined, open it with:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_fun_open</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>L</strong>: is the Lua context</li>
+<li><strong>fun</strong>: is the handle to the opened function</li>
+<li><strong>key</strong>: is the name of the function you want to access</li>
+</ul>
+<p>To access a function, which is within a table, use:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_fun_open</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where the additional arguments are:</p>
+<ul>
+<li><strong>parent</strong>: the table handle of the table, the function should be looked up in</li>
+<li><em>optional</em> <strong>pos</strong>: Refer to the function by position instead of name (<strong>key</strong>
+  is also optional)</li>
+</ul>
+<p>After the function is opened, its arguments need to be filled with:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_fun_put</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">arg</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>L</strong>: Lua context</li>
+<li><strong>fun</strong>: handle to the function to put the arguments in</li>
+<li><strong>arg</strong>: argument to provide to the function</li>
+</ul>
+<p>When all arguments are written, the function needs to be executed with:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_fun_do</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">nresults</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>L</strong>: Lua context</li>
+<li><strong>fun</strong>: opened function to execute</li>
+<li><strong>nresults</strong>: number of results you want to retrieve from that function</li>
+</ul>
+<p>After the function is executed, the results can be read, using:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_top_get_val</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">errCode</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>val</strong>: value to return</li>
+<li><strong>ErrCode</strong>: an error code, if something went wrong</li>
+<li><strong>L</strong>: Lua context</li>
+<li><em>optional</em> <strong>default</strong>: a default value to use, if no value can be retrieved</li>
+</ul>
+<p>You will get the results in reversed order if there are multiple results.
+That is, because the first call to <a href="../interface/aot_top_get_val.html">aot_top_get_val</a> will return the last result returned
+by the function, the next the second last, and so on.</p>
+<p>You may then go on and put new arguments into the function, execute
+it and retrieve the corresponding results.</p>
+<p>After you are done with the evaluation of the function it has to be closed
+with:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_fun_close</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This should cover the most typical tasks for configurations.</p>
+<h3>Vectors</h3>
+<p>In addition to the scalar retrieval routines, there is an aot_vector_module
+provided, which provides interfaces with arrays of rank 1 to access vectorial
+data in form of tables.
+They follow the same interfaces, as the scalar routines, however the values,
+error codes and defaults have to be one-dimensional arrays.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">call </span><span class="n">aot_get_val</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">errCode</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>L</strong>: is the Lua context of type flu_state</li>
+<li><strong>key</strong>: is a string identifying the variable you want to retrieve</li>
+<li><strong>val(:)</strong>: is the array the vector should be stored in</li>
+<li><strong>errCode(:)</strong>: Returns an error code with various bits set for different errors,
+  which might happen, while retrieving each component of the vector.
+  They can be checked by btest, and the different error codes are encoded in
+  parameters:<ul>
+<li><strong>aoterr_fatal</strong>: Something went irrecoverably wrong</li>
+<li><strong>aoterr_nonExistent</strong>: The requested component is not set in the Lua script</li>
+<li><strong>aoterr_wrongType</strong>: The requested component in the Lua script does not
+  meet the requested data type</li>
+<li>For example you can check for a fatal error by using
+  "btest(errCode(1), aoterr_fatal)"</li>
+</ul>
+</li>
+<li><em>optional</em> <strong>default(:)</strong>: A default vector to put into the variable, if the
+  variable is not provided in the Lua script, it also fills vectors, which are
+  only partially defined in the configuration script.</li>
+</ul>
+<p>The interface for vectors within other tables is defined accordingly.
+In the interface described above, the conf_val vector has a given size and
+just the values need to be filled.
+However, it might be necessary to retrieve arrays, of which the size is not
+known beforehand, and should depend on the table definition in the configuration.
+For these cases there are additional routines defined, which take allocatable
+arrays as input.
+These are then allocated and filled according to the configuration or the
+provided default vector.
+In these interfaces you have to provide an additional parameter <strong>maxlength</strong>
+that limits the size of the vector to allocate.
+If the Lua variable in question is not a table but rather a scalar of the
+correct type, an array of length 1 will be created for this single value.
+For undefined vectors zero sized arrays are returned for the values and the
+error codes.</p>
+<h2>Using Fortran Code in Lua Scripts</h2>
+<p>Aotus also provides the interface to register functions in Lua to allow the
+usage of your Fortran implementations in Lua.
+A short description for this feature is provided in
+<a href="FortranInLua.html">Using Fortran in Lua</a>.</p>
+    </div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

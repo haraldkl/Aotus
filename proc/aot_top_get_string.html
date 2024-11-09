@@ -1,0 +1,686 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_top_get_string &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_top_get_string
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.4% of total for procedures.">36 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_top_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_top_module.f90.html'>aot_top_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_top_module.html'>aot_top_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_top_get_string</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/aot_top_get_string.html#src">aot_top_get_string</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private  subroutine aot_top_get_string(val, ErrCode, L, default)  
+</h2>
+    
+
+    <p>Interpret topmost entry on Lua stack as a single precision real.</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-val~13"></span>
+              character(len=*)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>val</strong></td>
+            <td>
+                <p>Value of the Variable in the script</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errcode~11"></span>
+              integer,
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ErrCode</strong></td>
+            <td>
+                <p>Error code to indicate what kind of problem might have occured.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~56"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                <p>Handle to the Lua script</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-default~11"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>default</strong></td>
+            <td>
+                <p>Some default value, that should be used, if the variable is not set in
+the Lua script.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~aot_top_get_string~~CallsGraph Pages: 1 -->
+<svg id="procaot_top_get_stringCallsGraph" width="362pt" height="158pt"
+ viewBox="0.00 0.00 362.00 158.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~aot_top_get_string~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 154)">
+<title>proc~~aot_top_get_string~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-154 358,-154 358,4 -4,4"/>
+<!-- proc~aot_top_get_string -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node1" class="node">
+<title>proc~aot_top_get_string</title>
+<polygon fill="none" stroke="black" points="110,-87 0,-87 0,-63 110,-63 110,-87"/>
+<text text-anchor="middle" x="55" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_top_get_string</text>
+</g>
+<!-- proc~flu_isnoneornil -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node2" class="node">
+<title>proc~flu_isnoneornil</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node2"><a xlink:href="../proc/flu_isnoneornil.html" xlink:title="flu_isNoneOrNil">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="240,-150 146,-150 146,-126 240,-126 240,-150"/>
+<text text-anchor="middle" x="193" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_isNoneOrNil</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_top_get_string&#45;&gt;proc~flu_isnoneornil -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge1" class="edge">
+<title>proc~aot_top_get_string&#45;&gt;proc~flu_isnoneornil</title>
+<path fill="none" stroke="#000000" d="M81.58,-87.01C99.58,-95.44 124.24,-106.96 146,-117 149.21,-118.48 152.54,-120.01 155.88,-121.55"/>
+<polygon fill="#000000" stroke="#000000" points="154.68,-124.84 165.23,-125.82 157.59,-118.48 154.68,-124.84"/>
+</g>
+<!-- proc~flu_isstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node3" class="node">
+<title>proc~flu_isstring</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node3"><a xlink:href="../proc/flu_isstring.html" xlink:title="flu_isString">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="228.5,-108 157.5,-108 157.5,-84 228.5,-84 228.5,-108"/>
+<text text-anchor="middle" x="193" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_isString</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_top_get_string&#45;&gt;proc~flu_isstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge2" class="edge">
+<title>proc~aot_top_get_string&#45;&gt;proc~flu_isstring</title>
+<path fill="none" stroke="#000000" d="M110.14,-83.36C122.4,-85.25 135.29,-87.24 147.12,-89.07"/>
+<polygon fill="#000000" stroke="#000000" points="146.78,-92.56 157.2,-90.63 147.85,-85.64 146.78,-92.56"/>
+</g>
+<!-- proc~flu_pop -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node4" class="node">
+<title>proc~flu_pop</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node4"><a xlink:href="../proc/flu_pop.html" xlink:title="flu_pop">
+<polygon fill="#d9534f" stroke="#d9534f" points="220,-66 166,-66 166,-42 220,-42 220,-66"/>
+<text text-anchor="middle" x="193" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pop</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_top_get_string&#45;&gt;proc~flu_pop -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge3" class="edge">
+<title>proc~aot_top_get_string&#45;&gt;proc~flu_pop</title>
+<path fill="none" stroke="#000000" d="M110.14,-66.64C125.37,-64.29 141.57,-61.79 155.5,-59.64"/>
+<polygon fill="#000000" stroke="#000000" points="156.31,-63.05 165.66,-58.07 155.24,-56.13 156.31,-63.05"/>
+</g>
+<!-- proc~flu_tolstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node5" class="node">
+<title>proc~flu_tolstring</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node5"><a xlink:href="../proc/flu_tolstring.html" xlink:title="flu_tolstring">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="230.5,-24 155.5,-24 155.5,0 230.5,0 230.5,-24"/>
+<text text-anchor="middle" x="193" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_tolstring</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_top_get_string&#45;&gt;proc~flu_tolstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge4" class="edge">
+<title>proc~aot_top_get_string&#45;&gt;proc~flu_tolstring</title>
+<path fill="none" stroke="#000000" d="M81.58,-62.99C99.58,-54.56 124.24,-43.04 146,-33 149.21,-31.52 152.54,-29.99 155.88,-28.45"/>
+<polygon fill="#000000" stroke="#000000" points="157.59,-31.52 165.23,-24.18 154.68,-25.16 157.59,-31.52"/>
+</g>
+<!-- interface~lua_type -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node9" class="node">
+<title>interface~lua_type</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node9"><a xlink:href="../interface/lua_type.html" xlink:title="lua_type">
+<polygon fill="#a7506f" stroke="#a7506f" points="344,-150 286,-150 286,-126 344,-126 344,-150"/>
+<text text-anchor="middle" x="315" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_type</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_isnoneornil&#45;&gt;interface~lua_type -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge5" class="edge">
+<title>proc~flu_isnoneornil&#45;&gt;interface~lua_type</title>
+<path fill="none" stroke="#000000" d="M240.05,-138C251.89,-138 264.5,-138 275.89,-138"/>
+<polygon fill="#000000" stroke="#000000" points="275.95,-141.5 285.95,-138 275.95,-134.5 275.95,-141.5"/>
+</g>
+<!-- interface~lua_isstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node6" class="node">
+<title>interface~lua_isstring</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node6"><a xlink:href="../interface/lua_isstring.html" xlink:title="lua_isString">
+<polygon fill="#a7506f" stroke="#a7506f" points="352,-108 278,-108 278,-84 352,-84 352,-108"/>
+<text text-anchor="middle" x="315" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_isString</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_isstring&#45;&gt;interface~lua_isstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge6" class="edge">
+<title>proc~flu_isstring&#45;&gt;interface~lua_isstring</title>
+<path fill="none" stroke="#000000" d="M228.71,-96C240.83,-96 254.65,-96 267.57,-96"/>
+<polygon fill="#000000" stroke="#000000" points="267.7,-99.5 277.7,-96 267.7,-92.5 267.7,-99.5"/>
+</g>
+<!-- interface~lua_settop -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node7" class="node">
+<title>interface~lua_settop</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node7"><a xlink:href="../interface/lua_settop.html" xlink:title="lua_settop">
+<polygon fill="#a7506f" stroke="#a7506f" points="348.5,-66 281.5,-66 281.5,-42 348.5,-42 348.5,-66"/>
+<text text-anchor="middle" x="315" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pop&#45;&gt;interface~lua_settop -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge7" class="edge">
+<title>proc~flu_pop&#45;&gt;interface~lua_settop</title>
+<path fill="none" stroke="#000000" d="M220.04,-54C234.88,-54 253.86,-54 270.86,-54"/>
+<polygon fill="#000000" stroke="#000000" points="271.15,-57.5 281.15,-54 271.14,-50.5 271.15,-57.5"/>
+</g>
+<!-- interface~lua_tolstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_node8" class="node">
+<title>interface~lua_tolstring</title>
+<g id="a_proc~~aot_top_get_string~~CallsGraph_node8"><a xlink:href="../interface/lua_tolstring.html" xlink:title="lua_tolstring">
+<polygon fill="#a7506f" stroke="#a7506f" points="354,-24 276,-24 276,0 354,0 354,-24"/>
+<text text-anchor="middle" x="315" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_tolstring</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_tolstring&#45;&gt;interface~lua_tolstring -->
+<g id="proc~~aot_top_get_string~~CallsGraph_edge8" class="edge">
+<title>proc~flu_tolstring&#45;&gt;interface~lua_tolstring</title>
+<path fill="none" stroke="#000000" d="M230.66,-12C241.74,-12 254.09,-12 265.82,-12"/>
+<polygon fill="#000000" stroke="#000000" points="265.91,-15.5 275.91,-12 265.91,-8.5 265.91,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~aot_top_get_string~~CalledByGraph Pages: 1 -->
+<svg id="procaot_top_get_stringCalledByGraph" width="250pt" height="32pt"
+ viewBox="0.00 0.00 250.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~aot_top_get_string~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~aot_top_get_string~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 246,-28 246,4 -4,4"/>
+<!-- proc~aot_top_get_string -->
+<g id="proc~~aot_top_get_string~~CalledByGraph_node1" class="node">
+<title>proc~aot_top_get_string</title>
+<polygon fill="none" stroke="black" points="242,-24 132,-24 132,0 242,0 242,-24"/>
+<text text-anchor="middle" x="187" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_top_get_string</text>
+</g>
+<!-- interface~aot_top_get_val~4 -->
+<g id="proc~~aot_top_get_string~~CalledByGraph_node2" class="node">
+<title>interface~aot_top_get_val~4</title>
+<g id="a_proc~~aot_top_get_string~~CalledByGraph_node2"><a xlink:href="../interface/aot_top_get_val~4.html" xlink:title="aot_top_get_val">
+<polygon fill="#a7506f" stroke="#a7506f" points="96,-24 0,-24 0,0 96,0 96,-24"/>
+<text text-anchor="middle" x="48" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_get_val</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_top_get_val~4&#45;&gt;proc~aot_top_get_string -->
+<g id="proc~~aot_top_get_string~~CalledByGraph_edge1" class="edge">
+<title>interface~aot_top_get_val~4&#45;&gt;proc~aot_top_get_string</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M96.15,-12C104.38,-12 113.07,-12 121.67,-12"/>
+<polygon fill="#000000" stroke="#000000" points="121.7,-15.5 131.7,-12 121.7,-8.5 121.7,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_top_get_string</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">ErrCode</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="p">)</span>
+<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_State</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="c">!! Handle to the Lua script</span>
+
+<span class="w">    </span><span class="c">!&gt; Value of the Variable in the script</span>
+<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">val</span>
+
+<span class="w">    </span><span class="c">!&gt; Error code to indicate what kind of problem might have occured.</span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ErrCode</span>
+
+<span class="w">    </span><span class="c">!&gt; Some default value, that should be used, if the variable is not set in</span>
+<span class="w">    </span><span class="c">!! the Lua script.</span>
+<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">default</span>
+
+<span class="w">    </span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">not_retrievable</span>
+<span class="w">    </span><span class="kt">character</span><span class="p">,</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cstring</span><span class="p">(:)</span>
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">StrLen</span><span class="p">,</span><span class="w"> </span><span class="n">StrLimit</span>
+
+<span class="w">    </span><span class="n">ErrCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">not_retrievable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">flu_isNoneOrNil</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<span class="k">      </span><span class="n">ErrCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibSet</span><span class="p">(</span><span class="n">ErrCode</span><span class="p">,</span><span class="w"> </span><span class="n">aoterr_NonExistent</span><span class="p">)</span>
+<span class="w">      </span><span class="n">not_retrievable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">flu_isString</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">cstring</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">flu_toLString</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">StrLen</span><span class="p">)</span>
+<span class="w">        </span><span class="n">StrLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">StrLen</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">StrLimit</span>
+<span class="w">          </span><span class="n">val</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cstring</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">      else</span>
+<span class="k">        </span><span class="n">ErrCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibSet</span><span class="p">(</span><span class="n">ErrCode</span><span class="p">,</span><span class="w"> </span><span class="n">aoterr_WrongType</span><span class="p">)</span>
+<span class="w">        </span><span class="n">ErrCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibSet</span><span class="p">(</span><span class="n">ErrCode</span><span class="p">,</span><span class="w"> </span><span class="n">aoterr_Fatal</span><span class="p">)</span>
+<span class="w">        </span><span class="n">not_retrievable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<span class="w">      </span><span class="k">end if</span>
+<span class="k">    end if</span>
+
+<span class="k">    if</span><span class="w"> </span><span class="p">(</span><span class="n">not_retrievable</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">default</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">default</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">        </span><span class="n">ErrCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">ibSet</span><span class="p">(</span><span class="n">ErrCode</span><span class="p">,</span><span class="w"> </span><span class="n">aoterr_Fatal</span><span class="p">)</span>
+<span class="w">      </span><span class="k">end if</span>
+<span class="k">    end if</span>
+<span class="k">    call </span><span class="n">flu_pop</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_top_get_string</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

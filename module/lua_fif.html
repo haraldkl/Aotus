@@ -1,0 +1,3827 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>lua_fif &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>lua_fif
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 5.4% of total for modules and submodules.">241 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/lua_fif.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/lua_fif.f90.html'>lua_fif.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">lua_fif</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#inters-0"
+         aria-expanded="false" aria-controls="inters-0">
+         <h4 class="card-header bg-primary text-white">Interfaces</h4>
+      </a>
+      <div id="inters-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_getglobal">lua_getglobal</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_getfield">lua_getfield</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_gettable">lua_gettable</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_gettop">lua_gettop</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_isnumber">lua_isNumber</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_isstring">lua_isString</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_next">lua_next</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pcallk">lua_pcallk</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushlstring">lua_pushlstring</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_rawgeti">lua_rawgeti</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_tolstring">lua_tolstring</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_tonumberx">lua_tonumberx</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_toboolean">lua_toboolean</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_touserdata">lua_touserdata</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_topointer">lua_topointer</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_type">lua_type</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_getmetatable">lua_getmetatable</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_close">lua_close</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_createtable">lua_createtable</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushinteger">lua_pushinteger</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushboolean">lua_pushboolean</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushnil">lua_pushnil</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushnumber">lua_pushnumber</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushvalue">lua_pushvalue</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_rotate">lua_rotate</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_setfield">lua_setfield</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_setglobal">lua_setglobal</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_settable">lua_settable</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_settop">lua_settop</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushcclosure">lua_pushcclosure</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lua_pushlightuserdata">lua_pushlightuserdata</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_newstate">luaL_newstate</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_loadfilex">luaL_loadfilex</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_loadbufferx">luaL_loadbufferx</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_loadstring">luaL_loadstring</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_newmetatable">luaL_newmetatable</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_ref">luaL_ref</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_openlibs">luaL_openlibs</a>
+            <a class="list-group-item" href="../module/lua_fif.html#interface-lual_setmetatable">luaL_setmetatable</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This module provides a direct translation of some
+Lua 5.3.2
+C-Interfaces to Fortran 2003 interfaces using the
+ISO_C_BINDING facilities.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='lua_parameters.html'>lua_parameters</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~lua_fif~~UsesGraph Pages: 1 -->
+<svg id="modulelua_fifUsesGraph" width="315pt" height="52pt"
+ viewBox="0.00 0.00 315.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~lua_fif~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
+<title>module~~lua_fif~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-48 311,-48 311,4 -4,4"/>
+<!-- module~lua_fif -->
+<g id="module~~lua_fif~~UsesGraph_node1" class="node">
+<title>module~lua_fif</title>
+<polygon fill="none" stroke="black" points="307,-44 253,-44 253,-20 307,-20 307,-44"/>
+<text text-anchor="middle" x="280" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">lua_fif</text>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~lua_fif~~UsesGraph_node2" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~lua_fif~~UsesGraph_node2"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-44 0,-44 0,-20 84,-20 84,-44"/>
+<text text-anchor="middle" x="42" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~lua_fif&#45;&gt;iso_c_binding -->
+<g id="module~~lua_fif~~UsesGraph_edge1" class="edge">
+<title>module~lua_fif&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.76,-32.52C241.72,-32.71 228.73,-32.91 217,-33 173.89,-33.35 163.11,-33.28 120,-33 111.73,-32.95 102.96,-32.86 94.42,-32.76"/>
+<polygon fill="#000000" stroke="#000000" points="94.2,-29.26 84.16,-32.63 94.11,-36.26 94.2,-29.26"/>
+</g>
+<!-- module~lua_parameters -->
+<g id="module~~lua_fif~~UsesGraph_node3" class="node">
+<title>module~lua_parameters</title>
+<g id="a_module~~lua_fif~~UsesGraph_node3"><a xlink:href="../module/lua_parameters.html" xlink:title="lua_parameters">
+<polygon fill="#337ab7" stroke="#337ab7" points="217,-24 120,-24 120,0 217,0 217,-24"/>
+<text text-anchor="middle" x="168.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_parameters</text>
+</a>
+</g>
+</g>
+<!-- module~lua_fif&#45;&gt;module~lua_parameters -->
+<g id="module~~lua_fif~~UsesGraph_edge2" class="edge">
+<title>module~lua_fif&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M252.77,-27.21C245.05,-25.8 236.28,-24.2 227.39,-22.57"/>
+<polygon fill="#000000" stroke="#000000" points="227.83,-19.1 217.36,-20.74 226.57,-25.98 227.83,-19.1"/>
+</g>
+<!-- module~lua_parameters&#45;&gt;iso_c_binding -->
+<g id="module~~lua_fif~~UsesGraph_edge3" class="edge">
+<title>module~lua_parameters&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M119.72,-19.68C111.43,-21.01 102.78,-22.4 94.4,-23.74"/>
+<polygon fill="#000000" stroke="#000000" points="93.68,-20.31 84.36,-25.36 94.79,-27.23 93.68,-20.31"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~lua_fif~~UsedByGraph Pages: 1 -->
+<svg id="modulelua_fifUsedByGraph" width="641pt" height="244pt"
+ viewBox="0.00 0.00 641.00 243.53" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~lua_fif~~UsedByGraph" class="graph" transform="scale(0.38 0.38) rotate(0) translate(4 637.68)">
+<title>module~~lua_fif~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-637.68 1685,-637.68 1685,4 -4,4"/>
+<!-- module~lua_fif -->
+<g id="module~~lua_fif~~UsedByGraph_node1" class="node">
+<title>module~lua_fif</title>
+<polygon fill="none" stroke="black" points="54,-267.36 0,-267.36 0,-243.36 54,-243.36 54,-267.36"/>
+<text text-anchor="middle" x="27" y="-252.96" font-family="Helvetica,sans-Serif" font-size="10.50">lua_fif</text>
+</g>
+<!-- module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_node2" class="node">
+<title>module~flu_binding</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node2"><a xlink:href="../module/flu_binding.html" xlink:title="flu_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="161,-267.36 90,-267.36 90,-243.36 161,-243.36 161,-267.36"/>
+<text text-anchor="middle" x="125.5" y="-252.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_fif -->
+<g id="module~~lua_fif~~UsedByGraph_edge1" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_fif</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M89.93,-255.36C81.64,-255.36 72.77,-255.36 64.4,-255.36"/>
+<polygon fill="#000000" stroke="#000000" points="64.15,-251.86 54.15,-255.36 64.15,-258.86 64.15,-251.86"/>
+</g>
+<!-- module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_node3" class="node">
+<title>module~aot_err_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node3"><a xlink:href="../module/aot_err_module.html" xlink:title="aot_err_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="294,-287.36 197,-287.36 197,-263.36 294,-263.36 294,-287.36"/>
+<text text-anchor="middle" x="245.5" y="-272.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_err_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge2" class="edge">
+<title>module~aot_err_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M196.85,-267.28C188.39,-265.85 179.61,-264.36 171.23,-262.94"/>
+<polygon fill="#000000" stroke="#000000" points="171.71,-259.47 161.27,-261.25 170.54,-266.37 171.71,-259.47"/>
+</g>
+<!-- module~aot_extdouble_fun_module -->
+<g id="module~~lua_fif~~UsedByGraph_node4" class="node">
+<title>module~aot_extdouble_fun_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node4"><a xlink:href="../module/aot_extdouble_fun_module.html" xlink:title="aot_extdouble_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1405,-597.36 1249,-597.36 1249,-573.36 1405,-573.36 1405,-597.36"/>
+<text text-anchor="middle" x="1327" y="-582.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge3" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1282.17,-597.38C1247.93,-606.35 1199.01,-618.24 1155.5,-625.36"/>
+</g>
+<!-- module~aot_extdouble_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_node6" class="node">
+<title>module~aot_extdouble_top_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node6"><a xlink:href="../module/aot_extdouble_top_module.html" xlink:title="aot_extdouble_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="487,-329.36 331,-329.36 331,-305.36 487,-305.36 487,-329.36"/>
+<text text-anchor="middle" x="409" y="-314.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge28" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1248.86,-586.05C1177.64,-586.62 1068.94,-587.36 974.5,-587.36 974.5,-587.36 974.5,-587.36 783,-587.36 657.76,-587.36 621.63,-554.79 524,-476.36 475.29,-437.22 437.71,-372.22 420.43,-338.74"/>
+<polygon fill="#000000" stroke="#000000" points="423.36,-336.77 415.72,-329.43 417.11,-339.93 423.36,-336.77"/>
+</g>
+<!-- module~aot_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_node15" class="node">
+<title>module~aot_table_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node15"><a xlink:href="../module/aot_table_module.html" xlink:title="aot_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1208.5,-487.36 1100.5,-487.36 1100.5,-463.36 1208.5,-463.36 1208.5,-487.36"/>
+<text text-anchor="middle" x="1154.5" y="-472.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge44" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1299.73,-573.3C1284.3,-565.87 1264.62,-555.8 1248,-545.36 1222.86,-529.56 1196,-508.75 1177.74,-493.93"/>
+<polygon fill="#000000" stroke="#000000" points="1179.94,-491.21 1169.99,-487.58 1175.51,-496.63 1179.94,-491.21"/>
+</g>
+<!-- module~aot_extdouble_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_node5" class="node">
+<title>module~aot_extdouble_table_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node5"><a xlink:href="../module/aot_extdouble_table_module.html" xlink:title="aot_extdouble_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1056.5,-487.36 890.5,-487.36 890.5,-463.36 1056.5,-463.36 1056.5,-487.36"/>
+<text text-anchor="middle" x="973.5" y="-472.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge4" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M964.18,-487.49C940.72,-520.24 870.17,-609.11 785,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M783,-625.36C704.85,-640.26 683.35,-631.12 604,-625.36"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge20" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M928.22,-487.37C890.49,-496.76 834.65,-508.66 785,-511.36"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge30" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M890.29,-478.37C778.75,-481.18 586.23,-481.1 524,-450.36 474.55,-425.92 437.95,-369.35 420.81,-338.44"/>
+<polygon fill="#000000" stroke="#000000" points="423.76,-336.53 415.94,-329.39 417.59,-339.85 423.76,-336.53"/>
+</g>
+<!-- module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_node16" class="node">
+<title>module~aot_table_ops_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node16"><a xlink:href="../module/aot_table_ops_module.html" xlink:title="aot_table_ops_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="850,-249.36 718,-249.36 718,-225.36 850,-225.36 850,-249.36"/>
+<text text-anchor="middle" x="784" y="-234.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge49" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M898.43,-463.23C893.94,-460.76 889.73,-457.83 886,-454.36 847.44,-418.42 872.14,-389.19 850,-341.36 835.82,-310.72 814.27,-278.14 799.92,-257.78"/>
+<polygon fill="#000000" stroke="#000000" points="802.73,-255.69 794.07,-249.59 797.04,-259.76 802.73,-255.69"/>
+</g>
+<!-- module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_node17" class="node">
+<title>module~aot_top_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node17"><a xlink:href="../module/aot_top_module.html" xlink:title="aot_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="652,-249.36 554,-249.36 554,-225.36 652,-225.36 652,-249.36"/>
+<text text-anchor="middle" x="603" y="-234.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge56" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M904.71,-463.32C898.16,-460.86 891.8,-457.91 886,-454.36 865.04,-441.5 867.29,-429.84 850,-412.36 822.98,-385.03 818.98,-373.29 785,-355.36"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge5" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M348.07,-305.25C341.73,-302.8 335.58,-299.87 330,-296.36 309.2,-283.24 313.99,-268.67 294,-254.36 275.51,-241.12 269.17,-233.59 246.5,-235.36"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge21" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M361.72,-305.32C343.31,-300.53 321.95,-294.98 302.66,-289.96"/>
+<polygon fill="#000000" stroke="#000000" points="303.35,-286.52 292.79,-287.39 301.58,-293.3 303.35,-286.52"/>
+</g>
+<!-- module~aot_extdouble_vector_module -->
+<g id="module~~lua_fif~~UsedByGraph_node7" class="node">
+<title>module~aot_extdouble_vector_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node7"><a xlink:href="../module/aot_extdouble_vector_module.html" xlink:title="aot_extdouble_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1059.5,-133.36 887.5,-133.36 887.5,-109.36 1059.5,-109.36 1059.5,-133.36"/>
+<text text-anchor="middle" x="973.5" y="-118.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge6" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M887.18,-131.29C874.71,-132.69 862.03,-134.08 850,-135.36 740.76,-146.93 711.81,-138.25 604,-159.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M602,-159.36C519.23,-180.11 491.93,-135.48 410,-159.36"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge31" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M602,-159.36C559.86,-167.61 551.04,-183 524,-216.36 499.44,-246.64 517.68,-271.08 488,-296.36 486.44,-297.69 484.8,-298.93 483.1,-300.1"/>
+<polygon fill="#000000" stroke="#000000" points="481.03,-297.26 474.15,-305.31 484.55,-303.31 481.03,-297.26"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge50" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M955.93,-133.61C923.13,-157.86 852.83,-209.79 850,-211.36 843.5,-214.97 836.39,-218.34 829.34,-221.38"/>
+<polygon fill="#000000" stroke="#000000" points="827.73,-218.25 819.82,-225.3 830.4,-224.72 827.73,-218.25"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge57" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M922.01,-133.45C909.91,-137.18 897.25,-141.8 886,-147.36 868.3,-156.1 867.42,-164.07 850,-173.36 822.82,-187.84 814.97,-190.29 785,-197.36"/>
+</g>
+<!-- module~aot_fun_module -->
+<g id="module~~lua_fif~~UsedByGraph_node8" class="node">
+<title>module~aot_fun_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node8"><a xlink:href="../module/aot_fun_module.html" xlink:title="aot_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1540,-543.36 1442,-543.36 1442,-519.36 1540,-519.36 1540,-543.36"/>
+<text text-anchor="middle" x="1491" y="-528.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge7" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1479.94,-543.49C1465.38,-560.23 1436.8,-590.17 1406,-606.36 1374.42,-622.96 1363.33,-620.39 1328,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1326,-625.36C1250.96,-635.9 1230.28,-613.12 1155.5,-625.36"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge26" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1453.64,-543.47C1430.09,-551.33 1399.21,-561.62 1373.96,-570.04"/>
+<polygon fill="#000000" stroke="#000000" points="1372.61,-566.79 1364.23,-573.28 1374.83,-573.44 1372.61,-566.79"/>
+</g>
+<!-- module~aot_quadruple_fun_module -->
+<g id="module~~lua_fif~~UsedByGraph_node10" class="node">
+<title>module~aot_quadruple_fun_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node10"><a xlink:href="../module/aot_quadruple_fun_module.html" xlink:title="aot_quadruple_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1406,-503.36 1248,-503.36 1248,-479.36 1406,-479.36 1406,-503.36"/>
+<text text-anchor="middle" x="1327" y="-488.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge35" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1441.83,-519.46C1424.52,-515.19 1404.8,-510.32 1386.69,-505.85"/>
+<polygon fill="#000000" stroke="#000000" points="1387.37,-502.41 1376.82,-503.41 1385.69,-509.21 1387.37,-502.41"/>
+</g>
+<!-- module~aot_references_module -->
+<g id="module~~lua_fif~~UsedByGraph_node14" class="node">
+<title>module~aot_references_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node14"><a xlink:href="../module/aot_references_module.html" xlink:title="aot_references_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1042,-289.36 905,-289.36 905,-265.36 1042,-265.36 1042,-289.36"/>
+<text text-anchor="middle" x="973.5" y="-274.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_references_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge43" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_references_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-277.36C1120.32,-275.53 1083.63,-275.23 1052.15,-275.5"/>
+<polygon fill="#000000" stroke="#000000" points="1052.09,-272 1042.12,-275.6 1052.16,-279 1052.09,-272"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge45" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1441.59,-531.82C1392.27,-531.3 1313.87,-527.74 1248,-512.36 1228.01,-507.69 1206.67,-499.39 1189.53,-491.84"/>
+<polygon fill="#000000" stroke="#000000" points="1190.52,-488.44 1179.96,-487.51 1187.63,-494.82 1190.52,-488.44"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge58" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1478.14,-519.34C1428.52,-469.55 1236.32,-281.81 1155.5,-277.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-277.36C1063.54,-246.7 839.06,-184.61 785,-197.36"/>
+</g>
+<!-- module~aot_path_module -->
+<g id="module~~lua_fif~~UsedByGraph_node9" class="node">
+<title>module~aot_path_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node9"><a xlink:href="../module/aot_path_module.html" xlink:title="aot_path_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1681,-543.36 1576,-543.36 1576,-519.36 1681,-519.36 1681,-543.36"/>
+<text text-anchor="middle" x="1628.5" y="-528.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge8" class="edge">
+<title>module~aot_path_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1599.73,-543.49C1547.67,-565.44 1431.35,-610.84 1328,-625.36"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_fun_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge34" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1575.89,-531.36C1567.59,-531.36 1558.95,-531.36 1550.51,-531.36"/>
+<polygon fill="#000000" stroke="#000000" points="1550.35,-527.86 1540.35,-531.36 1550.35,-534.86 1550.35,-527.86"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge46" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1490,-451.36C1399.54,-386.02 1257.04,-431.97 1191.12,-459.19"/>
+<polygon fill="#000000" stroke="#000000" points="1189.44,-456.1 1181.59,-463.22 1192.17,-462.55 1189.44,-456.1"/>
+</g>
+<!-- module~aotus_module -->
+<g id="module~~lua_fif~~UsedByGraph_node19" class="node">
+<title>module~aotus_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node19"><a xlink:href="../module/aotus_module.html" xlink:title="aotus_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1371,-173.36 1283,-173.36 1283,-149.36 1371,-149.36 1371,-173.36"/>
+<text text-anchor="middle" x="1327" y="-158.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aotus_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge66" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aotus_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1604.16,-519.28C1576.49,-504.59 1529.43,-478.39 1492,-451.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1490,-451.36C1415.81,-397.78 1452.78,-342.01 1406,-263.36 1387.95,-233.01 1362.38,-201.17 1345.5,-181.3"/>
+<polygon fill="#000000" stroke="#000000" points="1348.02,-178.86 1338.85,-173.56 1342.71,-183.43 1348.02,-178.86"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge9" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1312.3,-503.39C1275.3,-535.71 1174.82,-622.19 1155.5,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-625.36C1074.99,-638.2 1052.53,-609.83 974.5,-625.36"/>
+</g>
+<!-- module~aot_quadruple_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_node12" class="node">
+<title>module~aot_quadruple_top_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node12"><a xlink:href="../module/aot_quadruple_top_module.html" xlink:title="aot_quadruple_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="488,-287.36 330,-287.36 330,-263.36 488,-263.36 488,-287.36"/>
+<text text-anchor="middle" x="409" y="-272.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge37" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1290.18,-479.3C1267.79,-471.87 1238.3,-462.28 1212,-454.36 1145.3,-434.27 1128.57,-429.27 1061,-412.36 967.8,-389.03 944.23,-384.08 850,-365.36 741.14,-343.73 712.76,-344.51 604,-322.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M602,-322.36C557.88,-311.16 507.93,-298.95 470.04,-289.78"/>
+<polygon fill="#000000" stroke="#000000" points="470.73,-286.34 460.19,-287.4 469.08,-293.15 470.73,-286.34"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge47" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1247.74,-484.01C1238.09,-483.11 1228.33,-482.19 1218.94,-481.31"/>
+<polygon fill="#000000" stroke="#000000" points="1219.22,-477.82 1208.93,-480.37 1218.56,-484.79 1219.22,-477.82"/>
+</g>
+<!-- module~aot_quadruple_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_node11" class="node">
+<title>module~aot_quadruple_table_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node11"><a xlink:href="../module/aot_quadruple_table_module.html" xlink:title="aot_quadruple_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1057.5,-445.36 889.5,-445.36 889.5,-421.36 1057.5,-421.36 1057.5,-445.36"/>
+<text text-anchor="middle" x="973.5" y="-430.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge10" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M900.74,-445.37C895.48,-447.84 890.48,-450.81 886,-454.36 858.26,-476.32 876.04,-501.4 850,-525.36 763.15,-605.27 721.39,-613.17 604,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M602,-625.36C372.6,-644.24 186.24,-357.27 138.42,-276.31"/>
+<polygon fill="#000000" stroke="#000000" points="141.34,-274.37 133.29,-267.49 135.3,-277.89 141.34,-274.37"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge22" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M913.19,-445.45C903.96,-447.99 894.62,-450.95 886,-454.36 838.06,-473.28 836.31,-506.44 785,-511.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M783,-511.36C667.37,-522.44 632.03,-519.04 524,-476.36 425.59,-437.47 415.35,-400.89 330,-338.36 309.79,-323.55 287.12,-306.41 270.5,-293.74"/>
+<polygon fill="#000000" stroke="#000000" points="272.48,-290.85 262.41,-287.57 268.23,-296.42 272.48,-290.85"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge39" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M914.71,-421.33C862.68,-409.91 784.41,-391.27 718,-369.36 665.96,-352.18 657.61,-333.73 604,-322.36"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge51" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M960.77,-421.1C929.2,-388.1 842.23,-297.18 803.75,-256.95"/>
+<polygon fill="#000000" stroke="#000000" points="806.17,-254.42 796.72,-249.61 801.11,-259.26 806.17,-254.42"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge59" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M920.96,-421.26C909.14,-417.57 896.87,-412.97 886,-407.36 867.99,-398.06 867.72,-389.2 850,-379.36 823.08,-364.39 812.24,-369.73 785,-355.36"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge11" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M371.02,-263.31C331.21,-250.87 270.4,-233.5 246.5,-235.36"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge23" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M329.62,-275.36C321.14,-275.36 312.63,-275.36 304.46,-275.36"/>
+<polygon fill="#000000" stroke="#000000" points="304.32,-271.86 294.32,-275.36 304.32,-278.86 304.32,-271.86"/>
+</g>
+<!-- module~aot_quadruple_vector_module -->
+<g id="module~~lua_fif~~UsedByGraph_node13" class="node">
+<title>module~aot_quadruple_vector_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node13"><a xlink:href="../module/aot_quadruple_vector_module.html" xlink:title="aot_quadruple_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1061,-91.36 886,-91.36 886,-67.36 1061,-67.36 1061,-91.36"/>
+<text text-anchor="middle" x="973.5" y="-76.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge12" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M885.9,-83.53C810.61,-88.51 698.99,-99.14 604,-121.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M602,-121.36C519.07,-147.6 493.52,-135.02 410,-159.36"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge40" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M602,-121.36C566.68,-129.62 552.09,-122.41 524,-145.36 498.12,-166.49 509.31,-185.62 488,-211.36 473.3,-229.12 453.09,-245.53 436.93,-257.29"/>
+<polygon fill="#000000" stroke="#000000" points="434.56,-254.68 428.43,-263.32 438.61,-260.39 434.56,-254.68"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge52" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M898.45,-91.51C893.95,-93.97 889.74,-96.89 886,-100.36 847.97,-135.62 885.43,-173.48 850,-211.36 846.83,-214.74 843.16,-217.7 839.22,-220.27"/>
+<polygon fill="#000000" stroke="#000000" points="837.22,-217.38 830.21,-225.33 840.64,-223.49 837.22,-217.38"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge60" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M906.39,-91.47C899.3,-93.91 892.36,-96.84 886,-100.36 858.76,-115.4 815.29,-190.21 785,-197.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M783,-197.36C742.8,-206.83 697.39,-216.97 662.37,-224.67"/>
+<polygon fill="#000000" stroke="#000000" points="661.33,-221.32 652.31,-226.88 662.83,-228.16 661.33,-221.32"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge13" class="edge">
+<title>module~aot_references_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M904.79,-275.93C816.9,-273.74 658.82,-268.69 524,-258.36 507.95,-257.13 504.03,-255.88 488,-254.36 380.82,-244.19 353.84,-227 246.5,-235.36"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge53" class="edge">
+<title>module~aot_references_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916.24,-265.35C895.85,-261 872.62,-256.05 851.43,-251.53"/>
+<polygon fill="#000000" stroke="#000000" points="852.05,-248.08 841.54,-249.42 850.59,-254.93 852.05,-248.08"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge14" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1145.7,-487.46C1123.69,-520.16 1057.21,-608.9 974.5,-625.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M972.5,-625.36C890.77,-641.62 866.86,-609.75 785,-625.36"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge24" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1107.67,-487.37C1092.87,-490.81 1076.33,-494.21 1061,-496.36 939.33,-513.35 907.67,-504.7 785,-511.36"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_extdouble_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge27" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_extdouble_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1100.28,-475.36C1089.68,-475.36 1078.26,-475.36 1066.78,-475.36"/>
+<polygon fill="#000000" stroke="#000000" points="1066.7,-471.86 1056.7,-475.36 1066.7,-478.86 1066.7,-471.86"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_quadruple_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge36" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_quadruple_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.21,-463.32C1081.42,-458.44 1057.25,-452.77 1035.57,-447.68"/>
+<polygon fill="#000000" stroke="#000000" points="1036.34,-444.27 1025.8,-445.39 1034.74,-451.08 1036.34,-444.27"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge54" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1144.4,-463.35C1129.01,-443.69 1096.07,-404.32 1061,-379.36 991.18,-329.65 961.68,-338.57 886,-298.36 860.43,-284.77 832.3,-267.59 812.24,-254.93"/>
+<polygon fill="#000000" stroke="#000000" points="813.95,-251.86 803.63,-249.45 810.19,-257.77 813.95,-251.86"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge61" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1139.49,-463.17C1122.22,-448.8 1091.41,-425.24 1061,-412.36 1057.4,-410.83 788.46,-357.18 785,-355.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M783,-355.36C725,-324.69 662.02,-280.32 628.41,-255.65"/>
+<polygon fill="#000000" stroke="#000000" points="630.25,-252.66 620.12,-249.53 626.09,-258.29 630.25,-252.66"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge15" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M737.33,-225.31C644.8,-201.26 441.27,-150.35 410,-159.36"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge62" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M717.87,-237.36C699.74,-237.36 680.16,-237.36 662.44,-237.36"/>
+<polygon fill="#000000" stroke="#000000" points="662.24,-233.86 652.24,-237.36 662.24,-240.86 662.24,-233.86"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge16" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M557.95,-225.28C510.55,-212.81 438.19,-195.41 410,-197.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M408,-197.36C334.44,-202.42 320.02,-229.63 246.5,-235.36"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge25" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M408,-197.36C394.14,-198.31 321.16,-235.82 278.2,-258.47"/>
+<polygon fill="#000000" stroke="#000000" points="276.46,-255.42 269.26,-263.19 279.73,-261.61 276.46,-255.42"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge32" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M582.02,-249.38C559.73,-262.39 522.28,-283.05 488,-296.36 482.56,-298.47 476.82,-300.45 471.03,-302.29"/>
+<polygon fill="#000000" stroke="#000000" points="469.83,-298.99 461.28,-305.24 471.86,-305.69 469.83,-298.99"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge41" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M553.55,-246.94C531.48,-251.31 504.93,-256.57 480.7,-261.36"/>
+<polygon fill="#000000" stroke="#000000" points="479.96,-257.94 470.83,-263.32 481.32,-264.81 479.96,-257.94"/>
+</g>
+<!-- module~aot_vector_module -->
+<g id="module~~lua_fif~~UsedByGraph_node18" class="node">
+<title>module~aot_vector_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node18"><a xlink:href="../module/aot_vector_module.html" xlink:title="aot_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1212,-51.36 1097,-51.36 1097,-27.36 1212,-27.36 1212,-51.36"/>
+<text text-anchor="middle" x="1154.5" y="-36.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge17" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1096.88,-36.11C1061.58,-34.88 1015.26,-34.74 974.5,-39.36"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge33" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1138.73,-51.45C1121.21,-65.22 1090.63,-87.46 1061,-100.36 1056.04,-102.51 1050.82,-104.48 1045.5,-106.25"/>
+<polygon fill="#000000" stroke="#000000" points="1044.37,-102.94 1035.86,-109.26 1046.45,-109.62 1044.37,-102.94"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge42" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1099.79,-51.36C1080.5,-55.67 1058.55,-60.57 1038.47,-65.06"/>
+<polygon fill="#000000" stroke="#000000" points="1037.47,-61.7 1028.48,-67.29 1039,-68.53 1037.47,-61.7"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge55" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1148.94,-51.42C1138.12,-78.3 1108.22,-143.24 1061,-175.36 1001.31,-215.95 919.17,-230.37 860.04,-235.29"/>
+<polygon fill="#000000" stroke="#000000" points="859.72,-231.8 850.02,-236.05 860.25,-238.78 859.72,-231.8"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge63" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1146.31,-51.43C1132.63,-73.28 1100.66,-119.24 1061,-142.36 1026.99,-162.17 1012.57,-151.37 974.5,-161.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M972.5,-161.36C934.83,-171.23 924.26,-168.1 886,-175.36 840.86,-183.92 829.72,-186.81 785,-197.36"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge18" class="edge">
+<title>module~aotus_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1320.83,-149.1C1307.73,-119.86 1270.07,-46.33 1212,-18.36 1116.53,27.63 1079.79,-27.43 974.5,-39.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M972.5,-39.36C771.88,-59.31 717.24,-49.86 524,-107.36 470.62,-123.24 463.47,-143.78 410,-159.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M408,-159.36C373.01,-168.9 361.47,-165.33 330,-183.36 311.17,-194.14 312.38,-204.8 294,-216.36 274.75,-228.46 269.18,-233.7 246.5,-235.36"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M244.5,-235.36C220.08,-237.14 193.14,-241.52 171.17,-245.72"/>
+<polygon fill="#000000" stroke="#000000" points="170.28,-242.33 161.14,-247.7 171.63,-249.2 170.28,-242.33"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge48" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1319.32,-173.66C1293.48,-221.25 1199.95,-393.49 1167.05,-454.09"/>
+<polygon fill="#000000" stroke="#000000" points="1163.83,-452.67 1162.14,-463.13 1169.99,-456.01 1163.83,-452.67"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge64" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1282.91,-154.45C1215.72,-145.2 1082.52,-133.04 974.5,-161.36"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_vector_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge65" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1309.03,-149.21C1278.9,-127.65 1215.94,-82.6 1180.72,-57.4"/>
+<polygon fill="#000000" stroke="#000000" points="1182.57,-54.42 1172.4,-51.45 1178.5,-60.12 1182.57,-54.42"/>
+</g>
+<!-- program~test -->
+<g id="module~~lua_fif~~UsedByGraph_node20" class="node">
+<title>program~test</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node20"><a xlink:href="../program/test.html" xlink:title="test">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="272.5,-207.36 218.5,-207.36 218.5,-183.36 272.5,-183.36 272.5,-207.36"/>
+<text text-anchor="middle" x="245.5" y="-192.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test</text>
+</a>
+</g>
+</g>
+<!-- program~test&#45;&gt;module~flu_binding -->
+<g id="module~~lua_fif~~UsedByGraph_edge19" class="edge">
+<title>program~test&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M220.62,-207.5C203.03,-216.44 178.88,-228.72 159.45,-238.6"/>
+<polygon fill="#000000" stroke="#000000" points="157.67,-235.58 150.34,-243.23 160.84,-241.82 157.67,-235.58"/>
+</g>
+<!-- module~aot_extdouble_out_module -->
+<g id="module~~lua_fif~~UsedByGraph_node21" class="node">
+<title>module~aot_extdouble_out_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node21"><a xlink:href="../module/aot_extdouble_out_module.html" xlink:title="aot_extdouble_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="681,-441.36 525,-441.36 525,-417.36 681,-417.36 681,-441.36"/>
+<text text-anchor="middle" x="603" y="-426.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge29" class="edge">
+<title>module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M563,-417.22C550.24,-412.63 536.22,-406.92 524,-400.36 489.57,-381.88 453.76,-354.18 431.67,-335.94"/>
+<polygon fill="#000000" stroke="#000000" points="433.83,-333.18 423.91,-329.45 429.34,-338.55 433.83,-333.18"/>
+</g>
+<!-- module~aot_quadruple_out_module -->
+<g id="module~~lua_fif~~UsedByGraph_node22" class="node">
+<title>module~aot_quadruple_out_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node22"><a xlink:href="../module/aot_quadruple_out_module.html" xlink:title="aot_quadruple_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="682,-391.36 524,-391.36 524,-367.36 682,-367.36 682,-391.36"/>
+<text text-anchor="middle" x="603" y="-376.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge38" class="edge">
+<title>module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M574.99,-367.26C559.31,-359.58 539.62,-348.76 524,-336.36 505.27,-321.49 508.38,-308.87 488,-296.36 485.04,-294.54 481.93,-292.88 478.71,-291.36"/>
+<polygon fill="#000000" stroke="#000000" points="480.01,-288.11 469.44,-287.44 477.29,-294.56 480.01,-288.11"/>
+</g>
+<!-- module~aot_out_module -->
+<g id="module~~lua_fif~~UsedByGraph_node23" class="node">
+<title>module~aot_out_module</title>
+<g id="a_module~~lua_fif~~UsedByGraph_node23"><a xlink:href="../module/aot_out_module.html" xlink:title="aot_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="833,-445.36 735,-445.36 735,-421.36 833,-421.36 833,-445.36"/>
+<text text-anchor="middle" x="784" y="-430.96" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_extdouble_out_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge67" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_extdouble_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M734.56,-432.27C721.18,-431.97 706.25,-431.64 691.39,-431.31"/>
+<polygon fill="#000000" stroke="#000000" points="691.21,-427.8 681.13,-431.08 691.05,-434.8 691.21,-427.8"/>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_quadruple_out_module -->
+<g id="module~~lua_fif~~UsedByGraph_edge68" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_quadruple_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M742.83,-421.24C716.46,-413.28 681.78,-402.82 653.68,-394.34"/>
+<polygon fill="#000000" stroke="#000000" points="654.62,-390.97 644.04,-391.43 652.6,-397.67 654.62,-390.97"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmodulelua_fifUsedByGraph = svgPanZoom('#modulelua_fifUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+        <section>
+          <h2>Interfaces</h2>
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_getglobal"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_getglobal(L, k) bind(c, name="lua_getglobal")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~15"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_getfield"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_getfield(L, index, k) bind(c, name="lua_getfield")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~16"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~2"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_gettable"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_gettable(L, index) bind(c, name="lua_gettable")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~17"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~2"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_gettop"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_gettop(L) bind(c, name="lua_gettop")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~18"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_isnumber"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_isNumber(L, index) result(lua_isnumber) bind(c, name="lua_isnumber")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~19"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~3"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_isstring"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_isString(L, index) bind(c, name="lua_isstring")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~20"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~4"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_next"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_next(L, index) bind(c, name="lua_next")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~21"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~5"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pcallk"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_pcallk(L, nargs, nresults, errfunc, ctx, k) bind(c, name="lua_pcallk")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~22"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nargs"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>nargs</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nresults"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>nresults</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errfunc"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>errfunc</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ctx"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>ctx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~3"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushlstring"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_pushlstring(L, s, len) bind(c, name="lua_pushlstring")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~27"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-s"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>s</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-len"></span>
+              integer(kind=c_size_t),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>len</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(c_ptr)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_rawgeti"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_rawgeti(L, index, n) bind(c, name="lua_rawgeti")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~29"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~7"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~4"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_tolstring"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_tolstring(L, index, len) bind(c, name="lua_tolstring")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~35"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~11"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-len~2"></span>
+              integer(kind=c_size_t)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>len</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(c_ptr)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_tonumberx"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_tonumberx(L, index, isnum) bind(c, name="lua_tonumberx")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~36"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~12"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-isnum"></span>
+              integer(kind=c_int)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>isnum</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=lua_num)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_toboolean"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_toboolean(L, index) bind(c, name="lua_toboolean")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~37"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~13"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_touserdata"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_touserdata(L, index) bind(c, name="lua_touserdata")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~38"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~14"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>type(c_ptr)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_topointer"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_topointer(L, index) bind(c, name="lua_topointer")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~39"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~15"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_intptr_t)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_type"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_type(L, index) bind(c, name="lua_type")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~40"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~16"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_getmetatable"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function lua_getmetatable(L, index) bind(c, name="lua_getmetatable")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~43"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~17"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_close"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_close(L) bind(c, name="lua_close")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~13"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_createtable"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_createtable(L, narr, nrec) bind(c, name="lua_createtable")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~14"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-narr"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>narr</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nrec"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>nrec</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushinteger"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushinteger(L, n) bind(c, name="lua_pushinteger")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~23"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n"></span>
+              integer(kind=lua_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushboolean"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushboolean(L, n) bind(c, name="lua_pushboolean")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~24"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~2"></span>
+              integer(kind=lua_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushnil"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushnil(L) bind(c, name="lua_pushnil")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~25"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushnumber"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushnumber(L, n) bind(c, name="lua_pushnumber")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~26"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~3"></span>
+              real(kind=c_double),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushvalue"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushvalue(L, index) bind(c, name="lua_pushvalue")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~28"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~6"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_rotate"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_rotate(L, idx, n) bind(c, name="lua_rotate")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~30"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-idx"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>idx</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~5"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_setfield"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_setfield(L, index, k) bind(c, name="lua_setfield")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~31"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~8"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~4"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_setglobal"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_setglobal(L, k) bind(c, name="lua_setglobal")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~32"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~5"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_settable"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_settable(L, index) bind(c, name="lua_settable")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~33"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~9"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_settop"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_settop(L, index) bind(c, name="lua_settop")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~34"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-index~10"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>index</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushcclosure"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushcclosure(L, c_fn, n) bind(c, name="lua_pushcclosure")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~41"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c_fn"></span>
+              type(c_funptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>c_fn</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~6"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lua_pushlightuserdata"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine lua_pushlightuserdata(L, ptr) bind(c, name="lua_pushlightuserdata")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~42"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ptr"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>ptr</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_newstate"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function luaL_newstate() bind(c, name="luaL_newstate")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+    <h4>
+    Return Value
+    <small>type(c_ptr)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_loadfilex"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function luaL_loadfilex(L, filename, mode) bind(c, name="luaL_loadfilex")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~45"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-filename"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>filename</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mode"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>mode</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_loadbufferx"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function luaL_loadbufferx(L, buff, sz, name, mode) bind(c, name="luaL_loadbufferx")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~46"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-buff"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>buff</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sz"></span>
+              integer(kind=c_size_t),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>sz</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>name</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mode~2"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>mode</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_loadstring"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function luaL_loadstring(L, string) bind(c, name="luaL_loadstring")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~47"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-string"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>string</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_newmetatable"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function luaL_newmetatable(L, tname) bind(c, name="luaL_newmetatable")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~49"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tname~2"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>tname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_ref"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  function luaL_ref(L, t) bind(c, name="luaL_ref")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~50"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t"></span>
+              integer(kind=c_int),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>t</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=c_int)</small>
+    </h4>
+    
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_openlibs"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine luaL_openlibs(L) bind(c, name="luaL_openlibs")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~44"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-lual_setmetatable"></span>
+      <h3>        interface
+      </h3>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+              <h3>
+    public  subroutine luaL_setmetatable(L, tname) bind(c, name="luaL_setmetatable")  
+
+    </h3>
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~48"></span>
+              type(c_ptr),
+            </td>
+<td></td>
+              <td></td>            <td>
+              value
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tname"></span>
+              character(kind=c_char, len=1),
+            </td>
+<td></td>
+              <td></td>            <td>
+              dimension(*)
+            </td>
+            <td>::</td>
+            <td><strong>tname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+        </li>
+    </ul>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

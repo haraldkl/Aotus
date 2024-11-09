@@ -1,0 +1,1529 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_path_module.f90 &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_path_module.f90
+      <small>Source File</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 6.4% of total for source files.">290 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_path_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+            <li class="breadcrumb-item active" aria-current="page">aot_path_module.f90</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#mods-0"
+         aria-expanded="false" aria-controls="mods-0">
+         <h4 class="card-header bg-primary text-white">Modules</h4>
+      </a>
+      <div id="mods-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/aot_path_module.html">aot_path_module</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../sourcefile/aot_path_module.f90.html#src">aot_path_module.f90</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">This file depends on</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: sourcefile~~aot_path_module.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefileaot_path_modulef90EfferentGraph" width="641pt" height="364pt"
+ viewBox="0.00 0.00 641.00 363.84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph" class="graph" transform="scale(0.3 0.3) rotate(0) translate(4 1201.61)">
+<title>sourcefile~~aot_path_module.f90~~EfferentGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1201.61 2120,-1201.61 2120,4 -4,4"/>
+<!-- sourcefile~aot_path_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~aot_path_module.f90</title>
+<polygon fill="none" stroke="black" points="2116,-699.42 1991,-699.42 1991,-675.42 2116,-675.42 2116,-699.42"/>
+<text text-anchor="middle" x="2053.5" y="-685.02" font-family="Helvetica,sans-Serif" font-size="10.50">aot_path_module.f90</text>
+</g>
+<!-- sourcefile~aot_fun_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~aot_fun_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/aot_fun_module.f90.html" xlink:title="aot_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1955,-453.42 1837,-453.42 1837,-429.42 1955,-429.42 1955,-453.42"/>
+<text text-anchor="middle" x="1896" y="-439.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_fun_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2044.79,-675.22C2019.92,-635.87 1941.62,-512 1910.22,-462.33"/>
+<polygon fill="#000000" stroke="#000000" points="1913.06,-460.28 1904.76,-453.69 1907.14,-464.02 1913.06,-460.28"/>
+</g>
+<!-- sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~aot_table_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node3"><a xlink:href="../sourcefile/aot_table_module.f90.html" xlink:title="aot_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1559,-624.42 1431,-624.42 1431,-600.42 1559,-600.42 1559,-624.42"/>
+<text text-anchor="middle" x="1495" y="-610.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M2051.35,-699.53C2045.74,-751.2 2016.49,-954.74 1897,-1048.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1895,-1048.42C1804.25,-1119.57 1565.25,-729.63 1508.31,-633.47"/>
+<polygon fill="#000000" stroke="#000000" points="1511.19,-631.47 1503.1,-624.63 1505.16,-635.02 1511.19,-631.47"/>
+</g>
+<!-- sourcefile~aotus_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~aotus_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node4"><a xlink:href="../sourcefile/aotus_module.f90.html" xlink:title="aotus_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1766,-1060.42 1658,-1060.42 1658,-1036.42 1766,-1036.42 1766,-1060.42"/>
+<text text-anchor="middle" x="1712" y="-1046.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aotus_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aotus_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1895,-1048.42C1857.06,-1078.16 1799.7,-1072.45 1759.54,-1062.99"/>
+<polygon fill="#000000" stroke="#000000" points="1760.28,-1059.56 1749.72,-1060.52 1758.57,-1066.35 1760.28,-1059.56"/>
+</g>
+<!-- sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~flu_binding.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node5"><a xlink:href="../sourcefile/flu_binding.f90.html" xlink:title="flu_binding.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="427,-662.42 336,-662.42 336,-638.42 427,-638.42 427,-662.42"/>
+<text text-anchor="middle" x="381.5" y="-648.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1895,-1048.42C1852.84,-1076.3 1847.63,-1092.93 1801,-1112.42 1711.57,-1149.79 1683.12,-1141.98 1587,-1154.42 1253.34,-1197.59 1158.53,-1224.97 830,-1152.42 732.81,-1130.96 707.54,-1125.49 616,-1086.42 572.27,-1067.76 564.49,-1056.74 522.5,-1034.42"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1893.41,-453.63C1885.76,-506.36 1847.43,-714.12 1713,-764.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1711,-764.42C1623.92,-797 1539.5,-681.86 1508.47,-633.17"/>
+<polygon fill="#000000" stroke="#000000" points="1511.42,-631.27 1503.16,-624.64 1505.48,-634.97 1511.42,-631.27"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1879.94,-429.33C1798.33,-365.3 1400.24,-71.79 1061,-156.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~aot_extdouble_fun_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node7"><a xlink:href="../sourcefile/aot_extdouble_fun_module.f90.html" xlink:title="aot_extdouble_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1800,-131.42 1624,-131.42 1624,-107.42 1800,-107.42 1800,-131.42"/>
+<text text-anchor="middle" x="1712" y="-117.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_fun_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1894.95,-429.23C1894.09,-384.49 1884.95,-227.69 1801,-145.42 1797.49,-141.98 1793.54,-138.99 1789.32,-136.39"/>
+<polygon fill="#000000" stroke="#000000" points="1790.78,-133.2 1780.31,-131.59 1787.49,-139.38 1790.78,-133.2"/>
+</g>
+<!-- sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node9" class="node">
+<title>sourcefile~aot_fun_declaration_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node9"><a xlink:href="../sourcefile/aot_fun_declaration_module.f90.html" xlink:title="aot_fun_declaration_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1587,-92.42 1403,-92.42 1403,-68.42 1587,-68.42 1587,-92.42"/>
+<text text-anchor="middle" x="1495" y="-78.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_declaration_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1711,-40.42C1697.43,-32.57 1611.85,-51.51 1552.84,-65.93"/>
+<polygon fill="#000000" stroke="#000000" points="1551.76,-62.59 1542.89,-68.38 1553.43,-69.39 1551.76,-62.59"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node10" class="node">
+<title>sourcefile~aot_quadruple_fun_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node10"><a xlink:href="../sourcefile/aot_quadruple_fun_module.f90.html" xlink:title="aot_quadruple_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1801,-453.42 1623,-453.42 1623,-429.42 1801,-429.42 1801,-453.42"/>
+<text text-anchor="middle" x="1712" y="-439.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_fun_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1836.91,-441.42C1828.69,-441.42 1820.05,-441.42 1811.32,-441.42"/>
+<polygon fill="#000000" stroke="#000000" points="1811.05,-437.92 1801.05,-441.42 1811.05,-444.92 1811.05,-437.92"/>
+</g>
+<!-- sourcefile~aot_references_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node12" class="node">
+<title>sourcefile~aot_references_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node12"><a xlink:href="../sourcefile/aot_references_module.f90.html" xlink:title="aot_references_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1348,-1159.42 1191,-1159.42 1191,-1135.42 1348,-1135.42 1348,-1159.42"/>
+<text text-anchor="middle" x="1269.5" y="-1145.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_references_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_references_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1894.96,-453.42C1894.44,-532.16 1887.65,-974.62 1801,-1069.42 1743.12,-1132.75 1493.57,-1145.32 1358.36,-1147.39"/>
+<polygon fill="#000000" stroke="#000000" points="1357.98,-1143.9 1348.03,-1147.53 1358.08,-1150.9 1357.98,-1143.9"/>
+</g>
+<!-- sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node14" class="node">
+<title>sourcefile~aot_top_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node14"><a xlink:href="../sourcefile/aot_top_module.f90.html" xlink:title="aot_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="948,-778.42 830,-778.42 830,-754.42 948,-754.42 948,-778.42"/>
+<text text-anchor="middle" x="889" y="-764.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1711,-764.42C1440.43,-865.66 1349.51,-749.67 1061,-764.42"/>
+</g>
+<!-- sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node17" class="node">
+<title>sourcefile~flu_kinds_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node17"><a xlink:href="../sourcefile/flu_kinds_module.f90.html" xlink:title="flu_kinds_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="289,-546.42 164,-546.42 164,-522.42 289,-522.42 289,-546.42"/>
+<text text-anchor="middle" x="226.5" y="-532.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_kinds_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1894.67,-429.18C1892.81,-381.86 1880.6,-208.11 1801,-98.42 1773.49,-60.51 1753.55,-63.87 1713,-40.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1711,-40.42C1540.83,58 1465.32,-54.17 1270.5,-80.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-80.42C1175.83,-94.67 1153.07,-100.71 1061,-118.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-118.42C1024.63,-125.03 1016.13,-128.55 984,-142.42 940.17,-161.34 937.33,-188.12 890,-194.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M888,-194.42C765.38,-210.74 719.32,-185.4 616,-253.42 556.26,-292.76 582.73,-345.84 522.5,-384.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M520.5,-384.42C497.98,-398 485.2,-384.32 463,-398.42 414.84,-429.01 438.21,-486.11 382.5,-498.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M380.5,-498.42C349.51,-505.26 315.11,-513.32 286.78,-520.07"/>
+<polygon fill="#000000" stroke="#000000" points="285.95,-516.67 277.03,-522.4 287.57,-523.48 285.95,-516.67"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge18" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1490.89,-600.22C1480.67,-563.08 1444.32,-451.36 1367,-408.42 1201.07,-316.26 680.76,-431.63 522.5,-536.42"/>
+</g>
+<!-- sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~aot_err_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node6"><a xlink:href="../sourcefile/aot_err_module.f90.html" xlink:title="aot_err_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="580,-778.42 463,-778.42 463,-754.42 580,-754.42 580,-778.42"/>
+<text text-anchor="middle" x="521.5" y="-764.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1458.48,-600.38C1394.78,-579.49 1256.52,-537.34 1136,-522.42 1000.05,-505.59 948.85,-491.3 830,-559.42 761,-598.97 779.08,-657.07 706,-688.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-688.42C654.09,-709.83 596.48,-734.6 559.79,-750.38"/>
+<polygon fill="#000000" stroke="#000000" points="558.28,-747.22 550.48,-754.38 561.05,-753.65 558.28,-747.22"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node8" class="node">
+<title>sourcefile~aot_extdouble_table_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node8"><a xlink:href="../sourcefile/aot_extdouble_table_module.f90.html" xlink:title="aot_extdouble_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1362.5,-624.42 1176.5,-624.42 1176.5,-600.42 1362.5,-600.42 1362.5,-624.42"/>
+<text text-anchor="middle" x="1269.5" y="-610.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_extdouble_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_extdouble_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1430.85,-612.42C1412.82,-612.42 1392.7,-612.42 1372.97,-612.42"/>
+<polygon fill="#000000" stroke="#000000" points="1372.69,-608.92 1362.69,-612.42 1372.69,-615.92 1372.69,-608.92"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node11" class="node">
+<title>sourcefile~aot_quadruple_table_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node11"><a xlink:href="../sourcefile/aot_quadruple_table_module.f90.html" xlink:title="aot_quadruple_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1363.5,-682.42 1175.5,-682.42 1175.5,-658.42 1363.5,-658.42 1363.5,-682.42"/>
+<text text-anchor="middle" x="1269.5" y="-668.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_quadruple_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_quadruple_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1447.69,-624.44C1412.48,-633.58 1363.88,-646.19 1326.49,-655.89"/>
+<polygon fill="#000000" stroke="#000000" points="1325.55,-652.52 1316.75,-658.42 1327.31,-659.29 1325.55,-652.52"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node13" class="node">
+<title>sourcefile~aot_table_ops_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node13"><a xlink:href="../sourcefile/aot_table_ops_module.f90.html" xlink:title="aot_table_ops_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1136,-892.42 984,-892.42 984,-868.42 1136,-868.42 1136,-892.42"/>
+<text text-anchor="middle" x="1060" y="-878.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge16" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-726.42C1229.01,-745.44 1128.91,-825.15 1083.73,-861.82"/>
+<polygon fill="#000000" stroke="#000000" points="1081.26,-859.32 1075.72,-868.34 1085.68,-864.75 1081.26,-859.32"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge17" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1476.99,-624.61C1453.23,-641.26 1408.34,-671.34 1367,-691.42 1325.96,-711.35 1311.6,-706.62 1270.5,-726.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-726.42C1247.38,-736.59 1084.41,-763.22 1061,-764.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-764.42C1025.96,-766.11 989.24,-766.7 958.49,-766.83"/>
+<polygon fill="#000000" stroke="#000000" points="958.3,-763.33 948.3,-766.86 958.31,-770.33 958.3,-763.33"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge19" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1490.93,-600.21C1480.53,-561.16 1442.87,-438.04 1367,-371.42 1197.08,-222.22 1114.02,-163.65 890,-194.42"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge20" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1657.78,-1042.59C1644.8,-1038.74 1632.06,-1032.49 1623,-1022.42 1563.77,-956.57 1612.48,-911.24 1587,-826.42 1565.03,-753.3 1525.87,-671.44 1506.89,-633.64"/>
+<polygon fill="#000000" stroke="#000000" points="1509.96,-631.95 1502.32,-624.61 1503.71,-635.11 1509.96,-631.95"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge23" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1657.71,-1052.48C1590.13,-1057.41 1470,-1065.43 1367,-1068.42 1280.37,-1070.94 1258.63,-1070.95 1172,-1068.42 1088.34,-1065.97 1067.49,-1063.32 984,-1057.42 860.33,-1048.69 829.95,-1037 706,-1034.42"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge21" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1699.2,-1036.09C1678.46,-1015.15 1633.28,-972.66 1587,-949.42 1372.27,-841.62 1087.45,-792.57 958.56,-774.79"/>
+<polygon fill="#000000" stroke="#000000" points="958.81,-771.3 948.43,-773.42 957.87,-778.23 958.81,-771.3"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node15" class="node">
+<title>sourcefile~aot_vector_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node15"><a xlink:href="../sourcefile/aot_vector_module.f90.html" xlink:title="aot_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1562.5,-982.42 1427.5,-982.42 1427.5,-958.42 1562.5,-958.42 1562.5,-982.42"/>
+<text text-anchor="middle" x="1495" y="-968.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_vector_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge22" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1666.85,-1036.33C1652.75,-1032.21 1637.13,-1027.38 1623,-1022.42 1592.24,-1011.61 1558.08,-997.5 1532.94,-986.71"/>
+<polygon fill="#000000" stroke="#000000" points="1534,-983.35 1523.44,-982.6 1531.23,-989.78 1534,-983.35"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge24" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1706.41,-1036.2C1692.33,-998.37 1649.12,-879.62 1623,-778.42 1601.84,-696.47 1626.67,-666.19 1587,-591.42 1498.56,-424.73 1459.2,-308.42 1270.5,-308.42 1270.5,-308.42 1270.5,-308.42 1059,-308.42 938.04,-308.42 912.69,-347.12 794,-370.42 755.14,-378.05 745.4,-380.39 706,-384.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-384.42C623.46,-388.89 590.43,-340.91 522.5,-384.42"/>
+</g>
+<!-- sourcefile~dump_lua_fif_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node16" class="node">
+<title>sourcefile~dump_lua_fif_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node16"><a xlink:href="../sourcefile/dump_lua_fif_module.f90.html" xlink:title="dump_lua_fif_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="300,-724.42 153,-724.42 153,-700.42 300,-700.42 300,-724.42"/>
+<text text-anchor="middle" x="226.5" y="-710.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dump_lua_fif_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~flu_binding.f90&#45;&gt;sourcefile~dump_lua_fif_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge25" class="edge">
+<title>sourcefile~flu_binding.f90&#45;&gt;sourcefile~dump_lua_fif_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M359.48,-662.51C343.53,-671.35 320.86,-683.17 300,-691.42 294.82,-693.47 289.36,-695.41 283.86,-697.24"/>
+<polygon fill="#000000" stroke="#000000" points="282.44,-694.02 273.96,-700.38 284.55,-700.69 282.44,-694.02"/>
+</g>
+<!-- sourcefile~flu_binding.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge26" class="edge">
+<title>sourcefile~flu_binding.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M364.42,-638.22C337.49,-617.81 283.13,-576.6 251.61,-552.7"/>
+<polygon fill="#000000" stroke="#000000" points="253.45,-549.7 243.37,-546.45 249.22,-555.28 253.45,-549.7"/>
+</g>
+<!-- sourcefile~lua_fif.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node18" class="node">
+<title>sourcefile~lua_fif.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node18"><a xlink:href="../sourcefile/lua_fif.f90.html" xlink:title="lua_fif.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="258.5,-682.42 194.5,-682.42 194.5,-658.42 258.5,-658.42 258.5,-682.42"/>
+<text text-anchor="middle" x="226.5" y="-668.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_fif.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~flu_binding.f90&#45;&gt;sourcefile~lua_fif.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge27" class="edge">
+<title>sourcefile~flu_binding.f90&#45;&gt;sourcefile~lua_fif.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M335.83,-656.26C314.71,-659.02 289.64,-662.3 268.94,-665"/>
+<polygon fill="#000000" stroke="#000000" points="268.32,-661.55 258.86,-666.32 269.23,-668.49 268.32,-661.55"/>
+</g>
+<!-- sourcefile~lua_parameters.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node19" class="node">
+<title>sourcefile~lua_parameters.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node19"><a xlink:href="../sourcefile/lua_parameters.f90.html" xlink:title="lua_parameters.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="117,-682.42 0,-682.42 0,-658.42 117,-658.42 117,-682.42"/>
+<text text-anchor="middle" x="58.5" y="-668.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_parameters.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~flu_binding.f90&#45;&gt;sourcefile~lua_parameters.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge28" class="edge">
+<title>sourcefile~flu_binding.f90&#45;&gt;sourcefile~lua_parameters.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M335.79,-649.77C324.14,-649.62 311.6,-649.49 300,-649.42 234.67,-649.01 217.94,-642.22 153,-649.42 140.21,-650.84 126.62,-653.32 113.87,-656.08"/>
+<polygon fill="#000000" stroke="#000000" points="112.85,-652.73 103.87,-658.35 114.39,-659.55 112.85,-652.73"/>
+</g>
+<!-- sourcefile~aot_err_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge29" class="edge">
+<title>sourcefile~aot_err_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M505.99,-754.22C481.81,-733.89 433.1,-692.95 404.61,-669.01"/>
+<polygon fill="#000000" stroke="#000000" points="406.72,-666.21 396.81,-662.45 402.22,-671.56 406.72,-666.21"/>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge32" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1705.69,-131.61C1677.19,-196.94 1542.44,-505.92 1505.43,-590.8"/>
+<polygon fill="#000000" stroke="#000000" points="1502.11,-589.65 1501.32,-600.22 1508.53,-592.45 1502.11,-589.65"/>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge33" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-118.42C1174.82,-122.24 1151.74,-132.83 1061,-156.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-156.42C1006.27,-170.13 997.92,-186.6 948,-208.42 802.05,-272.23 738.98,-242.18 616,-343.42 593.44,-361.99 598.1,-375.48 580,-398.42 533.07,-457.91 509.39,-462.51 463,-522.42 435.49,-557.94 408.79,-603.17 394.11,-629.26"/>
+<polygon fill="#000000" stroke="#000000" points="390.9,-627.82 389.09,-638.26 397.02,-631.23 390.9,-627.82"/>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge31" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1644.74,-107.4C1621.85,-103.25 1596.02,-98.56 1572.39,-94.28"/>
+<polygon fill="#000000" stroke="#000000" points="1572.88,-90.81 1562.41,-92.47 1571.63,-97.7 1572.88,-90.81"/>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge34" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1623.62,-117.01C1534.71,-115.07 1392.95,-113.42 1270.5,-118.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-118.42C1176.39,-123 1151.56,-101 1061,-118.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node20" class="node">
+<title>sourcefile~aot_extdouble_top_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node20"><a xlink:href="../sourcefile/aot_extdouble_top_module.f90.html" xlink:title="aot_extdouble_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="793,-778.42 617,-778.42 617,-754.42 793,-754.42 793,-778.42"/>
+<text text-anchor="middle" x="705" y="-764.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge30" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1679.68,-131.57C1623.19,-153.87 1501,-203.88 1403,-256.42 1129.72,-402.92 1042,-428.14 830,-654.42 811.77,-673.88 812.99,-683.7 794,-702.42 775.96,-720.2 752.68,-736.91 734.6,-748.79"/>
+<polygon fill="#000000" stroke="#000000" points="732.69,-745.86 726.18,-754.22 736.48,-751.74 732.69,-745.86"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge39" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1243.02,-600.28C1204.58,-582.62 1129.01,-550.43 1061,-536.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-536.42C1000.62,-524.39 572.58,-504.08 522.5,-536.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge35" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-536.42C974.88,-521.63 785,-655.96 706,-688.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge37" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1211.35,-624.51C1196.85,-630 1182.45,-637.94 1172,-649.42 1131.93,-693.44 1162.06,-724.9 1136,-778.42 1120.85,-809.55 1095.95,-840.98 1079.04,-860.56"/>
+<polygon fill="#000000" stroke="#000000" points="1076.3,-858.37 1072.33,-868.19 1081.56,-862.99 1076.3,-858.37"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge38" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1219.43,-624.46C1161.07,-639.94 1061.78,-669.97 984,-712.42 966.21,-722.13 965.37,-729.98 948,-740.42 942.22,-743.9 935.89,-747.19 929.6,-750.2"/>
+<polygon fill="#000000" stroke="#000000" points="928.12,-747.03 920.5,-754.39 931.05,-753.39 928.12,-747.03"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge40" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1257.24,-600.35C1214.55,-555.87 1056.62,-402.71 890,-384.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge36" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1176.25,-616.69C1119.94,-620.96 1046.92,-629.46 984,-646.42 890.3,-671.67 787.18,-722.9 736.94,-749.52"/>
+<polygon fill="#000000" stroke="#000000" points="735.08,-746.54 727.91,-754.34 738.38,-752.72 735.08,-746.54"/>
+</g>
+<!-- sourcefile~aot_fun_declaration_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge41" class="edge">
+<title>sourcefile~aot_fun_declaration_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1402.83,-74.92C1362.16,-73.88 1313.76,-74.59 1270.5,-80.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge44" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1695.88,-453.44C1658.8,-482.94 1563.13,-559.03 1518.97,-594.15"/>
+<polygon fill="#000000" stroke="#000000" points="1516.75,-591.44 1511.1,-600.41 1521.11,-596.92 1516.75,-591.44"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge45" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1494,-270.42C1312.72,-190.08 779.41,-317.11 616,-429.42 563.95,-465.19 575.18,-501.59 522.5,-536.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M520.5,-536.42C474.54,-564.37 427.64,-606.64 402.09,-631.09"/>
+<polygon fill="#000000" stroke="#000000" points="399.62,-628.6 394.86,-638.07 404.49,-633.64 399.62,-628.6"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge42" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1703.85,-429.41C1672.66,-377.05 1548.4,-168.4 1508.44,-101.31"/>
+<polygon fill="#000000" stroke="#000000" points="1511.3,-99.28 1503.18,-92.48 1505.29,-102.86 1511.3,-99.28"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge46" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1704.38,-429.37C1688.25,-401.15 1644,-330.47 1587,-294.42 1551.65,-272.06 1533.89,-288.14 1496,-270.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1494,-270.42C1447.81,-248.82 1111.18,-109.35 1061,-118.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node22" class="node">
+<title>sourcefile~aot_quadruple_top_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node22"><a xlink:href="../sourcefile/aot_quadruple_top_module.f90.html" xlink:title="aot_quadruple_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="794,-1006.42 616,-1006.42 616,-982.42 794,-982.42 794,-1006.42"/>
+<text text-anchor="middle" x="705" y="-992.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge43" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1706.9,-453.64C1693.18,-494.92 1648.34,-633.2 1623,-750.42 1611.56,-803.35 1623.48,-951.4 1587,-991.42 1481.54,-1107.1 981.49,-1039.71 785.28,-1008.05"/>
+<polygon fill="#000000" stroke="#000000" points="785.75,-1004.58 775.32,-1006.43 784.63,-1011.49 785.75,-1004.58"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge51" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1175.24,-662.74C1098.68,-657.1 987.39,-650.42 890,-650.42 890,-650.42 890,-650.42 704,-650.42 610.42,-650.42 501.51,-650.42 437.49,-650.42"/>
+<polygon fill="#000000" stroke="#000000" points="437.23,-646.92 427.23,-650.42 437.23,-653.92 437.23,-646.92"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge47" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1234.55,-682.52C1193.91,-696.31 1123.5,-718.02 1061,-726.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-726.42C902.61,-747.43 851.53,-627.43 706,-688.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge49" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1220.49,-682.51C1203.25,-688.93 1184.91,-698.47 1172,-712.42 1138.77,-748.32 1163.57,-776.02 1136,-816.42 1123.46,-834.79 1104.33,-851 1088.53,-862.51"/>
+<polygon fill="#000000" stroke="#000000" points="1086.32,-859.79 1080.15,-868.41 1090.35,-865.51 1086.32,-859.79"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge50" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-726.42C1018.78,-731.82 974.15,-742.6 940.85,-751.61"/>
+<polygon fill="#000000" stroke="#000000" points="939.62,-748.32 930.9,-754.34 941.47,-755.07 939.62,-748.32"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge52" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1237.04,-658.36C1152.55,-626.51 913.05,-539.75 706,-498.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-498.42C565.48,-463.36 522.67,-470.66 382.5,-498.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge48" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1224.61,-682.58C1206.73,-689.19 1186.83,-698.85 1172,-712.42 1147.35,-734.97 1160.81,-756.04 1136,-778.42 1026.52,-877.15 940.79,-809.16 830,-906.42 806.05,-927.44 819.05,-948.73 794,-968.42 789.27,-972.14 784.01,-975.33 778.49,-978.06"/>
+<polygon fill="#000000" stroke="#000000" points="776.74,-975.01 769,-982.24 779.56,-981.41 776.74,-975.01"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge54" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1190.82,-1157.03C1100.9,-1165.08 949.83,-1169.08 830,-1124.42 811.01,-1117.34 812.13,-1105.48 794,-1096.42 757.74,-1078.29 745.3,-1082.35 706,-1072.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-1072.42C623.64,-1054.13 595.27,-1073.11 522.5,-1034.42"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge53" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1257.85,-1135.2C1238.47,-1112.43 1197.12,-1061.38 1172,-1012.42 1149.29,-968.15 1171.07,-941.71 1136,-906.42 1132.54,-902.94 1128.59,-899.92 1124.35,-897.31"/>
+<polygon fill="#000000" stroke="#000000" points="1125.79,-894.11 1115.32,-892.49 1122.5,-900.28 1125.79,-894.11"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~lua_parameters.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge55" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~lua_parameters.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-1072.42C599.04,-1048.53 561.02,-1092.9 463,-1048.42 276,-963.56 119.75,-756.54 73.45,-690.81"/>
+<polygon fill="#000000" stroke="#000000" points="76.25,-688.7 67.66,-682.5 70.51,-692.7 76.25,-688.7"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge57" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1043.18,-892.57C995.38,-928.1 847,-1029.57 706,-1034.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-1034.42C623.35,-1032.74 593.73,-1072.29 522.5,-1034.42"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge56" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1014.39,-868.39C1004.03,-864.68 993.32,-860.05 984,-854.42 953.35,-835.92 924.27,-806.14 906.78,-786.42"/>
+<polygon fill="#000000" stroke="#000000" points="909.23,-783.9 900.03,-778.65 903.95,-788.49 909.23,-783.9"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge58" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1050.93,-868.09C1008.41,-803.72 808.41,-508.88 706,-498.42"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge62" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-954.42C665.28,-964.51 652.93,-958.01 616,-973.42 570.21,-992.53 566.31,-1057.71 522.5,-1034.42"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge59" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M853.57,-778.48C845.39,-782.23 837.01,-786.87 830,-792.42 758.9,-848.69 793.74,-931.55 706,-954.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M704,-954.42C613.68,-977.96 551.31,-842.24 530.3,-788.04"/>
+<polygon fill="#000000" stroke="#000000" points="533.56,-786.76 526.75,-778.64 527.01,-789.23 533.56,-786.76"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge63" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M878.16,-754.22C862.21,-735.08 828.93,-697.78 794,-674.42 752.66,-646.78 431.6,-490.54 382.5,-498.42"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge60" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M829.91,-766.42C821.37,-766.42 812.38,-766.42 803.31,-766.42"/>
+<polygon fill="#000000" stroke="#000000" points="803.05,-762.92 793.05,-766.42 803.05,-769.92 803.05,-762.92"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge61" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M847.4,-778.58C840.8,-782.12 834.62,-786.65 830,-792.42 780.07,-854.72 847.99,-909.6 794,-968.42 790.89,-971.81 787.35,-974.77 783.54,-977.35"/>
+<polygon fill="#000000" stroke="#000000" points="781.69,-974.37 774.78,-982.41 785.19,-980.44 781.69,-974.37"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge68" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1427.43,-979.46C1419.04,-981.58 1410.71,-984.2 1403,-987.42 1385.03,-994.93 1385.45,-1006.17 1367,-1012.42 1165.99,-1080.49 1100.96,-1011.26 890,-1034.42"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge66" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1461.44,-958.4C1435.99,-949.31 1399.57,-936.98 1367,-928.42 1324.72,-917.31 1313.7,-916.11 1270.5,-909.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-909.42C1228.58,-903.24 1184.24,-896.97 1146.84,-891.84"/>
+<polygon fill="#000000" stroke="#000000" points="1146.86,-888.31 1136.48,-890.43 1145.91,-895.25 1146.86,-888.31"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge67" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1268.5,-909.42C1177.24,-895.29 1144.68,-959.5 1061,-920.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-920.42C1027.84,-905.87 1012.28,-920.99 984,-901.42 942.01,-872.36 912.82,-818.05 899.04,-787.92"/>
+<polygon fill="#000000" stroke="#000000" points="902.2,-786.43 894.95,-778.71 895.8,-789.27 902.2,-786.43"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge69" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1492.47,-958.14C1485.74,-908.19 1455.12,-716.94 1367,-591.42 1291.74,-484.22 1257.46,-457.44 1136,-408.42 1034.13,-367.3 999.31,-395.34 890,-384.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M888,-384.42C807.67,-374.92 786.47,-376.2 706,-384.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node21" class="node">
+<title>sourcefile~aot_extdouble_vector_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node21"><a xlink:href="../sourcefile/aot_extdouble_vector_module.f90.html" xlink:title="aot_extdouble_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1366,-961.42 1173,-961.42 1173,-937.42 1366,-937.42 1366,-961.42"/>
+<text text-anchor="middle" x="1269.5" y="-947.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_vector_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge64" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1427.25,-964.15C1411.22,-962.64 1393.72,-961 1376.41,-959.37"/>
+<polygon fill="#000000" stroke="#000000" points="1376.53,-955.87 1366.25,-958.42 1375.87,-962.84 1376.53,-955.87"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_node23" class="node">
+<title>sourcefile~aot_quadruple_vector_module.f90</title>
+<g id="a_sourcefile~~aot_path_module.f90~~EfferentGraph_node23"><a xlink:href="../sourcefile/aot_quadruple_vector_module.f90.html" xlink:title="aot_quadruple_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1367,-1003.42 1172,-1003.42 1172,-979.42 1367,-979.42 1367,-1003.42"/>
+<text text-anchor="middle" x="1269.5" y="-989.02" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_vector_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge65" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1427.25,-976.69C1411.44,-978.18 1394.19,-979.8 1377.1,-981.4"/>
+<polygon fill="#000000" stroke="#000000" points="1376.7,-977.93 1367.07,-982.35 1377.36,-984.89 1376.7,-977.93"/>
+</g>
+<!-- sourcefile~lua_fif.f90&#45;&gt;sourcefile~lua_parameters.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge70" class="edge">
+<title>sourcefile~lua_fif.f90&#45;&gt;sourcefile~lua_parameters.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M194.28,-670.42C175.38,-670.42 150.52,-670.42 127.3,-670.42"/>
+<polygon fill="#000000" stroke="#000000" points="127.12,-666.92 117.12,-670.42 127.12,-673.92 127.12,-666.92"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge72" class="edge">
+<title>sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M697.5,-778.63C668.41,-832.93 550.29,-1049.19 522.5,-1034.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M520.5,-1034.42C452.83,-998.45 400.97,-748.99 386.53,-672.6"/>
+<polygon fill="#000000" stroke="#000000" points="389.95,-671.82 384.68,-662.63 383.07,-673.11 389.95,-671.82"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge71" class="edge">
+<title>sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M616.97,-766.42C608.01,-766.42 599.01,-766.42 590.3,-766.42"/>
+<polygon fill="#000000" stroke="#000000" points="590.24,-762.92 580.24,-766.42 590.24,-769.92 590.24,-762.92"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge76" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-958.42C1024.08,-960.8 1016.13,-968.55 984,-982.42 940.17,-1001.34 937.46,-1029.21 890,-1034.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M888,-1034.42C807.59,-1043.25 786.87,-1036.1 706,-1034.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge74" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1216.89,-937.33C1202.21,-933.4 1186.33,-928.69 1172,-923.42 1155.39,-917.32 1152.38,-913.1 1136,-906.42 1127,-902.75 1117.27,-899.13 1107.9,-895.81"/>
+<polygon fill="#000000" stroke="#000000" points="1108.89,-892.45 1098.3,-892.47 1106.59,-899.06 1108.89,-892.45"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge75" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1172.95,-947.9C1136.54,-944.33 1095.52,-936.54 1061,-920.42"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge73" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1172.9,-950.07C1137.62,-951.23 1097.38,-953.63 1061,-958.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-958.42C915.22,-977.33 772.18,-838.93 723.49,-786.23"/>
+<polygon fill="#000000" stroke="#000000" points="725.82,-783.58 716.5,-778.54 720.64,-788.29 725.82,-783.58"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge78" class="edge">
+<title>sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M662.59,-1006.5C612.92,-1020.52 534.79,-1040.95 522.5,-1034.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge77" class="edge">
+<title>sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M639.15,-982.28C630.76,-978.77 622.75,-974.25 616,-968.42 559.62,-919.73 535.13,-829.83 526.47,-788.39"/>
+<polygon fill="#000000" stroke="#000000" points="529.89,-787.64 524.52,-778.5 523.03,-788.99 529.89,-787.64"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge82" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-996.42C982.22,-1002.04 966.53,-1026.02 890,-1034.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge80" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1187.23,-979.25C1181.83,-976.8 1176.69,-973.88 1172,-970.42 1145.75,-951.03 1161.04,-927.35 1136,-906.42 1131.53,-902.68 1126.49,-899.47 1121.19,-896.71"/>
+<polygon fill="#000000" stroke="#000000" points="1122.63,-893.52 1112.08,-892.49 1119.68,-899.87 1122.63,-893.52"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge81" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1197.07,-979.37C1188.45,-976.9 1179.91,-973.95 1172,-970.42 1153.98,-962.37 1153.62,-953.32 1136,-944.42 1104.76,-928.64 1092.71,-935.23 1061,-920.42"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~aot_path_module.f90~~EfferentGraph_edge79" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1171.82,-992.02C1136.88,-992.69 1097.13,-993.99 1061,-996.42"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1059,-996.42C973.18,-1002.2 875.36,-1001.04 804.49,-998.81"/>
+<polygon fill="#000000" stroke="#000000" points="804.35,-995.31 794.24,-998.48 804.12,-1002.3 804.35,-995.31"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var pansourcefileaot_path_modulef90EfferentGraph = svgPanZoom('#sourcefileaot_path_modulef90EfferentGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#EfferentGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="EfferentGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="193.5,-24 88.5,-24 88.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a file to a file which it depends on. A file
+is dependent upon another if the latter must be compiled before the former
+can be.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+      <section>
+        <h2><span class="anchor" id="src"></span>Source Code</h2>
+        <div class="hl codehilite"><pre><span></span><a id="ln-1" name="ln-1" href="#ln-1"></a><span class="c">! Copyright (c) 2011-2016 Harald Klimach &lt;harald@klimachs.de&gt;</span>
+<a id="ln-2" name="ln-2" href="#ln-2"></a><span class="c">! Copyright (c) 2012, 2014 Kannan Masilamani &lt;kannan.masilamani@uni-siegen.de&gt;</span>
+<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="c">! Copyright (c) 2012 Simon Zimny &lt;s.zimny@grs-sim.de&gt;</span>
+<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="c">! Copyright (c) 2012 James Spencer &lt;j.spencer@imperial.ac.uk&gt;</span>
+<a id="ln-5" name="ln-5" href="#ln-5"></a><span class="c">! Copyright (c) 2014-2015 Peter Vitt &lt;peter.vitt2@uni-siegen.de&gt;</span>
+<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="c">! Copyright (c) 2015 Verena Krupp</span>
+<a id="ln-7" name="ln-7" href="#ln-7"></a><span class="c">!</span>
+<a id="ln-8" name="ln-8" href="#ln-8"></a><span class="c">! Parts of this file were written by Harald Klimach and Simon Zimny</span>
+<a id="ln-9" name="ln-9" href="#ln-9"></a><span class="c">! German Research School of Simulation Sciences.</span>
+<a id="ln-10" name="ln-10" href="#ln-10"></a><span class="c">! Parts of this file were written by Kannan Masilamani, Harald Klimach,</span>
+<a id="ln-11" name="ln-11" href="#ln-11"></a><span class="c">! Peter Vitt and Verena Krupp for University of Siegen.</span>
+<a id="ln-12" name="ln-12" href="#ln-12"></a><span class="c">!</span>
+<a id="ln-13" name="ln-13" href="#ln-13"></a><span class="c">! Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<a id="ln-14" name="ln-14" href="#ln-14"></a><span class="c">! of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<a id="ln-15" name="ln-15" href="#ln-15"></a><span class="c">! in the Software without restriction, including without limitation the rights</span>
+<a id="ln-16" name="ln-16" href="#ln-16"></a><span class="c">! to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<a id="ln-17" name="ln-17" href="#ln-17"></a><span class="c">! copies of the Software, and to permit persons to whom the Software is</span>
+<a id="ln-18" name="ln-18" href="#ln-18"></a><span class="c">! furnished to do so, subject to the following conditions:</span>
+<a id="ln-19" name="ln-19" href="#ln-19"></a><span class="c">!</span>
+<a id="ln-20" name="ln-20" href="#ln-20"></a><span class="c">! The above copyright notice and this permission notice shall be included in</span>
+<a id="ln-21" name="ln-21" href="#ln-21"></a><span class="c">! all copies or substantial portions of the Software.</span>
+<a id="ln-22" name="ln-22" href="#ln-22"></a><span class="c">!</span>
+<a id="ln-23" name="ln-23" href="#ln-23"></a><span class="c">! THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<a id="ln-24" name="ln-24" href="#ln-24"></a><span class="c">! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<a id="ln-25" name="ln-25" href="#ln-25"></a><span class="c">! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</span>
+<a id="ln-26" name="ln-26" href="#ln-26"></a><span class="c">! IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,</span>
+<a id="ln-27" name="ln-27" href="#ln-27"></a><span class="c">! DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR</span>
+<a id="ln-28" name="ln-28" href="#ln-28"></a><span class="c">! OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE</span>
+<a id="ln-29" name="ln-29" href="#ln-29"></a><span class="c">! OR OTHER DEALINGS IN THE SOFTWARE.</span>
+<a id="ln-30" name="ln-30" href="#ln-30"></a><span class="c">! **************************************************************************** !</span>
+<a id="ln-31" name="ln-31" href="#ln-31"></a>
+<a id="ln-32" name="ln-32" href="#ln-32"></a><span class="c">!&gt; The aot_path can be used to track the position of a Lua entity in nested</span>
+<a id="ln-33" name="ln-33" href="#ln-33"></a><span class="c">!! tables.</span>
+<a id="ln-34" name="ln-34" href="#ln-34"></a><span class="c">!!</span>
+<a id="ln-35" name="ln-35" href="#ln-35"></a><span class="c">!! @warning This is obsolete! Use [[aot_references_module]] instead.</span>
+<a id="ln-36" name="ln-36" href="#ln-36"></a><span class="c">!!          Please note that this module might be removed in future versions</span>
+<a id="ln-37" name="ln-37" href="#ln-37"></a><span class="c">!!          of Aotus.</span>
+<a id="ln-38" name="ln-38" href="#ln-38"></a><span class="c">!!</span>
+<a id="ln-39" name="ln-39" href="#ln-39"></a><span class="c">!! The idea is to initialize the path in the very beginning and then append a</span>
+<a id="ln-40" name="ln-40" href="#ln-40"></a><span class="c">!! node whenever a table is opened. Thus you pass down the growing path object</span>
+<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="c">!! and store at in the level, to which you might need to return later.</span>
+<a id="ln-42" name="ln-42" href="#ln-42"></a><span class="k">module </span><span class="n">aot_path_module</span>
+<a id="ln-43" name="ln-43" href="#ln-43"></a><span class="w">  </span><span class="k">use </span><span class="n">flu_binding</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">flu_State</span>
+<a id="ln-44" name="ln-44" href="#ln-44"></a><span class="w">  </span><span class="k">use </span><span class="n">aotus_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">open_config_file</span><span class="p">,</span><span class="w"> </span><span class="n">close_config</span>
+<a id="ln-45" name="ln-45" href="#ln-45"></a><span class="w">  </span><span class="k">use </span><span class="n">aot_table_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">aot_table_open</span><span class="p">,</span><span class="w"> </span><span class="n">aot_table_close</span>
+<a id="ln-46" name="ln-46" href="#ln-46"></a><span class="w">  </span><span class="k">use </span><span class="n">aot_fun_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">aot_fun_type</span><span class="p">,</span><span class="w"> </span><span class="n">aot_fun_open</span><span class="p">,</span><span class="w"> </span><span class="n">aot_fun_close</span>
+<a id="ln-47" name="ln-47" href="#ln-47"></a>
+<a id="ln-48" name="ln-48" href="#ln-48"></a><span class="w">  </span><span class="k">implicit none</span>
+<a id="ln-49" name="ln-49" href="#ln-49"></a>
+<a id="ln-50" name="ln-50" href="#ln-50"></a><span class="k">  private</span>
+<a id="ln-51" name="ln-51" href="#ln-51"></a>
+<a id="ln-52" name="ln-52" href="#ln-52"></a><span class="w">  </span><span class="c">!&gt; This data structure describes a node in the path through nested tables.</span>
+<a id="ln-53" name="ln-53" href="#ln-53"></a><span class="w">  </span><span class="k">type </span><span class="n">aot_path_node_type</span>
+<a id="ln-54" name="ln-54" href="#ln-54"></a><span class="w">    </span><span class="c">!&gt; What type of node is this?</span>
+<a id="ln-55" name="ln-55" href="#ln-55"></a><span class="w">    </span><span class="c">!! Currently supported are function and table</span>
+<a id="ln-56" name="ln-56" href="#ln-56"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">NodeType</span>
+<a id="ln-57" name="ln-57" href="#ln-57"></a>
+<a id="ln-58" name="ln-58" href="#ln-58"></a><span class="w">    </span><span class="c">!&gt; How to look up this node, by key or position?</span>
+<a id="ln-59" name="ln-59" href="#ln-59"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ID_kind</span>
+<a id="ln-60" name="ln-60" href="#ln-60"></a>
+<a id="ln-61" name="ln-61" href="#ln-61"></a><span class="w">    </span><span class="c">!&gt; Identifying key</span>
+<a id="ln-62" name="ln-62" href="#ln-62"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">key</span>
+<a id="ln-63" name="ln-63" href="#ln-63"></a>
+<a id="ln-64" name="ln-64" href="#ln-64"></a><span class="w">    </span><span class="c">!&gt; Identifying position</span>
+<a id="ln-65" name="ln-65" href="#ln-65"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pos</span>
+<a id="ln-66" name="ln-66" href="#ln-66"></a>
+<a id="ln-67" name="ln-67" href="#ln-67"></a><span class="w">    </span><span class="c">!&gt; Link to possible child of this node</span>
+<a id="ln-68" name="ln-68" href="#ln-68"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<a id="ln-69" name="ln-69" href="#ln-69"></a><span class="w">  </span><span class="k">end type</span>
+<a id="ln-70" name="ln-70" href="#ln-70"></a>
+<a id="ln-71" name="ln-71" href="#ln-71"></a><span class="w">  </span><span class="c">!&gt; This type is the main data structure of the module and describes the path.</span>
+<a id="ln-72" name="ln-72" href="#ln-72"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-73" name="ln-73" href="#ln-73"></a><span class="w">  </span><span class="c">!! It contains a linked list of all nodes, as well as the name of the Lua</span>
+<a id="ln-74" name="ln-74" href="#ln-74"></a><span class="w">  </span><span class="c">!! script where this path is recorded in.</span>
+<a id="ln-75" name="ln-75" href="#ln-75"></a><span class="w">  </span><span class="k">type </span><span class="n">aot_path_type</span>
+<a id="ln-76" name="ln-76" href="#ln-76"></a><span class="w">    </span><span class="k">private</span>
+<a id="ln-77" name="ln-77" href="#ln-77"></a><span class="w">    </span><span class="c">!&gt; Name of the file where this path object is found in.</span>
+<a id="ln-78" name="ln-78" href="#ln-78"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">LuaFilename</span>
+<a id="ln-79" name="ln-79" href="#ln-79"></a>
+<a id="ln-80" name="ln-80" href="#ln-80"></a><span class="w">    </span><span class="c">!&gt; Handle to the topmost table opened for the path.</span>
+<a id="ln-81" name="ln-81" href="#ln-81"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">rootHandle</span>
+<a id="ln-82" name="ln-82" href="#ln-82"></a>
+<a id="ln-83" name="ln-83" href="#ln-83"></a><span class="w">    </span><span class="c">!&gt; Entry level of the path on the global scope of the Lua script.</span>
+<a id="ln-84" name="ln-84" href="#ln-84"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">GlobalNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<a id="ln-85" name="ln-85" href="#ln-85"></a>
+<a id="ln-86" name="ln-86" href="#ln-86"></a><span class="w">    </span><span class="c">!&gt; Moving head through the linked list of path nodes.</span>
+<a id="ln-87" name="ln-87" href="#ln-87"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<a id="ln-88" name="ln-88" href="#ln-88"></a><span class="w">  </span><span class="k">end type</span>
+<a id="ln-89" name="ln-89" href="#ln-89"></a>
+<a id="ln-90" name="ln-90" href="#ln-90"></a><span class="w">  </span><span class="c">!&gt; Taking care of the linked list in a copying routine for the assignment of</span>
+<a id="ln-91" name="ln-91" href="#ln-91"></a><span class="w">  </span><span class="c">!! aot_path_type.</span>
+<a id="ln-92" name="ln-92" href="#ln-92"></a><span class="w">  </span><span class="k">interface </span><span class="n">assignment</span><span class="p">(</span><span class="o">=</span><span class="p">)</span>
+<a id="ln-93" name="ln-93" href="#ln-93"></a><span class="w">    </span><span class="k">module procedure </span><span class="n">aot_path_copy</span>
+<a id="ln-94" name="ln-94" href="#ln-94"></a><span class="w">  </span><span class="k">end interface</span>
+<a id="ln-95" name="ln-95" href="#ln-95"></a>
+<a id="ln-96" name="ln-96" href="#ln-96"></a><span class="k">  public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">aot_path_type</span>
+<a id="ln-97" name="ln-97" href="#ln-97"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">aot_init_path</span><span class="p">,</span><span class="w"> </span><span class="n">aot_fin_path</span>
+<a id="ln-98" name="ln-98" href="#ln-98"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">aot_path_addNode</span><span class="p">,</span><span class="w"> </span><span class="n">aot_path_delNode</span>
+<a id="ln-99" name="ln-99" href="#ln-99"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">assignment</span><span class="p">(</span><span class="o">=</span><span class="p">)</span>
+<a id="ln-100" name="ln-100" href="#ln-100"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">aot_path_open</span><span class="p">,</span><span class="w"> </span><span class="n">aot_path_close</span>
+<a id="ln-101" name="ln-101" href="#ln-101"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">aot_path_toString</span>
+<a id="ln-102" name="ln-102" href="#ln-102"></a><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">aot_path_dump</span>
+<a id="ln-103" name="ln-103" href="#ln-103"></a>
+<a id="ln-104" name="ln-104" href="#ln-104"></a><span class="w">  </span><span class="c">!&gt; Re-open a previously recorded path through nested Lua tables.</span>
+<a id="ln-105" name="ln-105" href="#ln-105"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-106" name="ln-106" href="#ln-106"></a><span class="w">  </span><span class="c">!! This opens all the tables recursively down to the last node in the path.</span>
+<a id="ln-107" name="ln-107" href="#ln-107"></a><span class="w">  </span><span class="c">!! It might be used to open a table, or a function.</span>
+<a id="ln-108" name="ln-108" href="#ln-108"></a><span class="w">  </span><span class="k">interface </span><span class="n">aot_path_open</span>
+<a id="ln-109" name="ln-109" href="#ln-109"></a><span class="w">    </span><span class="k">module procedure </span><span class="n">aot_path_open_fun</span>
+<a id="ln-110" name="ln-110" href="#ln-110"></a><span class="w">    </span><span class="k">module procedure </span><span class="n">aot_path_open_table</span>
+<a id="ln-111" name="ln-111" href="#ln-111"></a><span class="w">  </span><span class="k">end interface </span><span class="n">aot_path_open</span>
+<a id="ln-112" name="ln-112" href="#ln-112"></a>
+<a id="ln-113" name="ln-113" href="#ln-113"></a><span class="w">  </span><span class="c">! Close all tables, that were opened for the given path.</span>
+<a id="ln-114" name="ln-114" href="#ln-114"></a><span class="w">  </span><span class="k">interface </span><span class="n">aot_path_close</span>
+<a id="ln-115" name="ln-115" href="#ln-115"></a><span class="w">    </span><span class="k">module procedure </span><span class="n">aot_path_close_fun</span>
+<a id="ln-116" name="ln-116" href="#ln-116"></a><span class="w">    </span><span class="k">module procedure </span><span class="n">aot_path_close_table</span>
+<a id="ln-117" name="ln-117" href="#ln-117"></a><span class="w">  </span><span class="k">end interface </span><span class="n">aot_path_close</span>
+<a id="ln-118" name="ln-118" href="#ln-118"></a>
+<a id="ln-119" name="ln-119" href="#ln-119"></a><span class="k">contains</span>
+<a id="ln-120" name="ln-120" href="#ln-120"></a>
+<a id="ln-121" name="ln-121" href="#ln-121"></a><span class="w">  </span><span class="c">!&gt; This subroutine initializes a path object.</span>
+<a id="ln-122" name="ln-122" href="#ln-122"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-123" name="ln-123" href="#ln-123"></a><span class="w">  </span><span class="c">!! This is done by setting the given file name as reference to the script,</span>
+<a id="ln-124" name="ln-124" href="#ln-124"></a><span class="w">  </span><span class="c">!! to look the path up in and emptying the path completely.</span>
+<a id="ln-125" name="ln-125" href="#ln-125"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_init_path</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">Filename</span><span class="p">)</span>
+<a id="ln-126" name="ln-126" href="#ln-126"></a><span class="w">    </span><span class="c">!&gt; Path object to initialize</span>
+<a id="ln-127" name="ln-127" href="#ln-127"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-128" name="ln-128" href="#ln-128"></a><span class="w">    </span><span class="c">!&gt; Filename of the Lua script, this path is located in</span>
+<a id="ln-129" name="ln-129" href="#ln-129"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Filename</span>
+<a id="ln-130" name="ln-130" href="#ln-130"></a>
+<a id="ln-131" name="ln-131" href="#ln-131"></a><span class="w">    </span><span class="c">! Finalize the path first, just in case it might have had any entries.</span>
+<a id="ln-132" name="ln-132" href="#ln-132"></a><span class="w">    </span><span class="k">call </span><span class="n">aot_fin_path</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
+<a id="ln-133" name="ln-133" href="#ln-133"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">Filename</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-134" name="ln-134" href="#ln-134"></a><span class="k">      </span><span class="n">me</span><span class="p">%</span><span class="n">LuaFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">adjustl</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">Filename</span><span class="p">))</span>
+<a id="ln-135" name="ln-135" href="#ln-135"></a><span class="w">    </span><span class="k">else</span>
+<a id="ln-136" name="ln-136" href="#ln-136"></a><span class="k">      </span><span class="n">me</span><span class="p">%</span><span class="n">LuaFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<a id="ln-137" name="ln-137" href="#ln-137"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-138" name="ln-138" href="#ln-138"></a><span class="k">    </span><span class="n">me</span><span class="p">%</span><span class="n">rootHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="ln-139" name="ln-139" href="#ln-139"></a><span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_init_path</span>
+<a id="ln-140" name="ln-140" href="#ln-140"></a>
+<a id="ln-141" name="ln-141" href="#ln-141"></a>
+<a id="ln-142" name="ln-142" href="#ln-142"></a><span class="w">  </span><span class="c">!&gt; This subroutine finalizes a path object and deallocates</span>
+<a id="ln-143" name="ln-143" href="#ln-143"></a><span class="w">  </span><span class="c">!! all its nodes.</span>
+<a id="ln-144" name="ln-144" href="#ln-144"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_fin_path</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
+<a id="ln-145" name="ln-145" href="#ln-145"></a><span class="w">    </span><span class="c">!&gt; Path to destroy</span>
+<a id="ln-146" name="ln-146" href="#ln-146"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-147" name="ln-147" href="#ln-147"></a>
+<a id="ln-148" name="ln-148" href="#ln-148"></a><span class="w">    </span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">emptied</span>
+<a id="ln-149" name="ln-149" href="#ln-149"></a>
+<a id="ln-150" name="ln-150" href="#ln-150"></a><span class="w">    </span><span class="n">emptied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a id="ln-151" name="ln-151" href="#ln-151"></a>
+<a id="ln-152" name="ln-152" href="#ln-152"></a><span class="w">    </span><span class="k">do while</span><span class="w"> </span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="w"> </span><span class="n">emptied</span><span class="p">)</span>
+<a id="ln-153" name="ln-153" href="#ln-153"></a><span class="w">      </span><span class="k">call </span><span class="n">aot_path_delNode</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">emptied</span><span class="p">)</span>
+<a id="ln-154" name="ln-154" href="#ln-154"></a><span class="w">    </span><span class="k">end do</span>
+<a id="ln-155" name="ln-155" href="#ln-155"></a><span class="k">    </span><span class="n">me</span><span class="p">%</span><span class="n">LuaFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<a id="ln-156" name="ln-156" href="#ln-156"></a><span class="w">    </span><span class="n">me</span><span class="p">%</span><span class="n">rootHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="ln-157" name="ln-157" href="#ln-157"></a><span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_fin_path</span>
+<a id="ln-158" name="ln-158" href="#ln-158"></a>
+<a id="ln-159" name="ln-159" href="#ln-159"></a>
+<a id="ln-160" name="ln-160" href="#ln-160"></a><span class="w">  </span><span class="c">!&gt; With this subroutine a node is appended to the end of</span>
+<a id="ln-161" name="ln-161" href="#ln-161"></a><span class="w">  </span><span class="c">!! the list of nodes of the given path.</span>
+<a id="ln-162" name="ln-162" href="#ln-162"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-163" name="ln-163" href="#ln-163"></a><span class="w">  </span><span class="c">!! You need to provide a NodeType (table or function),</span>
+<a id="ln-164" name="ln-164" href="#ln-164"></a><span class="w">  </span><span class="c">!! and either its position or key to identify it in the</span>
+<a id="ln-165" name="ln-165" href="#ln-165"></a><span class="w">  </span><span class="c">!! parent object.</span>
+<a id="ln-166" name="ln-166" href="#ln-166"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_addNode</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">NodeType</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">)</span>
+<a id="ln-167" name="ln-167" href="#ln-167"></a><span class="w">    </span><span class="c">!&gt; Path to append the node to</span>
+<a id="ln-168" name="ln-168" href="#ln-168"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-169" name="ln-169" href="#ln-169"></a><span class="w">    </span><span class="c">!&gt; Type of the node (table of function)</span>
+<a id="ln-170" name="ln-170" href="#ln-170"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">NodeType</span>
+<a id="ln-171" name="ln-171" href="#ln-171"></a><span class="w">    </span><span class="c">!&gt; Position in the parenting table</span>
+<a id="ln-172" name="ln-172" href="#ln-172"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pos</span>
+<a id="ln-173" name="ln-173" href="#ln-173"></a><span class="w">    </span><span class="c">!&gt; Key within the parenting table</span>
+<a id="ln-174" name="ln-174" href="#ln-174"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">key</span>
+<a id="ln-175" name="ln-175" href="#ln-175"></a>
+<a id="ln-176" name="ln-176" href="#ln-176"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="nb">associated</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-177" name="ln-177" href="#ln-177"></a><span class="w">      </span><span class="c">! New list without any nodes so far</span>
+<a id="ln-178" name="ln-178" href="#ln-178"></a><span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span><span class="p">)</span>
+<a id="ln-179" name="ln-179" href="#ln-179"></a><span class="w">      </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span>
+<a id="ln-180" name="ln-180" href="#ln-180"></a><span class="w">    </span><span class="k">else</span>
+<a id="ln-181" name="ln-181" href="#ln-181"></a><span class="w">      </span><span class="c">! Existing list, append at the end</span>
+<a id="ln-182" name="ln-182" href="#ln-182"></a><span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">child</span><span class="p">)</span>
+<a id="ln-183" name="ln-183" href="#ln-183"></a><span class="w">      </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-184" name="ln-184" href="#ln-184"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-185" name="ln-185" href="#ln-185"></a>
+<a id="ln-186" name="ln-186" href="#ln-186"></a><span class="k">    if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">pos</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-187" name="ln-187" href="#ln-187"></a><span class="k">      </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">ID_kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;position&#39;</span>
+<a id="ln-188" name="ln-188" href="#ln-188"></a><span class="w">      </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span>
+<a id="ln-189" name="ln-189" href="#ln-189"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-190" name="ln-190" href="#ln-190"></a>
+<a id="ln-191" name="ln-191" href="#ln-191"></a><span class="w">    </span><span class="c">! Specified keys overwrite positions</span>
+<a id="ln-192" name="ln-192" href="#ln-192"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">key</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-193" name="ln-193" href="#ln-193"></a><span class="k">      </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">ID_kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;key&#39;</span>
+<a id="ln-194" name="ln-194" href="#ln-194"></a><span class="w">      </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span>
+<a id="ln-195" name="ln-195" href="#ln-195"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-196" name="ln-196" href="#ln-196"></a>
+<a id="ln-197" name="ln-197" href="#ln-197"></a><span class="k">    </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">NodeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NodeType</span>
+<a id="ln-198" name="ln-198" href="#ln-198"></a>
+<a id="ln-199" name="ln-199" href="#ln-199"></a><span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_path_addNode</span>
+<a id="ln-200" name="ln-200" href="#ln-200"></a>
+<a id="ln-201" name="ln-201" href="#ln-201"></a>
+<a id="ln-202" name="ln-202" href="#ln-202"></a><span class="w">  </span><span class="c">!&gt; The delNode removes the last node from the list of nodes of the given path.</span>
+<a id="ln-203" name="ln-203" href="#ln-203"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-204" name="ln-204" href="#ln-204"></a><span class="w">  </span><span class="c">!! With the optional isEmpty argument, it can be tested, if the list</span>
+<a id="ln-205" name="ln-205" href="#ln-205"></a><span class="w">  </span><span class="c">!! is completely empty after this operation.</span>
+<a id="ln-206" name="ln-206" href="#ln-206"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_delNode</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">isEmpty</span><span class="p">)</span>
+<a id="ln-207" name="ln-207" href="#ln-207"></a><span class="w">    </span><span class="c">!&gt; Path to delet the last node from</span>
+<a id="ln-208" name="ln-208" href="#ln-208"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-209" name="ln-209" href="#ln-209"></a><span class="w">    </span><span class="c">!&gt; Flag, if resulting path is empty (contains no nodes anymore)</span>
+<a id="ln-210" name="ln-210" href="#ln-210"></a><span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">isEmpty</span>
+<a id="ln-211" name="ln-211" href="#ln-211"></a>
+<a id="ln-212" name="ln-212" href="#ln-212"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<a id="ln-213" name="ln-213" href="#ln-213"></a><span class="w">    </span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">emptyList</span>
+<a id="ln-214" name="ln-214" href="#ln-214"></a>
+<a id="ln-215" name="ln-215" href="#ln-215"></a><span class="w">    </span><span class="n">emptyList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a id="ln-216" name="ln-216" href="#ln-216"></a>
+<a id="ln-217" name="ln-217" href="#ln-217"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-218" name="ln-218" href="#ln-218"></a><span class="k">      </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span>
+<a id="ln-219" name="ln-219" href="#ln-219"></a>
+<a id="ln-220" name="ln-220" href="#ln-220"></a><span class="w">      </span><span class="k">do</span>
+<a id="ln-221" name="ln-221" href="#ln-221"></a><span class="k">        if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-222" name="ln-222" href="#ln-222"></a><span class="k">          if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span><span class="p">,</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-223" name="ln-223" href="#ln-223"></a><span class="w">            </span><span class="c">! Found second Last Node (its child is the head)</span>
+<a id="ln-224" name="ln-224" href="#ln-224"></a><span class="w">            </span><span class="k">nullify</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span><span class="p">)</span>
+<a id="ln-225" name="ln-225" href="#ln-225"></a><span class="w">            </span><span class="k">deallocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">)</span>
+<a id="ln-226" name="ln-226" href="#ln-226"></a><span class="w">            </span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">curNode</span>
+<a id="ln-227" name="ln-227" href="#ln-227"></a><span class="w">            </span><span class="c">! The list is not empty, there is at least one</span>
+<a id="ln-228" name="ln-228" href="#ln-228"></a><span class="w">            </span><span class="c">! node remaining.</span>
+<a id="ln-229" name="ln-229" href="#ln-229"></a><span class="w">            </span><span class="n">emptyList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a id="ln-230" name="ln-230" href="#ln-230"></a><span class="w">            </span><span class="c">! Leave the loop</span>
+<a id="ln-231" name="ln-231" href="#ln-231"></a><span class="w">            </span><span class="k">exit</span>
+<a id="ln-232" name="ln-232" href="#ln-232"></a><span class="k">          end if</span>
+<a id="ln-233" name="ln-233" href="#ln-233"></a><span class="k">        else</span>
+<a id="ln-234" name="ln-234" href="#ln-234"></a><span class="w">          </span><span class="c">! There is just the global node, no childs yet</span>
+<a id="ln-235" name="ln-235" href="#ln-235"></a><span class="w">          </span><span class="k">nullify</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">globalNode</span><span class="p">)</span>
+<a id="ln-236" name="ln-236" href="#ln-236"></a><span class="w">          </span><span class="k">deallocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">)</span>
+<a id="ln-237" name="ln-237" href="#ln-237"></a><span class="w">          </span><span class="c">! Leave the loop</span>
+<a id="ln-238" name="ln-238" href="#ln-238"></a><span class="w">          </span><span class="k">exit</span>
+<a id="ln-239" name="ln-239" href="#ln-239"></a><span class="k">        end if</span>
+<a id="ln-240" name="ln-240" href="#ln-240"></a><span class="k">        </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-241" name="ln-241" href="#ln-241"></a><span class="w">      </span><span class="k">end do</span>
+<a id="ln-242" name="ln-242" href="#ln-242"></a>
+<a id="ln-243" name="ln-243" href="#ln-243"></a><span class="k">    end if</span>
+<a id="ln-244" name="ln-244" href="#ln-244"></a>
+<a id="ln-245" name="ln-245" href="#ln-245"></a><span class="k">    if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">isEmpty</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-246" name="ln-246" href="#ln-246"></a><span class="k">      </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emptyList</span>
+<a id="ln-247" name="ln-247" href="#ln-247"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-248" name="ln-248" href="#ln-248"></a>
+<a id="ln-249" name="ln-249" href="#ln-249"></a><span class="k">  end subroutine </span><span class="n">aot_path_delNode</span>
+<a id="ln-250" name="ln-250" href="#ln-250"></a>
+<a id="ln-251" name="ln-251" href="#ln-251"></a>
+<a id="ln-252" name="ln-252" href="#ln-252"></a><span class="w">  </span><span class="c">!&gt; Copy a given path object, this is the implementation of the</span>
+<a id="ln-253" name="ln-253" href="#ln-253"></a><span class="w">  </span><span class="c">!! assignment left = right.</span>
+<a id="ln-254" name="ln-254" href="#ln-254"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_copy</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="p">)</span>
+<a id="ln-255" name="ln-255" href="#ln-255"></a><span class="w">    </span><span class="c">!&gt; Object to assign a path to</span>
+<a id="ln-256" name="ln-256" href="#ln-256"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">left</span>
+<a id="ln-257" name="ln-257" href="#ln-257"></a><span class="w">    </span><span class="c">!&gt; Path to be copied</span>
+<a id="ln-258" name="ln-258" href="#ln-258"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">right</span>
+<a id="ln-259" name="ln-259" href="#ln-259"></a>
+<a id="ln-260" name="ln-260" href="#ln-260"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">curNode</span>
+<a id="ln-261" name="ln-261" href="#ln-261"></a>
+<a id="ln-262" name="ln-262" href="#ln-262"></a><span class="w">    </span><span class="k">call </span><span class="n">aot_fin_path</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
+<a id="ln-263" name="ln-263" href="#ln-263"></a>
+<a id="ln-264" name="ln-264" href="#ln-264"></a><span class="w">    </span><span class="n">left</span><span class="p">%</span><span class="n">LuaFilename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">LuaFilename</span>
+<a id="ln-265" name="ln-265" href="#ln-265"></a><span class="w">    </span><span class="n">left</span><span class="p">%</span><span class="n">roothandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">roothandle</span>
+<a id="ln-266" name="ln-266" href="#ln-266"></a>
+<a id="ln-267" name="ln-267" href="#ln-267"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">right</span><span class="p">%</span><span class="n">globalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-268" name="ln-268" href="#ln-268"></a><span class="k">      allocate</span><span class="p">(</span><span class="n">left</span><span class="p">%</span><span class="n">globalNode</span><span class="p">)</span>
+<a id="ln-269" name="ln-269" href="#ln-269"></a><span class="w">      </span><span class="n">left</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">NodeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">NodeType</span>
+<a id="ln-270" name="ln-270" href="#ln-270"></a><span class="w">      </span><span class="n">left</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">ID_kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">ID_kind</span>
+<a id="ln-271" name="ln-271" href="#ln-271"></a><span class="w">      </span><span class="n">left</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">key</span>
+<a id="ln-272" name="ln-272" href="#ln-272"></a><span class="w">      </span><span class="n">left</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">globalNode</span><span class="p">%</span><span class="n">pos</span>
+<a id="ln-273" name="ln-273" href="#ln-273"></a><span class="w">      </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">left</span><span class="p">%</span><span class="n">globalNode</span>
+<a id="ln-274" name="ln-274" href="#ln-274"></a>
+<a id="ln-275" name="ln-275" href="#ln-275"></a><span class="w">      </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">right</span><span class="p">%</span><span class="n">globalNode</span>
+<a id="ln-276" name="ln-276" href="#ln-276"></a><span class="w">      </span><span class="k">do while</span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span><span class="p">))</span>
+<a id="ln-277" name="ln-277" href="#ln-277"></a><span class="w">        </span><span class="k">allocate</span><span class="p">(</span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">child</span><span class="p">)</span>
+<a id="ln-278" name="ln-278" href="#ln-278"></a><span class="w">        </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-279" name="ln-279" href="#ln-279"></a><span class="w">        </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-280" name="ln-280" href="#ln-280"></a>
+<a id="ln-281" name="ln-281" href="#ln-281"></a><span class="w">        </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">NodeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">NodeType</span>
+<a id="ln-282" name="ln-282" href="#ln-282"></a><span class="w">        </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">ID_kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">ID_kind</span>
+<a id="ln-283" name="ln-283" href="#ln-283"></a><span class="w">        </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">key</span>
+<a id="ln-284" name="ln-284" href="#ln-284"></a><span class="w">        </span><span class="n">left</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">pos</span>
+<a id="ln-285" name="ln-285" href="#ln-285"></a><span class="w">      </span><span class="k">end do</span>
+<a id="ln-286" name="ln-286" href="#ln-286"></a><span class="k">    end if</span>
+<a id="ln-287" name="ln-287" href="#ln-287"></a>
+<a id="ln-288" name="ln-288" href="#ln-288"></a><span class="k">  end subroutine </span><span class="n">aot_path_copy</span>
+<a id="ln-289" name="ln-289" href="#ln-289"></a>
+<a id="ln-290" name="ln-290" href="#ln-290"></a>
+<a id="ln-291" name="ln-291" href="#ln-291"></a><span class="w">  </span><span class="c">!&gt; This subroutine opens all the tables on the way to the final head node,</span>
+<a id="ln-292" name="ln-292" href="#ln-292"></a><span class="w">  </span><span class="c">!! which ought to be a function.</span>
+<a id="ln-293" name="ln-293" href="#ln-293"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-294" name="ln-294" href="#ln-294"></a><span class="w">  </span><span class="c">!! The given fun object is then filled by an aot_fun_open</span>
+<a id="ln-295" name="ln-295" href="#ln-295"></a><span class="w">  </span><span class="c">!! on the head of the given path.</span>
+<a id="ln-296" name="ln-296" href="#ln-296"></a><span class="w">  </span><span class="c">!! The handle can be either passed in, to be used for the</span>
+<a id="ln-297" name="ln-297" href="#ln-297"></a><span class="w">  </span><span class="c">!! look up of the path, or, when specifying the optional</span>
+<a id="ln-298" name="ln-298" href="#ln-298"></a><span class="w">  </span><span class="c">!! openLua argument as true, it will return the handle to</span>
+<a id="ln-299" name="ln-299" href="#ln-299"></a><span class="w">  </span><span class="c">!! the newly opened Lua script.</span>
+<a id="ln-300" name="ln-300" href="#ln-300"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_open_fun</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">openLua</span><span class="p">)</span>
+<a id="ln-301" name="ln-301" href="#ln-301"></a><span class="w">    </span><span class="c">!&gt; The path object to open as a function</span>
+<a id="ln-302" name="ln-302" href="#ln-302"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-303" name="ln-303" href="#ln-303"></a><span class="w">    </span><span class="c">!&gt; The flu_state handle, which is either opened according to</span>
+<a id="ln-304" name="ln-304" href="#ln-304"></a><span class="w">    </span><span class="c">!! the path, or used to open the path in.</span>
+<a id="ln-305" name="ln-305" href="#ln-305"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_state</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">conf</span>
+<a id="ln-306" name="ln-306" href="#ln-306"></a><span class="w">    </span><span class="c">!&gt; The opened function</span>
+<a id="ln-307" name="ln-307" href="#ln-307"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_fun_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fun</span>
+<a id="ln-308" name="ln-308" href="#ln-308"></a><span class="w">    </span><span class="c">!&gt; A flag to indicate, wether to open the Lua script, default</span>
+<a id="ln-309" name="ln-309" href="#ln-309"></a><span class="w">    </span><span class="c">!! is false, in which case the conf argument has to link to</span>
+<a id="ln-310" name="ln-310" href="#ln-310"></a><span class="w">    </span><span class="c">!! an actual Lua state handle.</span>
+<a id="ln-311" name="ln-311" href="#ln-311"></a><span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">openLua</span>
+<a id="ln-312" name="ln-312" href="#ln-312"></a>
+<a id="ln-313" name="ln-313" href="#ln-313"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">myHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="ln-314" name="ln-314" href="#ln-314"></a>
+<a id="ln-315" name="ln-315" href="#ln-315"></a><span class="w">    </span><span class="c">! open the table until it reaches the final head node</span>
+<a id="ln-316" name="ln-316" href="#ln-316"></a><span class="w">    </span><span class="k">call </span><span class="n">aot_path_open_table</span><span class="p">(</span><span class="w"> </span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">myHandle</span><span class="p">,</span><span class="w"> </span><span class="n">openLua</span><span class="w"> </span><span class="p">)</span>
+<a id="ln-317" name="ln-317" href="#ln-317"></a>
+<a id="ln-318" name="ln-318" href="#ln-318"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">NodeType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;function&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-319" name="ln-319" href="#ln-319"></a><span class="k">      select case</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">ID_kind</span><span class="p">)</span>
+<a id="ln-320" name="ln-320" href="#ln-320"></a><span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+<a id="ln-321" name="ln-321" href="#ln-321"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">,</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-322" name="ln-322" href="#ln-322"></a><span class="k">          call </span><span class="n">aot_fun_open</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="o">=</span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">key</span><span class="p">)</span>
+<a id="ln-323" name="ln-323" href="#ln-323"></a><span class="w">        </span><span class="k">else</span>
+<a id="ln-324" name="ln-324" href="#ln-324"></a><span class="k">          call </span><span class="n">aot_fun_open</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="o">=</span><span class="n">myHandle</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="o">=</span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">key</span><span class="p">)</span>
+<a id="ln-325" name="ln-325" href="#ln-325"></a><span class="w">        </span><span class="k">end if</span>
+<a id="ln-326" name="ln-326" href="#ln-326"></a><span class="k">      case</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">)</span>
+<a id="ln-327" name="ln-327" href="#ln-327"></a><span class="w">        </span><span class="k">call </span><span class="n">aot_fun_open</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="o">=</span><span class="n">myHandle</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="o">=</span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="o">=</span><span class="n">me</span><span class="p">%</span><span class="n">head</span><span class="p">%</span><span class="n">pos</span><span class="p">)</span>
+<a id="ln-328" name="ln-328" href="#ln-328"></a><span class="w">      </span><span class="k">end select</span>
+<a id="ln-329" name="ln-329" href="#ln-329"></a><span class="k">    end if</span>
+<a id="ln-330" name="ln-330" href="#ln-330"></a>
+<a id="ln-331" name="ln-331" href="#ln-331"></a><span class="k">  end subroutine </span><span class="n">aot_path_open_fun</span>
+<a id="ln-332" name="ln-332" href="#ln-332"></a>
+<a id="ln-333" name="ln-333" href="#ln-333"></a>
+<a id="ln-334" name="ln-334" href="#ln-334"></a><span class="w">  </span><span class="c">!&gt; This subroutine opens all the tables on the way to the final head node of</span>
+<a id="ln-335" name="ln-335" href="#ln-335"></a><span class="w">  </span><span class="c">!! the given path.</span>
+<a id="ln-336" name="ln-336" href="#ln-336"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-337" name="ln-337" href="#ln-337"></a><span class="w">  </span><span class="c">!! The handle can be either passed in, to be used for the</span>
+<a id="ln-338" name="ln-338" href="#ln-338"></a><span class="w">  </span><span class="c">!! look up of the path, or, when specifying the optional</span>
+<a id="ln-339" name="ln-339" href="#ln-339"></a><span class="w">  </span><span class="c">!! openLua argument as true, it will return the handle to</span>
+<a id="ln-340" name="ln-340" href="#ln-340"></a><span class="w">  </span><span class="c">!! the newly opened Lua script.</span>
+<a id="ln-341" name="ln-341" href="#ln-341"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_open_table</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">openLua</span><span class="p">)</span>
+<a id="ln-342" name="ln-342" href="#ln-342"></a><span class="w">    </span><span class="c">!&gt; The path object to open as a function</span>
+<a id="ln-343" name="ln-343" href="#ln-343"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-344" name="ln-344" href="#ln-344"></a><span class="w">    </span><span class="c">!&gt; The flu_state handle, which is either opened according to</span>
+<a id="ln-345" name="ln-345" href="#ln-345"></a><span class="w">    </span><span class="c">!! the path, or used to open the path in.</span>
+<a id="ln-346" name="ln-346" href="#ln-346"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_state</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">conf</span>
+<a id="ln-347" name="ln-347" href="#ln-347"></a><span class="w">    </span><span class="c">!&gt; return handle of the last opened table</span>
+<a id="ln-348" name="ln-348" href="#ln-348"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">thandle</span>
+<a id="ln-349" name="ln-349" href="#ln-349"></a><span class="w">    </span><span class="c">!&gt; A flag to indicate, wether to open the Lua script, default</span>
+<a id="ln-350" name="ln-350" href="#ln-350"></a><span class="w">    </span><span class="c">!! is false, in which case the conf argument has to link to</span>
+<a id="ln-351" name="ln-351" href="#ln-351"></a><span class="w">    </span><span class="c">!! an actual Lua state handle.</span>
+<a id="ln-352" name="ln-352" href="#ln-352"></a><span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">openLua</span>
+<a id="ln-353" name="ln-353" href="#ln-353"></a>
+<a id="ln-354" name="ln-354" href="#ln-354"></a><span class="w">    </span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">new_conf</span>
+<a id="ln-355" name="ln-355" href="#ln-355"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">NULL</span><span class="p">()</span>
+<a id="ln-356" name="ln-356" href="#ln-356"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">myHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="ln-357" name="ln-357" href="#ln-357"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">prevHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<a id="ln-358" name="ln-358" href="#ln-358"></a>
+<a id="ln-359" name="ln-359" href="#ln-359"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">openLua</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-360" name="ln-360" href="#ln-360"></a><span class="k">      </span><span class="n">new_conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openLua</span>
+<a id="ln-361" name="ln-361" href="#ln-361"></a><span class="w">    </span><span class="k">else</span>
+<a id="ln-362" name="ln-362" href="#ln-362"></a><span class="k">      </span><span class="n">new_conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a id="ln-363" name="ln-363" href="#ln-363"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-364" name="ln-364" href="#ln-364"></a>
+<a id="ln-365" name="ln-365" href="#ln-365"></a><span class="k">    if</span><span class="w"> </span><span class="p">(</span><span class="n">new_conf</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-366" name="ln-366" href="#ln-366"></a><span class="k">      call </span><span class="n">open_config_file</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">LuaFilename</span><span class="p">)</span>
+<a id="ln-367" name="ln-367" href="#ln-367"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-368" name="ln-368" href="#ln-368"></a>
+<a id="ln-369" name="ln-369" href="#ln-369"></a><span class="k">    </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">GlobalNode</span>
+<a id="ln-370" name="ln-370" href="#ln-370"></a>
+<a id="ln-371" name="ln-371" href="#ln-371"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">NodeType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;table&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-372" name="ln-372" href="#ln-372"></a><span class="k">      select case</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">ID_kind</span><span class="p">)</span>
+<a id="ln-373" name="ln-373" href="#ln-373"></a><span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+<a id="ln-374" name="ln-374" href="#ln-374"></a><span class="w">        </span><span class="k">call </span><span class="n">aot_table_open</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="o">=</span><span class="n">me</span><span class="p">%</span><span class="n">roothandle</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="n">curNode</span><span class="p">%</span><span class="n">key</span><span class="p">)</span>
+<a id="ln-375" name="ln-375" href="#ln-375"></a><span class="w">      </span><span class="k">end select</span>
+<a id="ln-376" name="ln-376" href="#ln-376"></a><span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-377" name="ln-377" href="#ln-377"></a><span class="k">        </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-378" name="ln-378" href="#ln-378"></a><span class="w">        </span><span class="n">myHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">me</span><span class="p">%</span><span class="n">rootHandle</span>
+<a id="ln-379" name="ln-379" href="#ln-379"></a><span class="w">      </span><span class="k">end if</span>
+<a id="ln-380" name="ln-380" href="#ln-380"></a><span class="k">    end if</span>
+<a id="ln-381" name="ln-381" href="#ln-381"></a>
+<a id="ln-382" name="ln-382" href="#ln-382"></a><span class="k">    do while</span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span><span class="p">))</span>
+<a id="ln-383" name="ln-383" href="#ln-383"></a><span class="w">      </span><span class="n">prevHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myHandle</span>
+<a id="ln-384" name="ln-384" href="#ln-384"></a>
+<a id="ln-385" name="ln-385" href="#ln-385"></a><span class="w">      </span><span class="k">select case</span><span class="p">(</span><span class="n">curNode</span><span class="p">%</span><span class="n">ID_kind</span><span class="p">)</span>
+<a id="ln-386" name="ln-386" href="#ln-386"></a><span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+<a id="ln-387" name="ln-387" href="#ln-387"></a><span class="w">        </span><span class="k">call </span><span class="n">aot_table_open</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="o">=</span><span class="n">myHandle</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="o">=</span><span class="n">prevHandle</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<a id="ln-388" name="ln-388" href="#ln-388"></a><span class="w">          </span><span class="p">&amp;</span><span class="w">                 </span><span class="n">key</span><span class="o">=</span><span class="n">curNode</span><span class="p">%</span><span class="n">key</span><span class="p">)</span>
+<a id="ln-389" name="ln-389" href="#ln-389"></a><span class="w">      </span><span class="k">case</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">)</span>
+<a id="ln-390" name="ln-390" href="#ln-390"></a><span class="w">        </span><span class="k">call </span><span class="n">aot_table_open</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="o">=</span><span class="n">myHandle</span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="o">=</span><span class="n">prevHandle</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<a id="ln-391" name="ln-391" href="#ln-391"></a><span class="w">          </span><span class="p">&amp;</span><span class="w">                 </span><span class="n">pos</span><span class="o">=</span><span class="n">curNode</span><span class="p">%</span><span class="n">pos</span><span class="p">)</span>
+<a id="ln-392" name="ln-392" href="#ln-392"></a><span class="w">      </span><span class="k">end select</span>
+<a id="ln-393" name="ln-393" href="#ln-393"></a><span class="k">      </span><span class="n">curNode</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">curNode</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-394" name="ln-394" href="#ln-394"></a>
+<a id="ln-395" name="ln-395" href="#ln-395"></a><span class="w">    </span><span class="k">end do</span>
+<a id="ln-396" name="ln-396" href="#ln-396"></a>
+<a id="ln-397" name="ln-397" href="#ln-397"></a><span class="k">    </span><span class="n">thandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myHandle</span>
+<a id="ln-398" name="ln-398" href="#ln-398"></a>
+<a id="ln-399" name="ln-399" href="#ln-399"></a><span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_path_open_table</span>
+<a id="ln-400" name="ln-400" href="#ln-400"></a>
+<a id="ln-401" name="ln-401" href="#ln-401"></a>
+<a id="ln-402" name="ln-402" href="#ln-402"></a><span class="w">  </span><span class="c">!&gt; This routine closes function and all other tables opened along the path.</span>
+<a id="ln-403" name="ln-403" href="#ln-403"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_close_fun</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">,</span><span class="w"> </span><span class="n">closeLua</span><span class="p">)</span>
+<a id="ln-404" name="ln-404" href="#ln-404"></a><span class="w">    </span><span class="c">!&gt; The path object to open as a function</span>
+<a id="ln-405" name="ln-405" href="#ln-405"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-406" name="ln-406" href="#ln-406"></a><span class="w">    </span><span class="c">!&gt; The flu_state handle, which is either opened according to</span>
+<a id="ln-407" name="ln-407" href="#ln-407"></a><span class="w">    </span><span class="c">!! the path, or used to open the path in.</span>
+<a id="ln-408" name="ln-408" href="#ln-408"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_state</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">conf</span>
+<a id="ln-409" name="ln-409" href="#ln-409"></a><span class="w">    </span><span class="c">!&gt; The opened function</span>
+<a id="ln-410" name="ln-410" href="#ln-410"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_fun_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fun</span>
+<a id="ln-411" name="ln-411" href="#ln-411"></a><span class="w">    </span><span class="c">!&gt; A flag to indicate, wether to close the Lua script, default</span>
+<a id="ln-412" name="ln-412" href="#ln-412"></a><span class="w">    </span><span class="c">!! is false.</span>
+<a id="ln-413" name="ln-413" href="#ln-413"></a><span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">closeLua</span>
+<a id="ln-414" name="ln-414" href="#ln-414"></a>
+<a id="ln-415" name="ln-415" href="#ln-415"></a><span class="w">    </span><span class="c">! close function</span>
+<a id="ln-416" name="ln-416" href="#ln-416"></a><span class="w">    </span><span class="k">call </span><span class="n">aot_fun_close</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="o">=</span><span class="n">fun</span><span class="p">)</span>
+<a id="ln-417" name="ln-417" href="#ln-417"></a><span class="w">    </span><span class="c">! close tables</span>
+<a id="ln-418" name="ln-418" href="#ln-418"></a><span class="w">    </span><span class="k">call </span><span class="n">aot_path_close_table</span><span class="p">(</span><span class="w"> </span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">closeLua</span><span class="w"> </span><span class="p">)</span>
+<a id="ln-419" name="ln-419" href="#ln-419"></a>
+<a id="ln-420" name="ln-420" href="#ln-420"></a><span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_path_close_fun</span>
+<a id="ln-421" name="ln-421" href="#ln-421"></a>
+<a id="ln-422" name="ln-422" href="#ln-422"></a>
+<a id="ln-423" name="ln-423" href="#ln-423"></a><span class="w">  </span><span class="c">!&gt; This routine closes all the table opened in aot_path_open_table.</span>
+<a id="ln-424" name="ln-424" href="#ln-424"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_close_table</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">closeLua</span><span class="p">)</span>
+<a id="ln-425" name="ln-425" href="#ln-425"></a><span class="w">    </span><span class="c">!&gt; The path object to open as a function</span>
+<a id="ln-426" name="ln-426" href="#ln-426"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">me</span>
+<a id="ln-427" name="ln-427" href="#ln-427"></a><span class="w">    </span><span class="c">!&gt; The flu_state handle, which is either opened according to</span>
+<a id="ln-428" name="ln-428" href="#ln-428"></a><span class="w">    </span><span class="c">!! the path, or used to open the path in.</span>
+<a id="ln-429" name="ln-429" href="#ln-429"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_state</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">conf</span>
+<a id="ln-430" name="ln-430" href="#ln-430"></a><span class="w">    </span><span class="c">!&gt; A flag to indicate, wether to close the Lua script, default</span>
+<a id="ln-431" name="ln-431" href="#ln-431"></a><span class="w">    </span><span class="c">!! is false.</span>
+<a id="ln-432" name="ln-432" href="#ln-432"></a><span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">closeLua</span>
+<a id="ln-433" name="ln-433" href="#ln-433"></a>
+<a id="ln-434" name="ln-434" href="#ln-434"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">roothandle</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-435" name="ln-435" href="#ln-435"></a><span class="k">      call </span><span class="n">aot_table_close</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="n">conf</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="o">=</span><span class="n">me</span><span class="p">%</span><span class="n">roothandle</span><span class="p">)</span>
+<a id="ln-436" name="ln-436" href="#ln-436"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-437" name="ln-437" href="#ln-437"></a>
+<a id="ln-438" name="ln-438" href="#ln-438"></a><span class="k">    if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">closeLua</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-439" name="ln-439" href="#ln-439"></a><span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">closeLua</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-440" name="ln-440" href="#ln-440"></a><span class="k">        call </span><span class="n">close_config</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+<a id="ln-441" name="ln-441" href="#ln-441"></a><span class="w">      </span><span class="k">end if</span>
+<a id="ln-442" name="ln-442" href="#ln-442"></a><span class="k">    end if</span>
+<a id="ln-443" name="ln-443" href="#ln-443"></a>
+<a id="ln-444" name="ln-444" href="#ln-444"></a><span class="k">  end subroutine </span><span class="n">aot_path_close_table</span>
+<a id="ln-445" name="ln-445" href="#ln-445"></a>
+<a id="ln-446" name="ln-446" href="#ln-446"></a><span class="w">  </span><span class="c">!&gt; Dumps the complete path into a string.</span>
+<a id="ln-447" name="ln-447" href="#ln-447"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-448" name="ln-448" href="#ln-448"></a><span class="w">  </span><span class="c">!! This routine transforms a given path into a special notation. Each element</span>
+<a id="ln-449" name="ln-449" href="#ln-449"></a><span class="w">  </span><span class="c">!! is added to the string, separated by a . char.</span>
+<a id="ln-450" name="ln-450" href="#ln-450"></a><span class="w">  </span><span class="c">!! If the resulting string is to long for the provided buffer /ref</span>
+<a id="ln-451" name="ln-451" href="#ln-451"></a><span class="w">  </span><span class="c">!! pathAsString, the buffer will stay empty to not have the caller proceed</span>
+<a id="ln-452" name="ln-452" href="#ln-452"></a><span class="w">  </span><span class="c">!! with incomplete results.</span>
+<a id="ln-453" name="ln-453" href="#ln-453"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_toString</span><span class="p">(</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">pathAsString</span><span class="w"> </span><span class="p">)</span>
+<a id="ln-454" name="ln-454" href="#ln-454"></a><span class="w">    </span><span class="c">!&gt; The path which information should be printed</span>
+<a id="ln-455" name="ln-455" href="#ln-455"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">path</span>
+<a id="ln-456" name="ln-456" href="#ln-456"></a><span class="w">    </span><span class="c">!&gt; The path represented as string</span>
+<a id="ln-457" name="ln-457" href="#ln-457"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pathAsString</span>
+<a id="ln-458" name="ln-458" href="#ln-458"></a>
+<a id="ln-459" name="ln-459" href="#ln-459"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">current</span>
+<a id="ln-460" name="ln-460" href="#ln-460"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pathLength</span>
+<a id="ln-461" name="ln-461" href="#ln-461"></a><span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">stringLength</span>
+<a id="ln-462" name="ln-462" href="#ln-462"></a><span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">posstr</span>
+<a id="ln-463" name="ln-463" href="#ln-463"></a>
+<a id="ln-464" name="ln-464" href="#ln-464"></a><span class="w">    </span><span class="n">stringLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">pathAsString</span><span class="p">)</span>
+<a id="ln-465" name="ln-465" href="#ln-465"></a><span class="w">    </span><span class="n">pathLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<a id="ln-466" name="ln-466" href="#ln-466"></a>
+<a id="ln-467" name="ln-467" href="#ln-467"></a><span class="w">    </span><span class="c">! First we measure the size of the result</span>
+<a id="ln-468" name="ln-468" href="#ln-468"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-469" name="ln-469" href="#ln-469"></a><span class="k">      </span><span class="n">current</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span>
+<a id="ln-470" name="ln-470" href="#ln-470"></a><span class="w">      </span><span class="k">do while</span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">current</span><span class="p">))</span>
+<a id="ln-471" name="ln-471" href="#ln-471"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">current</span><span class="p">,</span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-472" name="ln-472" href="#ln-472"></a><span class="w">          </span><span class="c">! Add the length of the first node</span>
+<a id="ln-473" name="ln-473" href="#ln-473"></a><span class="w">          </span><span class="n">pathLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">len_trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">key</span><span class="p">))</span>
+<a id="ln-474" name="ln-474" href="#ln-474"></a><span class="w">        </span><span class="k">else</span>
+<a id="ln-475" name="ln-475" href="#ln-475"></a><span class="k">          if</span><span class="w"> </span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">ID_kind</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-476" name="ln-476" href="#ln-476"></a><span class="w">            </span><span class="c">! Add the length of a following node and the delimiter char</span>
+<a id="ln-477" name="ln-477" href="#ln-477"></a><span class="w">            </span><span class="n">pathLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pathLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">len_trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">key</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<a id="ln-478" name="ln-478" href="#ln-478"></a><span class="w">          </span><span class="k">else</span>
+<a id="ln-479" name="ln-479" href="#ln-479"></a><span class="w">            </span><span class="c">! Length of the position number and 2 places for brackets.</span>
+<a id="ln-480" name="ln-480" href="#ln-480"></a><span class="w">            </span><span class="k">write</span><span class="p">(</span><span class="n">posstr</span><span class="p">,</span><span class="s1">&#39;(i0)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">pos</span>
+<a id="ln-481" name="ln-481" href="#ln-481"></a><span class="w">            </span><span class="n">pathLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pathLength</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">len_trim</span><span class="p">(</span><span class="n">posstr</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span>
+<a id="ln-482" name="ln-482" href="#ln-482"></a><span class="w">          </span><span class="k">end if</span>
+<a id="ln-483" name="ln-483" href="#ln-483"></a><span class="k">        end if</span>
+<a id="ln-484" name="ln-484" href="#ln-484"></a><span class="k">        </span><span class="n">current</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-485" name="ln-485" href="#ln-485"></a><span class="w">      </span><span class="k">end do</span>
+<a id="ln-486" name="ln-486" href="#ln-486"></a><span class="k">    end if</span>
+<a id="ln-487" name="ln-487" href="#ln-487"></a>
+<a id="ln-488" name="ln-488" href="#ln-488"></a><span class="w">    </span><span class="c">! If the result fits into the buffer, we create it</span>
+<a id="ln-489" name="ln-489" href="#ln-489"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pathLength</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">stringLength</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">pathLength</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-490" name="ln-490" href="#ln-490"></a><span class="k">      </span><span class="n">current</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span>
+<a id="ln-491" name="ln-491" href="#ln-491"></a><span class="w">      </span><span class="k">do while</span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">current</span><span class="p">))</span>
+<a id="ln-492" name="ln-492" href="#ln-492"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">current</span><span class="p">,</span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-493" name="ln-493" href="#ln-493"></a><span class="k">          </span><span class="n">pathAsString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">key</span><span class="p">))</span>
+<a id="ln-494" name="ln-494" href="#ln-494"></a><span class="w">        </span><span class="k">else</span>
+<a id="ln-495" name="ln-495" href="#ln-495"></a><span class="k">          if</span><span class="w"> </span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">ID_kind</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-496" name="ln-496" href="#ln-496"></a><span class="k">            </span><span class="n">pathAsString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">pathAsString</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="p">&amp;</span>
+<a id="ln-497" name="ln-497" href="#ln-497"></a><span class="w">              </span><span class="p">&amp;</span><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">key</span><span class="p">))</span>
+<a id="ln-498" name="ln-498" href="#ln-498"></a><span class="w">          </span><span class="k">else</span>
+<a id="ln-499" name="ln-499" href="#ln-499"></a><span class="k">            write</span><span class="p">(</span><span class="n">posstr</span><span class="p">,</span><span class="s1">&#39;(i0)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">pos</span>
+<a id="ln-500" name="ln-500" href="#ln-500"></a><span class="w">            </span><span class="n">pathAsString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">pathAsString</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s1">&#39;[&#39;</span><span class="w"> </span><span class="p">&amp;</span>
+<a id="ln-501" name="ln-501" href="#ln-501"></a><span class="w">              </span><span class="p">&amp;</span><span class="w">            </span><span class="o">//</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">posstr</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="s1">&#39;]&#39;</span>
+<a id="ln-502" name="ln-502" href="#ln-502"></a><span class="w">          </span><span class="k">end if</span>
+<a id="ln-503" name="ln-503" href="#ln-503"></a><span class="k">        end if</span>
+<a id="ln-504" name="ln-504" href="#ln-504"></a><span class="k">        </span><span class="n">current</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-505" name="ln-505" href="#ln-505"></a><span class="w">      </span><span class="k">end do</span>
+<a id="ln-506" name="ln-506" href="#ln-506"></a><span class="k">    else</span>
+<a id="ln-507" name="ln-507" href="#ln-507"></a><span class="w">      </span><span class="c">! Either the result is empty or too long, thus we clear the buffer</span>
+<a id="ln-508" name="ln-508" href="#ln-508"></a><span class="w">      </span><span class="n">pathAsString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<a id="ln-509" name="ln-509" href="#ln-509"></a><span class="w">    </span><span class="k">end if</span>
+<a id="ln-510" name="ln-510" href="#ln-510"></a>
+<a id="ln-511" name="ln-511" href="#ln-511"></a><span class="k">  end subroutine </span><span class="n">aot_path_toString</span>
+<a id="ln-512" name="ln-512" href="#ln-512"></a>
+<a id="ln-513" name="ln-513" href="#ln-513"></a>
+<a id="ln-514" name="ln-514" href="#ln-514"></a><span class="w">  </span><span class="c">!&gt; Dumps the complete path to the given output unit.</span>
+<a id="ln-515" name="ln-515" href="#ln-515"></a><span class="w">  </span><span class="c">!!</span>
+<a id="ln-516" name="ln-516" href="#ln-516"></a><span class="w">  </span><span class="c">!! This routine is for debugging purposes. It takes the path and, beginning</span>
+<a id="ln-517" name="ln-517" href="#ln-517"></a><span class="w">  </span><span class="c">!! with the global node, dumps all following nodes to the output unit provided</span>
+<a id="ln-518" name="ln-518" href="#ln-518"></a><span class="w">  </span><span class="c">!! by the caller.</span>
+<a id="ln-519" name="ln-519" href="#ln-519"></a><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_path_dump</span><span class="p">(</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">outputUnit</span><span class="w"> </span><span class="p">)</span>
+<a id="ln-520" name="ln-520" href="#ln-520"></a><span class="w">    </span><span class="c">!&gt; The path which information should be printed</span>
+<a id="ln-521" name="ln-521" href="#ln-521"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">path</span>
+<a id="ln-522" name="ln-522" href="#ln-522"></a><span class="w">    </span><span class="c">!&gt; The unit to use to write the path data</span>
+<a id="ln-523" name="ln-523" href="#ln-523"></a><span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">outputUnit</span>
+<a id="ln-524" name="ln-524" href="#ln-524"></a>
+<a id="ln-525" name="ln-525" href="#ln-525"></a><span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_path_node_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">current</span>
+<a id="ln-526" name="ln-526" href="#ln-526"></a>
+<a id="ln-527" name="ln-527" href="#ln-527"></a><span class="w">    </span><span class="k">write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Path:&#39;</span>
+<a id="ln-528" name="ln-528" href="#ln-528"></a><span class="w">    </span><span class="k">write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;  Filename: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">%</span><span class="n">LuaFilename</span>
+<a id="ln-529" name="ln-529" href="#ln-529"></a><span class="w">    </span><span class="k">write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="s1">&#39;(A,I10)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;   root handle: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">%</span><span class="n">rootHandle</span>
+<a id="ln-530" name="ln-530" href="#ln-530"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-531" name="ln-531" href="#ln-531"></a><span class="k">      </span><span class="n">current</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span>
+<a id="ln-532" name="ln-532" href="#ln-532"></a><span class="w">      </span><span class="k">do while</span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">current</span><span class="p">))</span>
+<a id="ln-533" name="ln-533" href="#ln-533"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">current</span><span class="p">,</span><span class="n">path</span><span class="p">%</span><span class="n">globalNode</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-534" name="ln-534" href="#ln-534"></a><span class="k">          write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;  Global node: &#39;</span>
+<a id="ln-535" name="ln-535" href="#ln-535"></a><span class="w">        </span><span class="k">else</span>
+<a id="ln-536" name="ln-536" href="#ln-536"></a><span class="k">          write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;  next: &#39;</span>
+<a id="ln-537" name="ln-537" href="#ln-537"></a><span class="w">        </span><span class="k">end if</span>
+<a id="ln-538" name="ln-538" href="#ln-538"></a><span class="k">        write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;    NodeType: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">NodeType</span>
+<a id="ln-539" name="ln-539" href="#ln-539"></a><span class="w">        </span><span class="k">write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;    ID_Kind: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">ID_Kind</span>
+<a id="ln-540" name="ln-540" href="#ln-540"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">current</span><span class="p">%</span><span class="n">ID_Kind</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-541" name="ln-541" href="#ln-541"></a><span class="k">          write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;    key: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">key</span>
+<a id="ln-542" name="ln-542" href="#ln-542"></a><span class="w">        </span><span class="k">else</span>
+<a id="ln-543" name="ln-543" href="#ln-543"></a><span class="k">          write</span><span class="p">(</span><span class="n">outputUnit</span><span class="p">,</span><span class="s1">&#39;(A,I10)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;     pos: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">pos</span>
+<a id="ln-544" name="ln-544" href="#ln-544"></a><span class="w">        </span><span class="k">end if</span>
+<a id="ln-545" name="ln-545" href="#ln-545"></a><span class="k">        </span><span class="n">current</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">current</span><span class="p">%</span><span class="n">child</span>
+<a id="ln-546" name="ln-546" href="#ln-546"></a><span class="w">      </span><span class="k">end do</span>
+<a id="ln-547" name="ln-547" href="#ln-547"></a><span class="k">    end if</span>
+<a id="ln-548" name="ln-548" href="#ln-548"></a>
+<a id="ln-549" name="ln-549" href="#ln-549"></a><span class="k">  end subroutine </span><span class="n">aot_path_dump</span>
+<a id="ln-550" name="ln-550" href="#ln-550"></a>
+<a id="ln-551" name="ln-551" href="#ln-551"></a><span class="k">end module </span><span class="n">aot_path_module</span>
+</pre></div>
+
+      </section>
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

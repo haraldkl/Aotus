@@ -1,0 +1,752 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>create_1Darray_double &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>create_1Darray_double
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for procedures.">17 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_table_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_table_module.f90.html'>aot_table_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_table_module.html'>aot_table_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">create_1Darray_double</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/create_1darray_double.html#src">create_1Darray_double</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private  subroutine create_1Darray_double(L, thandle, val)  
+</h2>
+    
+
+    <p>This subroutine takes a one dimensional array, and puts it as a table
+into the Lua context.</p>
+<p>The returned thandle provides the index to access this newly created
+table.</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~75"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-thandle~27"></span>
+              integer,
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>thandle</strong></td>
+            <td>
+                <p>Handle to access the newly created table.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-val~30"></span>
+              real(kind=double_k),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>val</strong>(:)</td>
+            <td>
+                <p>Values to put into the new table.</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~create_1darray_double~~CallsGraph Pages: 1 -->
+<svg id="proccreate_1darray_doubleCallsGraph" width="549pt" height="284pt"
+ viewBox="0.00 0.00 549.00 284.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~create_1darray_double~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 280)">
+<title>proc~~create_1darray_double~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-280 545,-280 545,4 -4,4"/>
+<!-- proc~create_1darray_double -->
+<g id="proc~~create_1darray_double~~CallsGraph_node1" class="node">
+<title>proc~create_1darray_double</title>
+<polygon fill="none" stroke="black" points="137,-108 0,-108 0,-84 137,-84 137,-108"/>
+<text text-anchor="middle" x="68.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">create_1Darray_double</text>
+</g>
+<!-- interface~flu_pushinteger -->
+<g id="proc~~create_1darray_double~~CallsGraph_node2" class="node">
+<title>interface~flu_pushinteger</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node2"><a xlink:href="../interface/flu_pushinteger.html" xlink:title="flu_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="270,-234 175,-234 175,-210 270,-210 270,-234"/>
+<text text-anchor="middle" x="222.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_double&#45;&gt;interface~flu_pushinteger -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge1" class="edge">
+<title>proc~create_1darray_double&#45;&gt;interface~flu_pushinteger</title>
+<path fill="none" stroke="#000000" d="M84.07,-108.08C110.68,-130.13 167.27,-177.04 198.9,-203.27"/>
+<polygon fill="#000000" stroke="#000000" points="196.81,-206.08 206.75,-209.77 201.28,-200.69 196.81,-206.08"/>
+</g>
+<!-- interface~flu_pushnumber -->
+<g id="proc~~create_1darray_double~~CallsGraph_node3" class="node">
+<title>interface~flu_pushnumber</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node3"><a xlink:href="../interface/flu_pushnumber.html" xlink:title="flu_pushnumber">
+<polygon fill="#a7506f" stroke="#a7506f" points="272,-150 173,-150 173,-126 272,-126 272,-150"/>
+<text text-anchor="middle" x="222.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushnumber</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_double&#45;&gt;interface~flu_pushnumber -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge2" class="edge">
+<title>proc~create_1darray_double&#45;&gt;interface~flu_pushnumber</title>
+<path fill="none" stroke="#000000" d="M113.06,-108.04C130.23,-112.78 150.12,-118.28 168.15,-123.26"/>
+<polygon fill="#000000" stroke="#000000" points="167.37,-126.67 177.94,-125.96 169.23,-119.93 167.37,-126.67"/>
+</g>
+<!-- proc~flu_createtable -->
+<g id="proc~~create_1darray_double~~CallsGraph_node4" class="node">
+<title>proc~flu_createtable</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node4"><a xlink:href="../proc/flu_createtable.html" xlink:title="flu_createtable">
+<polygon fill="#d9534f" stroke="#d9534f" points="268.5,-108 176.5,-108 176.5,-84 268.5,-84 268.5,-108"/>
+<text text-anchor="middle" x="222.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_createtable</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_double&#45;&gt;proc~flu_createtable -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge3" class="edge">
+<title>proc~create_1darray_double&#45;&gt;proc~flu_createtable</title>
+<path fill="none" stroke="#000000" d="M137.05,-96C146.84,-96 156.81,-96 166.31,-96"/>
+<polygon fill="#000000" stroke="#000000" points="166.4,-99.5 176.4,-96 166.4,-92.5 166.4,-99.5"/>
+</g>
+<!-- proc~flu_gettop -->
+<g id="proc~~create_1darray_double~~CallsGraph_node5" class="node">
+<title>proc~flu_gettop</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node5"><a xlink:href="../proc/flu_gettop.html" xlink:title="flu_gettop">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="255.5,-66 189.5,-66 189.5,-42 255.5,-42 255.5,-66"/>
+<text text-anchor="middle" x="222.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_gettop</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_double&#45;&gt;proc~flu_gettop -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge4" class="edge">
+<title>proc~create_1darray_double&#45;&gt;proc~flu_gettop</title>
+<path fill="none" stroke="#000000" d="M113.06,-83.96C133.86,-78.22 158.67,-71.36 179.3,-65.66"/>
+<polygon fill="#000000" stroke="#000000" points="180.35,-69 189.05,-62.97 178.48,-62.26 180.35,-69"/>
+</g>
+<!-- proc~flu_settable -->
+<g id="proc~~create_1darray_double~~CallsGraph_node6" class="node">
+<title>proc~flu_settable</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node6"><a xlink:href="../proc/flu_settable.html" xlink:title="flu_settable">
+<polygon fill="#d9534f" stroke="#d9534f" points="259.5,-24 185.5,-24 185.5,0 259.5,0 259.5,-24"/>
+<text text-anchor="middle" x="222.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_settable</text>
+</a>
+</g>
+</g>
+<!-- proc~create_1darray_double&#45;&gt;proc~flu_settable -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge5" class="edge">
+<title>proc~create_1darray_double&#45;&gt;proc~flu_settable</title>
+<path fill="none" stroke="#000000" d="M87.75,-83.83C108.09,-70.52 142.18,-48.96 173,-33 176.11,-31.39 179.37,-29.79 182.67,-28.24"/>
+<polygon fill="#000000" stroke="#000000" points="184.3,-31.34 191.96,-24.02 181.41,-24.97 184.3,-31.34"/>
+</g>
+<!-- proc~flu_pushint -->
+<g id="proc~~create_1darray_double~~CallsGraph_node11" class="node">
+<title>proc~flu_pushint</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node11"><a xlink:href="../proc/flu_pushint.html" xlink:title="flu_pushint">
+<polygon fill="#d9534f" stroke="#d9534f" points="390.5,-276 320.5,-276 320.5,-252 390.5,-252 390.5,-276"/>
+<text text-anchor="middle" x="355.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushint</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushint -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge6" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushint</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M261.04,-234.04C276.44,-238.97 294.38,-244.73 310.41,-249.86"/>
+<polygon fill="#000000" stroke="#000000" points="309.5,-253.25 320.09,-252.97 311.64,-246.58 309.5,-253.25"/>
+</g>
+<!-- proc~flu_pushlong -->
+<g id="proc~~create_1darray_double~~CallsGraph_node12" class="node">
+<title>proc~flu_pushlong</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node12"><a xlink:href="../proc/flu_pushlong.html" xlink:title="flu_pushlong">
+<polygon fill="#d9534f" stroke="#d9534f" points="395.5,-234 315.5,-234 315.5,-210 395.5,-210 395.5,-234"/>
+<text text-anchor="middle" x="355.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushlong</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushlong -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge7" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushlong</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M270.05,-222C281.43,-222 293.64,-222 305.14,-222"/>
+<polygon fill="#000000" stroke="#000000" points="305.45,-225.5 315.45,-222 305.45,-218.5 305.45,-225.5"/>
+</g>
+<!-- proc~flu_pushdouble -->
+<g id="proc~~create_1darray_double~~CallsGraph_node10" class="node">
+<title>proc~flu_pushdouble</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node10"><a xlink:href="../proc/flu_pushdouble.html" xlink:title="flu_pushdouble">
+<polygon fill="#d9534f" stroke="#d9534f" points="402.5,-192 308.5,-192 308.5,-168 402.5,-168 402.5,-192"/>
+<text text-anchor="middle" x="355.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushdouble</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushnumber&#45;&gt;proc~flu_pushdouble -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge8" class="edge">
+<title>interface~flu_pushnumber&#45;&gt;proc~flu_pushdouble</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M261.04,-150.04C275.43,-154.65 292.03,-159.97 307.22,-164.84"/>
+<polygon fill="#000000" stroke="#000000" points="306.36,-168.24 316.96,-167.96 308.5,-161.58 306.36,-168.24"/>
+</g>
+<!-- proc~flu_pushreal -->
+<g id="proc~~create_1darray_double~~CallsGraph_node13" class="node">
+<title>proc~flu_pushreal</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node13"><a xlink:href="../proc/flu_pushreal.html" xlink:title="flu_pushreal">
+<polygon fill="#d9534f" stroke="#d9534f" points="394,-150 317,-150 317,-126 394,-126 394,-150"/>
+<text text-anchor="middle" x="355.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushreal</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushnumber&#45;&gt;proc~flu_pushreal -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge9" class="edge">
+<title>interface~flu_pushnumber&#45;&gt;proc~flu_pushreal</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M272.28,-138C283.53,-138 295.49,-138 306.69,-138"/>
+<polygon fill="#000000" stroke="#000000" points="306.74,-141.5 316.74,-138 306.74,-134.5 306.74,-141.5"/>
+</g>
+<!-- interface~lua_createtable -->
+<g id="proc~~create_1darray_double~~CallsGraph_node7" class="node">
+<title>interface~lua_createtable</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node7"><a xlink:href="../interface/lua_createtable.html" xlink:title="lua_createtable">
+<polygon fill="#a7506f" stroke="#a7506f" points="403,-108 308,-108 308,-84 403,-84 403,-108"/>
+<text text-anchor="middle" x="355.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_createtable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_createtable&#45;&gt;interface~lua_createtable -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge10" class="edge">
+<title>proc~flu_createtable&#45;&gt;interface~lua_createtable</title>
+<path fill="none" stroke="#000000" d="M268.58,-96C278.03,-96 288.11,-96 297.91,-96"/>
+<polygon fill="#000000" stroke="#000000" points="298,-99.5 308,-96 298,-92.5 298,-99.5"/>
+</g>
+<!-- interface~lua_gettop -->
+<g id="proc~~create_1darray_double~~CallsGraph_node8" class="node">
+<title>interface~lua_gettop</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node8"><a xlink:href="../interface/lua_gettop.html" xlink:title="lua_gettop">
+<polygon fill="#a7506f" stroke="#a7506f" points="390,-66 321,-66 321,-42 390,-42 390,-66"/>
+<text text-anchor="middle" x="355.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_gettop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_gettop&#45;&gt;interface~lua_gettop -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge11" class="edge">
+<title>proc~flu_gettop&#45;&gt;interface~lua_gettop</title>
+<path fill="none" stroke="#000000" d="M255.55,-54C272.21,-54 292.83,-54 310.93,-54"/>
+<polygon fill="#000000" stroke="#000000" points="310.96,-57.5 320.96,-54 310.96,-50.5 310.96,-57.5"/>
+</g>
+<!-- interface~lua_settable -->
+<g id="proc~~create_1darray_double~~CallsGraph_node9" class="node">
+<title>interface~lua_settable</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node9"><a xlink:href="../interface/lua_settable.html" xlink:title="lua_settable">
+<polygon fill="#a7506f" stroke="#a7506f" points="394,-24 317,-24 317,0 394,0 394,-24"/>
+<text text-anchor="middle" x="355.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_settable&#45;&gt;interface~lua_settable -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge12" class="edge">
+<title>proc~flu_settable&#45;&gt;interface~lua_settable</title>
+<path fill="none" stroke="#000000" d="M259.64,-12C274.04,-12 290.83,-12 306.24,-12"/>
+<polygon fill="#000000" stroke="#000000" points="306.65,-15.5 316.65,-12 306.65,-8.5 306.65,-15.5"/>
+</g>
+<!-- interface~lua_pushnumber -->
+<g id="proc~~create_1darray_double~~CallsGraph_node15" class="node">
+<title>interface~lua_pushnumber</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node15"><a xlink:href="../interface/lua_pushnumber.html" xlink:title="lua_pushnumber">
+<polygon fill="#a7506f" stroke="#a7506f" points="541,-181 439,-181 439,-157 541,-157 541,-181"/>
+<text text-anchor="middle" x="490" y="-166.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushnumber</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushdouble&#45;&gt;interface~lua_pushnumber -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge13" class="edge">
+<title>proc~flu_pushdouble&#45;&gt;interface~lua_pushnumber</title>
+<path fill="none" stroke="#000000" d="M402.84,-176.15C411.21,-175.46 420.04,-174.72 428.74,-174"/>
+<polygon fill="#000000" stroke="#000000" points="429.17,-177.48 438.85,-173.16 428.59,-170.5 429.17,-177.48"/>
+</g>
+<!-- interface~lua_pushinteger -->
+<g id="proc~~create_1darray_double~~CallsGraph_node14" class="node">
+<title>interface~lua_pushinteger</title>
+<g id="a_proc~~create_1darray_double~~CallsGraph_node14"><a xlink:href="../interface/lua_pushinteger.html" xlink:title="lua_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="539,-244 441,-244 441,-220 539,-220 539,-244"/>
+<text text-anchor="middle" x="490" y="-229.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushint&#45;&gt;interface~lua_pushinteger -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge14" class="edge">
+<title>proc~flu_pushint&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M390.62,-255.76C402.9,-252.79 417.12,-249.36 430.87,-246.04"/>
+<polygon fill="#000000" stroke="#000000" points="431.86,-249.4 440.76,-243.65 430.22,-242.6 431.86,-249.4"/>
+</g>
+<!-- proc~flu_pushlong&#45;&gt;interface~lua_pushinteger -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge15" class="edge">
+<title>proc~flu_pushlong&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M395.54,-224.95C406.52,-225.78 418.71,-226.69 430.56,-227.59"/>
+<polygon fill="#000000" stroke="#000000" points="430.61,-231.1 440.85,-228.37 431.14,-224.12 430.61,-231.1"/>
+</g>
+<!-- proc~flu_pushreal&#45;&gt;interface~lua_pushnumber -->
+<g id="proc~~create_1darray_double~~CallsGraph_edge16" class="edge">
+<title>proc~flu_pushreal&#45;&gt;interface~lua_pushnumber</title>
+<path fill="none" stroke="#000000" d="M394.11,-146.8C404.99,-149.35 417.15,-152.19 429.03,-154.97"/>
+<polygon fill="#000000" stroke="#000000" points="428.38,-158.41 438.91,-157.28 429.97,-151.6 428.38,-158.41"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~create_1darray_double~~CalledByGraph Pages: 1 -->
+<svg id="proccreate_1darray_doubleCalledByGraph" width="322pt" height="32pt"
+ viewBox="0.00 0.00 322.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~create_1darray_double~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~create_1darray_double~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 318,-28 318,4 -4,4"/>
+<!-- proc~create_1darray_double -->
+<g id="proc~~create_1darray_double~~CalledByGraph_node1" class="node">
+<title>proc~create_1darray_double</title>
+<polygon fill="none" stroke="black" points="314,-24 177,-24 177,0 314,0 314,-24"/>
+<text text-anchor="middle" x="245.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">create_1Darray_double</text>
+</g>
+<!-- interface~aot_table_from_1darray -->
+<g id="proc~~create_1darray_double~~CalledByGraph_node2" class="node">
+<title>interface~aot_table_from_1darray</title>
+<g id="a_proc~~create_1darray_double~~CalledByGraph_node2"><a xlink:href="../interface/aot_table_from_1darray.html" xlink:title="aot_table_from_1Darray">
+<polygon fill="#a7506f" stroke="#a7506f" points="141,-24 0,-24 0,0 141,0 141,-24"/>
+<text text-anchor="middle" x="70.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_from_1Darray</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_table_from_1darray&#45;&gt;proc~create_1darray_double -->
+<g id="proc~~create_1darray_double~~CalledByGraph_edge1" class="edge">
+<title>interface~aot_table_from_1darray&#45;&gt;proc~create_1darray_double</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M141.37,-12C149.7,-12 158.25,-12 166.68,-12"/>
+<polygon fill="#000000" stroke="#000000" points="166.9,-15.5 176.9,-12 166.9,-8.5 166.9,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">  </span><span class="k">subroutine </span><span class="n">create_1Darray_double</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">thandle</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">)</span>
+<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">flu_State</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="c">!&lt; Handle to the Lua script.</span>
+
+<span class="w">    </span><span class="c">!&gt; Handle to access the newly created table.</span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">thandle</span>
+
+<span class="w">    </span><span class="c">!&gt; Values to put into the new table.</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">double_k</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">val</span><span class="p">(:)</span>
+
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab</span>
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nvals</span>
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
+
+<span class="w">    </span><span class="n">nVals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<span class="w">    </span><span class="k">call </span><span class="n">flu_createtable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">nVals</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">thandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flu_gettop</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="w">    </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thandle</span>
+
+<span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">nVals</span>
+<span class="w">      </span><span class="k">call </span><span class="n">flu_pushInteger</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
+<span class="w">      </span><span class="k">call </span><span class="n">flu_pushNumber</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="w">      </span><span class="k">call </span><span class="n">flu_settable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">tab</span><span class="p">)</span>
+<span class="w">    </span><span class="k">end do</span>
+
+<span class="k">  end subroutine </span><span class="n">create_1Darray_double</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

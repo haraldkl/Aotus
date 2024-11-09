@@ -1,0 +1,1032 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>flu_kinds_module.f90 &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>flu_kinds_module.f90
+      <small>Source File</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for source files.">8 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/flu_kinds_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+            <li class="breadcrumb-item active" aria-current="page">flu_kinds_module.f90</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#mods-0"
+         aria-expanded="false" aria-controls="mods-0">
+         <h4 class="card-header bg-primary text-white">Modules</h4>
+      </a>
+      <div id="mods-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_kinds_module.html">flu_kinds_module</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../sourcefile/flu_kinds_module.f90.html#src">flu_kinds_module.f90</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Files dependent on this one</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: sourcefile~~flu_kinds_module.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefileflu_kinds_modulef90AfferentGraph" width="641pt" height="331pt"
+ viewBox="0.00 0.00 641.00 331.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph" class="graph" transform="scale(0.32 0.32) rotate(0) translate(4 1034.65)">
+<title>sourcefile~~flu_kinds_module.f90~~AfferentGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1034.65 2005,-1034.65 2005,4 -4,4"/>
+<!-- sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~flu_kinds_module.f90</title>
+<polygon fill="none" stroke="black" points="125,-441.7 0,-441.7 0,-417.7 125,-417.7 125,-441.7"/>
+<text text-anchor="middle" x="62.5" y="-427.3" font-family="Helvetica,sans-Serif" font-size="10.50">flu_kinds_module.f90</text>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~aot_extdouble_fun_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/aot_extdouble_fun_module.f90.html" xlink:title="aot_extdouble_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1685,-940.7 1509,-940.7 1509,-916.7 1685,-916.7 1685,-940.7"/>
+<text text-anchor="middle" x="1597" y="-926.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1575.63,-940.72C1551.6,-954.41 1510.11,-976.58 1472,-989.7 1432.93,-1003.15 1422.15,-1004.94 1381,-1008.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1379,-1008.7C1280.08,-1017.74 1254.69,-1003.36 1155.5,-1008.7"/>
+</g>
+<!-- sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~aot_fun_declaration_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/aot_fun_declaration_module.f90.html" xlink:title="aot_fun_declaration_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1472,-980.7 1288,-980.7 1288,-956.7 1472,-956.7 1472,-980.7"/>
+<text text-anchor="middle" x="1380" y="-966.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_declaration_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1531.49,-940.7C1507.68,-945.13 1480.51,-950.19 1455.86,-954.77"/>
+<polygon fill="#000000" stroke="#000000" points="1455.02,-951.37 1445.83,-956.64 1456.3,-958.25 1455.02,-951.37"/>
+</g>
+<!-- sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~aot_table_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node9"><a xlink:href="../sourcefile/aot_table_module.f90.html" xlink:title="aot_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1444,-594.7 1316,-594.7 1316,-570.7 1444,-570.7 1444,-594.7"/>
+<text text-anchor="middle" x="1380" y="-580.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1588.35,-916.39C1556.48,-865.1 1434.07,-668.11 1393.87,-603.42"/>
+<polygon fill="#000000" stroke="#000000" points="1396.81,-601.51 1388.56,-594.87 1390.87,-605.21 1396.81,-601.51"/>
+</g>
+<!-- sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~flu_binding.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node14"><a xlink:href="../sourcefile/flu_binding.f90.html" xlink:title="flu_binding.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="252,-441.7 161,-441.7 161,-417.7 252,-417.7 252,-441.7"/>
+<text text-anchor="middle" x="206.5" y="-427.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge46" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1379,-928.7C1322.02,-930.34 1308.67,-940.47 1252,-946.7 1116.4,-961.61 1082.42,-970.7 946,-970.7 946,-970.7 946,-970.7 743,-970.7 698.25,-970.7 383.44,-921.36 347.5,-894.7"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~aot_extdouble_top_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node16"><a xlink:href="../sourcefile/aot_extdouble_top_module.f90.html" xlink:title="aot_extdouble_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="618,-636.7 442,-636.7 442,-612.7 618,-612.7 618,-636.7"/>
+<text text-anchor="middle" x="530" y="-622.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge69" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1508.91,-928.35C1469.8,-928.28 1423.08,-928.33 1381,-928.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1379,-928.7C1148.36,-930.75 1084.13,-915.86 869,-832.7 740.55,-783.05 606.64,-684.14 554.09,-643.15"/>
+<polygon fill="#000000" stroke="#000000" points="556.12,-640.29 546.09,-636.86 551.79,-645.79 556.12,-640.29"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~aot_extdouble_table_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/aot_extdouble_table_module.f90.html" xlink:title="aot_extdouble_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1247.5,-672.7 1061.5,-672.7 1061.5,-648.7 1247.5,-648.7 1247.5,-672.7"/>
+<text text-anchor="middle" x="1154.5" y="-658.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1065.47,-672.89C1062.54,-674.33 1059.71,-675.93 1057,-677.7 1032.85,-693.47 1043.16,-713.23 1021,-731.7 996.54,-752.09 552.8,-930.78 531,-932.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M529,-932.7C448.69,-940.23 427.25,-944.81 347.5,-932.7"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~aot_table_ops_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node10"><a xlink:href="../sourcefile/aot_table_ops_module.f90.html" xlink:title="aot_table_ops_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1021,-288.7 869,-288.7 869,-264.7 1021,-264.7 1021,-288.7"/>
+<text text-anchor="middle" x="945" y="-274.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1144.74,-648.68C1125.68,-621.91 1080.28,-554.78 1057,-491.7 1027.4,-411.48 1076.91,-367.4 1021,-302.7 1018.16,-299.42 1014.89,-296.55 1011.32,-294.04"/>
+<polygon fill="#000000" stroke="#000000" points="1012.95,-290.93 1002.56,-288.82 1009.36,-296.95 1012.95,-290.93"/>
+</g>
+<!-- sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~aot_top_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node11"><a xlink:href="../sourcefile/aot_top_module.f90.html" xlink:title="aot_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="803,-402.7 685,-402.7 685,-378.7 803,-378.7 803,-402.7"/>
+<text text-anchor="middle" x="744" y="-388.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1135.15,-648.58C1069.96,-605.49 849.26,-459.61 771.99,-408.54"/>
+<polygon fill="#000000" stroke="#000000" points="773.57,-405.39 763.3,-402.79 769.71,-411.23 773.57,-405.39"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge47" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1092.55,-672.73C942.79,-702.72 560.32,-782.11 441,-833.7 395.46,-853.39 388.06,-923.28 347.5,-894.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M345.5,-894.7C270.68,-840.35 222.66,-536.97 210.53,-451.89"/>
+<polygon fill="#000000" stroke="#000000" points="213.97,-451.21 209.12,-441.79 207.04,-452.18 213.97,-451.21"/>
+</g>
+<!-- sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~aot_err_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node15"><a xlink:href="../sourcefile/aot_err_module.f90.html" xlink:title="aot_err_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="405,-480.7 288,-480.7 288,-456.7 405,-456.7 405,-480.7"/>
+<text text-anchor="middle" x="346.5" y="-466.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge63" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1065.56,-648.68C1050.7,-646.86 1035.43,-645.12 1021,-643.7 898.64,-631.65 867.18,-638.51 745,-624.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-624.7C703.42,-618.83 692.01,-620.91 655,-605.7 594.56,-580.86 595.07,-539.56 531,-526.7"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge71" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-624.7C705.64,-620.48 664.34,-619.63 628.2,-620.13"/>
+<polygon fill="#000000" stroke="#000000" points="628.09,-616.63 618.15,-620.3 628.21,-623.63 628.09,-616.63"/>
+</g>
+<!-- sourcefile~aot_fun_declaration_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~aot_fun_declaration_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1332.32,-980.79C1287.38,-991.54 1217.33,-1005.96 1155.5,-1008.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-1008.7C836.2,-1022.74 753.34,-1011.31 441,-953.7 399.12,-945.98 389.61,-939.09 347.5,-932.7"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~aot_fun_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/aot_fun_module.f90.html" xlink:title="aot_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1840,-442.7 1722,-442.7 1722,-418.7 1840,-418.7 1840,-442.7"/>
+<text text-anchor="middle" x="1781" y="-428.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1596,-1008.7C1516.35,-1061.49 1476.16,-1000 1381,-1008.7"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_fun_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1777.02,-442.73C1766.51,-484.56 1729.49,-627.27 1686,-740.7 1662.16,-802.87 1626.9,-873.23 1609.11,-907.57"/>
+<polygon fill="#000000" stroke="#000000" points="1605.9,-906.16 1604.39,-916.65 1612.11,-909.39 1605.9,-906.16"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1779.07,-442.95C1773.59,-512.87 1743.68,-861.6 1686,-949.7 1660.21,-989.1 1637.25,-982.69 1598,-1008.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1596,-1008.7C1582.86,-1017.41 1496.22,-997.97 1437.02,-983.25"/>
+<polygon fill="#000000" stroke="#000000" points="1437.59,-979.78 1427.04,-980.75 1435.89,-986.57 1437.59,-979.78"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~aot_quadruple_fun_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/aot_quadruple_fun_module.f90.html" xlink:title="aot_quadruple_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1686,-731.7 1508,-731.7 1508,-707.7 1686,-707.7 1686,-731.7"/>
+<text text-anchor="middle" x="1597" y="-717.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_fun_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1772.41,-442.75C1744.43,-487.18 1646.81,-642.2 1611.16,-698.8"/>
+<polygon fill="#000000" stroke="#000000" points="1607.99,-697.27 1605.62,-707.6 1613.91,-701 1607.99,-697.27"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1721.72,-419.82C1684.91,-415.54 1637.09,-414.86 1598,-430.7"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-392.7C1061.37,-388.53 1038.05,-398.36 946,-392.7"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge50" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1721.95,-421.1C1710.08,-419.41 1697.66,-417.83 1686,-416.7 1451.08,-393.95 1391.28,-403.37 1155.5,-392.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-392.7C1094.38,-389.24 1080.04,-383.23 1021,-378.7 858.76,-366.26 817.14,-356.07 655,-369.7 599.3,-374.38 586.87,-392.35 531,-390.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M529,-390.7C448.4,-387.38 427.42,-379.78 347.5,-390.7"/>
+</g>
+<!-- sourcefile~aot_references_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node21" class="node">
+<title>sourcefile~aot_references_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node21"><a xlink:href="../sourcefile/aot_references_module.f90.html" xlink:title="aot_references_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1233,-208.7 1076,-208.7 1076,-184.7 1233,-184.7 1233,-208.7"/>
+<text text-anchor="middle" x="1154.5" y="-194.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_references_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge81" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_references_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1761.5,-418.67C1749.44,-410.3 1733.81,-398.39 1722,-385.7 1702.35,-364.59 1708.02,-350.33 1686,-331.7 1559.06,-224.29 1357.82,-200.64 1243.15,-196.43"/>
+<polygon fill="#000000" stroke="#000000" points="1243.12,-192.93 1233.01,-196.1 1242.89,-199.93 1243.12,-192.93"/>
+</g>
+<!-- sourcefile~aot_out_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~aot_out_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/aot_out_module.f90.html" xlink:title="aot_out_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1004,-676.7 886,-676.7 886,-652.7 1004,-652.7 1004,-676.7"/>
+<text text-anchor="middle" x="945" y="-662.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_out_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~aot_out_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M885.95,-675.8C808.05,-690.79 676.87,-716.35 655,-722.7 552.69,-752.4 300.86,-946.03 207.5,-894.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M205.5,-894.7C132.75,-837.58 80.49,-537.46 66.96,-452.27"/>
+<polygon fill="#000000" stroke="#000000" points="70.37,-451.47 65.37,-442.14 63.46,-452.56 70.37,-451.47"/>
+</g>
+<!-- sourcefile~aot_extdouble_out_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node23" class="node">
+<title>sourcefile~aot_extdouble_out_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node23"><a xlink:href="../sourcefile/aot_extdouble_out_module.f90.html" xlink:title="aot_extdouble_out_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="832,-676.7 656,-676.7 656,-652.7 832,-652.7 832,-676.7"/>
+<text text-anchor="middle" x="744" y="-662.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_out_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_extdouble_out_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge82" class="edge">
+<title>sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_extdouble_out_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M885.91,-664.7C872.2,-664.7 857.23,-664.7 842.32,-664.7"/>
+<polygon fill="#000000" stroke="#000000" points="842.02,-661.2 832.02,-664.7 842.02,-668.2 842.02,-661.2"/>
+</g>
+<!-- sourcefile~aot_quadruple_out_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node24" class="node">
+<title>sourcefile~aot_quadruple_out_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node24"><a xlink:href="../sourcefile/aot_quadruple_out_module.f90.html" xlink:title="aot_quadruple_out_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="833,-596.7 655,-596.7 655,-572.7 833,-572.7 833,-596.7"/>
+<text text-anchor="middle" x="744" y="-582.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_out_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_quadruple_out_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge83" class="edge">
+<title>sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_quadruple_out_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M921.95,-652.63C899.89,-640.87 864.77,-623.02 833,-610.7 822.77,-606.73 811.67,-603.01 800.91,-599.7"/>
+<polygon fill="#000000" stroke="#000000" points="801.74,-596.3 791.16,-596.78 799.73,-603 801.74,-596.3"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1379,-856.7C1321.77,-866.13 1309.25,-877.39 1252,-886.7 1028.68,-923.02 969.1,-901.54 745,-932.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_fun_declaration_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1592.86,-731.76C1582.5,-769.16 1545.74,-884.19 1472,-942.7 1467.3,-946.43 1462.09,-949.63 1456.61,-952.36"/>
+<polygon fill="#000000" stroke="#000000" points="1454.9,-949.29 1447.18,-956.55 1457.74,-955.69 1454.9,-949.29"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1576.92,-707.54C1538.75,-683.22 1452.86,-628.49 1408.57,-600.27"/>
+<polygon fill="#000000" stroke="#000000" points="1410.35,-597.25 1400.04,-594.83 1406.59,-603.16 1410.35,-597.25"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge52" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1379,-856.7C1099.98,-899.51 1023.5,-848.66 745,-894.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node19" class="node">
+<title>sourcefile~aot_quadruple_top_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node19"><a xlink:href="../sourcefile/aot_quadruple_top_module.f90.html" xlink:title="aot_quadruple_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="619,-480.7 441,-480.7 441,-456.7 619,-456.7 619,-480.7"/>
+<text text-anchor="middle" x="530" y="-466.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge75" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1584.46,-732.07C1554.53,-762.9 1470.49,-841.76 1381,-856.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1379,-856.7C1268.78,-875.11 1341.83,-706.17 1252,-639.7 1153.46,-566.78 802.06,-507.66 628.89,-482.21"/>
+<polygon fill="#000000" stroke="#000000" points="629.15,-478.71 618.75,-480.73 628.14,-485.64 629.15,-478.71"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~aot_quadruple_table_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/aot_quadruple_table_module.f90.html" xlink:title="aot_quadruple_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1248.5,-482.7 1060.5,-482.7 1060.5,-458.7 1248.5,-458.7 1248.5,-482.7"/>
+<text text-anchor="middle" x="1154.5" y="-468.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1146.66,-482.8C1122.2,-525.97 1039.46,-670.62 1021,-685.7 990.14,-710.92 387.05,-937.64 347.5,-932.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M345.5,-932.7C282.6,-923.15 257.54,-933.98 207.5,-894.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1077.01,-458.62C1069.6,-455.06 1062.72,-450.51 1057,-444.7 1011.31,-398.32 1065.03,-350.66 1021,-302.7 1017.87,-299.3 1014.28,-296.34 1010.4,-293.77"/>
+<polygon fill="#000000" stroke="#000000" points="1011.92,-290.61 1001.49,-288.74 1008.48,-296.7 1011.92,-290.61"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1101.9,-458.58C1087.22,-454.66 1071.34,-449.95 1057,-444.7 1005.84,-425.99 1000.41,-395.5 946,-392.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge53" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1060.21,-470.81C977.4,-470.77 853.14,-470.38 745,-468.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-468.7C642.62,-466.89 631.35,-393.67 531,-390.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge65" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-468.7C645.33,-467.18 626.77,-545.93 531,-526.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M529,-526.7C472.09,-515.28 460.39,-503.04 405,-485.7 402.86,-485.03 400.68,-484.35 398.47,-483.68"/>
+<polygon fill="#000000" stroke="#000000" points="399.28,-480.26 388.69,-480.71 397.25,-486.96 399.28,-480.26"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge77" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-468.7C705.99,-468.12 665.34,-468 629.62,-468.06"/>
+<polygon fill="#000000" stroke="#000000" points="629.19,-464.56 619.19,-468.09 629.2,-471.56 629.19,-464.56"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-818.7C885.84,-844.22 889.52,-879.72 833,-908.7 796.93,-927.2 785.15,-927.12 745,-932.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-932.7C649.68,-945.68 624.81,-923.9 531,-932.7"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_extdouble_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_extdouble_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1344.57,-594.72C1305.6,-608.32 1242.04,-630.5 1199.51,-645.34"/>
+<polygon fill="#000000" stroke="#000000" points="1198.26,-642.07 1189.97,-648.67 1200.57,-648.68 1198.26,-642.07"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_quadruple_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_quadruple_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1354.66,-570.5C1314.41,-550.34 1233.96,-510.02 1188.6,-487.29"/>
+<polygon fill="#000000" stroke="#000000" points="1189.98,-484.07 1179.48,-482.72 1186.85,-490.32 1189.98,-484.07"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1371.2,-570.4C1353.55,-543.67 1307.71,-480.24 1252,-449.7 1213.67,-428.69 1193.62,-452.09 1155.5,-430.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-430.7C1114.96,-409.07 1089.62,-436.52 1057,-406.7 1020.9,-373.7 1055.58,-337.3 1021,-302.7 1017.53,-299.23 1013.57,-296.22 1009.33,-293.61"/>
+<polygon fill="#000000" stroke="#000000" points="1010.76,-290.41 1000.29,-288.8 1007.48,-296.59 1010.76,-290.41"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge39" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-430.7C1133.06,-419.23 969.41,-393.9 946,-392.7"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge57" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1365.23,-595C1342.65,-614.8 1295.86,-654.29 1252,-681.7 1125.64,-760.67 1091.39,-786.07 946,-818.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-818.7C911.95,-832.76 899.96,-826.37 869,-842.7 851.07,-852.16 851.13,-861.64 833,-870.7 796.74,-888.83 785.15,-889.12 745,-894.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-894.7C699.47,-900.75 383.05,-920.53 347.5,-894.7"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge67" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1316,-580.7C1146.11,-574.95 681.26,-556.87 531,-526.7"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M925.45,-264.6C848.64,-216.11 550.01,-44.1 347.5,-160.7"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge40" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M902.25,-288.83C891.18,-292.67 879.41,-297.34 869,-302.7 858.6,-308.05 803.21,-348.14 770.08,-372.33"/>
+<polygon fill="#000000" stroke="#000000" points="767.78,-369.67 761.78,-378.39 771.91,-375.32 767.78,-369.67"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge58" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M868.65,-272.52C784.1,-270.25 643.99,-273.86 531,-312.7"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M722.87,-378.68C647.57,-335.44 378.03,-196.22 207.5,-310.7"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge59" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M684.95,-391.62C642.34,-392.08 583.06,-392.24 531,-390.7"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge68" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M684.99,-401.04C624.1,-412.03 525.65,-430.21 441,-447.7 430.88,-449.79 420.16,-452.11 409.73,-454.41"/>
+<polygon fill="#000000" stroke="#000000" points="408.85,-451.02 399.85,-456.61 410.37,-457.85 408.85,-451.02"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge73" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M684.96,-398.93C673.88,-402.8 663.2,-408.46 655,-416.7 614.52,-457.38 648.78,-491.65 619,-540.7 602.89,-567.24 576.26,-591 556.51,-606.42"/>
+<polygon fill="#000000" stroke="#000000" points="554.36,-603.66 548.52,-612.5 558.6,-609.23 554.36,-603.66"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge79" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M691.63,-402.71C679.32,-406.44 666.44,-411.08 655,-416.7 637.28,-425.4 636.72,-434 619,-442.7 610.51,-446.87 601.22,-450.5 591.97,-453.63"/>
+<polygon fill="#000000" stroke="#000000" points="590.83,-450.32 582.37,-456.7 592.96,-456.98 590.83,-450.32"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~aot_vector_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node12"><a xlink:href="../sourcefile/aot_vector_module.f90.html" xlink:title="aot_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1447.5,-268.7 1312.5,-268.7 1312.5,-244.7 1447.5,-244.7 1447.5,-268.7"/>
+<text text-anchor="middle" x="1380" y="-254.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1361.05,-244.53C1341.78,-230.98 1310.87,-207.79 1288,-183.7 1269.15,-163.84 1275.05,-148.49 1252,-133.7 1215.21,-110.09 1196.91,-128.71 1155.5,-114.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-114.7C1008.18,-65.54 732.31,-13.87 531,-76.7"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1312.23,-252.75C1246.99,-249.77 1144.94,-247.46 1057,-255.7 1041.22,-257.18 1024.35,-259.82 1008.64,-262.74"/>
+<polygon fill="#000000" stroke="#000000" points="1007.66,-259.36 998.51,-264.68 1008.99,-266.23 1007.66,-259.36"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge41" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1349.02,-268.74C1323.63,-278.36 1286.03,-291.26 1252,-297.7 1118.12,-323.05 1078.86,-286.44 946,-316.7"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge60" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1153.5,-114.7C1066.14,-85.15 1038.03,-108.7 946,-114.7"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node17" class="node">
+<title>sourcefile~aot_extdouble_vector_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node17"><a xlink:href="../sourcefile/aot_extdouble_vector_module.f90.html" xlink:title="aot_extdouble_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1251,-288.7 1058,-288.7 1058,-264.7 1251,-264.7 1251,-288.7"/>
+<text text-anchor="middle" x="1154.5" y="-274.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_vector_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge74" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1312.25,-262.67C1296.22,-264.11 1278.72,-265.67 1261.41,-267.22"/>
+<polygon fill="#000000" stroke="#000000" points="1260.89,-263.76 1251.25,-268.13 1261.52,-270.73 1260.89,-263.76"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node20" class="node">
+<title>sourcefile~aot_quadruple_vector_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node20"><a xlink:href="../sourcefile/aot_quadruple_vector_module.f90.html" xlink:title="aot_quadruple_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1252,-166.7 1057,-166.7 1057,-142.7 1252,-142.7 1252,-166.7"/>
+<text text-anchor="middle" x="1154.5" y="-152.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_vector_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge80" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1363.95,-244.56C1341.13,-226.76 1295.76,-193.74 1252,-175.7 1246.57,-173.46 1240.86,-171.44 1235.05,-169.63"/>
+<polygon fill="#000000" stroke="#000000" points="1235.78,-166.2 1225.2,-166.77 1233.82,-172.92 1235.78,-166.2"/>
+</g>
+<!-- sourcefile~aotus_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~aotus_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node13"><a xlink:href="../sourcefile/aotus_module.f90.html" xlink:title="aotus_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1651,-364.7 1543,-364.7 1543,-340.7 1651,-340.7 1651,-364.7"/>
+<text text-anchor="middle" x="1597" y="-350.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1593.26,-340.59C1583.76,-301.32 1548.51,-176.18 1472,-109.7 1359.69,-12.13 1304.27,-0.7 1155.5,-0.7 1155.5,-0.7 1155.5,-0.7 944,-0.7 815.11,-0.7 780.19,5.93 655,-24.7 596.95,-38.9 587.48,-57.18 531,-76.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M529,-76.7C444.61,-104.61 422.49,-112.98 347.5,-160.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M345.5,-160.7C322.14,-175.57 309.2,-166.89 288,-184.7 237.12,-227.45 260.67,-270.83 207.5,-310.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M205.5,-310.7C161.19,-343.93 112.25,-386.29 84.95,-410.47"/>
+<polygon fill="#000000" stroke="#000000" points="82.35,-408.1 77.2,-417.36 87,-413.33 82.35,-408.1"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1576.22,-364.72C1557.51,-376.61 1529.22,-395.99 1508,-416.7 1460.26,-463.3 1415.59,-528.58 1394.2,-561.68"/>
+<polygon fill="#000000" stroke="#000000" points="1391,-560.18 1388.57,-570.49 1396.9,-563.95 1391,-560.18"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge42" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1542.74,-353.91C1445.9,-356.4 1234.56,-363.24 1057,-378.7 1007.46,-383.01 995.66,-395.25 946,-392.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-392.7C900.63,-390.03 851.85,-389.5 813.44,-389.66"/>
+<polygon fill="#000000" stroke="#000000" points="813.38,-386.16 803.4,-389.71 813.42,-393.16 813.38,-386.16"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_vector_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge43" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1568.77,-340.54C1530.32,-323.37 1460.05,-292 1417.23,-272.88"/>
+<polygon fill="#000000" stroke="#000000" points="1418.57,-269.64 1408.01,-268.76 1415.71,-276.03 1418.57,-269.64"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge61" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1585.78,-340.59C1547.56,-296.46 1407.32,-144.56 1252,-100.7 1120.98,-63.71 1081.85,-105.84 946,-114.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-114.7C855.58,-118.78 833.48,-125.12 745,-122.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M743,-122.7C648.81,-120.13 621.2,-95.47 531,-122.7"/>
+</g>
+<!-- sourcefile~flu_binding.f90&#45;&gt;sourcefile~flu_kinds_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~flu_binding.f90&#45;&gt;sourcefile~flu_kinds_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M160.96,-429.7C152.78,-429.7 144.04,-429.7 135.3,-429.7"/>
+<polygon fill="#000000" stroke="#000000" points="135.05,-426.2 125.05,-429.7 135.05,-433.2 135.05,-426.2"/>
+</g>
+<!-- sourcefile~aot_err_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge45" class="edge">
+<title>sourcefile~aot_err_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M302.97,-456.68C289.33,-452.83 274.06,-448.51 259.8,-444.48"/>
+<polygon fill="#000000" stroke="#000000" points="260.7,-441.1 250.13,-441.75 258.8,-447.84 260.7,-441.1"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge48" class="edge">
+<title>sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M505.14,-612.65C461.17,-590.17 364.84,-539.56 288,-489.7 268.01,-476.73 246.42,-460.51 230.63,-448.2"/>
+<polygon fill="#000000" stroke="#000000" points="232.53,-445.24 222.51,-441.81 228.21,-450.74 232.53,-445.24"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge64" class="edge">
+<title>sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M514.76,-612.46C483.21,-585.35 407.28,-520.08 369.55,-487.65"/>
+<polygon fill="#000000" stroke="#000000" points="371.54,-484.75 361.68,-480.89 366.98,-490.06 371.54,-484.75"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1057.95,-276.7C1049.08,-276.7 1040.13,-276.7 1031.36,-276.7"/>
+<polygon fill="#000000" stroke="#000000" points="1031.17,-273.2 1021.17,-276.7 1031.17,-280.2 1031.17,-273.2"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1085.04,-288.71C1044.47,-296.11 992.14,-306.19 946,-316.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-316.7C884.69,-330.21 819.16,-357.05 780.07,-374.42"/>
+<polygon fill="#000000" stroke="#000000" points="778.41,-371.33 770.72,-378.62 781.28,-377.72 778.41,-371.33"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge49" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1107.86,-264.7C956.1,-225.92 471,-111.45 347.5,-198.7"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge72" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1142.02,-288.81C1112.63,-319.68 1035.92,-399.44 1021,-406.7 873.5,-478.52 785.37,-355.1 655,-454.7 622.07,-479.86 642.48,-506.56 619,-540.7 601.27,-566.47 574.61,-590.53 555.28,-606.24"/>
+<polygon fill="#000000" stroke="#000000" points="552.88,-603.68 547.23,-612.65 557.24,-609.16 552.88,-603.68"/>
+</g>
+<!-- sourcefile~aot_path_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node18" class="node">
+<title>sourcefile~aot_path_module.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node18"><a xlink:href="../sourcefile/aot_path_module.f90.html" xlink:title="aot_path_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2001,-403.7 1876,-403.7 1876,-379.7 2001,-379.7 2001,-403.7"/>
+<text text-anchor="middle" x="1938.5" y="-389.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_fun_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1889.58,-403.72C1873.91,-407.65 1856.34,-412.06 1840.01,-416.15"/>
+<polygon fill="#000000" stroke="#000000" points="1838.88,-412.83 1830.03,-418.65 1840.58,-419.62 1838.88,-412.83"/>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1780,-371.7C1698.95,-345.99 1676.81,-398.77 1598,-430.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1596,-430.7C1516.04,-463.1 1437.13,-530.34 1401.17,-563.44"/>
+<polygon fill="#000000" stroke="#000000" points="1398.7,-560.96 1393.77,-570.33 1403.47,-566.08 1398.7,-560.96"/>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aotus_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge44" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aotus_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1780,-371.7C1741.83,-359.59 1697.12,-354.8 1661.57,-353.06"/>
+<polygon fill="#000000" stroke="#000000" points="1661.46,-349.55 1651.32,-352.63 1661.17,-356.54 1661.46,-349.55"/>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge51" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1875.85,-388.86C1846.85,-386.25 1812.1,-381.25 1782,-371.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1780,-371.7C1709.61,-349.38 1739,-286.12 1686,-234.7 1570.36,-122.5 1542.13,-38.7 1381,-38.7 1381,-38.7 1381,-38.7 944,-38.7 756.69,-38.7 710.32,-68.56 531,-122.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M529,-122.7C471.34,-138.41 460.13,-151.64 405,-174.7 379.45,-185.39 369.49,-181.86 347.5,-198.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M345.5,-198.7C307.69,-227.66 242.56,-357.04 217.62,-408.5"/>
+<polygon fill="#000000" stroke="#000000" points="214.38,-407.17 213.19,-417.69 220.68,-410.2 214.38,-407.17"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge54" class="edge">
+<title>sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M514.74,-456.36C485.11,-432.16 414.1,-381.6 347.5,-390.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge66" class="edge">
+<title>sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M440.91,-468.7C432.24,-468.7 423.54,-468.7 415.12,-468.7"/>
+<polygon fill="#000000" stroke="#000000" points="415.02,-465.2 405.02,-468.7 415.02,-472.2 415.02,-465.2"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1078.87,-166.77C1071.28,-169.22 1063.86,-172.16 1057,-175.7 1017.82,-195.91 981.94,-233.54 962.11,-256.72"/>
+<polygon fill="#000000" stroke="#000000" points="959.29,-254.63 955.56,-264.55 964.66,-259.13 959.29,-254.63"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge38" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-152.7C868.32,-171.67 883.15,-228.94 833,-288.7 808.82,-317.52 780.29,-350.39 762.41,-370.84"/>
+<polygon fill="#000000" stroke="#000000" points="759.62,-368.72 755.67,-378.55 764.89,-373.32 759.62,-368.72"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge55" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1056.95,-143.45C1021.56,-142.01 981.5,-143.56 946,-152.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-152.7C857.38,-175 834.41,-125.15 745,-122.7"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge78" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M944,-152.7C788.2,-191.75 777.05,-265.28 655,-369.7 638.04,-384.21 636.07,-390.32 619,-404.7 599.31,-421.28 575.66,-438.34 557.83,-450.68"/>
+<polygon fill="#000000" stroke="#000000" points="555.36,-448.13 549.09,-456.67 559.32,-453.9 555.36,-448.13"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1099.64,-208.72C1085.54,-212.54 1070.51,-217.23 1057,-222.7 1040.04,-229.58 1037.35,-234.47 1021,-242.7 1008.91,-248.79 995.5,-255.02 983.41,-260.46"/>
+<polygon fill="#000000" stroke="#000000" points="981.75,-257.37 974.04,-264.64 984.6,-263.77 981.75,-257.37"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge56" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1075.69,-202.77C976.78,-211.62 801.3,-231.15 655,-267.7 598.12,-281.91 585.67,-291.53 531,-312.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M529,-312.7C445.51,-339.87 434.49,-378.81 347.5,-390.7"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M345.5,-390.7C312.66,-395.19 276.65,-405.56 249.65,-414.48"/>
+<polygon fill="#000000" stroke="#000000" points="248.49,-411.17 240.13,-417.68 250.73,-417.81 248.49,-411.17"/>
+</g>
+<!-- sourcefile~test.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_node22" class="node">
+<title>sourcefile~test.f90</title>
+<g id="a_sourcefile~~flu_kinds_module.f90~~AfferentGraph_node22"><a xlink:href="../sourcefile/test.f90.html" xlink:title="test.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="373.5,-362.7 319.5,-362.7 319.5,-338.7 373.5,-338.7 373.5,-362.7"/>
+<text text-anchor="middle" x="346.5" y="-348.3" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~test.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge62" class="edge">
+<title>sourcefile~test.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M319.31,-361.5C309.34,-365.88 297.98,-371.2 288,-376.7 268.89,-387.23 248.36,-400.78 232.81,-411.55"/>
+<polygon fill="#000000" stroke="#000000" points="230.47,-408.92 224.29,-417.52 234.49,-414.65 230.47,-408.92"/>
+</g>
+<!-- sourcefile~aot_extdouble_out_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge70" class="edge">
+<title>sourcefile~aot_extdouble_out_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M679.39,-652.7C655.92,-648.27 629.12,-643.21 604.82,-638.63"/>
+<polygon fill="#000000" stroke="#000000" points="605.4,-635.18 594.93,-636.76 604.11,-642.06 605.4,-635.18"/>
+</g>
+<!-- sourcefile~aot_quadruple_out_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~flu_kinds_module.f90~~AfferentGraph_edge76" class="edge">
+<title>sourcefile~aot_quadruple_out_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M723.03,-572.59C698.7,-557.95 656.24,-532.8 619,-512.7 601.53,-503.28 581.79,-493.34 565.44,-485.3"/>
+<polygon fill="#000000" stroke="#000000" points="566.77,-482.06 556.25,-480.81 563.69,-488.34 566.77,-482.06"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var pansourcefileflu_kinds_modulef90AfferentGraph = svgPanZoom('#sourcefileflu_kinds_modulef90AfferentGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#AfferentGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="AfferentGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="193.5,-24 88.5,-24 88.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a file to a file which it depends on. A file
+is dependent upon another if the latter must be compiled before the former
+can be.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+      <section>
+        <h2><span class="anchor" id="src"></span>Source Code</h2>
+        <div class="hl codehilite"><pre><span></span><a id="ln-1" name="ln-1" href="#ln-1"></a><span class="c">! Copyright (c) 2016, 2018 Harald Klimach &lt;harald@klimachs.de&gt;</span>
+<a id="ln-2" name="ln-2" href="#ln-2"></a><span class="c">!</span>
+<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="c">! Parts of this file were written by Harald Klimach for University of</span>
+<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="c">! Siegen.</span>
+<a id="ln-5" name="ln-5" href="#ln-5"></a><span class="c">!</span>
+<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="c">! Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<a id="ln-7" name="ln-7" href="#ln-7"></a><span class="c">! of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<a id="ln-8" name="ln-8" href="#ln-8"></a><span class="c">! in the Software without restriction, including without limitation the rights</span>
+<a id="ln-9" name="ln-9" href="#ln-9"></a><span class="c">! to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<a id="ln-10" name="ln-10" href="#ln-10"></a><span class="c">! copies of the Software, and to permit persons to whom the Software is</span>
+<a id="ln-11" name="ln-11" href="#ln-11"></a><span class="c">! furnished to do so, subject to the following conditions:</span>
+<a id="ln-12" name="ln-12" href="#ln-12"></a><span class="c">!</span>
+<a id="ln-13" name="ln-13" href="#ln-13"></a><span class="c">! The above copyright notice and this permission notice shall be included in</span>
+<a id="ln-14" name="ln-14" href="#ln-14"></a><span class="c">! all copies or substantial portions of the Software.</span>
+<a id="ln-15" name="ln-15" href="#ln-15"></a><span class="c">!</span>
+<a id="ln-16" name="ln-16" href="#ln-16"></a><span class="c">! THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<a id="ln-17" name="ln-17" href="#ln-17"></a><span class="c">! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<a id="ln-18" name="ln-18" href="#ln-18"></a><span class="c">! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</span>
+<a id="ln-19" name="ln-19" href="#ln-19"></a><span class="c">! IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,</span>
+<a id="ln-20" name="ln-20" href="#ln-20"></a><span class="c">! DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR</span>
+<a id="ln-21" name="ln-21" href="#ln-21"></a><span class="c">! OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE</span>
+<a id="ln-22" name="ln-22" href="#ln-22"></a><span class="c">! OR OTHER DEALINGS IN THE SOFTWARE.</span>
+<a id="ln-23" name="ln-23" href="#ln-23"></a><span class="c">! **************************************************************************** !</span>
+<a id="ln-24" name="ln-24" href="#ln-24"></a>
+<a id="ln-25" name="ln-25" href="#ln-25"></a><span class="c">!&gt; Global definitions of some handy kind declarations</span>
+<a id="ln-26" name="ln-26" href="#ln-26"></a><span class="c">!! with the help of the intrinsic selected_*_kind</span>
+<a id="ln-27" name="ln-27" href="#ln-27"></a><span class="c">!! functions.</span>
+<a id="ln-28" name="ln-28" href="#ln-28"></a><span class="k">module </span><span class="n">flu_kinds_module</span>
+<a id="ln-29" name="ln-29" href="#ln-29"></a><span class="w">  </span><span class="k">implicit none</span>
+<a id="ln-30" name="ln-30" href="#ln-30"></a>
+<a id="ln-31" name="ln-31" href="#ln-31"></a><span class="k">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">quad_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">selected_real_kind</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+<a id="ln-32" name="ln-32" href="#ln-32"></a><span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">double_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">selected_real_kind</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<a id="ln-33" name="ln-33" href="#ln-33"></a><span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">single_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">selected_real_kind</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<a id="ln-34" name="ln-34" href="#ln-34"></a><span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">int_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">selected_int_kind</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<a id="ln-35" name="ln-35" href="#ln-35"></a><span class="w">  </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">long_k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">selected_int_kind</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<a id="ln-36" name="ln-36" href="#ln-36"></a>
+<a id="ln-37" name="ln-37" href="#ln-37"></a><span class="k">end module </span><span class="n">flu_kinds_module</span>
+</pre></div>
+
+      </section>
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

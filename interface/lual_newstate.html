@@ -1,0 +1,468 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>luaL_newstate &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>luaL_newstate
+      <small>Interface</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.5% of total for procedures.">49 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/lua_fif.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/lua_fif.f90.html'>lua_fif.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/lua_fif.html'>lua_fif</a></li>
+            <li class="breadcrumb-item active" aria-current="page">luaL_newstate</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    <em>None</em>
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>interface</h2>
+      
+      <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: interface~~lual_newstate~~CalledByGraph Pages: 1 -->
+<svg id="interfacelual_newstateCalledByGraph" width="641pt" height="159pt"
+ viewBox="0.00 0.00 641.00 159.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="interface~~lual_newstate~~CalledByGraph" class="graph" transform="scale(0.8 0.8) rotate(0) translate(4 196)">
+<title>interface~~lual_newstate~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-196 801,-196 801,4 -4,4"/>
+<!-- interface~lual_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_node1" class="node">
+<title>interface~lual_newstate</title>
+<polygon fill="none" stroke="black" points="797,-108 709,-108 709,-84 797,-84 797,-108"/>
+<text text-anchor="middle" x="753" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">luaL_newstate</text>
+</g>
+<!-- proc~flul_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_node2" class="node">
+<title>proc~flul_newstate</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node2"><a xlink:href="../proc/flul_newstate.html" xlink:title="fluL_newstate">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="673,-108 588,-108 588,-84 673,-84 673,-108"/>
+<text text-anchor="middle" x="630.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fluL_newstate</text>
+</a>
+</g>
+</g>
+<!-- proc~flul_newstate&#45;&gt;interface~lual_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge1" class="edge">
+<title>proc~flul_newstate&#45;&gt;interface~lual_newstate</title>
+<path fill="none" stroke="#000000" d="M673.31,-96C681.43,-96 690.04,-96 698.47,-96"/>
+<polygon fill="#000000" stroke="#000000" points="698.63,-99.5 708.63,-96 698.63,-92.5 698.63,-99.5"/>
+</g>
+<!-- proc~aot_file_to_buffer -->
+<g id="interface~~lual_newstate~~CalledByGraph_node3" class="node">
+<title>proc~aot_file_to_buffer</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node3"><a xlink:href="../proc/aot_file_to_buffer.html" xlink:title="aot_file_to_buffer">
+<polygon fill="#d9534f" stroke="#d9534f" points="547,-192 442,-192 442,-168 547,-168 547,-192"/>
+<text text-anchor="middle" x="494.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_file_to_buffer</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_file_to_buffer&#45;&gt;proc~flul_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge2" class="edge">
+<title>proc~aot_file_to_buffer&#45;&gt;proc~flul_newstate</title>
+<path fill="none" stroke="#000000" d="M533.36,-167.89C539.75,-165.3 546.19,-162.32 552,-159 573.34,-146.8 594.81,-128.8 609.72,-115.16"/>
+<polygon fill="#000000" stroke="#000000" points="612.37,-117.47 617.29,-108.09 607.59,-112.36 612.37,-117.47"/>
+</g>
+<!-- proc~open_config_buffer -->
+<g id="interface~~lual_newstate~~CalledByGraph_node4" class="node">
+<title>proc~open_config_buffer</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node4"><a xlink:href="../proc/open_config_buffer.html" xlink:title="open_config_buffer">
+<polygon fill="#d9534f" stroke="#d9534f" points="552,-150 437,-150 437,-126 552,-126 552,-150"/>
+<text text-anchor="middle" x="494.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">open_config_buffer</text>
+</a>
+</g>
+</g>
+<!-- proc~open_config_buffer&#45;&gt;proc~flul_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge3" class="edge">
+<title>proc~open_config_buffer&#45;&gt;proc~flul_newstate</title>
+<path fill="none" stroke="#000000" d="M533.9,-125.96C548.62,-121.35 565.6,-116.03 581.14,-111.16"/>
+<polygon fill="#000000" stroke="#000000" points="582.6,-114.37 591.1,-108.04 580.51,-107.69 582.6,-114.37"/>
+</g>
+<!-- proc~open_config_chunk -->
+<g id="interface~~lual_newstate~~CalledByGraph_node5" class="node">
+<title>proc~open_config_chunk</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node5"><a xlink:href="../proc/open_config_chunk.html" xlink:title="open_config_chunk">
+<polygon fill="#d9534f" stroke="#d9534f" points="552,-108 437,-108 437,-84 552,-84 552,-108"/>
+<text text-anchor="middle" x="494.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">open_config_chunk</text>
+</a>
+</g>
+</g>
+<!-- proc~open_config_chunk&#45;&gt;proc~flul_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge4" class="edge">
+<title>proc~open_config_chunk&#45;&gt;proc~flul_newstate</title>
+<path fill="none" stroke="#000000" d="M552.33,-96C560.65,-96 569.19,-96 577.42,-96"/>
+<polygon fill="#000000" stroke="#000000" points="577.63,-99.5 587.63,-96 577.63,-92.5 577.63,-99.5"/>
+</g>
+<!-- proc~open_config_file -->
+<g id="interface~~lual_newstate~~CalledByGraph_node6" class="node">
+<title>proc~open_config_file</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node6"><a xlink:href="../proc/open_config_file.html" xlink:title="open_config_file">
+<polygon fill="#d9534f" stroke="#d9534f" points="544.5,-66 444.5,-66 444.5,-42 544.5,-42 544.5,-66"/>
+<text text-anchor="middle" x="494.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">open_config_file</text>
+</a>
+</g>
+</g>
+<!-- proc~open_config_file&#45;&gt;proc~flul_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge5" class="edge">
+<title>proc~open_config_file&#45;&gt;proc~flul_newstate</title>
+<path fill="none" stroke="#000000" d="M533.9,-66.04C548.62,-70.65 565.6,-75.97 581.14,-80.84"/>
+<polygon fill="#000000" stroke="#000000" points="580.51,-84.31 591.1,-83.96 582.6,-77.63 580.51,-84.31"/>
+</g>
+<!-- program~test -->
+<g id="interface~~lual_newstate~~CalledByGraph_node7" class="node">
+<title>program~test</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node7"><a xlink:href="../program/test.html" xlink:title="test">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="521.5,-24 467.5,-24 467.5,0 521.5,0 521.5,-24"/>
+<text text-anchor="middle" x="494.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test</text>
+</a>
+</g>
+</g>
+<!-- program~test&#45;&gt;proc~flul_newstate -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge6" class="edge">
+<title>program~test&#45;&gt;proc~flul_newstate</title>
+<path fill="none" stroke="#000000" d="M521.61,-19.71C531.45,-23.12 542.55,-27.6 552,-33 573.34,-45.2 594.81,-63.2 609.72,-76.84"/>
+<polygon fill="#000000" stroke="#000000" points="607.59,-79.64 617.29,-83.91 612.37,-74.53 607.59,-79.64"/>
+</g>
+<!-- proc~aot_path_open_table -->
+<g id="interface~~lual_newstate~~CalledByGraph_node8" class="node">
+<title>proc~aot_path_open_table</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node8"><a xlink:href="../proc/aot_path_open_table.html" xlink:title="aot_path_open_table">
+<polygon fill="#d9534f" stroke="#d9534f" points="401,-66 277,-66 277,-42 401,-42 401,-66"/>
+<text text-anchor="middle" x="339" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_open_table</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_path_open_table&#45;&gt;proc~open_config_file -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge8" class="edge">
+<title>proc~aot_path_open_table&#45;&gt;proc~open_config_file</title>
+<path fill="none" stroke="#000000" d="M401.11,-54C412.01,-54 423.34,-54 434.19,-54"/>
+<polygon fill="#000000" stroke="#000000" points="434.41,-57.5 444.41,-54 434.41,-50.5 434.41,-57.5"/>
+</g>
+<!-- proc~aot_require_buffer -->
+<g id="interface~~lual_newstate~~CalledByGraph_node9" class="node">
+<title>proc~aot_require_buffer</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node9"><a xlink:href="../proc/aot_require_buffer.html" xlink:title="aot_require_buffer">
+<polygon fill="#d9534f" stroke="#d9534f" points="394,-150 284,-150 284,-126 394,-126 394,-150"/>
+<text text-anchor="middle" x="339" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_require_buffer</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_require_buffer&#45;&gt;proc~open_config_buffer -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge7" class="edge">
+<title>proc~aot_require_buffer&#45;&gt;proc~open_config_buffer</title>
+<path fill="none" stroke="#000000" d="M394.12,-138C404.58,-138 415.67,-138 426.49,-138"/>
+<polygon fill="#000000" stroke="#000000" points="426.75,-141.5 436.75,-138 426.75,-134.5 426.75,-141.5"/>
+</g>
+<!-- interface~aot_path_open -->
+<g id="interface~~lual_newstate~~CalledByGraph_node10" class="node">
+<title>interface~aot_path_open</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node10"><a xlink:href="../interface/aot_path_open.html" xlink:title="aot_path_open">
+<polygon fill="#a7506f" stroke="#a7506f" points="91,-66 0,-66 0,-42 91,-42 91,-66"/>
+<text text-anchor="middle" x="45.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_open</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_path_open&#45;&gt;proc~aot_path_open_table -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge10" class="edge">
+<title>interface~aot_path_open&#45;&gt;proc~aot_path_open_table</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M91.21,-54.65C102.86,-54.8 115.4,-54.93 127,-55 177.67,-55.31 190.33,-55.26 241,-55 249.35,-54.96 258.11,-54.89 266.8,-54.82"/>
+<polygon fill="#000000" stroke="#000000" points="266.98,-58.32 276.94,-54.73 266.91,-51.32 266.98,-58.32"/>
+</g>
+<!-- proc~aot_path_open_fun -->
+<g id="interface~~lual_newstate~~CalledByGraph_node11" class="node">
+<title>proc~aot_path_open_fun</title>
+<g id="a_interface~~lual_newstate~~CalledByGraph_node11"><a xlink:href="../proc/aot_path_open_fun.html" xlink:title="aot_path_open_fun">
+<polygon fill="#d9534f" stroke="#d9534f" points="241,-46 127,-46 127,-22 241,-22 241,-46"/>
+<text text-anchor="middle" x="184" y="-31.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_open_fun</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_path_open&#45;&gt;proc~aot_path_open_fun -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge11" class="edge">
+<title>interface~aot_path_open&#45;&gt;proc~aot_path_open_fun</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M91.2,-47.45C99.35,-46.26 108.03,-44.99 116.66,-43.72"/>
+<polygon fill="#000000" stroke="#000000" points="117.35,-47.16 126.74,-42.24 116.33,-40.23 117.35,-47.16"/>
+</g>
+<!-- proc~aot_path_open_fun&#45;&gt;proc~aot_path_open_table -->
+<g id="interface~~lual_newstate~~CalledByGraph_edge9" class="edge">
+<title>proc~aot_path_open_fun&#45;&gt;proc~aot_path_open_table</title>
+<path fill="none" stroke="#000000" d="M241.1,-41.33C249.44,-42.42 258.12,-43.56 266.72,-44.68"/>
+<polygon fill="#000000" stroke="#000000" points="266.38,-48.17 276.75,-45.99 267.28,-41.23 266.38,-48.17"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var paninterfacelual_newstateCalledByGraph = svgPanZoom('#interfacelual_newstateCalledByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+      <h2>public  function luaL_newstate() bind(c, name="luaL_newstate")  
+</h2>
+
+    
+
+    <h3>Arguments</h3>
+      <em>None</em>
+      <h3>Return Value <span class="anchor" id="variable-lual_newstate"></span><small>type(c_ptr)</small></h3>
+    
+    <br>
+
+ </div>
+</div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,771 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_out_open_table &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_out_open_table
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.1% of total for procedures.">13 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_out_general_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_out_general_module.f90.html'>aot_out_general_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_out_general_module.html'>aot_out_general_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_out_open_table</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/aot_out_open_table.html#src">aot_out_open_table</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine aot_out_open_table(put_conf, tname, advance_previous)  
+</h2>
+    
+
+    <p>Start a new table to write to.</p>
+<p>You can give the table a name with the tname argument.
+If the table definition should NOT start on a new line, you have to pass
+in an advance_previous = .false.</p>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-put_conf~7"></span>
+              type(<a href='../type/aot_out_type.html'>aot_out_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>put_conf</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tname~5"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>tname</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-advance_previous~5"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>advance_previous</strong></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~aot_out_open_table~~CallsGraph Pages: 1 -->
+<svg id="procaot_out_open_tableCallsGraph" width="268pt" height="32pt"
+ viewBox="0.00 0.00 268.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~aot_out_open_table~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~aot_out_open_table~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 264,-28 264,4 -4,4"/>
+<!-- proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CallsGraph_node1" class="node">
+<title>proc~aot_out_open_table</title>
+<polygon fill="none" stroke="black" points="117,-24 0,-24 0,0 117,0 117,-24"/>
+<text text-anchor="middle" x="58.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_out_open_table</text>
+</g>
+<!-- proc~aot_out_breakline -->
+<g id="proc~~aot_out_open_table~~CallsGraph_node2" class="node">
+<title>proc~aot_out_breakline</title>
+<g id="a_proc~~aot_out_open_table~~CallsGraph_node2"><a xlink:href="../proc/aot_out_breakline.html" xlink:title="aot_out_breakline">
+<polygon fill="#d9534f" stroke="#d9534f" points="260,-24 153,-24 153,0 260,0 260,-24"/>
+<text text-anchor="middle" x="206.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_breakline</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_open_table&#45;&gt;proc~aot_out_breakline -->
+<g id="proc~~aot_out_open_table~~CallsGraph_edge1" class="edge">
+<title>proc~aot_out_open_table&#45;&gt;proc~aot_out_breakline</title>
+<path fill="none" stroke="#000000" d="M117.2,-12C125.59,-12 134.26,-12 142.74,-12"/>
+<polygon fill="#000000" stroke="#000000" points="142.96,-15.5 152.96,-12 142.96,-8.5 142.96,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~aot_out_open_table~~CalledByGraph Pages: 1 -->
+<svg id="procaot_out_open_tableCalledByGraph" width="641pt" height="266pt"
+ viewBox="0.00 0.00 641.00 266.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~aot_out_open_table~~CalledByGraph" class="graph" transform="scale(0.91 0.91) rotate(0) translate(4 289)">
+<title>proc~~aot_out_open_table~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-289 701,-289 701,4 -4,4"/>
+<!-- proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node1" class="node">
+<title>proc~aot_out_open_table</title>
+<polygon fill="none" stroke="black" points="697,-160 580,-160 580,-136 697,-136 697,-160"/>
+<text text-anchor="middle" x="638.5" y="-145.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_out_open_table</text>
+</g>
+<!-- proc~aot_out_val_arr_double -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node2" class="node">
+<title>proc~aot_out_val_arr_double</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node2"><a xlink:href="../proc/aot_out_val_arr_double.html" xlink:title="aot_out_val_arr_double">
+<polygon fill="#d9534f" stroke="#d9534f" points="245,-159 109,-159 109,-135 245,-135 245,-159"/>
+<text text-anchor="middle" x="177" y="-144.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_double</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_double&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge1" class="edge">
+<title>proc~aot_out_val_arr_double&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M245.12,-146.78C318.53,-146.6 439.63,-146.44 544,-147 552.28,-147.04 560.98,-147.11 569.6,-147.19"/>
+<polygon fill="#000000" stroke="#000000" points="569.61,-150.69 579.64,-147.28 569.68,-143.69 569.61,-150.69"/>
+</g>
+<!-- interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node11" class="node">
+<title>interface~aot_out_val~2</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node11"><a xlink:href="../interface/aot_out_val~2.html" xlink:title="aot_out_val">
+<polygon fill="#a7506f" stroke="#a7506f" points="354,-180 281,-180 281,-156 354,-156 354,-180"/>
+<text text-anchor="middle" x="317.5" y="-165.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_double&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge18" class="edge">
+<title>proc~aot_out_val_arr_double&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M245.22,-157.19C253.85,-158.5 262.52,-159.81 270.69,-161.05"/>
+<polygon fill="#000000" stroke="#000000" points="270.33,-164.54 280.74,-162.58 271.38,-157.62 270.33,-164.54"/>
+</g>
+<!-- proc~aot_out_val_arr_extdouble -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node3" class="node">
+<title>proc~aot_out_val_arr_extdouble</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node3"><a xlink:href="../proc/aot_out_val_arr_extdouble.html" xlink:title="aot_out_val_arr_extdouble">
+<polygon fill="#d9534f" stroke="#d9534f" points="543,-180 391,-180 391,-156 543,-156 543,-180"/>
+<text text-anchor="middle" x="467" y="-165.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_extdouble</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_extdouble&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge2" class="edge">
+<title>proc~aot_out_val_arr_extdouble&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M543.33,-159.11C552.17,-158.07 561.14,-157.01 569.86,-155.98"/>
+<polygon fill="#000000" stroke="#000000" points="570.43,-159.44 579.95,-154.79 569.61,-152.49 570.43,-159.44"/>
+</g>
+<!-- proc~aot_out_val_arr_extdouble&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge19" class="edge">
+<title>proc~aot_out_val_arr_extdouble&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M390.97,-174.75C381.85,-174.74 372.76,-174.59 364.26,-174.3"/>
+<polygon fill="#000000" stroke="#000000" points="364.34,-170.8 354.21,-173.88 364.05,-177.79 364.34,-170.8"/>
+</g>
+<!-- proc~aot_out_val_arr_int -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node4" class="node">
+<title>proc~aot_out_val_arr_int</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node4"><a xlink:href="../proc/aot_out_val_arr_int.html" xlink:title="aot_out_val_arr_int">
+<polygon fill="#d9534f" stroke="#d9534f" points="233.5,-117 120.5,-117 120.5,-93 233.5,-93 233.5,-117"/>
+<text text-anchor="middle" x="177" y="-102.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_int</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_int&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge3" class="edge">
+<title>proc~aot_out_val_arr_int&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M233.88,-110.23C318.4,-118.14 478.52,-133.12 569.62,-141.65"/>
+<polygon fill="#000000" stroke="#000000" points="569.56,-145.16 579.84,-142.6 570.21,-138.19 569.56,-145.16"/>
+</g>
+<!-- proc~aot_out_val_arr_int&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge20" class="edge">
+<title>proc~aot_out_val_arr_int&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M221.43,-117.02C229.39,-119.67 237.53,-122.69 245,-126 260.5,-132.88 276.88,-142.32 290.04,-150.51"/>
+<polygon fill="#000000" stroke="#000000" points="288.27,-153.53 298.59,-155.93 292.02,-147.62 288.27,-153.53"/>
+</g>
+<!-- proc~aot_out_val_arr_logical -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node5" class="node">
+<title>proc~aot_out_val_arr_logical</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node5"><a xlink:href="../proc/aot_out_val_arr_logical.html" xlink:title="aot_out_val_arr_logical">
+<polygon fill="#d9534f" stroke="#d9534f" points="244.5,-75 109.5,-75 109.5,-51 244.5,-51 244.5,-75"/>
+<text text-anchor="middle" x="177" y="-60.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_logical</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_logical&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge4" class="edge">
+<title>proc~aot_out_val_arr_logical&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M244.59,-71.03C318.29,-80.5 440.39,-97.92 544,-121 559.01,-124.34 575.16,-128.72 589.75,-132.98"/>
+<polygon fill="#000000" stroke="#000000" points="588.98,-136.4 599.56,-135.89 590.97,-129.69 588.98,-136.4"/>
+</g>
+<!-- proc~aot_out_val_arr_logical&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge21" class="edge">
+<title>proc~aot_out_val_arr_logical&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M227.76,-75.09C233.81,-77.56 239.71,-80.5 245,-84 269.98,-100.53 291.12,-128.22 303.8,-147.26"/>
+<polygon fill="#000000" stroke="#000000" points="300.96,-149.31 309.32,-155.82 306.84,-145.52 300.96,-149.31"/>
+</g>
+<!-- proc~aot_out_val_arr_long -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node6" class="node">
+<title>proc~aot_out_val_arr_long</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node6"><a xlink:href="../proc/aot_out_val_arr_long.html" xlink:title="aot_out_val_arr_long">
+<polygon fill="#d9534f" stroke="#d9534f" points="238.5,-285 115.5,-285 115.5,-261 238.5,-261 238.5,-285"/>
+<text text-anchor="middle" x="177" y="-270.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_long</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_long&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge5" class="edge">
+<title>proc~aot_out_val_arr_long&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M238.76,-278.72C314.02,-283.25 444.44,-282.59 544,-237 577.49,-221.67 606.52,-189.34 623.01,-168.16"/>
+<polygon fill="#000000" stroke="#000000" points="625.85,-170.2 629.09,-160.11 620.27,-165.98 625.85,-170.2"/>
+</g>
+<!-- proc~aot_out_val_arr_long&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge22" class="edge">
+<title>proc~aot_out_val_arr_long&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M227.76,-260.91C233.81,-258.44 239.71,-255.5 245,-252 269.98,-235.47 291.12,-207.78 303.8,-188.74"/>
+<polygon fill="#000000" stroke="#000000" points="306.84,-190.48 309.32,-180.18 300.96,-186.69 306.84,-190.48"/>
+</g>
+<!-- proc~aot_out_val_arr_quadruple -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node7" class="node">
+<title>proc~aot_out_val_arr_quadruple</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node7"><a xlink:href="../proc/aot_out_val_arr_quadruple.html" xlink:title="aot_out_val_arr_quadruple">
+<polygon fill="#d9534f" stroke="#d9534f" points="544,-24 390,-24 390,0 544,0 544,-24"/>
+<text text-anchor="middle" x="467" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_quadruple</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_quadruple&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge6" class="edge">
+<title>proc~aot_out_val_arr_quadruple&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M516.09,-24.08C525.79,-27.69 535.59,-32.27 544,-38 579.27,-62.02 608.98,-102.74 624.93,-127.33"/>
+<polygon fill="#000000" stroke="#000000" points="622.04,-129.31 630.35,-135.89 627.96,-125.57 622.04,-129.31"/>
+</g>
+<!-- interface~aot_out_val -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node10" class="node">
+<title>interface~aot_out_val</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node10"><a xlink:href="../interface/aot_out_val.html" xlink:title="aot_out_val">
+<polygon fill="#a7506f" stroke="#a7506f" points="675,-24 602,-24 602,0 675,0 675,-24"/>
+<text text-anchor="middle" x="638.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_quadruple&#45;&gt;interface~aot_out_val -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge17" class="edge">
+<title>proc~aot_out_val_arr_quadruple&#45;&gt;interface~aot_out_val</title>
+<path fill="none" stroke="#000000" d="M544.32,-5.28C560.44,-5.17 576.97,-5.38 591.55,-5.92"/>
+<polygon fill="#000000" stroke="#000000" points="591.64,-9.43 601.79,-6.38 591.95,-2.44 591.64,-9.43"/>
+</g>
+<!-- proc~aot_out_val_arr_real -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node8" class="node">
+<title>proc~aot_out_val_arr_real</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node8"><a xlink:href="../proc/aot_out_val_arr_real.html" xlink:title="aot_out_val_arr_real">
+<polygon fill="#d9534f" stroke="#d9534f" points="237,-243 117,-243 117,-219 237,-219 237,-243"/>
+<text text-anchor="middle" x="177" y="-228.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_real</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_real&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge7" class="edge">
+<title>proc~aot_out_val_arr_real&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M237.13,-236.89C311,-242.18 440.29,-244.53 544,-210 571.32,-200.9 598.26,-181.64 616.15,-166.99"/>
+<polygon fill="#000000" stroke="#000000" points="618.78,-169.35 624.17,-160.23 614.27,-164 618.78,-169.35"/>
+</g>
+<!-- proc~aot_out_val_arr_real&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge23" class="edge">
+<title>proc~aot_out_val_arr_real&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M221.43,-218.98C229.39,-216.33 237.53,-213.31 245,-210 260.5,-203.12 276.88,-193.68 290.04,-185.49"/>
+<polygon fill="#000000" stroke="#000000" points="292.02,-188.38 298.59,-180.07 288.27,-182.47 292.02,-188.38"/>
+</g>
+<!-- proc~aot_out_val_arr_string -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node9" class="node">
+<title>proc~aot_out_val_arr_string</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node9"><a xlink:href="../proc/aot_out_val_arr_string.html" xlink:title="aot_out_val_arr_string">
+<polygon fill="#d9534f" stroke="#d9534f" points="242,-201 112,-201 112,-177 242,-177 242,-201"/>
+<text text-anchor="middle" x="177" y="-186.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val_arr_string</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_out_val_arr_string&#45;&gt;proc~aot_out_open_table -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge8" class="edge">
+<title>proc~aot_out_val_arr_string&#45;&gt;proc~aot_out_open_table</title>
+<path fill="none" stroke="#000000" d="M242.29,-196.89C316.03,-204.14 440.14,-210.77 544,-189 566.25,-184.34 589.67,-174.06 607.51,-164.96"/>
+<polygon fill="#000000" stroke="#000000" points="609.58,-167.82 616.8,-160.07 606.32,-161.63 609.58,-167.82"/>
+</g>
+<!-- proc~aot_out_val_arr_string&#45;&gt;interface~aot_out_val~2 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge24" class="edge">
+<title>proc~aot_out_val_arr_string&#45;&gt;interface~aot_out_val~2</title>
+<path fill="none" stroke="#000000" d="M242.38,-179.24C252.03,-177.77 261.81,-176.29 270.96,-174.91"/>
+<polygon fill="#000000" stroke="#000000" points="271.62,-178.35 280.98,-173.39 270.57,-171.42 271.62,-178.35"/>
+</g>
+<!-- interface~aot_out_val&#45;&gt;proc~aot_out_val_arr_quadruple -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge14" class="edge">
+<title>interface~aot_out_val&#45;&gt;proc~aot_out_val_arr_quadruple</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M601.79,-17.62C587.91,-18.35 571.34,-18.72 554.68,-18.75"/>
+<polygon fill="#000000" stroke="#000000" points="554.33,-15.25 544.32,-18.72 554.31,-22.25 554.33,-15.25"/>
+</g>
+<!-- interface~aot_out_val~2&#45;&gt;proc~aot_out_val_arr_extdouble -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge10" class="edge">
+<title>interface~aot_out_val~2&#45;&gt;proc~aot_out_val_arr_extdouble</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M354.21,-162.12C362.41,-161.71 371.47,-161.44 380.79,-161.32"/>
+<polygon fill="#000000" stroke="#000000" points="381,-164.82 390.97,-161.25 380.95,-157.82 381,-164.82"/>
+</g>
+<!-- interface~aot_out_val~3 -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_node12" class="node">
+<title>interface~aot_out_val~3</title>
+<g id="a_proc~~aot_out_open_table~~CalledByGraph_node12"><a xlink:href="../interface/aot_out_val~3.html" xlink:title="aot_out_val">
+<polygon fill="#a7506f" stroke="#a7506f" points="73,-180 0,-180 0,-156 73,-156 73,-180"/>
+<text text-anchor="middle" x="36.5" y="-165.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_val</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_double -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge9" class="edge">
+<title>interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_double</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M73.17,-162.59C81.15,-161.38 89.91,-160.05 98.85,-158.7"/>
+<polygon fill="#000000" stroke="#000000" points="99.62,-162.12 108.99,-157.16 98.57,-155.2 99.62,-162.12"/>
+</g>
+<!-- interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_int -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge11" class="edge">
+<title>interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_int</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M55.41,-155.93C69.51,-146.81 89.92,-134.46 109,-126 113.43,-124.03 118.11,-122.17 122.84,-120.43"/>
+<polygon fill="#000000" stroke="#000000" points="124.29,-123.63 132.57,-117.02 121.98,-117.02 124.29,-123.63"/>
+</g>
+<!-- interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_logical -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge12" class="edge">
+<title>interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_logical</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M44.68,-155.82C56.06,-137.58 79.93,-103.24 109,-84 111.56,-82.31 114.27,-80.74 117.06,-79.3"/>
+<polygon fill="#000000" stroke="#000000" points="118.61,-82.44 126.24,-75.09 115.69,-76.08 118.61,-82.44"/>
+</g>
+<!-- interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_long -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge13" class="edge">
+<title>interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_long</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M44.68,-180.18C56.06,-198.42 79.93,-232.76 109,-252 111.56,-253.69 114.27,-255.26 117.06,-256.7"/>
+<polygon fill="#000000" stroke="#000000" points="115.69,-259.92 126.24,-260.91 118.61,-253.56 115.69,-259.92"/>
+</g>
+<!-- interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_real -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge15" class="edge">
+<title>interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_real</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M55.41,-180.07C69.51,-189.19 89.92,-201.54 109,-210 113.43,-211.97 118.11,-213.83 122.84,-215.57"/>
+<polygon fill="#000000" stroke="#000000" points="121.98,-218.98 132.57,-218.98 124.29,-212.37 121.98,-218.98"/>
+</g>
+<!-- interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_string -->
+<g id="proc~~aot_out_open_table~~CalledByGraph_edge16" class="edge">
+<title>interface~aot_out_val~3&#45;&gt;proc~aot_out_val_arr_string</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M73.17,-173.41C82.06,-174.76 91.94,-176.25 101.94,-177.77"/>
+<polygon fill="#000000" stroke="#000000" points="101.55,-181.25 111.96,-179.29 102.6,-174.33 101.55,-181.25"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprocaot_out_open_tableCalledByGraph = svgPanZoom('#procaot_out_open_tableCalledByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">  </span><span class="k">subroutine </span><span class="n">aot_out_open_table</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">tname</span><span class="p">,</span><span class="w"> </span><span class="n">advance_previous</span><span class="p">)</span>
+<span class="w">    </span><span class="c">!------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">aot_out_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">put_conf</span>
+<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tname</span>
+<span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">optional</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">advance_previous</span>
+<span class="w">    </span><span class="c">!------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="k">call </span><span class="n">aot_out_breakline</span><span class="p">(</span><span class="n">put_conf</span><span class="p">,</span><span class="w"> </span><span class="n">advance_previous</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">tname</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<span class="k">      write</span><span class="p">(</span><span class="n">put_conf</span><span class="p">%</span><span class="n">outunit</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;(a)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">tname</span><span class="p">)</span><span class="o">//</span><span class="s1">&#39; = {&#39;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="k">      write</span><span class="p">(</span><span class="n">put_conf</span><span class="p">%</span><span class="n">outunit</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;(a)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">advance</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;{&#39;</span>
+<span class="w">    </span><span class="k">end if</span>
+
+<span class="k">    </span><span class="n">put_conf</span><span class="p">%</span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">put_conf</span><span class="p">%</span><span class="n">level</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="n">put_conf</span><span class="p">%</span><span class="n">indent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">put_conf</span><span class="p">%</span><span class="n">indent</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">put_conf</span><span class="p">%</span><span class="n">in_step</span>
+
+<span class="w">  </span><span class="k">end subroutine </span><span class="n">aot_out_open_table</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

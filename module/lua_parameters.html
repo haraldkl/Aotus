@@ -1,0 +1,1344 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>lua_parameters &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>lua_parameters
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.4% of total for modules and submodules.">18 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/lua_parameters.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/lua_parameters.f90.html'>lua_parameters.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">lua_parameters</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_int">lua_int</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_num">lua_num</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-luai_maxstack">LUAI_MAXSTACK</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tnone">LUA_TNONE</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tnil">LUA_TNIL</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tboolean">LUA_TBOOLEAN</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tlightuserdata">LUA_TLIGHTUSERDATA</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tnumber">LUA_TNUMBER</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tstring">LUA_TSTRING</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_ttable">LUA_TTABLE</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tfunction">LUA_TFUNCTION</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tuserdata">LUA_TUSERDATA</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_tthread">LUA_TTHREAD</a>
+            <a class="list-group-item" href="../module/lua_parameters.html#variable-lua_registryindex">LUA_REGISTRYINDEX</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>This module provides some parameters defined in the
+Lua header file that are needed in the wrapper
+functions for the Fortran interface.</p>
+<p>Lua_int and Lua_num are system dependent, and you
+might need to adapt them on your system.
+The type constants have to be consistent with the
+Lua header definition, and thus should be checked
+after version upgrades of the Lua library.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~lua_parameters~~UsesGraph Pages: 1 -->
+<svg id="modulelua_parametersUsesGraph" width="225pt" height="32pt"
+ viewBox="0.00 0.00 225.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~lua_parameters~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~lua_parameters~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 221,-28 221,4 -4,4"/>
+<!-- module~lua_parameters -->
+<g id="module~~lua_parameters~~UsesGraph_node1" class="node">
+<title>module~lua_parameters</title>
+<polygon fill="none" stroke="black" points="217,-24 120,-24 120,0 217,0 217,-24"/>
+<text text-anchor="middle" x="168.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">lua_parameters</text>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~lua_parameters~~UsesGraph_node2" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~lua_parameters~~UsesGraph_node2"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-24 0,-24 0,0 84,0 84,-24"/>
+<text text-anchor="middle" x="42" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~lua_parameters&#45;&gt;iso_c_binding -->
+<g id="module~~lua_parameters~~UsesGraph_edge1" class="edge">
+<title>module~lua_parameters&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M119.72,-12C111.43,-12 102.78,-12 94.4,-12"/>
+<polygon fill="#000000" stroke="#000000" points="94.36,-8.5 84.36,-12 94.36,-15.5 94.36,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~lua_parameters~~UsedByGraph Pages: 1 -->
+<svg id="modulelua_parametersUsedByGraph" width="641pt" height="280pt"
+ viewBox="0.00 0.00 641.00 280.37" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~lua_parameters~~UsedByGraph" class="graph" transform="scale(0.35 0.35) rotate(0) translate(4 792.95)">
+<title>module~~lua_parameters~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-792.95 1818,-792.95 1818,4 -4,4"/>
+<!-- module~lua_parameters -->
+<g id="module~~lua_parameters~~UsedByGraph_node1" class="node">
+<title>module~lua_parameters</title>
+<polygon fill="none" stroke="black" points="97,-759.95 0,-759.95 0,-735.95 97,-735.95 97,-759.95"/>
+<text text-anchor="middle" x="48.5" y="-745.55" font-family="Helvetica,sans-Serif" font-size="10.50">lua_parameters</text>
+</g>
+<!-- module~aot_references_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node2" class="node">
+<title>module~aot_references_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node2"><a xlink:href="../module/aot_references_module.html" xlink:title="aot_references_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1175,-760.95 1038,-760.95 1038,-736.95 1175,-736.95 1175,-760.95"/>
+<text text-anchor="middle" x="1106.5" y="-746.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~lua_parameters -->
+<g id="module~~lua_parameters~~UsedByGraph_edge1" class="edge">
+<title>module~aot_references_module&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1037.8,-760.14C964.04,-771.35 842.48,-786.95 737,-786.95 737,-786.95 737,-786.95 377.5,-786.95 281.28,-786.95 257.2,-785 161,-786.95"/>
+</g>
+<!-- module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_node3" class="node">
+<title>module~flu_binding</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node3"><a xlink:href="../module/flu_binding.html" xlink:title="flu_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="294,-720.95 223,-720.95 223,-696.95 294,-696.95 294,-720.95"/>
+<text text-anchor="middle" x="258.5" y="-706.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding</text>
+</a>
+</g>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge16" class="edge">
+<title>module~aot_references_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1037.81,-748.95C1002.16,-748.95 957.71,-748.95 918,-748.95"/>
+</g>
+<!-- module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node17" class="node">
+<title>module~aot_table_ops_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node17"><a xlink:href="../module/aot_table_ops_module.html" xlink:title="aot_table_ops_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="983,-336.95 851,-336.95 851,-312.95 983,-312.95 983,-336.95"/>
+<text text-anchor="middle" x="917" y="-322.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge56" class="edge">
+<title>module~aot_references_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1102.43,-736.79C1086.28,-673.27 1010.92,-381.25 983,-350.95 979.91,-347.59 976.32,-344.65 972.45,-342.09"/>
+<polygon fill="#000000" stroke="#000000" points="974.04,-338.97 963.62,-337.07 970.58,-345.05 974.04,-338.97"/>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_parameters -->
+<g id="module~~lua_parameters~~UsedByGraph_edge2" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M250.18,-720.98C235.96,-742.65 202.35,-786.11 161,-786.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M159,-786.95C130.53,-787.52 100.17,-775.61 78.66,-764.81"/>
+<polygon fill="#000000" stroke="#000000" points="80.21,-761.67 69.73,-760.13 76.96,-767.87 80.21,-761.67"/>
+</g>
+<!-- module~lua_fif -->
+<g id="module~~lua_parameters~~UsedByGraph_node4" class="node">
+<title>module~lua_fif</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node4"><a xlink:href="../module/lua_fif.html" xlink:title="lua_fif">
+<polygon fill="#337ab7" stroke="#337ab7" points="187,-739.95 133,-739.95 133,-715.95 187,-715.95 187,-739.95"/>
+<text text-anchor="middle" x="160" y="-725.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_fif</text>
+</a>
+</g>
+</g>
+<!-- module~flu_binding&#45;&gt;module~lua_fif -->
+<g id="module~~lua_parameters~~UsedByGraph_edge23" class="edge">
+<title>module~flu_binding&#45;&gt;module~lua_fif</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M222.93,-715.75C214.55,-717.4 205.57,-719.17 197.12,-720.83"/>
+<polygon fill="#000000" stroke="#000000" points="196.28,-717.43 187.15,-722.8 197.64,-724.3 196.28,-717.43"/>
+</g>
+<!-- module~lua_fif&#45;&gt;module~lua_parameters -->
+<g id="module~~lua_parameters~~UsedByGraph_edge3" class="edge">
+<title>module~lua_fif&#45;&gt;module~lua_parameters</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M132.77,-732.74C125.05,-734.15 116.28,-735.75 107.39,-737.37"/>
+<polygon fill="#000000" stroke="#000000" points="106.57,-733.96 97.36,-739.2 107.83,-740.85 106.57,-733.96"/>
+</g>
+<!-- module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node5" class="node">
+<title>module~aot_err_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node5"><a xlink:href="../module/aot_err_module.html" xlink:title="aot_err_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="427,-397.95 330,-397.95 330,-373.95 427,-373.95 427,-397.95"/>
+<text text-anchor="middle" x="378.5" y="-383.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_err_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge5" class="edge">
+<title>module~aot_err_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M373.02,-398.21C355.35,-446.58 290.36,-624.46 267.51,-687.02"/>
+<polygon fill="#000000" stroke="#000000" points="264.13,-686.07 263.99,-696.67 270.71,-688.47 264.13,-686.07"/>
+</g>
+<!-- module~aot_extdouble_fun_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node6" class="node">
+<title>module~aot_extdouble_fun_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node6"><a xlink:href="../module/aot_extdouble_fun_module.html" xlink:title="aot_extdouble_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1538,-356.95 1382,-356.95 1382,-332.95 1538,-332.95 1538,-356.95"/>
+<text text-anchor="middle" x="1460" y="-342.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge6" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1442.38,-357.14C1426.47,-368.91 1401.86,-387.34 1381,-403.95 1256.96,-502.69 1251.59,-566.83 1107.5,-632.95"/>
+</g>
+<!-- module~aot_extdouble_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node8" class="node">
+<title>module~aot_extdouble_top_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node8"><a xlink:href="../module/aot_extdouble_top_module.html" xlink:title="aot_extdouble_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="620,-184.95 464,-184.95 464,-160.95 620,-160.95 620,-184.95"/>
+<text text-anchor="middle" x="542" y="-170.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge32" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1449.07,-332.68C1432.85,-312.13 1400.52,-268.94 1381,-227.95 1357.79,-179.21 1379.67,-153.32 1345,-111.95 1296.49,-54.05 1267.4,-51.78 1194,-33.95 1118.42,-15.58 1096.06,-23.4 1019,-33.95 853.51,-56.6 816.72,-86.08 657,-134.95 633.84,-142.03 608.23,-150.51 587.17,-157.66"/>
+<polygon fill="#000000" stroke="#000000" points="585.87,-154.4 577.53,-160.94 588.12,-161.03 585.87,-154.4"/>
+</g>
+<!-- module~aot_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node16" class="node">
+<title>module~aot_table_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node16"><a xlink:href="../module/aot_table_module.html" xlink:title="aot_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1341.5,-376.95 1233.5,-376.95 1233.5,-352.95 1341.5,-352.95 1341.5,-376.95"/>
+<text text-anchor="middle" x="1287.5" y="-362.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge47" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1381.73,-354.01C1371.66,-355.19 1361.44,-356.39 1351.64,-357.54"/>
+<polygon fill="#000000" stroke="#000000" points="1351.12,-354.08 1341.6,-358.72 1351.94,-361.03 1351.12,-354.08"/>
+</g>
+<!-- module~aot_extdouble_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node7" class="node">
+<title>module~aot_extdouble_table_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node7"><a xlink:href="../module/aot_extdouble_table_module.html" xlink:title="aot_extdouble_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1189.5,-376.95 1023.5,-376.95 1023.5,-352.95 1189.5,-352.95 1189.5,-376.95"/>
+<text text-anchor="middle" x="1106.5" y="-362.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge7" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-478.95C802.12,-517.07 770.3,-516.14 657,-555.95 531.36,-600.08 503.24,-619.75 379.5,-668.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M377.5,-668.95C351.66,-675.87 323.24,-685.45 300.77,-693.49"/>
+<polygon fill="#000000" stroke="#000000" points="299.42,-690.25 291.21,-696.95 301.8,-696.84 299.42,-690.25"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge24" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1039.94,-377.08C1032.67,-379.52 1025.54,-382.45 1019,-385.95 965.19,-414.73 975.86,-459.57 918,-478.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-478.95C840.56,-504.2 816.45,-483.1 737,-478.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M735,-478.95C616.53,-472.75 482.6,-426.48 418.17,-401.63"/>
+<polygon fill="#000000" stroke="#000000" points="419.4,-398.35 408.81,-397.98 416.86,-404.87 419.4,-398.35"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge34" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1049.29,-376.96C955.17,-393.49 765.4,-410.97 657,-311.95 628.21,-285.65 645.3,-262.43 621,-231.95 607.78,-215.37 588.9,-200.92 573.03,-190.48"/>
+<polygon fill="#000000" stroke="#000000" points="574.89,-187.51 564.57,-185.1 571.13,-193.42 574.89,-187.51"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge52" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1049.24,-352.94C1028.85,-348.59 1005.62,-343.64 984.43,-339.12"/>
+<polygon fill="#000000" stroke="#000000" points="985.05,-335.67 974.54,-337.01 983.59,-342.52 985.05,-335.67"/>
+</g>
+<!-- module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node18" class="node">
+<title>module~aot_top_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node18"><a xlink:href="../module/aot_top_module.html" xlink:title="aot_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="785,-302.95 687,-302.95 687,-278.95 785,-278.95 785,-302.95"/>
+<text text-anchor="middle" x="736" y="-288.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge59" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.19,-373.68C990.05,-374.95 951.75,-373.54 918,-364.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-364.95C886.83,-357.52 879.09,-356.74 851,-345.95 822.28,-334.91 790.88,-319.49 768.32,-307.79"/>
+<polygon fill="#000000" stroke="#000000" points="769.71,-304.57 759.22,-303.03 766.46,-310.77 769.71,-304.57"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge8" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M463.96,-178.56C435.03,-183.93 403.4,-194.04 379.5,-212.95"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge25" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M520.49,-184.98C503.53,-195.7 479.6,-212.63 463,-231.95 427.38,-273.39 400.62,-332.53 387.84,-364.1"/>
+<polygon fill="#000000" stroke="#000000" points="384.47,-363.1 384.05,-373.68 390.98,-365.67 384.47,-363.1"/>
+</g>
+<!-- module~aot_extdouble_vector_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node9" class="node">
+<title>module~aot_extdouble_vector_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node9"><a xlink:href="../module/aot_extdouble_vector_module.html" xlink:title="aot_extdouble_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1192.5,-66.95 1020.5,-66.95 1020.5,-42.95 1192.5,-42.95 1192.5,-66.95"/>
+<text text-anchor="middle" x="1106.5" y="-52.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge9" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1052.51,-66.96C1006.58,-77.03 943.59,-89.94 918,-90.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-90.95C750.35,-97.49 694.56,-23.77 543,-90.95"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge35" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1041.53,-67.07C1033.75,-69.53 1026.07,-72.46 1019,-75.95 1000.57,-85.03 1001.89,-96.86 983,-104.95 848.66,-162.48 800.95,-122.72 657,-147.95 639.57,-151 620.76,-154.88 603.54,-158.67"/>
+<polygon fill="#000000" stroke="#000000" points="602.61,-155.29 593.61,-160.88 604.13,-162.12 602.61,-155.29"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge53" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1030.04,-66.95C1025.99,-69.46 1022.25,-72.43 1019,-75.95 950.84,-149.65 1045.75,-220.58 983,-298.95 980.42,-302.16 977.39,-304.98 974.07,-307.46"/>
+<polygon fill="#000000" stroke="#000000" points="971.93,-304.66 965.29,-312.92 975.63,-310.6 971.93,-304.66"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge60" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1031.42,-67.06C1026.93,-69.53 1022.73,-72.46 1019,-75.95 980.18,-112.22 1020.4,-152.21 983,-189.95 939.57,-233.77 908,-209.33 851,-232.95 821.79,-245.05 789.81,-261.63 767.17,-273.96"/>
+<polygon fill="#000000" stroke="#000000" points="765.46,-270.91 758.38,-278.8 768.83,-277.05 765.46,-270.91"/>
+</g>
+<!-- module~aot_fun_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node10" class="node">
+<title>module~aot_fun_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node10"><a xlink:href="../module/aot_fun_module.html" xlink:title="aot_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1673,-396.95 1575,-396.95 1575,-372.95 1673,-372.95 1673,-396.95"/>
+<text text-anchor="middle" x="1624" y="-382.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_references_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge4" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_references_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1286.5,-708.95C1240.87,-711.46 1190.15,-723.72 1154.38,-734.02"/>
+<polygon fill="#000000" stroke="#000000" points="1153.32,-730.68 1144.71,-736.86 1155.29,-737.4 1153.32,-730.68"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge10" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1617.64,-397.22C1591.42,-455.16 1470.54,-698.92 1288.5,-708.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1286.5,-708.95C1210.71,-733.14 1186.09,-696.56 1107.5,-708.95"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge30" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1574.83,-373.05C1557.52,-368.78 1537.8,-363.91 1519.69,-359.44"/>
+<polygon fill="#000000" stroke="#000000" points="1520.37,-356 1509.82,-357 1518.69,-362.8 1520.37,-356"/>
+</g>
+<!-- module~aot_quadruple_fun_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node12" class="node">
+<title>module~aot_quadruple_fun_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node12"><a xlink:href="../module/aot_quadruple_fun_module.html" xlink:title="aot_quadruple_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1539,-436.95 1381,-436.95 1381,-412.95 1539,-412.95 1539,-436.95"/>
+<text text-anchor="middle" x="1460" y="-422.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge39" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1574.83,-396.84C1557.52,-401.11 1537.8,-405.98 1519.69,-410.45"/>
+<polygon fill="#000000" stroke="#000000" points="1518.69,-407.1 1509.82,-412.89 1520.37,-413.89 1518.69,-407.1"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge48" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1574.72,-382.06C1515.98,-378.55 1416.67,-372.61 1351.84,-368.73"/>
+<polygon fill="#000000" stroke="#000000" points="1351.93,-365.23 1341.74,-368.13 1351.52,-372.22 1351.93,-365.23"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge61" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1611.22,-372.94C1596.06,-358.37 1568.17,-334.44 1539,-323.95 1278.79,-230.31 1194.2,-271.14 918,-284.95"/>
+</g>
+<!-- module~aot_path_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node11" class="node">
+<title>module~aot_path_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node11"><a xlink:href="../module/aot_path_module.html" xlink:title="aot_path_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1814,-396.95 1709,-396.95 1709,-372.95 1814,-372.95 1814,-396.95"/>
+<text text-anchor="middle" x="1761.5" y="-382.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge11" class="edge">
+<title>module~aot_path_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1757.98,-397.04C1743.19,-464.26 1661.38,-788.95 1461,-788.95 1461,-788.95 1461,-788.95 1286.5,-788.95 1167.31,-788.95 1137.06,-786.34 1019,-769.95 973.59,-763.64 963.85,-748.57 918,-748.95"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_fun_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge38" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1708.89,-384.95C1700.59,-384.95 1691.95,-384.95 1683.51,-384.95"/>
+<polygon fill="#000000" stroke="#000000" points="1683.35,-381.45 1673.35,-384.95 1683.35,-388.45 1683.35,-381.45"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge49" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1623,-246.95C1509.55,-191.54 1363.26,-300.58 1309.51,-346.19"/>
+<polygon fill="#000000" stroke="#000000" points="1306.98,-343.75 1301.69,-352.93 1311.55,-349.05 1306.98,-343.75"/>
+</g>
+<!-- module~aotus_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node20" class="node">
+<title>module~aotus_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node20"><a xlink:href="../module/aotus_module.html" xlink:title="aotus_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1504,-218.95 1416,-218.95 1416,-194.95 1504,-194.95 1504,-218.95"/>
+<text text-anchor="middle" x="1460" y="-204.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aotus_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge69" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aotus_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1752.82,-372.67C1734.59,-344.74 1685.64,-276.56 1625,-246.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1623,-246.95C1588.82,-230.26 1547.09,-220.16 1514.55,-214.29"/>
+<polygon fill="#000000" stroke="#000000" points="1514.77,-210.78 1504.32,-212.53 1513.58,-217.68 1514.77,-210.78"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge12" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1286.5,-670.95C1212.58,-704.85 1187.84,-696.29 1107.5,-708.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1105.5,-708.95C1100.24,-709.78 923.33,-748.95 918,-748.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-748.95C655.42,-748.95 587.21,-771.71 330,-729.95 321.21,-728.52 311.97,-726.31 303.19,-723.85"/>
+<polygon fill="#000000" stroke="#000000" points="304.09,-720.47 293.51,-721 302.11,-727.18 304.09,-720.47"/>
+</g>
+<!-- module~aot_quadruple_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node14" class="node">
+<title>module~aot_quadruple_top_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node14"><a xlink:href="../module/aot_quadruple_top_module.html" xlink:title="aot_quadruple_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="621,-264.95 463,-264.95 463,-240.95 621,-240.95 621,-264.95"/>
+<text text-anchor="middle" x="542" y="-250.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge41" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1455.95,-437.08C1446.14,-473.72 1412.11,-584.55 1345,-646.95 1325.02,-665.52 1313.33,-659.64 1288.5,-670.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1286.5,-670.95C1243.58,-690.49 1237.77,-636.51 1194,-618.95 961.92,-525.81 845.05,-615.8 657,-450.95 599.78,-400.78 564.29,-314.6 550.11,-274.56"/>
+<polygon fill="#000000" stroke="#000000" points="553.38,-273.31 546.81,-264.99 546.76,-275.59 553.38,-273.31"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge50" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1422.02,-412.88C1409.02,-408.57 1394.34,-403.62 1381,-398.95 1364.29,-393.09 1345.96,-386.41 1330.07,-380.53"/>
+<polygon fill="#000000" stroke="#000000" points="1331.11,-377.19 1320.52,-376.99 1328.68,-383.75 1331.11,-377.19"/>
+</g>
+<!-- module~aot_quadruple_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node13" class="node">
+<title>module~aot_quadruple_table_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node13"><a xlink:href="../module/aot_quadruple_table_module.html" xlink:title="aot_quadruple_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1190.5,-418.95 1022.5,-418.95 1022.5,-394.95 1190.5,-394.95 1190.5,-418.95"/>
+<text text-anchor="middle" x="1106.5" y="-404.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge13" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-516.95C745.81,-572.45 721.18,-651.66 543,-668.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541,-668.95C469.49,-675.16 446.2,-642.43 379.5,-668.95"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge26" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1090.84,-419.14C1068.64,-437.16 1024.65,-471.11 983,-492.95 955.73,-507.25 947.28,-507.4 918,-516.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-516.95C838.68,-542.16 817.43,-491.02 737,-478.95"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge43" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1068.82,-418.98C988.69,-442.99 794.18,-488.66 657,-416.95 599.1,-386.68 564.68,-312.14 550.54,-274.88"/>
+<polygon fill="#000000" stroke="#000000" points="553.65,-273.21 546.94,-265.02 547.08,-275.61 553.65,-273.21"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge54" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1039.39,-394.83C1032.3,-392.39 1025.36,-389.46 1019,-385.95 999.47,-375.15 1001.72,-363.1 983,-350.95 977.32,-347.26 971.02,-343.94 964.66,-341.01"/>
+<polygon fill="#000000" stroke="#000000" points="965.91,-337.74 955.34,-336.99 963.14,-344.16 965.91,-337.74"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge62" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1047.85,-394.93C1010.66,-386.96 961.32,-375.97 918,-364.95"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge14" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M504.94,-240.86C460.42,-226.43 389.36,-205.15 379.5,-212.95"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge27" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M490.23,-265.05C480.69,-268.63 471.16,-273.18 463,-278.95 430.69,-301.77 404.85,-340.67 390.89,-364.75"/>
+<polygon fill="#000000" stroke="#000000" points="387.66,-363.35 385.81,-373.78 393.76,-366.78 387.66,-363.35"/>
+</g>
+<!-- module~aot_quadruple_vector_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node15" class="node">
+<title>module~aot_quadruple_vector_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node15"><a xlink:href="../module/aot_quadruple_vector_module.html" xlink:title="aot_quadruple_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1194,-108.95 1019,-108.95 1019,-84.95 1194,-84.95 1194,-108.95"/>
+<text text-anchor="middle" x="1106.5" y="-94.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge15" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1018.68,-91.58C986.99,-90.31 950.87,-89.65 918,-90.95"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge44" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1095.33,-109.1C1071.01,-137.92 1009.53,-209.24 983,-225.95 957.31,-242.12 945.95,-235.1 918,-246.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-246.95C866.66,-267.85 725.27,-264.24 631.44,-259.07"/>
+<polygon fill="#000000" stroke="#000000" points="631.56,-255.57 621.37,-258.5 631.16,-262.56 631.56,-255.57"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge55" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1097.35,-109.15C1081.67,-132.75 1046.44,-186.43 1019,-232.95 1002.02,-261.73 1007.99,-276.76 983,-298.95 979.07,-302.44 974.61,-305.49 969.91,-308.16"/>
+<polygon fill="#000000" stroke="#000000" points="968.02,-305.19 960.66,-312.81 971.17,-311.44 968.02,-305.19"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge63" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-246.95C877.25,-263.36 831.07,-274.52 795.32,-281.5"/>
+<polygon fill="#000000" stroke="#000000" points="794.23,-278.14 785.06,-283.44 795.53,-285.02 794.23,-278.14"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge17" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1283.47,-377.21C1271.27,-423.37 1220.86,-586.43 1107.5,-632.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1105.5,-632.95C873.74,-728.05 792.57,-647.24 543,-668.95"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge28" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1274.02,-377.12C1229.65,-419.06 1073.83,-554.95 918,-554.95 918,-554.95 918,-554.95 735,-554.95 606.2,-554.95 574.68,-519.11 463,-454.95 439.12,-441.23 415.23,-420.62 399.16,-405.5"/>
+<polygon fill="#000000" stroke="#000000" points="401.15,-402.55 391.51,-398.15 396.3,-407.6 401.15,-402.55"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_extdouble_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge31" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_extdouble_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1233.28,-364.95C1222.68,-364.95 1211.26,-364.95 1199.78,-364.95"/>
+<polygon fill="#000000" stroke="#000000" points="1199.7,-361.45 1189.7,-364.95 1199.7,-368.45 1199.7,-361.45"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_quadruple_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge40" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_quadruple_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1235.21,-376.98C1214.42,-381.86 1190.25,-387.53 1168.57,-392.62"/>
+<polygon fill="#000000" stroke="#000000" points="1167.74,-389.22 1158.8,-394.91 1169.34,-396.03 1167.74,-389.22"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge57" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1105.5,-322.95C1068.8,-316.97 1027.52,-316.73 993.06,-318.29"/>
+<polygon fill="#000000" stroke="#000000" points="992.87,-314.79 983.06,-318.8 993.23,-321.78 992.87,-314.79"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge64" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1242.7,-352.88C1206.67,-343.39 1154.13,-330.54 1107.5,-322.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1105.5,-322.95C1021.58,-309.29 1002.92,-280.7 918,-284.95"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge18" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M850.65,-329.38C759.72,-332.98 591.71,-330.22 463,-273.95 420.89,-255.53 415.62,-184.52 379.5,-212.95"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge65" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M852.64,-312.91C833.89,-309.35 813.45,-305.47 795.05,-301.97"/>
+<polygon fill="#000000" stroke="#000000" points="795.54,-298.5 785.06,-300.08 794.24,-305.38 795.54,-298.5"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge19" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M717,-278.72C695.3,-264.68 657.22,-242.28 621,-231.95 569.24,-217.17 421.72,-179.55 379.5,-212.95"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge29" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M689.98,-302.98C624.89,-320.37 504.64,-352.51 434.42,-371.27"/>
+<polygon fill="#000000" stroke="#000000" points="433.2,-367.97 424.44,-373.94 435,-374.74 433.2,-367.97"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge36" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M717.91,-278.73C701.86,-267.1 677.35,-248.9 657,-231.95 640.33,-218.05 639.71,-209.95 621,-198.95 614.25,-194.98 606.82,-191.51 599.3,-188.52"/>
+<polygon fill="#000000" stroke="#000000" points="600.36,-185.19 589.77,-184.99 597.93,-191.75 600.36,-185.19"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge45" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M686.55,-281.36C664.48,-276.99 637.93,-271.74 613.7,-266.94"/>
+<polygon fill="#000000" stroke="#000000" points="614.32,-263.49 603.83,-264.99 612.96,-270.36 614.32,-263.49"/>
+</g>
+<!-- module~aot_vector_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node19" class="node">
+<title>module~aot_vector_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node19"><a xlink:href="../module/aot_vector_module.html" xlink:title="aot_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1345,-144.95 1230,-144.95 1230,-120.95 1345,-120.95 1345,-144.95"/>
+<text text-anchor="middle" x="1287.5" y="-130.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge20" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1279.48,-120.77C1266.09,-98.86 1234.57,-53.25 1194,-33.95 1082.97,18.87 1040.36,-2.8 918,-14.95"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge37" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1270.31,-120.77C1252.48,-107.9 1222.55,-87.86 1194,-75.95 1188.7,-73.74 1183.12,-71.72 1177.44,-69.9"/>
+<polygon fill="#000000" stroke="#000000" points="1178.43,-66.54 1167.85,-67.01 1176.41,-73.24 1178.43,-66.54"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge46" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229.86,-121.56C1213.25,-118.21 1194.89,-114.52 1177.55,-111.03"/>
+<polygon fill="#000000" stroke="#000000" points="1177.97,-107.55 1167.48,-109.01 1176.59,-114.41 1177.97,-107.55"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge58" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1276.94,-145.08C1261.4,-164.08 1228.87,-200.95 1194,-222.95 1126,-265.85 1037.29,-294.55 979.03,-310.3"/>
+<polygon fill="#000000" stroke="#000000" points="978,-306.95 969.24,-312.9 979.8,-313.72 978,-306.95"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge66" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1262.79,-144.96C1229.09,-161.59 1165.01,-191.52 1107.5,-208.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1105.5,-208.95C1068.23,-220.24 1053.43,-204.74 1019,-222.95 998.43,-233.82 1002.42,-248.14 983,-260.95 957.29,-277.9 948.76,-283.41 918,-284.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-284.95C875.72,-286.96 830.31,-288.47 795.31,-289.48"/>
+<polygon fill="#000000" stroke="#000000" points="795.16,-285.98 785.26,-289.76 795.36,-292.98 795.16,-285.98"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge21" class="edge">
+<title>module~aotus_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1454.72,-194.59C1442.95,-162.63 1406.78,-77.09 1345,-38.95 1278.84,1.91 947.65,-12.12 918,-14.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M916,-14.95C746.82,-14.95 696.2,-19.17 543,-90.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M541,-90.95C458.85,-127.6 448.99,-155.82 379.5,-212.95"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M377.5,-212.95C302.1,-274.94 269.03,-598.3 261.32,-686.63"/>
+<polygon fill="#000000" stroke="#000000" points="257.83,-686.38 260.47,-696.64 264.81,-686.97 257.83,-686.38"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_table_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge51" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1415.73,-216.01C1403.72,-219.9 1391.18,-225.35 1381,-232.95 1341.26,-262.57 1312.23,-314.39 1298.12,-343.51"/>
+<polygon fill="#000000" stroke="#000000" points="1294.84,-342.25 1293.75,-352.79 1301.18,-345.23 1294.84,-342.25"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge67" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1415.9,-199.48C1348.44,-189.49 1214.52,-176.52 1107.5,-208.95"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_vector_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge68" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1431.23,-194.89C1402.49,-182.42 1357.45,-162.87 1325.67,-149.08"/>
+<polygon fill="#000000" stroke="#000000" points="1326.83,-145.77 1316.26,-145 1324.04,-152.19 1326.83,-145.77"/>
+</g>
+<!-- program~test -->
+<g id="module~~lua_parameters~~UsedByGraph_node21" class="node">
+<title>program~test</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node21"><a xlink:href="../program/test.html" xlink:title="test">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="405.5,-720.95 351.5,-720.95 351.5,-696.95 405.5,-696.95 405.5,-720.95"/>
+<text text-anchor="middle" x="378.5" y="-706.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test</text>
+</a>
+</g>
+</g>
+<!-- program~test&#45;&gt;module~flu_binding -->
+<g id="module~~lua_parameters~~UsedByGraph_edge22" class="edge">
+<title>program~test&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M351.31,-708.95C337.5,-708.95 320.17,-708.95 304.29,-708.95"/>
+<polygon fill="#000000" stroke="#000000" points="304.13,-705.45 294.13,-708.95 304.13,-712.45 304.13,-705.45"/>
+</g>
+<!-- module~aot_extdouble_out_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node22" class="node">
+<title>module~aot_extdouble_out_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node22"><a xlink:href="../module/aot_extdouble_out_module.html" xlink:title="aot_extdouble_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="814,-180.95 658,-180.95 658,-156.95 814,-156.95 814,-180.95"/>
+<text text-anchor="middle" x="736" y="-166.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge33" class="edge">
+<title>module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M657.74,-170.56C648.73,-170.74 639.49,-170.94 630.35,-171.13"/>
+<polygon fill="#000000" stroke="#000000" points="630.03,-167.63 620.11,-171.34 630.18,-174.63 630.03,-167.63"/>
+</g>
+<!-- module~aot_quadruple_out_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node23" class="node">
+<title>module~aot_quadruple_out_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node23"><a xlink:href="../module/aot_quadruple_out_module.html" xlink:title="aot_quadruple_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="815,-222.95 657,-222.95 657,-198.95 815,-198.95 815,-222.95"/>
+<text text-anchor="middle" x="736" y="-208.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge42" class="edge">
+<title>module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M679.98,-222.98C657.49,-227.9 631.3,-233.63 607.88,-238.75"/>
+<polygon fill="#000000" stroke="#000000" points="607.05,-235.35 598.03,-240.91 608.54,-242.19 607.05,-235.35"/>
+</g>
+<!-- module~aot_out_module -->
+<g id="module~~lua_parameters~~UsedByGraph_node24" class="node">
+<title>module~aot_out_module</title>
+<g id="a_module~~lua_parameters~~UsedByGraph_node24"><a xlink:href="../module/aot_out_module.html" xlink:title="aot_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="966,-180.95 868,-180.95 868,-156.95 966,-156.95 966,-180.95"/>
+<text text-anchor="middle" x="917" y="-166.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_extdouble_out_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge70" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_extdouble_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M867.56,-168.95C854.18,-168.95 839.25,-168.95 824.39,-168.95"/>
+<polygon fill="#000000" stroke="#000000" points="824.13,-165.45 814.13,-168.95 824.13,-172.45 824.13,-165.45"/>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_quadruple_out_module -->
+<g id="module~~lua_parameters~~UsedByGraph_edge71" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_quadruple_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M867.56,-180.31C846.18,-185.33 820.82,-191.28 798.16,-196.6"/>
+<polygon fill="#000000" stroke="#000000" points="797.23,-193.22 788.3,-198.91 798.83,-200.03 797.23,-193.22"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmodulelua_parametersUsedByGraph = svgPanZoom('#modulelua_parametersUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_int"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>lua_int</strong></td>
+<td> =</td>
+                <td>c_long</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_num"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>lua_num</strong></td>
+<td> =</td>
+                <td>c_double</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-luai_maxstack"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUAI_MAXSTACK</strong></td>
+<td> =</td>
+                <td>1000000</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tnone"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TNONE</strong></td>
+<td> =</td>
+                <td>-1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tnil"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TNIL</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tboolean"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TBOOLEAN</strong></td>
+<td> =</td>
+                <td>1</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tlightuserdata"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TLIGHTUSERDATA</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tnumber"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TNUMBER</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tstring"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TSTRING</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_ttable"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TTABLE</strong></td>
+<td> =</td>
+                <td>5</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tfunction"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TFUNCTION</strong></td>
+<td> =</td>
+                <td>6</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tuserdata"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TUSERDATA</strong></td>
+<td> =</td>
+                <td>7</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_tthread"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_TTHREAD</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lua_registryindex"></span>
+              integer(kind=c_int),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>LUA_REGISTRYINDEX</strong></td>
+<td> =</td>
+                <td>-LUAI_MAXSTACK-1000</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

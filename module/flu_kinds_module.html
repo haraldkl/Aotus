@@ -1,0 +1,1133 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>flu_kinds_module &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>flu_kinds_module
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for modules and submodules.">8 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/flu_kinds_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/flu_kinds_module.f90.html'>flu_kinds_module.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">flu_kinds_module</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/flu_kinds_module.html#variable-quad_k~2">quad_k</a>
+            <a class="list-group-item" href="../module/flu_kinds_module.html#variable-double_k">double_k</a>
+            <a class="list-group-item" href="../module/flu_kinds_module.html#variable-single_k">single_k</a>
+            <a class="list-group-item" href="../module/flu_kinds_module.html#variable-int_k">int_k</a>
+            <a class="list-group-item" href="../module/flu_kinds_module.html#variable-long_k">long_k</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>Global definitions of some handy kind declarations
+with the help of the intrinsic selected_*_kind
+functions.</p>
+<br>      
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~flu_kinds_module~~UsedByGraph Pages: 1 -->
+<svg id="moduleflu_kinds_moduleUsedByGraph" width="641pt" height="371pt"
+ viewBox="0.00 0.00 641.00 371.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~flu_kinds_module~~UsedByGraph" class="graph" transform="scale(0.36 0.36) rotate(0) translate(4 1032.63)">
+<title>module~~flu_kinds_module~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1032.63 1785,-1032.63 1785,4 -4,4"/>
+<!-- module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node1" class="node">
+<title>module~flu_kinds_module</title>
+<polygon fill="none" stroke="black" points="105,-441.51 0,-441.51 0,-417.51 105,-417.51 105,-441.51"/>
+<text text-anchor="middle" x="52.5" y="-427.11" font-family="Helvetica,sans-Serif" font-size="10.50">flu_kinds_module</text>
+</g>
+<!-- module~aot_extdouble_fun_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node2" class="node">
+<title>module~aot_extdouble_fun_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node2"><a xlink:href="../module/aot_extdouble_fun_module.html" xlink:title="aot_extdouble_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1505,-940.51 1349,-940.51 1349,-916.51 1505,-916.51 1505,-940.51"/>
+<text text-anchor="middle" x="1427" y="-926.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge1" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1406.96,-940.7C1384.9,-954.34 1347.07,-976.27 1312,-989.51 1277.4,-1002.56 1267.79,-1004.81 1231,-1008.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229,-1008.51C1139.01,-1017.55 1115.79,-1003.17 1025.5,-1008.51"/>
+</g>
+<!-- module~aot_fun_declaration_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node4" class="node">
+<title>module~aot_fun_declaration_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node4"><a xlink:href="../module/aot_fun_declaration_module.html" xlink:title="aot_fun_declaration_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1312,-980.51 1148,-980.51 1148,-956.51 1312,-956.51 1312,-980.51"/>
+<text text-anchor="middle" x="1230" y="-966.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_declaration_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge16" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1367.49,-940.51C1346.19,-944.88 1321.91,-949.86 1299.79,-954.39"/>
+<polygon fill="#000000" stroke="#000000" points="1298.89,-951.01 1289.8,-956.44 1300.3,-957.86 1298.89,-951.01"/>
+</g>
+<!-- module~aot_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node9" class="node">
+<title>module~aot_table_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node9"><a xlink:href="../module/aot_table_module.html" xlink:title="aot_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1284,-594.51 1176,-594.51 1176,-570.51 1284,-570.51 1284,-594.51"/>
+<text text-anchor="middle" x="1230" y="-580.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge22" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1419.06,-916.19C1390.21,-865.01 1279.59,-668.72 1242.9,-603.62"/>
+<polygon fill="#000000" stroke="#000000" points="1245.82,-601.67 1237.86,-594.67 1239.72,-605.1 1245.82,-601.67"/>
+</g>
+<!-- module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node14" class="node">
+<title>module~flu_binding</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node14"><a xlink:href="../module/flu_binding.html" xlink:title="flu_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="212,-441.51 141,-441.51 141,-417.51 212,-417.51 212,-441.51"/>
+<text text-anchor="middle" x="176.5" y="-427.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge46" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229,-928.51C1176.41,-930.1 1164.24,-940.22 1112,-946.51 989.75,-961.21 959.13,-970.51 836,-970.51 836,-970.51 836,-970.51 653,-970.51 612.61,-970.51 329.48,-919.18 297.5,-894.51"/>
+</g>
+<!-- module~aot_extdouble_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node16" class="node">
+<title>module~aot_extdouble_top_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node16"><a xlink:href="../module/aot_extdouble_top_module.html" xlink:title="aot_extdouble_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="538,-636.51 382,-636.51 382,-612.51 538,-612.51 538,-636.51"/>
+<text text-anchor="middle" x="460" y="-622.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge69" class="edge">
+<title>module~aot_extdouble_fun_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1348.66,-928.16C1312.86,-928.09 1269.76,-928.13 1231,-928.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229,-928.51C1020.16,-930.54 961.37,-913.81 769,-832.51 650.7,-782.51 530.16,-684.51 482.38,-643.38"/>
+<polygon fill="#000000" stroke="#000000" points="484.43,-640.52 474.58,-636.61 479.84,-645.81 484.43,-640.52"/>
+</g>
+<!-- module~aot_extdouble_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node3" class="node">
+<title>module~aot_extdouble_table_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node3"><a xlink:href="../module/aot_extdouble_table_module.html" xlink:title="aot_extdouble_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1107.5,-672.51 941.5,-672.51 941.5,-648.51 1107.5,-648.51 1107.5,-672.51"/>
+<text text-anchor="middle" x="1024.5" y="-658.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge2" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M945.87,-672.53C942.79,-674.01 939.82,-675.66 937,-677.51 913.48,-692.9 922.41,-711.29 901,-729.51 856.71,-767.18 503.46,-928.39 461,-932.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M459,-932.51C387.58,-939.7 368.2,-944.91 297.5,-932.51"/>
+</g>
+<!-- module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node10" class="node">
+<title>module~aot_table_ops_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node10"><a xlink:href="../module/aot_table_ops_module.html" xlink:title="aot_table_ops_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="901,-288.51 769,-288.51 769,-264.51 901,-264.51 901,-288.51"/>
+<text text-anchor="middle" x="835" y="-274.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge27" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1015.71,-648.33C998.75,-621.25 958.29,-553.54 937,-491.51 909.24,-410.63 955.38,-368.5 901,-302.51 898.38,-299.33 895.31,-296.53 891.96,-294.08"/>
+<polygon fill="#000000" stroke="#000000" points="893.5,-290.91 883.15,-288.65 889.83,-296.87 893.5,-290.91"/>
+</g>
+<!-- module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node11" class="node">
+<title>module~aot_top_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node11"><a xlink:href="../module/aot_top_module.html" xlink:title="aot_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="703,-402.51 605,-402.51 605,-378.51 703,-378.51 703,-402.51"/>
+<text text-anchor="middle" x="654" y="-388.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge34" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1006.71,-648.2C947.7,-604.97 749.66,-459.86 679.72,-408.62"/>
+<polygon fill="#000000" stroke="#000000" points="681.6,-405.66 671.47,-402.57 677.47,-411.31 681.6,-405.66"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge47" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M968.39,-672.6C833,-702.76 487.38,-782.51 381,-833.51 339.56,-853.37 334.62,-921.6 297.5,-894.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M295.5,-894.51C222.51,-839.38 187.91,-536.56 179.55,-451.65"/>
+<polygon fill="#000000" stroke="#000000" points="183.02,-451.19 178.58,-441.57 176.05,-451.86 183.02,-451.19"/>
+</g>
+<!-- module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node15" class="node">
+<title>module~aot_err_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node15"><a xlink:href="../module/aot_err_module.html" xlink:title="aot_err_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="345,-480.51 248,-480.51 248,-456.51 345,-456.51 345,-480.51"/>
+<text text-anchor="middle" x="296.5" y="-466.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge63" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M941.88,-648.47C928.24,-646.67 914.24,-644.93 901,-643.51 791.97,-631.74 763.82,-638.04 655,-624.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-624.51C617.79,-618.74 607.54,-620.13 575,-605.51 518.78,-580.23 521.16,-539.96 461,-526.51"/>
+</g>
+<!-- module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge71" class="edge">
+<title>module~aot_extdouble_table_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-624.51C618.98,-620.27 581.3,-619.44 548.39,-619.96"/>
+<polygon fill="#000000" stroke="#000000" points="548.27,-616.47 538.34,-620.17 548.41,-623.46 548.27,-616.47"/>
+</g>
+<!-- module~aot_fun_declaration_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge3" class="edge">
+<title>module~aot_fun_declaration_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1186.57,-980.6C1145.71,-991.34 1081.96,-1005.76 1025.5,-1008.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-1008.51C737.2,-1022.4 661.97,-1009.25 381,-952.51 343.59,-944.95 335.09,-939.1 297.5,-932.51"/>
+</g>
+<!-- module~aot_fun_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node5" class="node">
+<title>module~aot_fun_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node5"><a xlink:href="../module/aot_fun_module.html" xlink:title="aot_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1640,-442.51 1542,-442.51 1542,-418.51 1640,-418.51 1640,-442.51"/>
+<text text-anchor="middle" x="1591" y="-428.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge4" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1426,-1008.51C1354.3,-1057.2 1317.23,-999.84 1231,-1008.51"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge14" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_extdouble_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1587.27,-442.79C1577.81,-484.85 1544.82,-626.78 1506,-740.51 1484.91,-802.29 1453.63,-872.82 1437.86,-907.29"/>
+<polygon fill="#000000" stroke="#000000" points="1434.67,-905.85 1433.67,-916.4 1441.03,-908.78 1434.67,-905.85"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge17" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1589.25,-442.7C1584.8,-512.31 1560.13,-859.57 1506,-949.51 1483.58,-986.75 1463.96,-984.09 1428,-1008.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1426,-1008.51C1414.22,-1016.5 1336.85,-997.64 1283.18,-983.18"/>
+<polygon fill="#000000" stroke="#000000" points="1284.02,-979.78 1273.46,-980.54 1282.19,-986.54 1284.02,-979.78"/>
+</g>
+<!-- module~aot_quadruple_fun_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node7" class="node">
+<title>module~aot_quadruple_fun_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node7"><a xlink:href="../module/aot_quadruple_fun_module.html" xlink:title="aot_quadruple_fun_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1506,-731.51 1348,-731.51 1348,-707.51 1506,-707.51 1506,-731.51"/>
+<text text-anchor="middle" x="1427" y="-717.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge20" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_quadruple_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1583.25,-442.56C1558.34,-486.99 1471.44,-642 1439.71,-698.61"/>
+<polygon fill="#000000" stroke="#000000" points="1436.62,-696.97 1434.78,-707.4 1442.73,-700.39 1436.62,-696.97"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge23" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1541.81,-420.57C1508.42,-416.01 1463.73,-414.65 1428,-430.51"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge36" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-392.51C940.27,-388.34 919.14,-398.16 836,-392.51"/>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge50" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1541.71,-421.48C1530.06,-419.57 1517.61,-417.76 1506,-416.51 1293.41,-393.56 1239.05,-403.18 1025.5,-392.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-392.51C968.82,-388.97 955.61,-383.08 901,-378.51 756.56,-366.39 719.34,-356.32 575,-369.51 523.69,-374.19 512.49,-392.18 461,-390.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M459,-390.51C387.3,-387.25 368.39,-379.27 297.5,-390.51"/>
+</g>
+<!-- module~aot_references_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node21" class="node">
+<title>module~aot_references_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node21"><a xlink:href="../module/aot_references_module.html" xlink:title="aot_references_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1093,-208.51 956,-208.51 956,-184.51 1093,-184.51 1093,-208.51"/>
+<text text-anchor="middle" x="1024.5" y="-194.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_fun_module&#45;&gt;module~aot_references_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge81" class="edge">
+<title>module~aot_fun_module&#45;&gt;module~aot_references_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1575.3,-418.3C1565.34,-409.67 1552.19,-397.53 1542,-385.51 1523.36,-363.5 1527.66,-350.55 1506,-331.51 1391.37,-230.74 1207.02,-204.72 1103.15,-198.3"/>
+<polygon fill="#000000" stroke="#000000" points="1103.23,-194.8 1093.05,-197.72 1102.83,-201.79 1103.23,-194.8"/>
+</g>
+<!-- module~aot_out_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node6" class="node">
+<title>module~aot_out_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node6"><a xlink:href="../module/aot_out_module.html" xlink:title="aot_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="884,-676.51 786,-676.51 786,-652.51 884,-652.51 884,-676.51"/>
+<text text-anchor="middle" x="835" y="-662.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge5" class="edge">
+<title>module~aot_out_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M785.78,-674.39C722.15,-687.63 613.69,-710.89 575,-723.51 483.57,-753.31 261.81,-940.76 177.5,-894.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M175.5,-894.51C105.11,-836.11 65.83,-536.9 55.98,-451.99"/>
+<polygon fill="#000000" stroke="#000000" points="59.44,-451.44 54.83,-441.9 52.48,-452.23 59.44,-451.44"/>
+</g>
+<!-- module~aot_extdouble_out_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node23" class="node">
+<title>module~aot_extdouble_out_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node23"><a xlink:href="../module/aot_extdouble_out_module.html" xlink:title="aot_extdouble_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="732,-676.51 576,-676.51 576,-652.51 732,-652.51 732,-676.51"/>
+<text text-anchor="middle" x="654" y="-662.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_extdouble_out_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge82" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_extdouble_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M785.56,-664.51C772.18,-664.51 757.25,-664.51 742.39,-664.51"/>
+<polygon fill="#000000" stroke="#000000" points="742.13,-661.01 732.13,-664.51 742.13,-668.01 742.13,-661.01"/>
+</g>
+<!-- module~aot_quadruple_out_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node24" class="node">
+<title>module~aot_quadruple_out_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node24"><a xlink:href="../module/aot_quadruple_out_module.html" xlink:title="aot_quadruple_out_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="733,-596.51 575,-596.51 575,-572.51 733,-572.51 733,-596.51"/>
+<text text-anchor="middle" x="654" y="-582.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_out_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_out_module&#45;&gt;module~aot_quadruple_out_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge83" class="edge">
+<title>module~aot_out_module&#45;&gt;module~aot_quadruple_out_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M813.99,-652.5C793.97,-640.81 762.04,-623 733,-610.51 724.14,-606.69 714.53,-603.09 705.18,-599.84"/>
+<polygon fill="#000000" stroke="#000000" points="706.16,-596.47 695.57,-596.59 703.92,-603.1 706.16,-596.47"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge6" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229,-856.51C1176.14,-865.87 1164.86,-877.12 1112,-886.51 911,-922.18 856.77,-901.49 655,-932.51"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_fun_declaration_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge18" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_fun_declaration_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1423.28,-731.71C1414.33,-769.05 1382.24,-882.81 1312,-942.51 1307.71,-946.15 1302.9,-949.29 1297.82,-951.99"/>
+<polygon fill="#000000" stroke="#000000" points="1296.01,-948.97 1288.45,-956.39 1298.99,-955.31 1296.01,-948.97"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge25" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1408.7,-707.35C1374.22,-683.13 1296.83,-628.75 1256.51,-600.43"/>
+<polygon fill="#000000" stroke="#000000" points="1258.46,-597.52 1248.27,-594.64 1254.44,-603.25 1258.46,-597.52"/>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge52" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229,-856.51C976.73,-898.07 906.62,-849.16 655,-894.51"/>
+</g>
+<!-- module~aot_quadruple_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node19" class="node">
+<title>module~aot_quadruple_top_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node19"><a xlink:href="../module/aot_quadruple_top_module.html" xlink:title="aot_quadruple_top_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="539,-480.51 381,-480.51 381,-456.51 539,-456.51 539,-480.51"/>
+<text text-anchor="middle" x="460" y="-466.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge75" class="edge">
+<title>module~aot_quadruple_fun_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1415.81,-731.87C1389.31,-762.71 1314.49,-841.58 1231,-856.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1229,-856.51C1121.14,-875.78 1198.11,-707.25 1112,-639.51 1023.82,-570.13 701.62,-508.62 546.11,-482.2"/>
+<polygon fill="#000000" stroke="#000000" points="546.55,-478.73 536.11,-480.52 545.39,-485.63 546.55,-478.73"/>
+</g>
+<!-- module~aot_quadruple_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node8" class="node">
+<title>module~aot_quadruple_table_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node8"><a xlink:href="../module/aot_quadruple_table_module.html" xlink:title="aot_quadruple_table_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1108.5,-482.51 940.5,-482.51 940.5,-458.51 1108.5,-458.51 1108.5,-482.51"/>
+<text text-anchor="middle" x="1024.5" y="-468.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge7" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1017.88,-482.65C998.81,-523.49 935.78,-654.96 901,-685.51 873.78,-709.41 333.35,-937.71 297.5,-932.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M295.5,-932.51C241.23,-922.98 219.9,-929.68 177.5,-894.51"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge29" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M956.57,-458.3C949.29,-454.79 942.53,-450.28 937,-444.51 891.98,-397.47 943.9,-351.48 901,-302.51 898.12,-299.21 894.76,-296.33 891.12,-293.81"/>
+<polygon fill="#000000" stroke="#000000" points="892.59,-290.62 882.2,-288.57 889.04,-296.65 892.59,-290.62"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge37" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M977.62,-458.42C964.34,-454.46 949.94,-449.73 937,-444.51 890.18,-425.6 886.41,-395.37 836,-392.51"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge53" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M940.44,-470.61C865.75,-470.57 753.03,-470.19 655,-468.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-468.51C560.91,-466.67 553.06,-393.51 461,-390.51"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge65" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-468.51C563.87,-466.97 547.99,-545.97 461,-526.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M459,-526.51C406.46,-514.75 395.68,-503.69 345,-485.51 343.61,-485.01 342.19,-484.5 340.77,-483.99"/>
+<polygon fill="#000000" stroke="#000000" points="341.83,-480.65 331.24,-480.57 339.47,-487.24 341.83,-480.65"/>
+</g>
+<!-- module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge77" class="edge">
+<title>module~aot_quadruple_table_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-468.51C619.17,-467.92 581.98,-467.8 549.41,-467.87"/>
+<polygon fill="#000000" stroke="#000000" points="549,-464.37 539.01,-467.9 549.02,-471.37 549,-464.37"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge8" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-818.51C779.93,-844.79 785.38,-878.99 733,-908.51 701.4,-926.31 690.85,-926.99 655,-932.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-932.51C568.66,-945.47 545.9,-923.95 461,-932.51"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_extdouble_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge15" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_extdouble_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1197.65,-594.52C1162.4,-608.03 1105.03,-630.02 1066.3,-644.87"/>
+<polygon fill="#000000" stroke="#000000" points="1064.97,-641.63 1056.89,-648.48 1067.48,-648.16 1064.97,-641.63"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_quadruple_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge21" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_quadruple_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1206.83,-570.31C1170.35,-550.22 1097.56,-510.16 1056.16,-487.38"/>
+<polygon fill="#000000" stroke="#000000" points="1057.78,-484.28 1047.33,-482.52 1054.4,-490.41 1057.78,-484.28"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge32" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1222.02,-570.28C1206.17,-543.71 1164.72,-480.59 1112,-449.51 1078.09,-429.51 1059,-451.18 1025.5,-430.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-430.51C989.55,-409.55 966.08,-433.82 937,-406.51 901.35,-373.02 934.76,-337.9 901,-302.51 897.8,-299.15 894.11,-296.22 890.15,-293.65"/>
+<polygon fill="#000000" stroke="#000000" points="891.56,-290.43 881.12,-288.62 888.15,-296.55 891.56,-290.43"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge39" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-430.51C1005.41,-419.34 857.22,-393.71 836,-392.51"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge57" class="edge">
+<title>module~aot_table_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1216.39,-594.74C1195.68,-614.46 1152.71,-653.83 1112,-681.51 998.74,-758.49 968.97,-785.73 836,-818.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-818.51C806.3,-831.97 795.92,-827.54 769,-842.51 751.28,-852.35 750.98,-861.15 733,-870.51 700.82,-887.25 690.85,-888.99 655,-894.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-894.51C613.96,-900.51 329.02,-918.31 297.5,-894.51"/>
+</g>
+<!-- module~aot_table_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge67" class="edge">
+<title>module~aot_table_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1175.98,-580.67C1025.49,-575.14 597.74,-557.1 461,-526.51"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge9" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M816.58,-264.18C745.69,-215.7 474.38,-46.19 297.5,-160.51"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge40" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M798.76,-288.55C788.87,-292.47 778.29,-297.2 769,-302.51 750.31,-313.18 705.19,-349.31 677.65,-371.82"/>
+<polygon fill="#000000" stroke="#000000" points="675.23,-369.28 669.71,-378.32 679.66,-374.69 675.23,-369.28"/>
+</g>
+<!-- module~aot_table_ops_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge58" class="edge">
+<title>module~aot_table_ops_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M768.94,-272.52C692.58,-270.13 563.38,-273.33 461,-312.51"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge10" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M634.2,-378.33C565.06,-335.23 321.48,-198.37 177.5,-310.51"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge59" class="edge">
+<title>module~aot_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M604.85,-391.37C566.01,-391.87 509.97,-392.1 461,-390.51"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge68" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M604.72,-400.02C550.24,-410.89 459.05,-429.52 381,-447.51 372.32,-449.51 363.16,-451.71 354.21,-453.92"/>
+<polygon fill="#000000" stroke="#000000" points="353.09,-450.59 344.23,-456.4 354.78,-457.38 353.09,-450.59"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge73" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M604.72,-398.66C593.77,-402.51 583.01,-408.17 575,-416.51 535.22,-457.87 567.29,-490.58 539,-540.51 524.54,-566.03 500.87,-590.01 483.39,-605.77"/>
+<polygon fill="#000000" stroke="#000000" points="481.04,-603.17 475.85,-612.4 485.67,-608.42 481.04,-603.17"/>
+</g>
+<!-- module~aot_top_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge79" class="edge">
+<title>module~aot_top_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M609.13,-402.54C597.74,-406.36 585.67,-411.04 575,-416.51 557.44,-425.51 556.56,-433.5 539,-442.51 531.25,-446.48 522.76,-450.04 514.32,-453.15"/>
+<polygon fill="#000000" stroke="#000000" points="513.14,-449.85 504.87,-456.47 515.46,-456.46 513.14,-449.85"/>
+</g>
+<!-- module~aot_vector_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node12" class="node">
+<title>module~aot_vector_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node12"><a xlink:href="../module/aot_vector_module.html" xlink:title="aot_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1287.5,-268.51 1172.5,-268.51 1172.5,-244.51 1287.5,-244.51 1287.5,-268.51"/>
+<text text-anchor="middle" x="1230" y="-254.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge11" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1214.51,-244.49C1197.71,-230.25 1169.56,-205.42 1148,-181.51 1130.14,-161.7 1134.43,-147.94 1112,-133.51 1078.9,-112.21 1062.44,-128.09 1025.5,-114.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-114.51C893.31,-66.64 633.47,-16.65 461,-76.51"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge33" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1172.3,-252.77C1113.34,-249.72 1018.44,-247.13 937,-255.51 922.88,-256.96 907.82,-259.52 893.76,-262.38"/>
+<polygon fill="#000000" stroke="#000000" points="892.79,-259 883.72,-264.49 894.23,-265.85 892.79,-259"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge41" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1201.23,-268.62C1177.89,-278.21 1143.41,-291.04 1112,-297.51 991.57,-322.28 955.24,-286.49 836,-316.51"/>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge60" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1023.5,-114.51C945.28,-85.75 919.12,-108.51 836,-114.51"/>
+</g>
+<!-- module~aot_extdouble_vector_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node17" class="node">
+<title>module~aot_extdouble_vector_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node17"><a xlink:href="../module/aot_extdouble_vector_module.html" xlink:title="aot_extdouble_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1110.5,-288.51 938.5,-288.51 938.5,-264.51 1110.5,-264.51 1110.5,-288.51"/>
+<text text-anchor="middle" x="1024.5" y="-274.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge74" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_extdouble_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1172.31,-262.08C1156.39,-263.64 1138.62,-265.39 1121.09,-267.11"/>
+<polygon fill="#000000" stroke="#000000" points="1120.42,-263.66 1110.81,-268.12 1121.11,-270.63 1120.42,-263.66"/>
+</g>
+<!-- module~aot_quadruple_vector_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node20" class="node">
+<title>module~aot_quadruple_vector_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node20"><a xlink:href="../module/aot_quadruple_vector_module.html" xlink:title="aot_quadruple_vector_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1112,-166.51 937,-166.51 937,-142.51 1112,-142.51 1112,-166.51"/>
+<text text-anchor="middle" x="1024.5" y="-152.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge80" class="edge">
+<title>module~aot_vector_module&#45;&gt;module~aot_quadruple_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1215.26,-244.44C1194.39,-226.72 1152.8,-193.81 1112,-175.51 1107.27,-173.38 1102.3,-171.46 1097.23,-169.71"/>
+<polygon fill="#000000" stroke="#000000" points="1097.99,-166.28 1087.4,-166.58 1095.86,-172.95 1097.99,-166.28"/>
+</g>
+<!-- module~aotus_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node13" class="node">
+<title>module~aotus_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node13"><a xlink:href="../module/aotus_module.html" xlink:title="aotus_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1471,-364.51 1383,-364.51 1383,-340.51 1471,-340.51 1471,-364.51"/>
+<text text-anchor="middle" x="1427" y="-350.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module</text>
+</a>
+</g>
+</g>
+<!-- module~aotus_module&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge12" class="edge">
+<title>module~aotus_module&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1423.65,-340.23C1415.51,-300.98 1384.94,-177.16 1312,-109.51 1212.12,-16.86 1161.74,-0.51 1025.5,-0.51 1025.5,-0.51 1025.5,-0.51 834,-0.51 718.4,-0.51 686.71,5.23 575,-24.51 521.19,-38.83 513,-56.58 461,-76.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M459,-76.51C383.03,-104.34 363.29,-113.42 297.5,-160.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M295.5,-160.51C276.27,-174.27 265.07,-168.14 248,-184.51 201.68,-228.91 225.86,-268.33 177.5,-310.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M175.5,-310.51C137.44,-343.7 95.89,-385.54 72.43,-409.73"/>
+<polygon fill="#000000" stroke="#000000" points="69.63,-407.6 65.2,-417.22 74.66,-412.46 69.63,-407.6"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge26" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1408.74,-364.55C1392.14,-376.61 1366.84,-396.23 1348,-416.51 1303.87,-463.99 1262.78,-528.89 1243.13,-561.7"/>
+<polygon fill="#000000" stroke="#000000" points="1240.04,-560.04 1237.95,-570.43 1246.06,-563.61 1240.04,-560.04"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge42" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1382.74,-353.58C1297.35,-355.96 1101.18,-362.79 937,-378.51 891.89,-382.82 881.25,-395.08 836,-392.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-392.51C793.79,-389.77 748.37,-389.29 713.35,-389.49"/>
+<polygon fill="#000000" stroke="#000000" points="713.27,-385.99 703.3,-389.57 713.33,-392.99 713.27,-385.99"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~aot_vector_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge43" class="edge">
+<title>module~aotus_module&#45;&gt;module~aot_vector_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1401.3,-340.35C1366.72,-323.32 1303.76,-292.33 1264.84,-273.17"/>
+<polygon fill="#000000" stroke="#000000" points="1266.01,-269.84 1255.5,-268.57 1262.92,-276.12 1266.01,-269.84"/>
+</g>
+<!-- module~aotus_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge61" class="edge">
+<title>module~aotus_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1416.93,-340.44C1382.96,-296.48 1257.71,-145.08 1112,-100.51 994.55,-64.58 958.51,-105.66 836,-114.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-114.51C754.47,-118.57 734.6,-124.92 655,-122.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M653,-122.51C567.71,-119.92 541.89,-95.33 461,-122.51"/>
+</g>
+<!-- module~flu_binding&#45;&gt;module~flu_kinds_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge13" class="edge">
+<title>module~flu_binding&#45;&gt;module~flu_kinds_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M140.87,-429.51C132.87,-429.51 124.12,-429.51 115.34,-429.51"/>
+<polygon fill="#000000" stroke="#000000" points="115.08,-426.01 105.08,-429.51 115.08,-433.01 115.08,-426.01"/>
+</g>
+<!-- module~aot_err_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge45" class="edge">
+<title>module~aot_err_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M259.13,-456.49C247.38,-452.6 234.21,-448.25 221.94,-444.19"/>
+<polygon fill="#000000" stroke="#000000" points="222.93,-440.83 212.33,-441.02 220.73,-447.48 222.93,-440.83"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge48" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M438.01,-612.37C399.36,-589.75 314.77,-538.92 248,-489.51 230.51,-476.56 211.79,-460.52 198.04,-448.28"/>
+<polygon fill="#000000" stroke="#000000" points="200.35,-445.65 190.57,-441.57 195.67,-450.85 200.35,-445.65"/>
+</g>
+<!-- module~aot_extdouble_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge64" class="edge">
+<title>module~aot_extdouble_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M446.33,-612.26C418.38,-585.27 351.26,-520.43 317.54,-487.86"/>
+<polygon fill="#000000" stroke="#000000" points="319.74,-485.12 310.11,-480.69 314.87,-490.15 319.74,-485.12"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge28" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M938.25,-276.51C929.28,-276.51 920.21,-276.51 911.36,-276.51"/>
+<polygon fill="#000000" stroke="#000000" points="911.1,-273.01 901.1,-276.51 911.1,-280.01 911.1,-273.01"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge35" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M961.59,-288.53C924.92,-295.95 877.64,-306.02 836,-316.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-316.51C780.64,-329.94 722.37,-356.43 687.26,-373.8"/>
+<polygon fill="#000000" stroke="#000000" points="685.37,-370.83 678,-378.44 688.51,-377.09 685.37,-370.83"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge49" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M980.92,-264.45C842.02,-226.24 404.9,-115.14 297.5,-198.51"/>
+</g>
+<!-- module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge72" class="edge">
+<title>module~aot_extdouble_vector_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1013.86,-288.61C990.18,-318.01 929.05,-391.88 901,-406.51 771.14,-474.22 690.67,-364.68 575,-454.51 542.27,-479.92 561.44,-505.67 539,-540.51 523.16,-565.09 499.8,-589.13 482.78,-605.15"/>
+<polygon fill="#000000" stroke="#000000" points="479.97,-602.98 474.99,-612.33 484.71,-608.12 479.97,-602.98"/>
+</g>
+<!-- module~aot_path_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node18" class="node">
+<title>module~aot_path_module</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node18"><a xlink:href="../module/aot_path_module.html" xlink:title="aot_path_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="1781,-403.51 1676,-403.51 1676,-379.51 1781,-379.51 1781,-403.51"/>
+<text text-anchor="middle" x="1728.5" y="-389.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module</text>
+</a>
+</g>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_fun_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge19" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_fun_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1685.74,-403.52C1672.47,-407.34 1657.64,-411.61 1643.76,-415.61"/>
+<polygon fill="#000000" stroke="#000000" points="1642.5,-412.33 1633.86,-418.46 1644.43,-419.06 1642.5,-412.33"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aot_table_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge24" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aot_table_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1590,-371.51C1517.78,-345.89 1498.04,-399.43 1428,-430.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1426,-430.51C1352.26,-463.22 1281.7,-529.82 1249.39,-562.92"/>
+<polygon fill="#000000" stroke="#000000" points="1246.79,-560.57 1242.37,-570.2 1251.83,-565.43 1246.79,-560.57"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~aotus_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge44" class="edge">
+<title>module~aot_path_module&#45;&gt;module~aotus_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1590,-371.51C1555.08,-359.12 1513.54,-354.43 1481.26,-352.81"/>
+<polygon fill="#000000" stroke="#000000" points="1481.27,-349.31 1471.13,-352.38 1480.98,-356.3 1481.27,-349.31"/>
+</g>
+<!-- module~aot_path_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge51" class="edge">
+<title>module~aot_path_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1675.85,-388.61C1650.09,-385.99 1618.78,-381 1592,-371.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1590,-371.51C1525.52,-348.64 1552.88,-292.34 1506,-242.51 1401.73,-131.66 1383.18,-38.51 1231,-38.51 1231,-38.51 1231,-38.51 834,-38.51 664.07,-38.51 622.08,-68.38 461,-122.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M459,-122.51C449.51,-125.39 305.09,-192.12 297.5,-198.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M295.5,-198.51C260.53,-227.95 206.82,-355.97 186.08,-407.7"/>
+<polygon fill="#000000" stroke="#000000" points="182.72,-406.66 182.28,-417.25 189.23,-409.25 182.72,-406.66"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge54" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M446.87,-456.46C421.06,-432.27 358.08,-380.91 297.5,-390.51"/>
+</g>
+<!-- module~aot_quadruple_top_module&#45;&gt;module~aot_err_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge66" class="edge">
+<title>module~aot_quadruple_top_module&#45;&gt;module~aot_err_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M380.62,-468.51C372.14,-468.51 363.63,-468.51 355.46,-468.51"/>
+<polygon fill="#000000" stroke="#000000" points="355.32,-465.01 345.32,-468.51 355.32,-472.01 355.32,-465.01"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge30" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M957.34,-166.53C950.26,-168.99 943.33,-171.95 937,-175.51 900.57,-195.97 868.35,-233.24 850.57,-256.34"/>
+<polygon fill="#000000" stroke="#000000" points="847.7,-254.33 844.49,-264.43 853.29,-258.54 847.7,-254.33"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge38" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-152.51C761.39,-172.43 778.31,-228.38 733,-288.51 711.52,-317.01 686.39,-349.76 670.59,-370.3"/>
+<polygon fill="#000000" stroke="#000000" points="667.75,-368.24 664.42,-378.3 673.3,-372.51 667.75,-368.24"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge55" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M936.74,-143.43C904.57,-141.96 868.11,-143.44 836,-152.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-152.51C756.37,-174.42 735.63,-124.95 655,-122.51"/>
+</g>
+<!-- module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge78" class="edge">
+<title>module~aot_quadruple_vector_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M834,-152.51C689.18,-192.24 686.47,-268.87 575,-369.51 558.44,-384.46 555.64,-389.64 539,-404.51 521.26,-420.36 500.38,-437.41 484.69,-449.92"/>
+<polygon fill="#000000" stroke="#000000" points="482.22,-447.41 476.56,-456.37 486.57,-452.9 482.22,-447.41"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~aot_table_ops_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge31" class="edge">
+<title>module~aot_references_module&#45;&gt;module~aot_table_ops_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M976.61,-208.6C963.58,-212.5 949.57,-217.2 937,-222.51 920.14,-229.63 917.11,-233.82 901,-242.51 890.53,-248.15 879.05,-254.2 868.68,-259.61"/>
+<polygon fill="#000000" stroke="#000000" points="866.8,-256.65 859.54,-264.37 870.03,-262.86 866.8,-256.65"/>
+</g>
+<!-- module~aot_references_module&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge56" class="edge">
+<title>module~aot_references_module&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M955.66,-202.57C866.97,-211.56 707.33,-231.38 575,-267.51 522.45,-281.85 511.02,-290.94 461,-312.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M459,-312.51C384.05,-339.65 376.23,-378.03 297.5,-390.51"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M295.5,-390.51C267.72,-394.91 237.63,-404.94 214.79,-413.73"/>
+<polygon fill="#000000" stroke="#000000" points="213.49,-410.48 205.47,-417.4 216.06,-416.99 213.49,-410.48"/>
+</g>
+<!-- program~test -->
+<g id="module~~flu_kinds_module~~UsedByGraph_node22" class="node">
+<title>program~test</title>
+<g id="a_module~~flu_kinds_module~~UsedByGraph_node22"><a xlink:href="../program/test.html" xlink:title="test">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="323.5,-362.51 269.5,-362.51 269.5,-338.51 323.5,-338.51 323.5,-362.51"/>
+<text text-anchor="middle" x="296.5" y="-348.11" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test</text>
+</a>
+</g>
+</g>
+<!-- program~test&#45;&gt;module~flu_binding -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge62" class="edge">
+<title>program~test&#45;&gt;module~flu_binding</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M271.92,-362.55C264.16,-366.74 255.58,-371.61 248,-376.51 231.37,-387.23 213.58,-400.62 200.02,-411.27"/>
+<polygon fill="#000000" stroke="#000000" points="197.84,-408.53 192.18,-417.49 202.19,-414.01 197.84,-408.53"/>
+</g>
+<!-- module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge70" class="edge">
+<title>module~aot_extdouble_out_module&#45;&gt;module~aot_extdouble_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M595.39,-652.5C574.42,-648.13 550.51,-643.15 528.73,-638.62"/>
+<polygon fill="#000000" stroke="#000000" points="529.4,-635.18 518.9,-636.57 527.97,-642.03 529.4,-635.18"/>
+</g>
+<!-- module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module -->
+<g id="module~~flu_kinds_module~~UsedByGraph_edge76" class="edge">
+<title>module~aot_quadruple_out_module&#45;&gt;module~aot_quadruple_top_module</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M634.61,-572.5C612.23,-557.97 573.16,-532.91 539,-512.51 523.67,-503.35 506.4,-493.55 492.01,-485.53"/>
+<polygon fill="#000000" stroke="#000000" points="493.46,-482.34 483.02,-480.55 490.07,-488.46 493.46,-482.34"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmoduleflu_kinds_moduleUsedByGraph = svgPanZoom('#moduleflu_kinds_moduleUsedByGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-quad_k~2"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>quad_k</strong></td>
+<td> =</td>
+                <td>selected_real_kind(33)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-double_k"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>double_k</strong></td>
+<td> =</td>
+                <td>selected_real_kind(15)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-single_k"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>single_k</strong></td>
+<td> =</td>
+                <td>selected_real_kind(6)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-int_k"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>int_k</strong></td>
+<td> =</td>
+                <td>selected_int_kind(6)</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long_k"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>long_k</strong></td>
+<td> =</td>
+                <td>selected_int_kind(15)</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1306 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>lua_fif.f90 &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>lua_fif.f90
+      <small>Source File</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 5.3% of total for source files.">241 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/lua_fif.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+            <li class="breadcrumb-item active" aria-current="page">lua_fif.f90</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#mods-0"
+         aria-expanded="false" aria-controls="mods-0">
+         <h4 class="card-header bg-primary text-white">Modules</h4>
+      </a>
+      <div id="mods-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/lua_fif.html">lua_fif</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../sourcefile/lua_fif.f90.html#src">lua_fif.f90</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">This file depends on</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: sourcefile~~lua_fif.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefilelua_fiff90EfferentGraph" width="225pt" height="32pt"
+ viewBox="0.00 0.00 225.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~lua_fif.f90~~EfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>sourcefile~~lua_fif.f90~~EfferentGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 221,-28 221,4 -4,4"/>
+<!-- sourcefile~lua_fif.f90 -->
+<g id="sourcefile~~lua_fif.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~lua_fif.f90</title>
+<polygon fill="none" stroke="black" points="217,-24 153,-24 153,0 217,0 217,-24"/>
+<text text-anchor="middle" x="185" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">lua_fif.f90</text>
+</g>
+<!-- sourcefile~lua_parameters.f90 -->
+<g id="sourcefile~~lua_fif.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~lua_parameters.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/lua_parameters.f90.html" xlink:title="lua_parameters.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="117,-24 0,-24 0,0 117,0 117,-24"/>
+<text text-anchor="middle" x="58.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_parameters.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~lua_fif.f90&#45;&gt;sourcefile~lua_parameters.f90 -->
+<g id="sourcefile~~lua_fif.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~lua_fif.f90&#45;&gt;sourcefile~lua_parameters.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M152.9,-12C145.06,-12 136.32,-12 127.42,-12"/>
+<polygon fill="#000000" stroke="#000000" points="127.35,-8.5 117.35,-12 127.35,-15.5 127.35,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#EfferentGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="EfferentGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="193.5,-24 88.5,-24 88.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a file to a file which it depends on. A file
+is dependent upon another if the latter must be compiled before the former
+can be.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Files dependent on this one</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: sourcefile~~lua_fif.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilelua_fiff90AfferentGraph" width="641pt" height="217pt"
+ viewBox="0.00 0.00 641.00 217.21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph" class="graph" transform="scale(0.34 0.34) rotate(0) translate(4 639.5)">
+<title>sourcefile~~lua_fif.f90~~AfferentGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-639.5 1895,-639.5 1895,4 -4,4"/>
+<!-- sourcefile~lua_fif.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~lua_fif.f90</title>
+<polygon fill="none" stroke="black" points="64,-268.97 0,-268.97 0,-244.97 64,-244.97 64,-268.97"/>
+<text text-anchor="middle" x="32" y="-254.57" font-family="Helvetica,sans-Serif" font-size="10.50">lua_fif.f90</text>
+</g>
+<!-- sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~flu_binding.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/flu_binding.f90.html" xlink:title="flu_binding.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="191,-268.97 100,-268.97 100,-244.97 191,-244.97 191,-268.97"/>
+<text text-anchor="middle" x="145.5" y="-254.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_binding.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~flu_binding.f90&#45;&gt;sourcefile~lua_fif.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~flu_binding.f90&#45;&gt;sourcefile~lua_fif.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M99.79,-256.97C91.36,-256.97 82.57,-256.97 74.25,-256.97"/>
+<polygon fill="#000000" stroke="#000000" points="74.02,-253.47 64.01,-256.97 74.01,-260.47 74.02,-253.47"/>
+</g>
+<!-- sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~aot_err_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/aot_err_module.f90.html" xlink:title="aot_err_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="344,-288.97 227,-288.97 227,-264.97 344,-264.97 344,-288.97"/>
+<text text-anchor="middle" x="285.5" y="-274.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_err_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_err_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~aot_err_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.78,-268.6C218.37,-267.38 209.74,-266.13 201.4,-264.92"/>
+<polygon fill="#000000" stroke="#000000" points="201.8,-261.44 191.4,-263.47 200.79,-268.37 201.8,-261.44"/>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~aot_extdouble_fun_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/aot_extdouble_fun_module.f90.html" xlink:title="aot_extdouble_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1575,-598.97 1399,-598.97 1399,-574.97 1575,-574.97 1575,-598.97"/>
+<text text-anchor="middle" x="1487" y="-584.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1436.96,-598.98C1398.65,-607.94 1343.98,-619.82 1295.5,-626.97"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~aot_extdouble_top_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/aot_extdouble_top_module.f90.html" xlink:title="aot_extdouble_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="557,-330.97 381,-330.97 381,-306.97 557,-306.97 557,-330.97"/>
+<text text-anchor="middle" x="469" y="-316.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1398.92,-587.67C1319.59,-588.24 1199.17,-588.97 1094.5,-588.97 1094.5,-588.97 1094.5,-588.97 883,-588.97 745.57,-588.97 704.43,-560.78 594,-478.97 541.83,-440.32 500.37,-374.11 481.34,-340.26"/>
+<polygon fill="#000000" stroke="#000000" points="484.26,-338.31 476.37,-331.24 478.13,-341.69 484.26,-338.31"/>
+</g>
+<!-- sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~aot_table_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node15"><a xlink:href="../sourcefile/aot_table_module.f90.html" xlink:title="aot_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1358.5,-488.97 1230.5,-488.97 1230.5,-464.97 1358.5,-464.97 1358.5,-488.97"/>
+<text text-anchor="middle" x="1294.5" y="-474.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge44" class="edge">
+<title>sourcefile~aot_extdouble_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1456.04,-574.87C1438.72,-567.51 1416.72,-557.51 1398,-546.97 1369.91,-531.14 1339.64,-509.91 1319.33,-494.99"/>
+<polygon fill="#000000" stroke="#000000" points="1321.39,-492.16 1311.28,-489.01 1317.23,-497.78 1321.39,-492.16"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~aot_extdouble_table_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/aot_extdouble_table_module.f90.html" xlink:title="aot_extdouble_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1186.5,-488.97 1000.5,-488.97 1000.5,-464.97 1186.5,-464.97 1186.5,-488.97"/>
+<text text-anchor="middle" x="1093.5" y="-474.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1082.96,-489.14C1056.14,-522.01 976.1,-611.15 885,-626.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M883,-626.97C795.86,-642.09 772.23,-633.1 684,-626.97"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1043.41,-488.98C1001.6,-498.36 939.78,-510.26 885,-512.97"/>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1000.3,-480.5C876.42,-483.87 663.73,-484.39 594,-451.97 541.86,-427.72 501.14,-370.64 481.98,-339.73"/>
+<polygon fill="#000000" stroke="#000000" points="484.91,-337.8 476.74,-331.04 478.91,-341.41 484.91,-337.8"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~aot_table_ops_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node16"><a xlink:href="../sourcefile/aot_table_ops_module.f90.html" xlink:title="aot_table_ops_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="960,-250.97 808,-250.97 808,-226.97 960,-226.97 960,-250.97"/>
+<text text-anchor="middle" x="884" y="-236.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_ops_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge49" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1008.56,-464.86C1004.04,-462.37 999.8,-459.43 996,-455.97 957.02,-420.49 983.71,-390.04 960,-342.97 944.14,-311.48 919.2,-279.15 902.48,-259.07"/>
+<polygon fill="#000000" stroke="#000000" points="905,-256.63 895.87,-251.25 899.66,-261.15 905,-256.63"/>
+</g>
+<!-- sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node17" class="node">
+<title>sourcefile~aot_top_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node17"><a xlink:href="../sourcefile/aot_top_module.f90.html" xlink:title="aot_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="742,-250.97 624,-250.97 624,-226.97 742,-226.97 742,-250.97"/>
+<text text-anchor="middle" x="683" y="-236.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge56" class="edge">
+<title>sourcefile~aot_extdouble_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1014.91,-464.85C1008.29,-462.41 1001.89,-459.48 996,-455.97 974.89,-443.36 977.89,-430.83 960,-413.97 929.54,-385.24 922.79,-374.99 885,-356.97"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M398.59,-306.86C392.07,-304.42 385.76,-301.49 380,-297.97 359.02,-285.15 364.42,-269.66 344,-255.97 321.65,-240.98 313.35,-235.18 286.5,-236.97"/>
+</g>
+<!-- sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~aot_extdouble_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M415.99,-306.93C394.91,-302.05 370.41,-296.38 348.42,-291.3"/>
+<polygon fill="#000000" stroke="#000000" points="349.05,-287.85 338.52,-289 347.47,-294.67 349.05,-287.85"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~aot_extdouble_vector_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/aot_extdouble_vector_module.f90.html" xlink:title="aot_extdouble_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1190,-134.97 997,-134.97 997,-110.97 1190,-110.97 1190,-134.97"/>
+<text text-anchor="middle" x="1093.5" y="-120.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M996.99,-133.27C984.55,-134.55 971.97,-135.81 960,-136.97 837.44,-148.77 805.21,-139.31 684,-160.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M682,-160.97C590.13,-181.89 561.15,-137.09 470,-160.97"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M682,-160.97C636.13,-169.16 624.35,-182.61 594,-217.97 568.6,-247.55 588.04,-273.11 558,-297.97 556.41,-299.28 554.75,-300.51 553.04,-301.67"/>
+<polygon fill="#000000" stroke="#000000" points="550.95,-298.84 544.04,-306.87 554.45,-304.9 550.95,-298.84"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge50" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1073.85,-135.02C1054.31,-147.72 1022.78,-168.43 996,-186.97 979.77,-198.2 977.51,-203.86 960,-212.97 952.53,-216.85 944.35,-220.36 936.24,-223.46"/>
+<polygon fill="#000000" stroke="#000000" points="934.98,-220.19 926.77,-226.9 937.37,-226.77 934.98,-220.19"/>
+</g>
+<!-- sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge57" class="edge">
+<title>sourcefile~aot_extdouble_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1034.38,-134.97C1021.42,-138.64 1007.98,-143.26 996,-148.97 978.18,-157.45 977.62,-166.07 960,-174.97 928.76,-190.74 919.23,-191.68 885,-198.97"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~aot_fun_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/aot_fun_module.f90.html" xlink:title="aot_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1730,-544.97 1612,-544.97 1612,-520.97 1730,-520.97 1730,-544.97"/>
+<text text-anchor="middle" x="1671" y="-530.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1658.49,-545.17C1641.9,-562 1609.57,-592.04 1576,-607.97 1539.85,-625.12 1527.7,-621.98 1488,-626.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1486,-626.97C1401.99,-637.53 1379.26,-614.62 1295.5,-626.97"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_fun_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_extdouble_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1629.16,-545.09C1602.34,-553.04 1567.08,-563.5 1538.51,-571.98"/>
+<polygon fill="#000000" stroke="#000000" points="1537.3,-568.69 1528.71,-574.89 1539.29,-575.4 1537.3,-568.69"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~aot_quadruple_fun_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node10"><a xlink:href="../sourcefile/aot_quadruple_fun_module.f90.html" xlink:title="aot_quadruple_fun_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1576,-504.97 1398,-504.97 1398,-480.97 1576,-480.97 1576,-504.97"/>
+<text text-anchor="middle" x="1487" y="-490.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_fun_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_fun_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1615.39,-520.97C1595.69,-516.63 1573.26,-511.7 1552.76,-507.2"/>
+<polygon fill="#000000" stroke="#000000" points="1553.4,-503.76 1542.88,-505.03 1551.9,-510.59 1553.4,-503.76"/>
+</g>
+<!-- sourcefile~aot_references_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~aot_references_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node14"><a xlink:href="../sourcefile/aot_references_module.f90.html" xlink:title="aot_references_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1172,-290.97 1015,-290.97 1015,-266.97 1172,-266.97 1172,-290.97"/>
+<text text-anchor="middle" x="1093.5" y="-276.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_references_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_references_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge43" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_references_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1293.5,-278.97C1257.07,-277.16 1216.84,-276.84 1182.14,-277.09"/>
+<polygon fill="#000000" stroke="#000000" points="1182.01,-273.59 1172.04,-277.18 1182.07,-280.59 1182.01,-273.59"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge45" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1611.79,-533.53C1556.27,-532.98 1470.6,-529.29 1398,-513.97 1375.51,-509.22 1351.29,-500.65 1332.04,-492.95"/>
+<polygon fill="#000000" stroke="#000000" points="1333.32,-489.69 1322.74,-489.14 1330.67,-496.17 1333.32,-489.69"/>
+</g>
+<!-- sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge58" class="edge">
+<title>sourcefile~aot_fun_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1656.55,-520.94C1600.26,-471.13 1382.6,-283.29 1295.5,-278.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1293.5,-278.97C1195.04,-247.94 949.26,-185.29 885,-198.97"/>
+</g>
+<!-- sourcefile~aot_path_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~aot_path_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node9"><a xlink:href="../sourcefile/aot_path_module.f90.html" xlink:title="aot_path_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1891,-544.97 1766,-544.97 1766,-520.97 1891,-520.97 1891,-544.97"/>
+<text text-anchor="middle" x="1828.5" y="-530.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_path_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1795.84,-545.08C1736.53,-567.01 1604.2,-612.36 1488,-626.97"/>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_fun_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_fun_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1765.6,-532.97C1757.29,-532.97 1748.72,-532.97 1740.31,-532.97"/>
+<polygon fill="#000000" stroke="#000000" points="1740.15,-529.47 1730.15,-532.97 1740.15,-536.47 1740.15,-529.47"/>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge46" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1670,-452.97C1563.83,-385.11 1404.33,-433.48 1332.68,-461.19"/>
+<polygon fill="#000000" stroke="#000000" points="1331.18,-458.02 1323.17,-464.95 1333.75,-464.53 1331.18,-458.02"/>
+</g>
+<!-- sourcefile~aotus_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node19" class="node">
+<title>sourcefile~aotus_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node19"><a xlink:href="../sourcefile/aotus_module.f90.html" xlink:title="aotus_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1541,-174.97 1433,-174.97 1433,-150.97 1541,-150.97 1541,-174.97"/>
+<text text-anchor="middle" x="1487" y="-160.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aotus_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aotus_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge66" class="edge">
+<title>sourcefile~aot_path_module.f90&#45;&gt;sourcefile~aotus_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1800.24,-520.84C1768.51,-506.3 1714.98,-480.43 1672,-452.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1670,-452.97C1591.29,-402.66 1627.8,-342.71 1576,-264.97 1555.37,-234 1526.4,-202.13 1507.42,-182.44"/>
+<polygon fill="#000000" stroke="#000000" points="1509.68,-179.75 1500.19,-175.03 1504.67,-184.63 1509.68,-179.75"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1470.61,-505.01C1429.06,-537.36 1316.3,-623.9 1295.5,-626.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1293.5,-626.97C1206,-639.86 1181.54,-611.26 1094.5,-626.97"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~aot_quadruple_top_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node12"><a xlink:href="../sourcefile/aot_quadruple_top_module.f90.html" xlink:title="aot_quadruple_top_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="558,-288.97 380,-288.97 380,-264.97 558,-264.97 558,-288.97"/>
+<text text-anchor="middle" x="469" y="-274.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_top_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1447.32,-480.89C1422.93,-473.41 1390.72,-463.77 1362,-455.97 1286.48,-435.44 1267.36,-431.1 1191,-413.97 1088.77,-391.02 1063.12,-385.48 960,-366.97 837.81,-345.03 806.09,-346.46 684,-323.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M682,-323.97C632.84,-312.7 577.17,-300.37 535.21,-291.17"/>
+<polygon fill="#000000" stroke="#000000" points="535.92,-287.74 525.4,-289.02 534.42,-294.58 535.92,-287.74"/>
+</g>
+<!-- sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge47" class="edge">
+<title>sourcefile~aot_quadruple_fun_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1398,-485.58C1388.26,-484.76 1378.42,-483.93 1368.89,-483.13"/>
+<polygon fill="#000000" stroke="#000000" points="1368.95,-479.62 1358.69,-482.27 1368.37,-486.6 1368.95,-479.62"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~aot_quadruple_table_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node11"><a xlink:href="../sourcefile/aot_quadruple_table_module.f90.html" xlink:title="aot_quadruple_table_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1187.5,-446.97 999.5,-446.97 999.5,-422.97 1187.5,-422.97 1187.5,-446.97"/>
+<text text-anchor="middle" x="1093.5" y="-432.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_table_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1010.59,-447.13C1005.4,-449.59 1000.48,-452.51 996,-455.97 968,-477.6 986.49,-503.52 960,-526.97 862.31,-613.44 813.9,-614.8 684,-626.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M682,-626.97C433.47,-644.8 215.79,-357.41 160.2,-277.37"/>
+<polygon fill="#000000" stroke="#000000" points="163.04,-275.33 154.5,-269.06 157.27,-279.29 163.04,-275.33"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1026.19,-447C1015.95,-449.55 1005.6,-452.52 996,-455.97 943.8,-474.69 940.25,-508.17 885,-512.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M883,-512.97C754.15,-524.16 715.64,-522.9 594,-478.97 487.33,-440.44 474.59,-402.54 380,-339.97 357.17,-324.86 331.38,-307.46 312.68,-294.78"/>
+<polygon fill="#000000" stroke="#000000" points="314.6,-291.85 304.36,-289.13 310.67,-297.65 314.6,-291.85"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge39" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1026.85,-422.93C968.75,-411.64 881.94,-393.18 808,-370.97 751.55,-354.01 741.88,-335.07 684,-323.97"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge51" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1079.52,-422.71C1044.43,-389.56 947.48,-297.98 905.18,-258.02"/>
+<polygon fill="#000000" stroke="#000000" points="907.38,-255.29 897.71,-250.97 902.58,-260.38 907.38,-255.29"/>
+</g>
+<!-- sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge59" class="edge">
+<title>sourcefile~aot_quadruple_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1032.95,-422.91C1020.4,-419.28 1007.49,-414.69 996,-408.97 977.86,-399.93 977.93,-390.42 960,-380.97 929.04,-364.64 916.59,-372.03 885,-356.97"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M426.38,-264.95C381.6,-252.53 313.22,-235.18 286.5,-236.97"/>
+</g>
+<!-- sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~aot_quadruple_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M379.91,-276.97C371.24,-276.97 362.54,-276.97 354.12,-276.97"/>
+<polygon fill="#000000" stroke="#000000" points="354.02,-273.47 344.02,-276.97 354.02,-280.47 354.02,-273.47"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~aot_quadruple_vector_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node13"><a xlink:href="../sourcefile/aot_quadruple_vector_module.f90.html" xlink:title="aot_quadruple_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1191,-92.97 996,-92.97 996,-68.97 1191,-68.97 1191,-92.97"/>
+<text text-anchor="middle" x="1093.5" y="-78.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M995.84,-85C912.48,-89.87 789.27,-100.44 684,-122.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M682,-122.97C590.01,-149.42 562.6,-136.71 470,-160.97"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge40" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M682,-122.97C642.36,-131.45 625.8,-121.83 594,-146.97 567.79,-167.69 580.05,-187.86 558,-212.97 541.61,-231.63 518.84,-248 500.57,-259.52"/>
+<polygon fill="#000000" stroke="#000000" points="498.7,-256.56 492.01,-264.77 502.36,-262.52 498.7,-256.56"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge52" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1008.58,-93.1C1004.06,-95.58 999.81,-98.51 996,-101.97 957.55,-136.77 996.3,-175.93 960,-212.97 956.56,-216.47 952.63,-219.51 948.41,-222.13"/>
+<polygon fill="#000000" stroke="#000000" points="946.55,-219.16 939.39,-226.97 949.86,-225.32 946.55,-219.16"/>
+</g>
+<!-- sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge60" class="edge">
+<title>sourcefile~aot_quadruple_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1017.25,-92.98C1009.86,-95.43 1002.65,-98.4 996,-101.97 976.34,-112.52 976.61,-122.07 960,-136.97 927.8,-165.84 927.3,-189.96 885,-198.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M883,-198.97C839.65,-208.19 790.87,-218.01 752.45,-225.61"/>
+<polygon fill="#000000" stroke="#000000" points="751.55,-222.22 742.41,-227.59 752.9,-229.08 751.55,-222.22"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1014.69,-277.75C916.52,-275.81 742.55,-271.04 594,-259.97 577.95,-258.77 574.03,-257.42 558,-255.97 437.53,-245.06 407.19,-228.92 286.5,-236.97"/>
+</g>
+<!-- sourcefile~aot_references_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge53" class="edge">
+<title>sourcefile~aot_references_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1030.24,-266.97C1007.37,-262.56 981.27,-257.52 957.57,-252.96"/>
+<polygon fill="#000000" stroke="#000000" points="958.05,-249.48 947.57,-251.03 956.73,-256.36 958.05,-249.48"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1284.48,-489.12C1259.08,-521.95 1183.06,-610.98 1094.5,-626.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1092.5,-626.97C1001.74,-643.35 975.86,-611.19 885,-626.97"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1242.66,-488.98C1226.26,-492.43 1207.94,-495.83 1191,-497.97 1055.91,-515.01 1021,-506.24 885,-512.97"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_extdouble_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_extdouble_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1230.26,-476.97C1219.52,-476.97 1208.13,-476.97 1196.69,-476.97"/>
+<polygon fill="#000000" stroke="#000000" points="1196.64,-473.47 1186.64,-476.97 1196.64,-480.47 1196.64,-473.47"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_quadruple_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_quadruple_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1236.47,-464.93C1213.06,-459.99 1185.77,-454.23 1161.42,-449.09"/>
+<polygon fill="#000000" stroke="#000000" points="1162.04,-445.64 1151.53,-447 1160.6,-452.49 1162.04,-445.64"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge54" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1283.25,-464.87C1265.95,-445.09 1229.1,-405.56 1191,-380.97 1112.15,-330.07 1080.58,-340.63 996,-299.97 967.73,-286.38 936.51,-269 914.4,-256.27"/>
+<polygon fill="#000000" stroke="#000000" points="915.92,-253.1 905.51,-251.12 912.41,-259.16 915.92,-253.1"/>
+</g>
+<!-- sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge61" class="edge">
+<title>sourcefile~aot_table_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1277.79,-464.73C1258.46,-450.32 1224.14,-426.73 1191,-413.97 1190.75,-413.87 885.24,-357.08 885,-356.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M883,-356.97C818.69,-326.24 747.91,-281.41 710.54,-256.79"/>
+<polygon fill="#000000" stroke="#000000" points="712.05,-253.6 701.78,-250.99 708.18,-259.43 712.05,-253.6"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M832.45,-226.92C730.03,-202.88 504.75,-151.97 470,-160.97"/>
+</g>
+<!-- sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge62" class="edge">
+<title>sourcefile~aot_table_ops_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M807.77,-238.97C789.64,-238.97 770.37,-238.97 752.57,-238.97"/>
+<polygon fill="#000000" stroke="#000000" points="752.28,-235.47 742.28,-238.97 752.28,-242.47 752.28,-235.47"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M633.32,-226.91C580.96,-214.46 501.03,-197.08 470,-198.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M468,-198.97C385.74,-203.96 368.73,-231.48 286.5,-236.97"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_err_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M468,-198.97C460.28,-199.44 373.33,-237.97 322.64,-260.69"/>
+<polygon fill="#000000" stroke="#000000" points="321.01,-257.58 313.32,-264.87 323.88,-263.97 321.01,-257.58"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M660.2,-251.07C635.88,-264.15 595.1,-284.88 558,-297.97 551.63,-300.21 544.92,-302.3 538.16,-304.21"/>
+<polygon fill="#000000" stroke="#000000" points="536.99,-300.9 528.25,-306.89 538.82,-307.66 536.99,-300.9"/>
+</g>
+<!-- sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge41" class="edge">
+<title>sourcefile~aot_top_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M623.79,-249.4C600.09,-253.65 572.36,-258.62 547.02,-263.16"/>
+<polygon fill="#000000" stroke="#000000" points="546.3,-259.73 537.08,-264.94 547.54,-266.62 546.3,-259.73"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node18" class="node">
+<title>sourcefile~aot_vector_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node18"><a xlink:href="../sourcefile/aot_vector_module.f90.html" xlink:title="aot_vector_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1362,-52.97 1227,-52.97 1227,-28.97 1362,-28.97 1362,-52.97"/>
+<text text-anchor="middle" x="1294.5" y="-38.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_vector_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1226.99,-37.59C1188.24,-36.47 1138.49,-36.47 1094.5,-40.97"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_vector_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_extdouble_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1276.96,-53.11C1257.39,-66.92 1223.36,-89.21 1191,-101.97 1185.19,-104.26 1179.08,-106.32 1172.87,-108.18"/>
+<polygon fill="#000000" stroke="#000000" points="1171.75,-104.85 1163.07,-110.92 1173.64,-111.6 1171.75,-104.85"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_vector_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge42" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_quadruple_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1233.79,-52.97C1211.95,-57.36 1187.05,-62.36 1164.4,-66.92"/>
+<polygon fill="#000000" stroke="#000000" points="1163.62,-63.5 1154.51,-68.9 1165,-70.37 1163.62,-63.5"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge55" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_table_ops_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1288.11,-53.12C1275.45,-80.16 1241.02,-145.43 1191,-176.97 1124.62,-218.81 1035.47,-233.15 970.53,-237.72"/>
+<polygon fill="#000000" stroke="#000000" points="970.07,-234.24 960.32,-238.37 970.52,-241.23 970.07,-234.24"/>
+</g>
+<!-- sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge63" class="edge">
+<title>sourcefile~aot_vector_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1285.25,-53.12C1269.63,-75.09 1233.49,-121.24 1191,-143.97 1152.45,-164.58 1137.04,-152.9 1094.5,-162.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1092.5,-162.97C1050.33,-172.95 1038.71,-169.64 996,-176.97 946.43,-185.47 934.19,-188.5 885,-198.97"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1480.06,-150.68C1465.1,-121.35 1422.68,-47.67 1362,-19.97 1253.51,29.55 1213.14,-28.84 1094.5,-40.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1092.5,-40.97C869.79,-60.97 809.72,-50.12 594,-108.97 536.35,-124.69 527.81,-145.82 470,-160.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M468,-160.97C428.63,-170.63 415.5,-165.39 380,-184.97 360.99,-195.45 362.72,-206.98 344,-217.97 320.79,-231.59 313.36,-235.29 286.5,-236.97"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M284.5,-236.97C256.89,-238.69 226.44,-242.86 201.18,-246.94"/>
+<polygon fill="#000000" stroke="#000000" points="200.35,-243.53 191.06,-248.62 201.49,-250.44 200.35,-243.53"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_table_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge48" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_table_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1478.53,-175.28C1449.61,-222.96 1344.73,-395.82 1308.17,-456.07"/>
+<polygon fill="#000000" stroke="#000000" points="1305.11,-454.38 1302.92,-464.74 1311.1,-458.01 1305.11,-454.38"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge64" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1432.86,-155.32C1356.72,-146.08 1212.73,-134.98 1094.5,-162.97"/>
+</g>
+<!-- sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_vector_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge65" class="edge">
+<title>sourcefile~aotus_module.f90&#45;&gt;sourcefile~aot_vector_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M1467.04,-150.82C1433.23,-129.17 1362.43,-83.83 1323.18,-58.69"/>
+<polygon fill="#000000" stroke="#000000" points="1324.69,-55.51 1314.39,-53.06 1320.92,-61.4 1324.69,-55.51"/>
+</g>
+<!-- sourcefile~test.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node20" class="node">
+<title>sourcefile~test.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node20"><a xlink:href="../sourcefile/test.f90.html" xlink:title="test.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="312.5,-208.97 258.5,-208.97 258.5,-184.97 312.5,-184.97 312.5,-208.97"/>
+<text text-anchor="middle" x="285.5" y="-194.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~test.f90&#45;&gt;sourcefile~flu_binding.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~test.f90&#45;&gt;sourcefile~flu_binding.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M258.22,-208.39C237.05,-217.6 207.03,-230.65 183.45,-240.9"/>
+<polygon fill="#000000" stroke="#000000" points="181.88,-237.77 174.1,-244.97 184.67,-244.19 181.88,-237.77"/>
+</g>
+<!-- sourcefile~aot_extdouble_out_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node21" class="node">
+<title>sourcefile~aot_extdouble_out_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node21"><a xlink:href="../sourcefile/aot_extdouble_out_module.f90.html" xlink:title="aot_extdouble_out_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="771,-442.97 595,-442.97 595,-418.97 771,-418.97 771,-442.97"/>
+<text text-anchor="middle" x="683" y="-428.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_extdouble_out_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_extdouble_out_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~aot_extdouble_out_module.f90&#45;&gt;sourcefile~aot_extdouble_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M637.66,-418.94C623.39,-414.39 607.73,-408.67 594,-401.97 556.68,-383.75 517.47,-355.8 493.38,-337.45"/>
+<polygon fill="#000000" stroke="#000000" points="495.27,-334.49 485.22,-331.16 491,-340.04 495.27,-334.49"/>
+</g>
+<!-- sourcefile~aot_quadruple_out_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node22" class="node">
+<title>sourcefile~aot_quadruple_out_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node22"><a xlink:href="../sourcefile/aot_quadruple_out_module.f90.html" xlink:title="aot_quadruple_out_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="772,-392.97 594,-392.97 594,-368.97 772,-368.97 772,-392.97"/>
+<text text-anchor="middle" x="683" y="-378.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_quadruple_out_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_quadruple_out_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge38" class="edge">
+<title>sourcefile~aot_quadruple_out_module.f90&#45;&gt;sourcefile~aot_quadruple_top_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M650.2,-368.94C632.69,-361.49 611.1,-350.87 594,-337.97 574.91,-323.56 578.56,-310.18 558,-297.97 554.94,-296.15 551.72,-294.48 548.42,-292.97"/>
+<polygon fill="#000000" stroke="#000000" points="549.45,-289.61 538.87,-289.06 546.8,-296.09 549.45,-289.61"/>
+</g>
+<!-- sourcefile~aot_out_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_node23" class="node">
+<title>sourcefile~aot_out_module.f90</title>
+<g id="a_sourcefile~~lua_fif.f90~~AfferentGraph_node23"><a xlink:href="../sourcefile/aot_out_module.f90.html" xlink:title="aot_out_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="943,-446.97 825,-446.97 825,-422.97 943,-422.97 943,-446.97"/>
+<text text-anchor="middle" x="884" y="-432.57" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_out_module.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_extdouble_out_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge67" class="edge">
+<title>sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_extdouble_out_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M824.91,-433.8C811.2,-433.52 796.23,-433.22 781.32,-432.92"/>
+<polygon fill="#000000" stroke="#000000" points="781.09,-429.42 771.02,-432.72 780.95,-436.42 781.09,-429.42"/>
+</g>
+<!-- sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_quadruple_out_module.f90 -->
+<g id="sourcefile~~lua_fif.f90~~AfferentGraph_edge68" class="edge">
+<title>sourcefile~aot_out_module.f90&#45;&gt;sourcefile~aot_quadruple_out_module.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M838.34,-422.85C808.77,-414.82 769.79,-404.25 738.41,-395.73"/>
+<polygon fill="#000000" stroke="#000000" points="739.08,-392.29 728.51,-393.04 737.24,-399.04 739.08,-392.29"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var pansourcefilelua_fiff90AfferentGraph = svgPanZoom('#sourcefilelua_fiff90AfferentGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#AfferentGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="AfferentGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="193.5,-24 88.5,-24 88.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a file to a file which it depends on. A file
+is dependent upon another if the latter must be compiled before the former
+can be.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+      <section>
+        <h2><span class="anchor" id="src"></span>Source Code</h2>
+        <div class="hl codehilite"><pre><span></span><a id="ln-1" name="ln-1" href="#ln-1"></a><span class="c">! Copyright (c) 2011-2012, 2015-2016 Harald Klimach &lt;harald@klimachs.de&gt;</span>
+<a id="ln-2" name="ln-2" href="#ln-2"></a><span class="c">! Copyright (c) 2012-2013 James Spencer &lt;j.spencer@imperial.ac.uk&gt;</span>
+<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="c">! Copyright (c) 2015 Peter Vitt &lt;peter.vitt2@uni-siegen.de&gt;</span>
+<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="c">! Copyright (c) 2016 Ruth Franklin</span>
+<a id="ln-5" name="ln-5" href="#ln-5"></a><span class="c">!</span>
+<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="c">! Parts of this file were written by Harald Klimach for</span>
+<a id="ln-7" name="ln-7" href="#ln-7"></a><span class="c">! German Research School of Simulation Sciences and University of</span>
+<a id="ln-8" name="ln-8" href="#ln-8"></a><span class="c">! Siegen.</span>
+<a id="ln-9" name="ln-9" href="#ln-9"></a><span class="c">! Parts of this file were written by Peter Vitt for University of</span>
+<a id="ln-10" name="ln-10" href="#ln-10"></a><span class="c">! Siegen.</span>
+<a id="ln-11" name="ln-11" href="#ln-11"></a><span class="c">!</span>
+<a id="ln-12" name="ln-12" href="#ln-12"></a><span class="c">! Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<a id="ln-13" name="ln-13" href="#ln-13"></a><span class="c">! of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<a id="ln-14" name="ln-14" href="#ln-14"></a><span class="c">! in the Software without restriction, including without limitation the rights</span>
+<a id="ln-15" name="ln-15" href="#ln-15"></a><span class="c">! to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<a id="ln-16" name="ln-16" href="#ln-16"></a><span class="c">! copies of the Software, and to permit persons to whom the Software is</span>
+<a id="ln-17" name="ln-17" href="#ln-17"></a><span class="c">! furnished to do so, subject to the following conditions:</span>
+<a id="ln-18" name="ln-18" href="#ln-18"></a><span class="c">!</span>
+<a id="ln-19" name="ln-19" href="#ln-19"></a><span class="c">! The above copyright notice and this permission notice shall be included in</span>
+<a id="ln-20" name="ln-20" href="#ln-20"></a><span class="c">! all copies or substantial portions of the Software.</span>
+<a id="ln-21" name="ln-21" href="#ln-21"></a><span class="c">!</span>
+<a id="ln-22" name="ln-22" href="#ln-22"></a><span class="c">! THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<a id="ln-23" name="ln-23" href="#ln-23"></a><span class="c">! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<a id="ln-24" name="ln-24" href="#ln-24"></a><span class="c">! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</span>
+<a id="ln-25" name="ln-25" href="#ln-25"></a><span class="c">! IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,</span>
+<a id="ln-26" name="ln-26" href="#ln-26"></a><span class="c">! DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR</span>
+<a id="ln-27" name="ln-27" href="#ln-27"></a><span class="c">! OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE</span>
+<a id="ln-28" name="ln-28" href="#ln-28"></a><span class="c">! OR OTHER DEALINGS IN THE SOFTWARE.</span>
+<a id="ln-29" name="ln-29" href="#ln-29"></a><span class="c">! **************************************************************************** !</span>
+<a id="ln-30" name="ln-30" href="#ln-30"></a>
+<a id="ln-31" name="ln-31" href="#ln-31"></a><span class="c">!&gt; This module provides a direct translation of some</span>
+<a id="ln-32" name="ln-32" href="#ln-32"></a><span class="c">!! Lua 5.3.2</span>
+<a id="ln-33" name="ln-33" href="#ln-33"></a><span class="c">!! C-Interfaces to Fortran 2003 interfaces using the</span>
+<a id="ln-34" name="ln-34" href="#ln-34"></a><span class="c">!! ISO_C_BINDING facilities.</span>
+<a id="ln-35" name="ln-35" href="#ln-35"></a><span class="k">module </span><span class="n">lua_fif</span>
+<a id="ln-36" name="ln-36" href="#ln-36"></a><span class="w">  </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-37" name="ln-37" href="#ln-37"></a><span class="nb">  </span><span class="k">use </span><span class="n">lua_parameters</span>
+<a id="ln-38" name="ln-38" href="#ln-38"></a>
+<a id="ln-39" name="ln-39" href="#ln-39"></a><span class="w">  </span><span class="k">implicit none</span>
+<a id="ln-40" name="ln-40" href="#ln-40"></a>
+<a id="ln-41" name="ln-41" href="#ln-41"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-42" name="ln-42" href="#ln-42"></a><span class="w">  </span><span class="c">! Lua API interfaces</span>
+<a id="ln-43" name="ln-43" href="#ln-43"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-44" name="ln-44" href="#ln-44"></a><span class="w">  </span><span class="k">interface</span>
+<a id="ln-45" name="ln-45" href="#ln-45"></a>
+<a id="ln-46" name="ln-46" href="#ln-46"></a><span class="k">    subroutine </span><span class="n">lua_close</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_close&quot;</span><span class="p">)</span>
+<a id="ln-47" name="ln-47" href="#ln-47"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-48" name="ln-48" href="#ln-48"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-49" name="ln-49" href="#ln-49"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_close</span>
+<a id="ln-50" name="ln-50" href="#ln-50"></a>
+<a id="ln-51" name="ln-51" href="#ln-51"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_createtable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">narr</span><span class="p">,</span><span class="w"> </span><span class="n">nrec</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_createtable&quot;</span><span class="p">)</span>
+<a id="ln-52" name="ln-52" href="#ln-52"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-53" name="ln-53" href="#ln-53"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-54" name="ln-54" href="#ln-54"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">narr</span>
+<a id="ln-55" name="ln-55" href="#ln-55"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nrec</span>
+<a id="ln-56" name="ln-56" href="#ln-56"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_createtable</span>
+<a id="ln-57" name="ln-57" href="#ln-57"></a>
+<a id="ln-58" name="ln-58" href="#ln-58"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_getglobal</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_getglobal&quot;</span><span class="p">)</span>
+<a id="ln-59" name="ln-59" href="#ln-59"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-60" name="ln-60" href="#ln-60"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-61" name="ln-61" href="#ln-61"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k</span>
+<a id="ln-62" name="ln-62" href="#ln-62"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_getglobal</span>
+<a id="ln-63" name="ln-63" href="#ln-63"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_getglobal</span>
+<a id="ln-64" name="ln-64" href="#ln-64"></a>
+<a id="ln-65" name="ln-65" href="#ln-65"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_getfield</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_getfield&quot;</span><span class="p">)</span>
+<a id="ln-66" name="ln-66" href="#ln-66"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-67" name="ln-67" href="#ln-67"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-68" name="ln-68" href="#ln-68"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-69" name="ln-69" href="#ln-69"></a><span class="nb">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k</span>
+<a id="ln-70" name="ln-70" href="#ln-70"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_getfield</span>
+<a id="ln-71" name="ln-71" href="#ln-71"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_getfield</span>
+<a id="ln-72" name="ln-72" href="#ln-72"></a>
+<a id="ln-73" name="ln-73" href="#ln-73"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_gettable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_gettable&quot;</span><span class="p">)</span>
+<a id="ln-74" name="ln-74" href="#ln-74"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-75" name="ln-75" href="#ln-75"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-76" name="ln-76" href="#ln-76"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-77" name="ln-77" href="#ln-77"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_gettable</span>
+<a id="ln-78" name="ln-78" href="#ln-78"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_gettable</span>
+<a id="ln-79" name="ln-79" href="#ln-79"></a>
+<a id="ln-80" name="ln-80" href="#ln-80"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_gettop</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_gettop&quot;</span><span class="p">)</span>
+<a id="ln-81" name="ln-81" href="#ln-81"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-82" name="ln-82" href="#ln-82"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-83" name="ln-83" href="#ln-83"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_gettop</span>
+<a id="ln-84" name="ln-84" href="#ln-84"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_gettop</span>
+<a id="ln-85" name="ln-85" href="#ln-85"></a>
+<a id="ln-86" name="ln-86" href="#ln-86"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_isNumber</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_isnumber&quot;</span><span class="p">)</span>
+<a id="ln-87" name="ln-87" href="#ln-87"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-88" name="ln-88" href="#ln-88"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-89" name="ln-89" href="#ln-89"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-90" name="ln-90" href="#ln-90"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_isnumber</span>
+<a id="ln-91" name="ln-91" href="#ln-91"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_isnumber</span>
+<a id="ln-92" name="ln-92" href="#ln-92"></a>
+<a id="ln-93" name="ln-93" href="#ln-93"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_isString</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_isstring&quot;</span><span class="p">)</span>
+<a id="ln-94" name="ln-94" href="#ln-94"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-95" name="ln-95" href="#ln-95"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-96" name="ln-96" href="#ln-96"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-97" name="ln-97" href="#ln-97"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_isString</span>
+<a id="ln-98" name="ln-98" href="#ln-98"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_isString</span>
+<a id="ln-99" name="ln-99" href="#ln-99"></a>
+<a id="ln-100" name="ln-100" href="#ln-100"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_next</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_next&quot;</span><span class="p">)</span>
+<a id="ln-101" name="ln-101" href="#ln-101"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-102" name="ln-102" href="#ln-102"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-103" name="ln-103" href="#ln-103"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-104" name="ln-104" href="#ln-104"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_next</span>
+<a id="ln-105" name="ln-105" href="#ln-105"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_next</span>
+<a id="ln-106" name="ln-106" href="#ln-106"></a>
+<a id="ln-107" name="ln-107" href="#ln-107"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_pcallk</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">nargs</span><span class="p">,</span><span class="w"> </span><span class="n">nresults</span><span class="p">,</span><span class="w"> </span><span class="n">errfunc</span><span class="p">,</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pcallk&quot;</span><span class="p">)</span>
+<a id="ln-108" name="ln-108" href="#ln-108"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-109" name="ln-109" href="#ln-109"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-110" name="ln-110" href="#ln-110"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nargs</span>
+<a id="ln-111" name="ln-111" href="#ln-111"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nresults</span>
+<a id="ln-112" name="ln-112" href="#ln-112"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">errfunc</span>
+<a id="ln-113" name="ln-113" href="#ln-113"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ctx</span>
+<a id="ln-114" name="ln-114" href="#ln-114"></a><span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k</span>
+<a id="ln-115" name="ln-115" href="#ln-115"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_pcallk</span>
+<a id="ln-116" name="ln-116" href="#ln-116"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_pcallk</span>
+<a id="ln-117" name="ln-117" href="#ln-117"></a>
+<a id="ln-118" name="ln-118" href="#ln-118"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushinteger</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushinteger&quot;</span><span class="p">)</span>
+<a id="ln-119" name="ln-119" href="#ln-119"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-120" name="ln-120" href="#ln-120"></a><span class="nb">      </span><span class="k">use </span><span class="n">lua_parameters</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">lua_int</span>
+<a id="ln-121" name="ln-121" href="#ln-121"></a><span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-122" name="ln-122" href="#ln-122"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">lua_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<a id="ln-123" name="ln-123" href="#ln-123"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_pushinteger</span>
+<a id="ln-124" name="ln-124" href="#ln-124"></a>
+<a id="ln-125" name="ln-125" href="#ln-125"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushboolean</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushboolean&quot;</span><span class="p">)</span>
+<a id="ln-126" name="ln-126" href="#ln-126"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-127" name="ln-127" href="#ln-127"></a><span class="nb">      </span><span class="k">use </span><span class="n">lua_parameters</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">lua_int</span>
+<a id="ln-128" name="ln-128" href="#ln-128"></a><span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-129" name="ln-129" href="#ln-129"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">lua_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<a id="ln-130" name="ln-130" href="#ln-130"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_pushboolean</span>
+<a id="ln-131" name="ln-131" href="#ln-131"></a>
+<a id="ln-132" name="ln-132" href="#ln-132"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushnil</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushnil&quot;</span><span class="p">)</span>
+<a id="ln-133" name="ln-133" href="#ln-133"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-134" name="ln-134" href="#ln-134"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-135" name="ln-135" href="#ln-135"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_pushnil</span>
+<a id="ln-136" name="ln-136" href="#ln-136"></a>
+<a id="ln-137" name="ln-137" href="#ln-137"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushnumber</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushnumber&quot;</span><span class="p">)</span>
+<a id="ln-138" name="ln-138" href="#ln-138"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-139" name="ln-139" href="#ln-139"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-140" name="ln-140" href="#ln-140"></a><span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_double</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<a id="ln-141" name="ln-141" href="#ln-141"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_pushnumber</span>
+<a id="ln-142" name="ln-142" href="#ln-142"></a>
+<a id="ln-143" name="ln-143" href="#ln-143"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_pushlstring</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushlstring&quot;</span><span class="p">)</span>
+<a id="ln-144" name="ln-144" href="#ln-144"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-145" name="ln-145" href="#ln-145"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-146" name="ln-146" href="#ln-146"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">s</span>
+<a id="ln-147" name="ln-147" href="#ln-147"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_size_t</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">len</span>
+<a id="ln-148" name="ln-148" href="#ln-148"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_pushlstring</span>
+<a id="ln-149" name="ln-149" href="#ln-149"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_pushlstring</span>
+<a id="ln-150" name="ln-150" href="#ln-150"></a>
+<a id="ln-151" name="ln-151" href="#ln-151"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushvalue</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushvalue&quot;</span><span class="p">)</span>
+<a id="ln-152" name="ln-152" href="#ln-152"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-153" name="ln-153" href="#ln-153"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-154" name="ln-154" href="#ln-154"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-155" name="ln-155" href="#ln-155"></a><span class="nb">    </span><span class="k">end subroutine </span><span class="n">lua_pushvalue</span>
+<a id="ln-156" name="ln-156" href="#ln-156"></a>
+<a id="ln-157" name="ln-157" href="#ln-157"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_rawgeti</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_rawgeti&quot;</span><span class="p">)</span>
+<a id="ln-158" name="ln-158" href="#ln-158"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-159" name="ln-159" href="#ln-159"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-160" name="ln-160" href="#ln-160"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-161" name="ln-161" href="#ln-161"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<a id="ln-162" name="ln-162" href="#ln-162"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_rawgeti</span>
+<a id="ln-163" name="ln-163" href="#ln-163"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_rawgeti</span>
+<a id="ln-164" name="ln-164" href="#ln-164"></a>
+<a id="ln-165" name="ln-165" href="#ln-165"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_rotate</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_rotate&quot;</span><span class="p">)</span>
+<a id="ln-166" name="ln-166" href="#ln-166"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-167" name="ln-167" href="#ln-167"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-168" name="ln-168" href="#ln-168"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">idx</span>
+<a id="ln-169" name="ln-169" href="#ln-169"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<a id="ln-170" name="ln-170" href="#ln-170"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_rotate</span>
+<a id="ln-171" name="ln-171" href="#ln-171"></a>
+<a id="ln-172" name="ln-172" href="#ln-172"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_setfield</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_setfield&quot;</span><span class="p">)</span>
+<a id="ln-173" name="ln-173" href="#ln-173"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-174" name="ln-174" href="#ln-174"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-175" name="ln-175" href="#ln-175"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-176" name="ln-176" href="#ln-176"></a><span class="nb">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k</span>
+<a id="ln-177" name="ln-177" href="#ln-177"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_setfield</span>
+<a id="ln-178" name="ln-178" href="#ln-178"></a>
+<a id="ln-179" name="ln-179" href="#ln-179"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_setglobal</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_setglobal&quot;</span><span class="p">)</span>
+<a id="ln-180" name="ln-180" href="#ln-180"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-181" name="ln-181" href="#ln-181"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-182" name="ln-182" href="#ln-182"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">k</span>
+<a id="ln-183" name="ln-183" href="#ln-183"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_setglobal</span>
+<a id="ln-184" name="ln-184" href="#ln-184"></a>
+<a id="ln-185" name="ln-185" href="#ln-185"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_settable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_settable&quot;</span><span class="p">)</span>
+<a id="ln-186" name="ln-186" href="#ln-186"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-187" name="ln-187" href="#ln-187"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-188" name="ln-188" href="#ln-188"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-189" name="ln-189" href="#ln-189"></a><span class="nb">    </span><span class="k">end subroutine </span><span class="n">lua_settable</span>
+<a id="ln-190" name="ln-190" href="#ln-190"></a>
+<a id="ln-191" name="ln-191" href="#ln-191"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_settop</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_settop&quot;</span><span class="p">)</span>
+<a id="ln-192" name="ln-192" href="#ln-192"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-193" name="ln-193" href="#ln-193"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-194" name="ln-194" href="#ln-194"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-195" name="ln-195" href="#ln-195"></a><span class="nb">    </span><span class="k">end subroutine </span><span class="n">lua_settop</span>
+<a id="ln-196" name="ln-196" href="#ln-196"></a>
+<a id="ln-197" name="ln-197" href="#ln-197"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_tolstring</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_tolstring&quot;</span><span class="p">)</span>
+<a id="ln-198" name="ln-198" href="#ln-198"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-199" name="ln-199" href="#ln-199"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-200" name="ln-200" href="#ln-200"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-201" name="ln-201" href="#ln-201"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_size_t</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">len</span>
+<a id="ln-202" name="ln-202" href="#ln-202"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_tolstring</span>
+<a id="ln-203" name="ln-203" href="#ln-203"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_tolstring</span>
+<a id="ln-204" name="ln-204" href="#ln-204"></a>
+<a id="ln-205" name="ln-205" href="#ln-205"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_tonumberx</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">,</span><span class="w"> </span><span class="n">isnum</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_tonumberx&quot;</span><span class="p">)</span>
+<a id="ln-206" name="ln-206" href="#ln-206"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-207" name="ln-207" href="#ln-207"></a><span class="nb">      </span><span class="k">use </span><span class="n">lua_parameters</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">lua_num</span>
+<a id="ln-208" name="ln-208" href="#ln-208"></a><span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-209" name="ln-209" href="#ln-209"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-210" name="ln-210" href="#ln-210"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">isnum</span>
+<a id="ln-211" name="ln-211" href="#ln-211"></a><span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">lua_num</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_tonumberx</span>
+<a id="ln-212" name="ln-212" href="#ln-212"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_tonumberx</span>
+<a id="ln-213" name="ln-213" href="#ln-213"></a>
+<a id="ln-214" name="ln-214" href="#ln-214"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_toboolean</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_toboolean&quot;</span><span class="p">)</span>
+<a id="ln-215" name="ln-215" href="#ln-215"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-216" name="ln-216" href="#ln-216"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-217" name="ln-217" href="#ln-217"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-218" name="ln-218" href="#ln-218"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_toboolean</span>
+<a id="ln-219" name="ln-219" href="#ln-219"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_toboolean</span>
+<a id="ln-220" name="ln-220" href="#ln-220"></a>
+<a id="ln-221" name="ln-221" href="#ln-221"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_touserdata</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_touserdata&quot;</span><span class="p">)</span>
+<a id="ln-222" name="ln-222" href="#ln-222"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-223" name="ln-223" href="#ln-223"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-224" name="ln-224" href="#ln-224"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-225" name="ln-225" href="#ln-225"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_touserdata</span>
+<a id="ln-226" name="ln-226" href="#ln-226"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_touserdata</span>
+<a id="ln-227" name="ln-227" href="#ln-227"></a>
+<a id="ln-228" name="ln-228" href="#ln-228"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_topointer</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_topointer&quot;</span><span class="p">)</span>
+<a id="ln-229" name="ln-229" href="#ln-229"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-230" name="ln-230" href="#ln-230"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-231" name="ln-231" href="#ln-231"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-232" name="ln-232" href="#ln-232"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_intptr_t</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_topointer</span>
+<a id="ln-233" name="ln-233" href="#ln-233"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_topointer</span>
+<a id="ln-234" name="ln-234" href="#ln-234"></a>
+<a id="ln-235" name="ln-235" href="#ln-235"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_type</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_type&quot;</span><span class="p">)</span>
+<a id="ln-236" name="ln-236" href="#ln-236"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-237" name="ln-237" href="#ln-237"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-238" name="ln-238" href="#ln-238"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-239" name="ln-239" href="#ln-239"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_type</span>
+<a id="ln-240" name="ln-240" href="#ln-240"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_type</span>
+<a id="ln-241" name="ln-241" href="#ln-241"></a>
+<a id="ln-242" name="ln-242" href="#ln-242"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushcclosure</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">c_fn</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushcclosure&quot;</span><span class="p">)</span>
+<a id="ln-243" name="ln-243" href="#ln-243"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-244" name="ln-244" href="#ln-244"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-245" name="ln-245" href="#ln-245"></a><span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_funptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">c_fn</span>
+<a id="ln-246" name="ln-246" href="#ln-246"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<a id="ln-247" name="ln-247" href="#ln-247"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_pushcclosure</span>
+<a id="ln-248" name="ln-248" href="#ln-248"></a>
+<a id="ln-249" name="ln-249" href="#ln-249"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">lua_pushlightuserdata</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">ptr</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_pushlightuserdata&quot;</span><span class="p">)</span>
+<a id="ln-250" name="ln-250" href="#ln-250"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-251" name="ln-251" href="#ln-251"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-252" name="ln-252" href="#ln-252"></a><span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ptr</span>
+<a id="ln-253" name="ln-253" href="#ln-253"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">lua_pushlightuserdata</span>
+<a id="ln-254" name="ln-254" href="#ln-254"></a>
+<a id="ln-255" name="ln-255" href="#ln-255"></a><span class="w">    </span><span class="k">function </span><span class="n">lua_getmetatable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="nb">index</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lua_getmetatable&quot;</span><span class="p">)</span>
+<a id="ln-256" name="ln-256" href="#ln-256"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-257" name="ln-257" href="#ln-257"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-258" name="ln-258" href="#ln-258"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">index</span>
+<a id="ln-259" name="ln-259" href="#ln-259"></a><span class="nb">      </span><span class="kt">integer</span><span class="p">(</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lua_getmetatable</span>
+<a id="ln-260" name="ln-260" href="#ln-260"></a><span class="w">    </span><span class="k">end function </span><span class="n">lua_getmetatable</span>
+<a id="ln-261" name="ln-261" href="#ln-261"></a>
+<a id="ln-262" name="ln-262" href="#ln-262"></a><span class="w">  </span><span class="k">end interface</span>
+<a id="ln-263" name="ln-263" href="#ln-263"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-264" name="ln-264" href="#ln-264"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-265" name="ln-265" href="#ln-265"></a>
+<a id="ln-266" name="ln-266" href="#ln-266"></a>
+<a id="ln-267" name="ln-267" href="#ln-267"></a>
+<a id="ln-268" name="ln-268" href="#ln-268"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-269" name="ln-269" href="#ln-269"></a><span class="w">  </span><span class="c">! Lua auxiliary library interfaces</span>
+<a id="ln-270" name="ln-270" href="#ln-270"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-271" name="ln-271" href="#ln-271"></a><span class="w">  </span><span class="k">interface</span>
+<a id="ln-272" name="ln-272" href="#ln-272"></a>
+<a id="ln-273" name="ln-273" href="#ln-273"></a><span class="k">    subroutine </span><span class="n">luaL_openlibs</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_openlibs&quot;</span><span class="p">)</span>
+<a id="ln-274" name="ln-274" href="#ln-274"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-275" name="ln-275" href="#ln-275"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-276" name="ln-276" href="#ln-276"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">luaL_openlibs</span>
+<a id="ln-277" name="ln-277" href="#ln-277"></a>
+<a id="ln-278" name="ln-278" href="#ln-278"></a><span class="w">    </span><span class="k">function </span><span class="n">luaL_newstate</span><span class="p">()</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_newstate&quot;</span><span class="p">)</span>
+<a id="ln-279" name="ln-279" href="#ln-279"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-280" name="ln-280" href="#ln-280"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">luaL_newstate</span>
+<a id="ln-281" name="ln-281" href="#ln-281"></a><span class="w">    </span><span class="k">end function </span><span class="n">luaL_newstate</span>
+<a id="ln-282" name="ln-282" href="#ln-282"></a>
+<a id="ln-283" name="ln-283" href="#ln-283"></a><span class="w">    </span><span class="k">function </span><span class="n">luaL_loadfilex</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_loadfilex&quot;</span><span class="p">)</span>
+<a id="ln-284" name="ln-284" href="#ln-284"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-285" name="ln-285" href="#ln-285"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-286" name="ln-286" href="#ln-286"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">filename</span>
+<a id="ln-287" name="ln-287" href="#ln-287"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mode</span>
+<a id="ln-288" name="ln-288" href="#ln-288"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">luaL_loadfilex</span>
+<a id="ln-289" name="ln-289" href="#ln-289"></a><span class="w">    </span><span class="k">end function </span><span class="n">luaL_loadfilex</span>
+<a id="ln-290" name="ln-290" href="#ln-290"></a>
+<a id="ln-291" name="ln-291" href="#ln-291"></a><span class="w">    </span><span class="k">function </span><span class="n">luaL_loadbufferx</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">sz</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_loadbufferx&quot;</span><span class="p">)</span>
+<a id="ln-292" name="ln-292" href="#ln-292"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-293" name="ln-293" href="#ln-293"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-294" name="ln-294" href="#ln-294"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">buff</span>
+<a id="ln-295" name="ln-295" href="#ln-295"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_size_t</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sz</span>
+<a id="ln-296" name="ln-296" href="#ln-296"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">name</span>
+<a id="ln-297" name="ln-297" href="#ln-297"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mode</span>
+<a id="ln-298" name="ln-298" href="#ln-298"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">luaL_loadbufferx</span>
+<a id="ln-299" name="ln-299" href="#ln-299"></a><span class="w">    </span><span class="k">end function </span><span class="n">luaL_loadbufferx</span>
+<a id="ln-300" name="ln-300" href="#ln-300"></a>
+<a id="ln-301" name="ln-301" href="#ln-301"></a><span class="w">    </span><span class="k">function </span><span class="n">luaL_loadstring</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_loadstring&quot;</span><span class="p">)</span>
+<a id="ln-302" name="ln-302" href="#ln-302"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-303" name="ln-303" href="#ln-303"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-304" name="ln-304" href="#ln-304"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">string</span>
+<a id="ln-305" name="ln-305" href="#ln-305"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">luaL_loadstring</span>
+<a id="ln-306" name="ln-306" href="#ln-306"></a><span class="w">    </span><span class="k">end function </span><span class="n">luaL_loadstring</span>
+<a id="ln-307" name="ln-307" href="#ln-307"></a>
+<a id="ln-308" name="ln-308" href="#ln-308"></a><span class="w">    </span><span class="k">subroutine </span><span class="n">luaL_setmetatable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">tname</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_setmetatable&quot;</span><span class="p">)</span>
+<a id="ln-309" name="ln-309" href="#ln-309"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-310" name="ln-310" href="#ln-310"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-311" name="ln-311" href="#ln-311"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tname</span>
+<a id="ln-312" name="ln-312" href="#ln-312"></a><span class="w">    </span><span class="k">end subroutine </span><span class="n">luaL_setmetatable</span>
+<a id="ln-313" name="ln-313" href="#ln-313"></a>
+<a id="ln-314" name="ln-314" href="#ln-314"></a><span class="w">    </span><span class="k">function </span><span class="n">luaL_newmetatable</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">tname</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_newmetatable&quot;</span><span class="p">)</span>
+<a id="ln-315" name="ln-315" href="#ln-315"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-316" name="ln-316" href="#ln-316"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-317" name="ln-317" href="#ln-317"></a><span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_char</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tname</span>
+<a id="ln-318" name="ln-318" href="#ln-318"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">luaL_newmetatable</span>
+<a id="ln-319" name="ln-319" href="#ln-319"></a><span class="w">    </span><span class="k">end function </span><span class="n">luaL_newmetatable</span>
+<a id="ln-320" name="ln-320" href="#ln-320"></a>
+<a id="ln-321" name="ln-321" href="#ln-321"></a><span class="w">    </span><span class="k">function </span><span class="n">luaL_ref</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">bind</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;luaL_ref&quot;</span><span class="p">)</span>
+<a id="ln-322" name="ln-322" href="#ln-322"></a><span class="w">      </span><span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="nb">iso_c_binding</span>
+<a id="ln-323" name="ln-323" href="#ln-323"></a><span class="nb">      </span><span class="k">type</span><span class="p">(</span><span class="kt">c_ptr</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">L</span>
+<a id="ln-324" name="ln-324" href="#ln-324"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">t</span>
+<a id="ln-325" name="ln-325" href="#ln-325"></a><span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="kt">c_int</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">luaL_ref</span>
+<a id="ln-326" name="ln-326" href="#ln-326"></a><span class="w">    </span><span class="k">end function </span><span class="n">luaL_ref</span>
+<a id="ln-327" name="ln-327" href="#ln-327"></a>
+<a id="ln-328" name="ln-328" href="#ln-328"></a><span class="w">  </span><span class="k">end interface</span>
+<a id="ln-329" name="ln-329" href="#ln-329"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-330" name="ln-330" href="#ln-330"></a><span class="w">  </span><span class="c">! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !</span>
+<a id="ln-331" name="ln-331" href="#ln-331"></a>
+<a id="ln-332" name="ln-332" href="#ln-332"></a><span class="k">end module </span><span class="n">lua_fif</span>
+</pre></div>
+
+      </section>
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

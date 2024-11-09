@@ -1,0 +1,670 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>aot_push &ndash; Aotus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>aot_push
+      <small>Interface</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="<p> 0.0% of total for procedures.</p>Including implementation: 48 statements,  0.5% of total for procedures.">3 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/aot_table_ops_module.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/aot_table_ops_module.f90.html'>aot_table_ops_module.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/aot_table_ops_module.html'>aot_table_ops_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">aot_push</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#modprocs-0"
+         aria-expanded="false" aria-controls="modprocs-0">
+         <h4 class="card-header bg-primary text-white">Module Procedures</h4>
+      </a>
+      <div id="modprocs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../interface/aot_push.html#moduleprocedure-aot_table_push">aot_table_push</a>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <h2>public interface aot_push</h2>
+      
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Calls</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: interface~~aot_push~~CallsGraph Pages: 1 -->
+<svg id="interfaceaot_pushCallsGraph" width="584pt" height="326pt"
+ viewBox="0.00 0.00 584.00 326.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="interface~~aot_push~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 322)">
+<title>interface~~aot_push~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-322 580,-322 580,4 -4,4"/>
+<!-- interface~aot_push -->
+<g id="interface~~aot_push~~CallsGraph_node1" class="node">
+<title>interface~aot_push</title>
+<polygon fill="none" stroke="black" points="61,-150 0,-150 0,-126 61,-126 61,-150"/>
+<text text-anchor="middle" x="30.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">aot_push</text>
+</g>
+<!-- proc~aot_table_push -->
+<g id="interface~~aot_push~~CallsGraph_node2" class="node">
+<title>proc~aot_table_push</title>
+<g id="a_interface~~aot_push~~CallsGraph_node2"><a xlink:href="../proc/aot_table_push.html" xlink:title="aot_table_push">
+<polygon fill="#d9534f" stroke="#d9534f" points="190,-150 97,-150 97,-126 190,-126 190,-150"/>
+<text text-anchor="middle" x="143.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">aot_table_push</text>
+</a>
+</g>
+</g>
+<!-- interface~aot_push&#45;&gt;proc~aot_table_push -->
+<g id="interface~~aot_push~~CallsGraph_edge1" class="edge">
+<title>interface~aot_push&#45;&gt;proc~aot_table_push</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M61.25,-138C69.09,-138 77.82,-138 86.57,-138"/>
+<polygon fill="#000000" stroke="#000000" points="86.78,-141.5 96.78,-138 86.78,-134.5 86.78,-141.5"/>
+</g>
+<!-- interface~flu_pushinteger -->
+<g id="interface~~aot_push~~CallsGraph_node3" class="node">
+<title>interface~flu_pushinteger</title>
+<g id="a_interface~~aot_push~~CallsGraph_node3"><a xlink:href="../interface/flu_pushinteger.html" xlink:title="flu_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="321,-276 226,-276 226,-252 321,-252 321,-276"/>
+<text text-anchor="middle" x="273.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;interface~flu_pushinteger -->
+<g id="interface~~aot_push~~CallsGraph_edge2" class="edge">
+<title>proc~aot_table_push&#45;&gt;interface~flu_pushinteger</title>
+<path fill="none" stroke="#000000" d="M151.29,-150.26C163.65,-171.64 191.75,-216 226,-243 227.75,-244.38 229.61,-245.69 231.54,-246.94"/>
+<polygon fill="#000000" stroke="#000000" points="229.88,-250.02 240.29,-251.96 233.36,-243.95 229.88,-250.02"/>
+</g>
+<!-- proc~flu_getfield -->
+<g id="interface~~aot_push~~CallsGraph_node4" class="node">
+<title>proc~flu_getfield</title>
+<g id="a_interface~~aot_push~~CallsGraph_node4"><a xlink:href="../proc/flu_getfield.html" xlink:title="flu_getfield">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="309.5,-234 237.5,-234 237.5,-210 309.5,-210 309.5,-234"/>
+<text text-anchor="middle" x="273.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_getfield</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;proc~flu_getfield -->
+<g id="interface~~aot_push~~CallsGraph_edge3" class="edge">
+<title>proc~aot_table_push&#45;&gt;proc~flu_getfield</title>
+<path fill="none" stroke="#000000" d="M158.2,-150.21C173.84,-163.76 200.55,-185.71 226,-201 228.49,-202.5 231.11,-203.96 233.78,-205.36"/>
+<polygon fill="#000000" stroke="#000000" points="232.43,-208.6 242.95,-209.91 235.54,-202.33 232.43,-208.6"/>
+</g>
+<!-- proc~flu_getglobal -->
+<g id="interface~~aot_push~~CallsGraph_node5" class="node">
+<title>proc~flu_getglobal</title>
+<g id="a_interface~~aot_push~~CallsGraph_node5"><a xlink:href="../proc/flu_getglobal.html" xlink:title="flu_getglobal">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="314.5,-192 232.5,-192 232.5,-168 314.5,-168 314.5,-192"/>
+<text text-anchor="middle" x="273.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_getglobal</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;proc~flu_getglobal -->
+<g id="interface~~aot_push~~CallsGraph_edge4" class="edge">
+<title>proc~aot_table_push&#45;&gt;proc~flu_getglobal</title>
+<path fill="none" stroke="#000000" d="M181.18,-150.04C195.24,-154.65 211.46,-159.97 226.3,-164.84"/>
+<polygon fill="#000000" stroke="#000000" points="225.22,-168.17 235.81,-167.96 227.4,-161.52 225.22,-168.17"/>
+</g>
+<!-- proc~flu_gettable -->
+<g id="interface~~aot_push~~CallsGraph_node6" class="node">
+<title>proc~flu_gettable</title>
+<g id="a_interface~~aot_push~~CallsGraph_node6"><a xlink:href="../proc/flu_gettable.html" xlink:title="flu_gettable">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311.5,-150 235.5,-150 235.5,-126 311.5,-126 311.5,-150"/>
+<text text-anchor="middle" x="273.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_gettable</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;proc~flu_gettable -->
+<g id="interface~~aot_push~~CallsGraph_edge5" class="edge">
+<title>proc~aot_table_push&#45;&gt;proc~flu_gettable</title>
+<path fill="none" stroke="#000000" d="M190.35,-138C201.66,-138 213.8,-138 225.18,-138"/>
+<polygon fill="#000000" stroke="#000000" points="225.38,-141.5 235.38,-138 225.38,-134.5 225.38,-141.5"/>
+</g>
+<!-- proc~flu_pop -->
+<g id="interface~~aot_push~~CallsGraph_node7" class="node">
+<title>proc~flu_pop</title>
+<g id="a_interface~~aot_push~~CallsGraph_node7"><a xlink:href="../proc/flu_pop.html" xlink:title="flu_pop">
+<polygon fill="#d9534f" stroke="#d9534f" points="300.5,-108 246.5,-108 246.5,-84 300.5,-84 300.5,-108"/>
+<text text-anchor="middle" x="273.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pop</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;proc~flu_pop -->
+<g id="interface~~aot_push~~CallsGraph_edge6" class="edge">
+<title>proc~aot_table_push&#45;&gt;proc~flu_pop</title>
+<path fill="none" stroke="#000000" d="M181.18,-125.96C198.59,-120.25 219.33,-113.45 236.64,-107.77"/>
+<polygon fill="#000000" stroke="#000000" points="237.97,-111.01 246.38,-104.57 235.79,-104.36 237.97,-111.01"/>
+</g>
+<!-- proc~flu_pushnil -->
+<g id="interface~~aot_push~~CallsGraph_node8" class="node">
+<title>proc~flu_pushnil</title>
+<g id="a_interface~~aot_push~~CallsGraph_node8"><a xlink:href="../proc/flu_pushnil.html" xlink:title="flu_pushnil">
+<polygon fill="#d9534f" stroke="#d9534f" points="308.5,-66 238.5,-66 238.5,-42 308.5,-42 308.5,-66"/>
+<text text-anchor="middle" x="273.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushnil</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;proc~flu_pushnil -->
+<g id="interface~~aot_push~~CallsGraph_edge7" class="edge">
+<title>proc~aot_table_push&#45;&gt;proc~flu_pushnil</title>
+<path fill="none" stroke="#000000" d="M158.2,-125.79C173.84,-112.24 200.55,-90.29 226,-75 228.49,-73.5 231.11,-72.04 233.78,-70.64"/>
+<polygon fill="#000000" stroke="#000000" points="235.54,-73.67 242.95,-66.09 232.43,-67.4 235.54,-73.67"/>
+</g>
+<!-- proc~flu_type -->
+<g id="interface~~aot_push~~CallsGraph_node9" class="node">
+<title>proc~flu_type</title>
+<g id="a_interface~~aot_push~~CallsGraph_node9"><a xlink:href="../proc/flu_type.html" xlink:title="flu_type">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="301,-24 246,-24 246,0 301,0 301,-24"/>
+<text text-anchor="middle" x="273.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_type</text>
+</a>
+</g>
+</g>
+<!-- proc~aot_table_push&#45;&gt;proc~flu_type -->
+<g id="interface~~aot_push~~CallsGraph_edge8" class="edge">
+<title>proc~aot_table_push&#45;&gt;proc~flu_type</title>
+<path fill="none" stroke="#000000" d="M151.29,-125.74C163.65,-104.36 191.75,-60 226,-33 229.2,-30.48 232.74,-28.19 236.41,-26.13"/>
+<polygon fill="#000000" stroke="#000000" points="238.3,-29.09 245.65,-21.46 235.14,-22.84 238.3,-29.09"/>
+</g>
+<!-- proc~flu_pushint -->
+<g id="interface~~aot_push~~CallsGraph_node16" class="node">
+<title>proc~flu_pushint</title>
+<g id="a_interface~~aot_push~~CallsGraph_node16"><a xlink:href="../proc/flu_pushint.html" xlink:title="flu_pushint">
+<polygon fill="#d9534f" stroke="#d9534f" points="434.5,-318 364.5,-318 364.5,-294 434.5,-294 434.5,-318"/>
+<text text-anchor="middle" x="399.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushint</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushint -->
+<g id="interface~~aot_push~~CallsGraph_edge9" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushint</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M310.03,-276.04C323.87,-280.72 339.88,-286.14 354.44,-291.08"/>
+<polygon fill="#000000" stroke="#000000" points="353.65,-294.5 364.24,-294.4 355.89,-287.87 353.65,-294.5"/>
+</g>
+<!-- proc~flu_pushlong -->
+<g id="interface~~aot_push~~CallsGraph_node17" class="node">
+<title>proc~flu_pushlong</title>
+<g id="a_interface~~aot_push~~CallsGraph_node17"><a xlink:href="../proc/flu_pushlong.html" xlink:title="flu_pushlong">
+<polygon fill="#d9534f" stroke="#d9534f" points="439.5,-276 359.5,-276 359.5,-252 439.5,-252 439.5,-276"/>
+<text text-anchor="middle" x="399.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flu_pushlong</text>
+</a>
+</g>
+</g>
+<!-- interface~flu_pushinteger&#45;&gt;proc~flu_pushlong -->
+<g id="interface~~aot_push~~CallsGraph_edge10" class="edge">
+<title>interface~flu_pushinteger&#45;&gt;proc~flu_pushlong</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M321.03,-264C330.21,-264 339.88,-264 349.16,-264"/>
+<polygon fill="#000000" stroke="#000000" points="349.42,-267.5 359.42,-264 349.42,-260.5 349.42,-267.5"/>
+</g>
+<!-- interface~lua_getfield -->
+<g id="interface~~aot_push~~CallsGraph_node10" class="node">
+<title>interface~lua_getfield</title>
+<g id="a_interface~~aot_push~~CallsGraph_node10"><a xlink:href="../interface/lua_getfield.html" xlink:title="lua_getfield">
+<polygon fill="#a7506f" stroke="#a7506f" points="437,-234 362,-234 362,-210 437,-210 437,-234"/>
+<text text-anchor="middle" x="399.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_getfield</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_getfield&#45;&gt;interface~lua_getfield -->
+<g id="interface~~aot_push~~CallsGraph_edge11" class="edge">
+<title>proc~flu_getfield&#45;&gt;interface~lua_getfield</title>
+<path fill="none" stroke="#000000" d="M309.7,-222C322.71,-222 337.67,-222 351.55,-222"/>
+<polygon fill="#000000" stroke="#000000" points="351.91,-225.5 361.91,-222 351.91,-218.5 351.91,-225.5"/>
+</g>
+<!-- interface~lua_getglobal -->
+<g id="interface~~aot_push~~CallsGraph_node11" class="node">
+<title>interface~lua_getglobal</title>
+<g id="a_interface~~aot_push~~CallsGraph_node11"><a xlink:href="../interface/lua_getglobal.html" xlink:title="lua_getglobal">
+<polygon fill="#a7506f" stroke="#a7506f" points="442,-192 357,-192 357,-168 442,-168 442,-192"/>
+<text text-anchor="middle" x="399.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_getglobal</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_getglobal&#45;&gt;interface~lua_getglobal -->
+<g id="interface~~aot_push~~CallsGraph_edge12" class="edge">
+<title>proc~flu_getglobal&#45;&gt;interface~lua_getglobal</title>
+<path fill="none" stroke="#000000" d="M314.76,-180C324.94,-180 336.02,-180 346.68,-180"/>
+<polygon fill="#000000" stroke="#000000" points="346.74,-183.5 356.74,-180 346.74,-176.5 346.74,-183.5"/>
+</g>
+<!-- interface~lua_gettable -->
+<g id="interface~~aot_push~~CallsGraph_node12" class="node">
+<title>interface~lua_gettable</title>
+<g id="a_interface~~aot_push~~CallsGraph_node12"><a xlink:href="../interface/lua_gettable.html" xlink:title="lua_gettable">
+<polygon fill="#a7506f" stroke="#a7506f" points="439,-150 360,-150 360,-126 439,-126 439,-150"/>
+<text text-anchor="middle" x="399.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_gettable</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_gettable&#45;&gt;interface~lua_gettable -->
+<g id="interface~~aot_push~~CallsGraph_edge13" class="edge">
+<title>proc~flu_gettable&#45;&gt;interface~lua_gettable</title>
+<path fill="none" stroke="#000000" d="M311.7,-138C323.52,-138 336.77,-138 349.3,-138"/>
+<polygon fill="#000000" stroke="#000000" points="349.6,-141.5 359.6,-138 349.6,-134.5 349.6,-141.5"/>
+</g>
+<!-- interface~lua_settop -->
+<g id="interface~~aot_push~~CallsGraph_node14" class="node">
+<title>interface~lua_settop</title>
+<g id="a_interface~~aot_push~~CallsGraph_node14"><a xlink:href="../interface/lua_settop.html" xlink:title="lua_settop">
+<polygon fill="#a7506f" stroke="#a7506f" points="433,-108 366,-108 366,-84 433,-84 433,-108"/>
+<text text-anchor="middle" x="399.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_settop</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pop&#45;&gt;interface~lua_settop -->
+<g id="interface~~aot_push~~CallsGraph_edge14" class="edge">
+<title>proc~flu_pop&#45;&gt;interface~lua_settop</title>
+<path fill="none" stroke="#000000" d="M300.8,-96C316.68,-96 337.3,-96 355.51,-96"/>
+<polygon fill="#000000" stroke="#000000" points="355.61,-99.5 365.61,-96 355.61,-92.5 355.61,-99.5"/>
+</g>
+<!-- interface~lua_pushnil -->
+<g id="interface~~aot_push~~CallsGraph_node13" class="node">
+<title>interface~lua_pushnil</title>
+<g id="a_interface~~aot_push~~CallsGraph_node13"><a xlink:href="../interface/lua_pushnil.html" xlink:title="lua_pushnil">
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-66 363,-66 363,-42 436,-42 436,-66"/>
+<text text-anchor="middle" x="399.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushnil</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushnil&#45;&gt;interface~lua_pushnil -->
+<g id="interface~~aot_push~~CallsGraph_edge15" class="edge">
+<title>proc~flu_pushnil&#45;&gt;interface~lua_pushnil</title>
+<path fill="none" stroke="#000000" d="M308.71,-54C322.21,-54 337.92,-54 352.4,-54"/>
+<polygon fill="#000000" stroke="#000000" points="352.67,-57.5 362.67,-54 352.67,-50.5 352.67,-57.5"/>
+</g>
+<!-- interface~lua_type -->
+<g id="interface~~aot_push~~CallsGraph_node15" class="node">
+<title>interface~lua_type</title>
+<g id="a_interface~~aot_push~~CallsGraph_node15"><a xlink:href="../interface/lua_type.html" xlink:title="lua_type">
+<polygon fill="#a7506f" stroke="#a7506f" points="428.5,-24 370.5,-24 370.5,0 428.5,0 428.5,-24"/>
+<text text-anchor="middle" x="399.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_type</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_type&#45;&gt;interface~lua_type -->
+<g id="interface~~aot_push~~CallsGraph_edge16" class="edge">
+<title>proc~flu_type&#45;&gt;interface~lua_type</title>
+<path fill="none" stroke="#000000" d="M301.1,-12C318.27,-12 340.89,-12 360.01,-12"/>
+<polygon fill="#000000" stroke="#000000" points="360.22,-15.5 370.22,-12 360.22,-8.5 360.22,-15.5"/>
+</g>
+<!-- interface~lua_pushinteger -->
+<g id="interface~~aot_push~~CallsGraph_node18" class="node">
+<title>interface~lua_pushinteger</title>
+<g id="a_interface~~aot_push~~CallsGraph_node18"><a xlink:href="../interface/lua_pushinteger.html" xlink:title="lua_pushinteger">
+<polygon fill="#a7506f" stroke="#a7506f" points="576,-297 478,-297 478,-273 576,-273 576,-297"/>
+<text text-anchor="middle" x="527" y="-282.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lua_pushinteger</text>
+</a>
+</g>
+</g>
+<!-- proc~flu_pushint&#45;&gt;interface~lua_pushinteger -->
+<g id="interface~~aot_push~~CallsGraph_edge17" class="edge">
+<title>proc~flu_pushint&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M434.79,-300.26C444.91,-298.57 456.27,-296.67 467.46,-294.8"/>
+<polygon fill="#000000" stroke="#000000" points="468.35,-298.2 477.64,-293.09 467.19,-291.29 468.35,-298.2"/>
+</g>
+<!-- proc~flu_pushlong&#45;&gt;interface~lua_pushinteger -->
+<g id="interface~~aot_push~~CallsGraph_edge18" class="edge">
+<title>proc~flu_pushlong&#45;&gt;interface~lua_pushinteger</title>
+<path fill="none" stroke="#000000" d="M439.52,-270.53C448.49,-272.03 458.22,-273.66 467.81,-275.26"/>
+<polygon fill="#000000" stroke="#000000" points="467.27,-278.72 477.71,-276.92 468.43,-271.82 467.27,-278.72"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+
+
+        <h2>Module Procedures</h2>
+            <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-aot_table_push"></span> <h3>public  subroutine <a href='../proc/aot_table_push.html'>aot_table_push</a>(L, thandle, key, pos, toptype)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>This subroutine tries to push the value of the entry given by key or pos
+within the table thandle onto the Lua stack.</p><a href="../proc/aot_table_push.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l~9"></span>
+              type(<a href='../type/flu_state.html'>flu_State</a>)
+            </td>
+<td></td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>L</strong></td>
+            <td>
+<p>Handle for the Lua script.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-thandle~6"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>thandle</strong></td>
+            <td>
+<p>Handle to the table to look in.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-key~4"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>key</strong></td>
+            <td>
+<p>Name of the entry to push to the stack.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pos~4"></span>
+              integer,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pos</strong></td>
+            <td>
+<p>Position of the entry to push to the stack.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-toptype~3"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>toptype</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+</div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

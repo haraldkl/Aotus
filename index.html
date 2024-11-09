@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A Fortran wrapper around the C-API of Lua, for usage as configuration.">
+    <meta name="author" content="University of Siegen" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> Aotus </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">Aotus </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="page/index.html">Overview</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./program/test.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <!-- Main component for a primary marketing message or call to action -->
+    <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+      <p>A Fortran wrapper around the C-API of Lua, for usage as configuration.</p>
+        <p> Find us on&hellip;</p>
+      <p>
+        
+        
+        
+        
+        <a class="btn btn-lg btn-primary" href="https://geb.inf.tu-dresden.de/apes-suite/pages/aotus.html" role="button">The Web</a>
+      </p>
+    </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>Aotus</h1>
+          <h1>Advanced Options and Tables in Universal Scripting</h1>
+<p>The Aotus library provides a Fortran wrapper around the C-API of the
+<a href="http://www.lua.org">Lua</a> scripting language, allowing a convenient usage of Lua
+scripts as configuration files in Fortran applications.</p>
+<p><strong>It is available for download from <a href="https://github.com/apes-suite/aotus">Github</a>.</strong></p>
+<p><em>This library is released under a simplified MIT licence,
+ please have a look into the LICENSE file for details.</em></p>
+<p>Aotus is part of the <a href="https://geb.inf.tu-dresden.de/apes-suite/">APES suite</a>.</p>
+<h2>How To Build</h2>
+<p><a href="http://waf.io/">Waf</a> is used as build system.</p>
+<p>Run:</p>
+<div class="codehilite"><pre><span></span><code>./waf<span class="w"> </span>configure<span class="w"> </span>build
+</code></pre></div>
+
+<p>to build the Aotus library.
+If you want to select a specific Fortran compiler, set the environment variable
+<em>FC</em>.
+And for a specific C compiler, set the environment variable <em>CC</em>.
+The Fortran compiler flags are set with the help of fcopts, which provide
+a set of compiler flag combinations for various compilers.
+They are found in the <code>fortran_compiler.py</code> file in the root directory of the project.</p>
+<p>By running:</p>
+<div class="codehilite"><pre><span></span><code>./waf<span class="w"> </span>--help
+</code></pre></div>
+
+<p>you get a list of available options to the waf script.</p>
+<h3>Generating a Makefile</h3>
+<p>If you do not want to use waf for the actual compilation of the project,
+you can generate a <code>Makefile</code> with waf by running the <code>dump</code> command.
+To resemble more closely the usual auto-tool steps, there is a
+<code>configure</code> script to run the configuration phase of waf and the
+generation of the Makefile.
+This will create a Makefile in the build subdirectory, so you can
+compile aotus with:</p>
+<div class="codehilite"><pre><span></span><code>./configure
+<span class="nb">cd</span><span class="w"> </span>build
+make
+</code></pre></div>
+
+<p>You can get a list of available options by running</p>
+<div class="codehilite"><pre><span></span><code>./configure<span class="w"> </span>--help
+</code></pre></div>
+
+<h3>Build with the smeka system</h3>
+<p>The Aotus library can also be built by using the provided <code>Makefile.smeka</code>,
+which utilizes the <a href="https://github.com/zerothi/smeka">smeka</a> build system.</p>
+<p>This build system requires the compilation in a subdirectory.
+A minimal compilation (defaulting to the GNU compiler suite,
+<code>gfortran</code>/<code>gcc</code>) is achieved by running:</p>
+<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+<span class="o">{</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;TOP_DIR = ..&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;include $(TOP_DIR)/Makefile.smeka&#39;</span>
+<span class="o">}</span><span class="w"> </span>&gt;<span class="w"> </span>Makefile
+make
+</code></pre></div>
+
+<p>and the resulting <em>libaotus.a</em> will be put in that directory.
+To control the compiler flags you may create a file <code>setup.make</code>,
+which can define the usual <code>FC</code>, <code>FFLAGS</code>, <code>CC</code>, <code>CFLAGS</code>, <code>INCLUDES</code>
+and <code>LIBS</code> variables which are used for compilation, and linking.
+For instance, to compile with just the <code>-g</code> flag, you can use:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">{</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">FFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-g
+<span class="nb">echo</span><span class="w"> </span><span class="nv">CFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-g
+<span class="o">}</span><span class="w"> </span>&gt;<span class="w"> </span>setup.make
+</code></pre></div>
+
+<p>Note that the default compiler is still the GNU suite.</p>
+<p>Aotus may be built with two variations of extended precisions. They may
+individually be turned on by setting these variables:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">EXTDOUBLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>#<span class="w"> </span><span class="nv">defaults</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">build</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">extended</span><span class="w"> </span><span class="nv">double</span>
+<span class="nv">QUADRUPLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>#<span class="w"> </span><span class="nv">defaults</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">build</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">quadruple</span><span class="w"> </span><span class="nv">double</span>
+</code></pre></div>
+
+<p>To install the library together with the modules in a given directory,
+you can run:</p>
+<div class="codehilite"><pre><span></span><code>make<span class="w"> </span>install<span class="w"> </span><span class="nv">PREFIX</span><span class="o">=</span><span class="nv">$HOME</span>/aotus
+</code></pre></div>
+
+<p>This will create <code>bin/</code>, <code>include/</code> and <code>lib/</code> directories within the
+<code>PREFIX</code> path with the typical libraries and modules.</p>
+<p><em>NOTE</em>: Currently <code>liblua.a</code> is not added to the archive, this may easily be
+achieved by performing this shell command (after having run <code>make</code>)</p>
+<div class="codehilite"><pre><span></span><code>rm<span class="w"> </span>libaotus.a
+ar<span class="w"> </span>-ru<span class="w"> </span>libaotus.a<span class="w"> </span>*.o
+ranlib<span class="w"> </span>libaotus.a
+</code></pre></div>
+
+<h2>What is Built</h2>
+<p>For your convenience the Lua library is included in version 5.4.6 (released
+2023-05-14).
+Its objects are completely gathered into the final <em>libaotus</em> library, so it is
+only necessary to link against this single static library to gain the
+configuration features of aotus in your Fortran application.
+Due to the compiler specific module information required by any application
+using the libaotus, the suggested approach to incorporate libaotus is to include
+its building in the build process of the final application. This is straight
+forward if waf is used for the complete project. But also in other build
+environments it should not be too hard to make use of the generated <em>build</em>
+directory.
+Yet if you would rather install the <em>libaotus.a</em> and the module files into a
+<em>$PREFIX</em> directory, you can make use of:</p>
+<div class="codehilite"><pre><span></span><code>./waf<span class="w"> </span>install
+</code></pre></div>
+
+<p>The default build process will also create some unit test executables and
+execute them to ensure functionality of the various parts in the library.</p>
+<p>The documentation can be built with
+<a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> by running:</p>
+<div class="codehilite"><pre><span></span><code>ford<span class="w"> </span>aot_mainpage.md
+</code></pre></div>
+
+<p>This will build a docu directory with the resulting documentation.
+Note, that this requires
+<a href="https://github.com/Fortran-FOSS-Programmers/ford/wiki/Installation">FORD to be installed</a>
+beforehand.
+This documentation is also online available at
+<a href="https://geb.inf.tu-dresden.de/doxy/aotus/">our server</a>.</p>
+<h3>Example</h3>
+<p>There is an example program built, called aotus_sample, which you will find in
+the <em>build</em> directory.
+It can be used with the provided <em>config.lua</em> in the <em>sample</em> directory, where
+also the source of this small program is found.</p>
+<h2>Getting Started</h2>
+<p>The central module in this library is the <a href="module/aotus_module.html">aotus_module</a>.
+Its documentation and the <a href="page/index.html">Aotus overview</a> would be good
+starting points.</p>
+<h2>Related Projects</h2>
+<p>Some projects with similar goals or related information:</p>
+<ul>
+<li><a href="https://github.com/MaikBeckmann/f2k3-lua/tree/simple">f2k3-lua</a></li>
+<li><a href="https://github.com/adolgert/FortLua">FortLua</a></li>
+</ul>
+<h1>License</h1>
+<p>Aotus is licensed under the terms of the MIT license reproduced below.
+This means that Aotus is free software and can be used for both academic and
+commercial purposes at absolutely no cost. You are free to do with the code
+whatever you want.
+The only requirement is that some credit to the authors is given by putting this
+copyright notice somewhere in your project.
+The MIT license is chosen for full compatibility with Lua.</p>
+<p>For the license of the underlying Lua library have a look at
+http://www.lua.org/license.html.</p>
+<hr>
+<p>See individual files for the respective copyright holders.</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+<hr>
+        </div>
+          <div class="col-md-4">
+            <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">University of Siegen</h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='sourcefile/aot_err_module.f90.html'>aot_err_module.f90</a></li><li><a href='sourcefile/aot_extdouble_fun_module.f90.html'>aot_extdouble_fun_module.f90</a></li><li><a href='sourcefile/aot_extdouble_out_module.f90.html'>aot_extdouble_out_module.f90</a></li><li><a href='sourcefile/aot_extdouble_table_module.f90.html'>aot_extdouble_table_module.f90</a></li><li><a href='sourcefile/aot_extdouble_top_module.f90.html'>aot_extdouble_top_module.f90</a></li><li><a href='sourcefile/aot_extdouble_vector_module.f90.html'>aot_extdouble_vector_module.f90</a></li><li><a href='sourcefile/aot_fun_declaration_module.f90.html'>aot_fun_declaration_module.f90</a></li><li><a href='sourcefile/aot_fun_module.f90.html'>aot_fun_module.f90</a></li><li><a href='sourcefile/aot_out_general_module.f90.html'>aot_out_general_module.f90</a></li><li><a href='sourcefile/aot_out_module.f90.html'>aot_out_module.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='module/aot_err_module.html'>aot_err_module</a></li><li><a href='module/aot_extdouble_fun_module.html'>aot_extdouble_fun_module</a></li><li><a href='module/aot_extdouble_out_module.html'>aot_extdouble_out_module</a></li><li><a href='module/aot_extdouble_table_module.html'>aot_extdouble_table_module</a></li><li><a href='module/aot_extdouble_top_module.html'>aot_extdouble_top_module</a></li><li><a href='module/aot_extdouble_vector_module.html'>aot_extdouble_vector_module</a></li><li><a href='module/aot_fun_declaration_module.html'>aot_fun_declaration_module</a></li><li><a href='module/aot_fun_module.html'>aot_fun_module</a></li><li><a href='module/aot_out_general_module.html'>aot_out_general_module</a></li><li><a href='module/aot_out_module.html'>aot_out_module</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='proc/aot_err_handler.html'>aot_err_handler</a></li><li><a href='proc/aot_exists.html'>aot_exists</a></li><li><a href='proc/aot_file_to_buffer.html'>aot_file_to_buffer</a></li><li><a href='proc/aot_fin_path.html'>aot_fin_path</a></li><li><a href='proc/aot_fun_close.html'>aot_fun_close</a></li><li><a href='proc/aot_fun_do.html'>aot_fun_do</a></li><li><a href='proc/aot_fun_id.html'>aot_fun_id</a></li><li><a href='interface/aot_fun_open.html'>aot_fun_open</a></li><li><a href='interface/aot_fun_put.html'>aot_fun_put</a></li><li><a href='interface/aot_fun_put~2.html'>aot_fun_put</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='type/aot_fun_type.html'>aot_fun_type</a></li><li><a href='type/aot_out_type.html'>aot_out_type</a></li><li><a href='type/aot_path_node_type.html'>aot_path_node_type</a></li><li><a href='type/aot_path_type.html'>aot_path_type</a></li><li><a href='type/cbuf_type.html'>cbuf_type</a></li><li><a href='type/flu_state.html'>flu_State</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              Aotus
+ was developed by University of Siegen<br>              &copy; 2024 
+<br /><small>2a2b7066101f</small></p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-09T15:12:20.958032             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
