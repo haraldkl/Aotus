@@ -37,7 +37,7 @@ jobs:
 
       - name: Build FORD Documentation
         run: |
-          git_hash=$(git describe --abbrev=12 --always --dirty=+ "$GITHUB_SHA")
+          git_hash=$(git describe --abbrev=12 --always "$GITHUB_SHA")
           ford -r $git_hash --externalize aot_mainpage.md
 
       - name: Deploy Documentation
