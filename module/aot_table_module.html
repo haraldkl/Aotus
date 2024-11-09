@@ -126,10 +126,10 @@
       </a>
       <div id="inters-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_table_get_val~3">aot_table_get_val</a>
-            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_table_set_val">aot_table_set_val</a>
-            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_get_val~3">aot_get_val</a>
-            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_table_from_1darray">aot_table_from_1Darray</a>
+            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_table_get_val~8">aot_table_get_val</a>
+            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_table_set_val~2">aot_table_set_val</a>
+            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_get_val~8">aot_get_val</a>
+            <a class="list-group-item" href="../module/aot_table_module.html#interface-aot_table_from_1darray~2">aot_table_from_1Darray</a>
         </div>
       </div>
     </div>
@@ -197,13 +197,13 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <ul class="list-inline">
-                  <li class="list-inline-item"><a href='flu_binding.html'>flu_binding</a></li>
-                  <li class="list-inline-item"><a href='aot_top_module.html'>aot_top_module</a></li>
-                  <li class="list-inline-item"><a href='aot_quadruple_table_module.html'>aot_quadruple_table_module</a></li>
-                  <li class="list-inline-item"><a href='aot_table_ops_module.html'>aot_table_ops_module</a></li>
                   <li class="list-inline-item"><a href='aot_err_module.html'>aot_err_module</a></li>
-                  <li class="list-inline-item"><a href='aot_extdouble_table_module.html'>aot_extdouble_table_module</a></li>
+                  <li class="list-inline-item"><a href='aot_top_module.html'>aot_top_module</a></li>
+                  <li class="list-inline-item"><a href='aot_table_ops_module.html'>aot_table_ops_module</a></li>
+                  <li class="list-inline-item"><a href='aot_quadruple_table_module.html'>aot_quadruple_table_module</a></li>
                   <li class="list-inline-item"><a href='flu_kinds_module.html'>flu_kinds_module</a></li>
+                  <li class="list-inline-item"><a href='aot_extdouble_table_module.html'>aot_extdouble_table_module</a></li>
+                  <li class="list-inline-item"><a href='flu_binding.html'>flu_binding</a></li>
               </ul>
             </li>
             <li class="list-group-item">
@@ -884,8 +884,8 @@ modules which it uses.
           <h2>Interfaces</h2>
               <div class="card">
     <div class="card-header bg-light codesum">
-      <span class="anchor" id="interface-aot_table_get_val~3"></span>
-      <h3>public        interface <a href='../interface/aot_table_get_val~3.html'>aot_table_get_val</a> 
+      <span class="anchor" id="interface-aot_table_get_val~8"></span>
+      <h3>public        interface <a href='../interface/aot_table_get_val~8.html'>aot_table_get_val</a> 
       </h3>
     </div>
       <div class="card-body">
@@ -919,7 +919,7 @@ in the list before the entry in question.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~15"></span>
+              <span class="anchor" id="variable-val~47"></span>
               real(kind=single_k),
             </td>
 <td>intent(out)</td>
@@ -934,7 +934,7 @@ in the list before the entry in question.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~13"></span>
+              <span class="anchor" id="variable-errcode~47"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -949,7 +949,7 @@ in the list before the entry in question.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~59"></span>
+              <span class="anchor" id="variable-l~164"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -964,7 +964,7 @@ in the list before the entry in question.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~11"></span>
+              <span class="anchor" id="variable-thandle~32"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -979,7 +979,7 @@ in the list before the entry in question.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~7"></span>
+              <span class="anchor" id="variable-key~25"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -989,12 +989,12 @@ in the list before the entry in question.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_real.html#variable-key~7" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_real.html#variable-key~25" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~7"></span>
+              <span class="anchor" id="variable-pos~25"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1004,12 +1004,12 @@ in the list before the entry in question.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_real.html#variable-pos~7" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_real.html#variable-pos~25" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~13"></span>
+              <span class="anchor" id="variable-default~42"></span>
               real(kind=single_k),
             </td>
 <td>intent(in),</td>
@@ -1049,7 +1049,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~16"></span>
+              <span class="anchor" id="variable-val~48"></span>
               real(kind=double_k),
             </td>
 <td>intent(out)</td>
@@ -1064,7 +1064,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~14"></span>
+              <span class="anchor" id="variable-errcode~48"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1079,7 +1079,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~60"></span>
+              <span class="anchor" id="variable-l~165"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1094,7 +1094,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~12"></span>
+              <span class="anchor" id="variable-thandle~33"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1109,7 +1109,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~8"></span>
+              <span class="anchor" id="variable-key~26"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1119,12 +1119,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_double.html#variable-key~8" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_double.html#variable-key~26" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~8"></span>
+              <span class="anchor" id="variable-pos~26"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1134,12 +1134,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_double.html#variable-pos~8" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_double.html#variable-pos~26" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~14"></span>
+              <span class="anchor" id="variable-default~43"></span>
               real(kind=double_k),
             </td>
 <td>intent(in),</td>
@@ -1179,7 +1179,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~17"></span>
+              <span class="anchor" id="variable-val~49"></span>
               integer(kind=int_k),
             </td>
 <td>intent(out)</td>
@@ -1194,7 +1194,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~15"></span>
+              <span class="anchor" id="variable-errcode~49"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1209,7 +1209,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~61"></span>
+              <span class="anchor" id="variable-l~166"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1224,7 +1224,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~13"></span>
+              <span class="anchor" id="variable-thandle~34"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1239,7 +1239,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~9"></span>
+              <span class="anchor" id="variable-key~27"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1249,12 +1249,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_integer.html#variable-key~9" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_integer.html#variable-key~27" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~9"></span>
+              <span class="anchor" id="variable-pos~27"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1264,12 +1264,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_integer.html#variable-pos~9" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_integer.html#variable-pos~27" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~15"></span>
+              <span class="anchor" id="variable-default~44"></span>
               integer(kind=int_k),
             </td>
 <td>intent(in),</td>
@@ -1309,7 +1309,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~18"></span>
+              <span class="anchor" id="variable-val~50"></span>
               integer(kind=long_k),
             </td>
 <td>intent(out)</td>
@@ -1324,7 +1324,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~16"></span>
+              <span class="anchor" id="variable-errcode~50"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1339,7 +1339,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~62"></span>
+              <span class="anchor" id="variable-l~167"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1354,7 +1354,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~14"></span>
+              <span class="anchor" id="variable-thandle~35"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1369,7 +1369,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~10"></span>
+              <span class="anchor" id="variable-key~28"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1379,12 +1379,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_long.html#variable-key~10" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_long.html#variable-key~28" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~10"></span>
+              <span class="anchor" id="variable-pos~28"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1394,12 +1394,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_long.html#variable-pos~10" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_long.html#variable-pos~28" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~16"></span>
+              <span class="anchor" id="variable-default~45"></span>
               integer(kind=long_k),
             </td>
 <td>intent(in),</td>
@@ -1439,7 +1439,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~21"></span>
+              <span class="anchor" id="variable-val~53"></span>
               character(len=*)
             </td>
 <td></td>
@@ -1454,7 +1454,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~19"></span>
+              <span class="anchor" id="variable-errcode~53"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1469,7 +1469,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~65"></span>
+              <span class="anchor" id="variable-l~170"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1484,7 +1484,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~17"></span>
+              <span class="anchor" id="variable-thandle~38"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1499,7 +1499,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~13"></span>
+              <span class="anchor" id="variable-key~31"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1509,12 +1509,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_string.html#variable-key~13" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_string.html#variable-key~31" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~13"></span>
+              <span class="anchor" id="variable-pos~31"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1524,12 +1524,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_string.html#variable-pos~13" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_string.html#variable-pos~31" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~19"></span>
+              <span class="anchor" id="variable-default~48"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1569,7 +1569,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~19"></span>
+              <span class="anchor" id="variable-val~51"></span>
               logical,
             </td>
 <td>intent(out)</td>
@@ -1584,7 +1584,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~17"></span>
+              <span class="anchor" id="variable-errcode~51"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1599,7 +1599,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~63"></span>
+              <span class="anchor" id="variable-l~168"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1614,7 +1614,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~15"></span>
+              <span class="anchor" id="variable-thandle~36"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1629,7 +1629,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~11"></span>
+              <span class="anchor" id="variable-key~29"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1639,12 +1639,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_logical.html#variable-key~11" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_logical.html#variable-key~29" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~11"></span>
+              <span class="anchor" id="variable-pos~29"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1654,12 +1654,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_logical.html#variable-pos~11" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_logical.html#variable-pos~29" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~17"></span>
+              <span class="anchor" id="variable-default~46"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -1699,7 +1699,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~20"></span>
+              <span class="anchor" id="variable-val~52"></span>
               type(c_ptr),
             </td>
 <td>intent(out)</td>
@@ -1714,7 +1714,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~18"></span>
+              <span class="anchor" id="variable-errcode~52"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -1729,7 +1729,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~64"></span>
+              <span class="anchor" id="variable-l~169"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1744,7 +1744,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~16"></span>
+              <span class="anchor" id="variable-thandle~37"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1759,7 +1759,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~12"></span>
+              <span class="anchor" id="variable-key~30"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1769,12 +1769,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_userdata.html#variable-key~12" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_userdata.html#variable-key~30" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~12"></span>
+              <span class="anchor" id="variable-pos~30"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1784,12 +1784,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_userdata.html#variable-pos~12" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_userdata.html#variable-pos~30" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~18"></span>
+              <span class="anchor" id="variable-default~47"></span>
               type(c_ptr),
             </td>
 <td>intent(in),</td>
@@ -1813,8 +1813,8 @@ the Lua script.</p>
 
               <div class="card">
     <div class="card-header bg-light codesum">
-      <span class="anchor" id="interface-aot_table_set_val"></span>
-      <h3>public        interface <a href='../interface/aot_table_set_val.html'>aot_table_set_val</a> 
+      <span class="anchor" id="interface-aot_table_set_val~2"></span>
+      <h3>public        interface <a href='../interface/aot_table_set_val~2.html'>aot_table_set_val</a> 
       </h3>
     </div>
       <div class="card-body">
@@ -1848,7 +1848,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~22"></span>
+              <span class="anchor" id="variable-val~54"></span>
               real(kind=single_k),
             </td>
 <td>intent(in)</td>
@@ -1863,7 +1863,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~67"></span>
+              <span class="anchor" id="variable-l~172"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1878,7 +1878,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~19"></span>
+              <span class="anchor" id="variable-thandle~40"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -1893,7 +1893,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~15"></span>
+              <span class="anchor" id="variable-key~33"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -1903,12 +1903,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_real.html#variable-key~15" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_real.html#variable-key~33" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~15"></span>
+              <span class="anchor" id="variable-pos~33"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -1918,7 +1918,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_real.html#variable-pos~15" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_real.html#variable-pos~33" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -1947,7 +1947,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~23"></span>
+              <span class="anchor" id="variable-val~55"></span>
               real(kind=double_k),
             </td>
 <td>intent(in)</td>
@@ -1962,7 +1962,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~68"></span>
+              <span class="anchor" id="variable-l~173"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -1977,7 +1977,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~20"></span>
+              <span class="anchor" id="variable-thandle~41"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -1992,7 +1992,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~16"></span>
+              <span class="anchor" id="variable-key~34"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2002,12 +2002,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_double.html#variable-key~16" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_double.html#variable-key~34" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~16"></span>
+              <span class="anchor" id="variable-pos~34"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2017,7 +2017,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_double.html#variable-pos~16" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_double.html#variable-pos~34" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -2046,7 +2046,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~24"></span>
+              <span class="anchor" id="variable-val~56"></span>
               integer(kind=int_k),
             </td>
 <td>intent(in)</td>
@@ -2061,7 +2061,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~69"></span>
+              <span class="anchor" id="variable-l~174"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2076,7 +2076,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~21"></span>
+              <span class="anchor" id="variable-thandle~42"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2091,7 +2091,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~17"></span>
+              <span class="anchor" id="variable-key~35"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2101,12 +2101,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_integer.html#variable-key~17" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_integer.html#variable-key~35" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~17"></span>
+              <span class="anchor" id="variable-pos~35"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2116,7 +2116,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_integer.html#variable-pos~17" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_integer.html#variable-pos~35" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -2145,7 +2145,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~25"></span>
+              <span class="anchor" id="variable-val~57"></span>
               integer(kind=long_k),
             </td>
 <td>intent(in)</td>
@@ -2160,7 +2160,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~70"></span>
+              <span class="anchor" id="variable-l~175"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2175,7 +2175,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~22"></span>
+              <span class="anchor" id="variable-thandle~43"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2190,7 +2190,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~18"></span>
+              <span class="anchor" id="variable-key~36"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2200,12 +2200,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_long.html#variable-key~18" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_long.html#variable-key~36" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~18"></span>
+              <span class="anchor" id="variable-pos~36"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2215,7 +2215,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_long.html#variable-pos~18" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_long.html#variable-pos~36" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -2244,7 +2244,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~27"></span>
+              <span class="anchor" id="variable-val~59"></span>
               character(len=*),
             </td>
 <td>intent(in)</td>
@@ -2259,7 +2259,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~72"></span>
+              <span class="anchor" id="variable-l~177"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2274,7 +2274,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~24"></span>
+              <span class="anchor" id="variable-thandle~45"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2289,7 +2289,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~20"></span>
+              <span class="anchor" id="variable-key~38"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2299,12 +2299,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to set.</p><a href="../proc/set_table_string.html#variable-key~20" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to set.</p><a href="../proc/set_table_string.html#variable-key~38" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~20"></span>
+              <span class="anchor" id="variable-pos~38"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2314,7 +2314,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to set in the table.</p><a href="../proc/set_table_string.html#variable-pos~20" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to set in the table.</p><a href="../proc/set_table_string.html#variable-pos~38" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -2343,7 +2343,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~26"></span>
+              <span class="anchor" id="variable-val~58"></span>
               logical,
             </td>
 <td>intent(in)</td>
@@ -2358,7 +2358,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~71"></span>
+              <span class="anchor" id="variable-l~176"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2373,7 +2373,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~23"></span>
+              <span class="anchor" id="variable-thandle~44"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2388,7 +2388,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~19"></span>
+              <span class="anchor" id="variable-key~37"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2398,12 +2398,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to set.</p><a href="../proc/set_table_logical.html#variable-key~19" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to set.</p><a href="../proc/set_table_logical.html#variable-key~37" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~19"></span>
+              <span class="anchor" id="variable-pos~37"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2413,7 +2413,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to set in the table.</p><a href="../proc/set_table_logical.html#variable-pos~19" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to set in the table.</p><a href="../proc/set_table_logical.html#variable-pos~37" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -2442,7 +2442,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~28"></span>
+              <span class="anchor" id="variable-val~60"></span>
               type(c_ptr),
             </td>
 <td>intent(in)</td>
@@ -2457,7 +2457,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~73"></span>
+              <span class="anchor" id="variable-l~178"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2472,7 +2472,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~25"></span>
+              <span class="anchor" id="variable-thandle~46"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -2487,7 +2487,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~21"></span>
+              <span class="anchor" id="variable-key~39"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2497,12 +2497,12 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to set.</p><a href="../proc/set_table_userdata.html#variable-key~21" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to set.</p><a href="../proc/set_table_userdata.html#variable-key~39" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~21"></span>
+              <span class="anchor" id="variable-pos~39"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2512,7 +2512,7 @@ Though, both of them are optional, at least one of them has to be provided.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to set in the table.</p><a href="../proc/set_table_userdata.html#variable-pos~21" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to set in the table.</p><a href="../proc/set_table_userdata.html#variable-pos~39" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -2525,8 +2525,8 @@ Though, both of them are optional, at least one of them has to be provided.</p>
 
               <div class="card">
     <div class="card-header bg-light codesum">
-      <span class="anchor" id="interface-aot_get_val~3"></span>
-      <h3>public        interface <a href='../interface/aot_get_val~3.html'>aot_get_val</a> 
+      <span class="anchor" id="interface-aot_get_val~8"></span>
+      <h3>public        interface <a href='../interface/aot_get_val~8.html'>aot_get_val</a> 
       </h3>
     </div>
       <div class="card-body">
@@ -2594,7 +2594,7 @@ the unnamed entries of the tables.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~15"></span>
+              <span class="anchor" id="variable-val~47"></span>
               real(kind=single_k),
             </td>
 <td>intent(out)</td>
@@ -2609,7 +2609,7 @@ the unnamed entries of the tables.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~13"></span>
+              <span class="anchor" id="variable-errcode~47"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -2624,7 +2624,7 @@ the unnamed entries of the tables.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~59"></span>
+              <span class="anchor" id="variable-l~164"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2639,7 +2639,7 @@ the unnamed entries of the tables.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~11"></span>
+              <span class="anchor" id="variable-thandle~32"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2654,7 +2654,7 @@ the unnamed entries of the tables.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~7"></span>
+              <span class="anchor" id="variable-key~25"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2664,12 +2664,12 @@ the unnamed entries of the tables.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_real.html#variable-key~7" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_real.html#variable-key~25" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~7"></span>
+              <span class="anchor" id="variable-pos~25"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2679,12 +2679,12 @@ the unnamed entries of the tables.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_real.html#variable-pos~7" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_real.html#variable-pos~25" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~13"></span>
+              <span class="anchor" id="variable-default~42"></span>
               real(kind=single_k),
             </td>
 <td>intent(in),</td>
@@ -2724,7 +2724,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~16"></span>
+              <span class="anchor" id="variable-val~48"></span>
               real(kind=double_k),
             </td>
 <td>intent(out)</td>
@@ -2739,7 +2739,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~14"></span>
+              <span class="anchor" id="variable-errcode~48"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -2754,7 +2754,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~60"></span>
+              <span class="anchor" id="variable-l~165"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2769,7 +2769,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~12"></span>
+              <span class="anchor" id="variable-thandle~33"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2784,7 +2784,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~8"></span>
+              <span class="anchor" id="variable-key~26"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2794,12 +2794,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_double.html#variable-key~8" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_double.html#variable-key~26" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~8"></span>
+              <span class="anchor" id="variable-pos~26"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2809,12 +2809,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_double.html#variable-pos~8" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_double.html#variable-pos~26" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~14"></span>
+              <span class="anchor" id="variable-default~43"></span>
               real(kind=double_k),
             </td>
 <td>intent(in),</td>
@@ -2854,7 +2854,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~17"></span>
+              <span class="anchor" id="variable-val~49"></span>
               integer(kind=int_k),
             </td>
 <td>intent(out)</td>
@@ -2869,7 +2869,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~15"></span>
+              <span class="anchor" id="variable-errcode~49"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -2884,7 +2884,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~61"></span>
+              <span class="anchor" id="variable-l~166"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -2899,7 +2899,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~13"></span>
+              <span class="anchor" id="variable-thandle~34"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2914,7 +2914,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~9"></span>
+              <span class="anchor" id="variable-key~27"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -2924,12 +2924,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_integer.html#variable-key~9" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_integer.html#variable-key~27" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~9"></span>
+              <span class="anchor" id="variable-pos~27"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -2939,12 +2939,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_integer.html#variable-pos~9" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_integer.html#variable-pos~27" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~15"></span>
+              <span class="anchor" id="variable-default~44"></span>
               integer(kind=int_k),
             </td>
 <td>intent(in),</td>
@@ -2984,7 +2984,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~18"></span>
+              <span class="anchor" id="variable-val~50"></span>
               integer(kind=long_k),
             </td>
 <td>intent(out)</td>
@@ -2999,7 +2999,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~16"></span>
+              <span class="anchor" id="variable-errcode~50"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3014,7 +3014,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~62"></span>
+              <span class="anchor" id="variable-l~167"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3029,7 +3029,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~14"></span>
+              <span class="anchor" id="variable-thandle~35"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3044,7 +3044,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~10"></span>
+              <span class="anchor" id="variable-key~28"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3054,12 +3054,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_long.html#variable-key~10" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_long.html#variable-key~28" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~10"></span>
+              <span class="anchor" id="variable-pos~28"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3069,12 +3069,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_long.html#variable-pos~10" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_long.html#variable-pos~28" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~16"></span>
+              <span class="anchor" id="variable-default~45"></span>
               integer(kind=long_k),
             </td>
 <td>intent(in),</td>
@@ -3114,7 +3114,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~21"></span>
+              <span class="anchor" id="variable-val~53"></span>
               character(len=*)
             </td>
 <td></td>
@@ -3129,7 +3129,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~19"></span>
+              <span class="anchor" id="variable-errcode~53"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3144,7 +3144,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~65"></span>
+              <span class="anchor" id="variable-l~170"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3159,7 +3159,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~17"></span>
+              <span class="anchor" id="variable-thandle~38"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3174,7 +3174,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~13"></span>
+              <span class="anchor" id="variable-key~31"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3184,12 +3184,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_string.html#variable-key~13" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_string.html#variable-key~31" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~13"></span>
+              <span class="anchor" id="variable-pos~31"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3199,12 +3199,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_string.html#variable-pos~13" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_string.html#variable-pos~31" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~19"></span>
+              <span class="anchor" id="variable-default~48"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3244,7 +3244,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~19"></span>
+              <span class="anchor" id="variable-val~51"></span>
               logical,
             </td>
 <td>intent(out)</td>
@@ -3259,7 +3259,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~17"></span>
+              <span class="anchor" id="variable-errcode~51"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3274,7 +3274,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~63"></span>
+              <span class="anchor" id="variable-l~168"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3289,7 +3289,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~15"></span>
+              <span class="anchor" id="variable-thandle~36"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3304,7 +3304,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~11"></span>
+              <span class="anchor" id="variable-key~29"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3314,12 +3314,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_logical.html#variable-key~11" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_logical.html#variable-key~29" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~11"></span>
+              <span class="anchor" id="variable-pos~29"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3329,12 +3329,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_logical.html#variable-pos~11" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_logical.html#variable-pos~29" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~17"></span>
+              <span class="anchor" id="variable-default~46"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -3374,7 +3374,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~20"></span>
+              <span class="anchor" id="variable-val~52"></span>
               type(c_ptr),
             </td>
 <td>intent(out)</td>
@@ -3389,7 +3389,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~18"></span>
+              <span class="anchor" id="variable-errcode~52"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3404,7 +3404,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~64"></span>
+              <span class="anchor" id="variable-l~169"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3419,7 +3419,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~16"></span>
+              <span class="anchor" id="variable-thandle~37"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3434,7 +3434,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~12"></span>
+              <span class="anchor" id="variable-key~30"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3444,12 +3444,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_userdata.html#variable-key~12" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_userdata.html#variable-key~30" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~12"></span>
+              <span class="anchor" id="variable-pos~30"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3459,12 +3459,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_userdata.html#variable-pos~12" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_userdata.html#variable-pos~30" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~18"></span>
+              <span class="anchor" id="variable-default~47"></span>
               type(c_ptr),
             </td>
 <td>intent(in),</td>
@@ -3488,8 +3488,8 @@ the Lua script.</p>
 
               <div class="card">
     <div class="card-header bg-light codesum">
-      <span class="anchor" id="interface-aot_table_from_1darray"></span>
-      <h3>public        interface <a href='../interface/aot_table_from_1darray.html'>aot_table_from_1Darray</a> 
+      <span class="anchor" id="interface-aot_table_from_1darray~2"></span>
+      <h3>public        interface <a href='../interface/aot_table_from_1darray~2.html'>aot_table_from_1Darray</a> 
       </h3>
     </div>
       <div class="card-body">
@@ -3523,7 +3523,7 @@ table.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~74"></span>
+              <span class="anchor" id="variable-l~179"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3538,7 +3538,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~26"></span>
+              <span class="anchor" id="variable-thandle~47"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3553,7 +3553,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~29"></span>
+              <span class="anchor" id="variable-val~61"></span>
               real(kind=single_k),
             </td>
 <td>intent(in)</td>
@@ -3595,7 +3595,7 @@ table.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~75"></span>
+              <span class="anchor" id="variable-l~180"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3610,7 +3610,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~27"></span>
+              <span class="anchor" id="variable-thandle~48"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3625,7 +3625,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~30"></span>
+              <span class="anchor" id="variable-val~62"></span>
               real(kind=double_k),
             </td>
 <td>intent(in)</td>
@@ -3673,7 +3673,7 @@ table.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~58"></span>
+              <span class="anchor" id="variable-l~163"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3688,7 +3688,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~10"></span>
+              <span class="anchor" id="variable-thandle~31"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3703,7 +3703,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~6"></span>
+              <span class="anchor" id="variable-key~24"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3713,12 +3713,12 @@ table.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/aot_exists.html#variable-key~6" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/aot_exists.html#variable-key~24" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~6"></span>
+              <span class="anchor" id="variable-pos~24"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3728,7 +3728,7 @@ table.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/aot_exists.html#variable-pos~6" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/aot_exists.html#variable-pos~24" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -3768,7 +3768,7 @@ table.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~66"></span>
+              <span class="anchor" id="variable-l~171"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3783,7 +3783,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~18"></span>
+              <span class="anchor" id="variable-thandle~39"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -3798,7 +3798,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~14"></span>
+              <span class="anchor" id="variable-key~32"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3808,12 +3808,12 @@ table.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/aot_table_set_top.html#variable-key~14" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/aot_table_set_top.html#variable-key~32" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~14"></span>
+              <span class="anchor" id="variable-pos~32"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3823,7 +3823,7 @@ table.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/aot_table_set_top.html#variable-pos~14" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/aot_table_set_top.html#variable-pos~32" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -3853,7 +3853,7 @@ table.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~15"></span>
+              <span class="anchor" id="variable-val~47"></span>
               real(kind=single_k),
             </td>
 <td>intent(out)</td>
@@ -3868,7 +3868,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~13"></span>
+              <span class="anchor" id="variable-errcode~47"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -3883,7 +3883,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~59"></span>
+              <span class="anchor" id="variable-l~164"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -3898,7 +3898,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~11"></span>
+              <span class="anchor" id="variable-thandle~32"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3913,7 +3913,7 @@ table.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~7"></span>
+              <span class="anchor" id="variable-key~25"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -3923,12 +3923,12 @@ table.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_real.html#variable-key~7" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_real.html#variable-key~25" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~7"></span>
+              <span class="anchor" id="variable-pos~25"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -3938,12 +3938,12 @@ table.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_real.html#variable-pos~7" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_real.html#variable-pos~25" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~13"></span>
+              <span class="anchor" id="variable-default~42"></span>
               real(kind=single_k),
             </td>
 <td>intent(in),</td>
@@ -3984,7 +3984,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~16"></span>
+              <span class="anchor" id="variable-val~48"></span>
               real(kind=double_k),
             </td>
 <td>intent(out)</td>
@@ -3999,7 +3999,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~14"></span>
+              <span class="anchor" id="variable-errcode~48"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -4014,7 +4014,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~60"></span>
+              <span class="anchor" id="variable-l~165"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4029,7 +4029,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~12"></span>
+              <span class="anchor" id="variable-thandle~33"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4044,7 +4044,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~8"></span>
+              <span class="anchor" id="variable-key~26"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4054,12 +4054,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_double.html#variable-key~8" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_double.html#variable-key~26" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~8"></span>
+              <span class="anchor" id="variable-pos~26"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4069,12 +4069,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_double.html#variable-pos~8" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_double.html#variable-pos~26" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~14"></span>
+              <span class="anchor" id="variable-default~43"></span>
               real(kind=double_k),
             </td>
 <td>intent(in),</td>
@@ -4115,7 +4115,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~17"></span>
+              <span class="anchor" id="variable-val~49"></span>
               integer(kind=int_k),
             </td>
 <td>intent(out)</td>
@@ -4130,7 +4130,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~15"></span>
+              <span class="anchor" id="variable-errcode~49"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -4145,7 +4145,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~61"></span>
+              <span class="anchor" id="variable-l~166"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4160,7 +4160,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~13"></span>
+              <span class="anchor" id="variable-thandle~34"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4175,7 +4175,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~9"></span>
+              <span class="anchor" id="variable-key~27"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4185,12 +4185,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_integer.html#variable-key~9" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_integer.html#variable-key~27" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~9"></span>
+              <span class="anchor" id="variable-pos~27"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4200,12 +4200,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_integer.html#variable-pos~9" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_integer.html#variable-pos~27" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~15"></span>
+              <span class="anchor" id="variable-default~44"></span>
               integer(kind=int_k),
             </td>
 <td>intent(in),</td>
@@ -4246,7 +4246,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~18"></span>
+              <span class="anchor" id="variable-val~50"></span>
               integer(kind=long_k),
             </td>
 <td>intent(out)</td>
@@ -4261,7 +4261,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~16"></span>
+              <span class="anchor" id="variable-errcode~50"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -4276,7 +4276,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~62"></span>
+              <span class="anchor" id="variable-l~167"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4291,7 +4291,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~14"></span>
+              <span class="anchor" id="variable-thandle~35"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4306,7 +4306,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~10"></span>
+              <span class="anchor" id="variable-key~28"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4316,12 +4316,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_long.html#variable-key~10" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_long.html#variable-key~28" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~10"></span>
+              <span class="anchor" id="variable-pos~28"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4331,12 +4331,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_long.html#variable-pos~10" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_long.html#variable-pos~28" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~16"></span>
+              <span class="anchor" id="variable-default~45"></span>
               integer(kind=long_k),
             </td>
 <td>intent(in),</td>
@@ -4377,7 +4377,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~19"></span>
+              <span class="anchor" id="variable-val~51"></span>
               logical,
             </td>
 <td>intent(out)</td>
@@ -4392,7 +4392,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~17"></span>
+              <span class="anchor" id="variable-errcode~51"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -4407,7 +4407,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~63"></span>
+              <span class="anchor" id="variable-l~168"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4422,7 +4422,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~15"></span>
+              <span class="anchor" id="variable-thandle~36"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4437,7 +4437,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~11"></span>
+              <span class="anchor" id="variable-key~29"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4447,12 +4447,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_logical.html#variable-key~11" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_logical.html#variable-key~29" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~11"></span>
+              <span class="anchor" id="variable-pos~29"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4462,12 +4462,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_logical.html#variable-pos~11" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_logical.html#variable-pos~29" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~17"></span>
+              <span class="anchor" id="variable-default~46"></span>
               logical,
             </td>
 <td>intent(in),</td>
@@ -4508,7 +4508,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~20"></span>
+              <span class="anchor" id="variable-val~52"></span>
               type(c_ptr),
             </td>
 <td>intent(out)</td>
@@ -4523,7 +4523,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~18"></span>
+              <span class="anchor" id="variable-errcode~52"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -4538,7 +4538,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~64"></span>
+              <span class="anchor" id="variable-l~169"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4553,7 +4553,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~16"></span>
+              <span class="anchor" id="variable-thandle~37"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4568,7 +4568,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~12"></span>
+              <span class="anchor" id="variable-key~30"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4578,12 +4578,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_userdata.html#variable-key~12" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_userdata.html#variable-key~30" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~12"></span>
+              <span class="anchor" id="variable-pos~30"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4593,12 +4593,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_userdata.html#variable-pos~12" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_userdata.html#variable-pos~30" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~18"></span>
+              <span class="anchor" id="variable-default~47"></span>
               type(c_ptr),
             </td>
 <td>intent(in),</td>
@@ -4639,7 +4639,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~21"></span>
+              <span class="anchor" id="variable-val~53"></span>
               character(len=*)
             </td>
 <td></td>
@@ -4654,7 +4654,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-errcode~19"></span>
+              <span class="anchor" id="variable-errcode~53"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -4669,7 +4669,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~65"></span>
+              <span class="anchor" id="variable-l~170"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4684,7 +4684,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~17"></span>
+              <span class="anchor" id="variable-thandle~38"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4699,7 +4699,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~13"></span>
+              <span class="anchor" id="variable-key~31"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4709,12 +4709,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/get_table_string.html#variable-key~13" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/get_table_string.html#variable-key~31" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~13"></span>
+              <span class="anchor" id="variable-pos~31"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4724,12 +4724,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_string.html#variable-pos~13" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/get_table_string.html#variable-pos~31" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-default~19"></span>
+              <span class="anchor" id="variable-default~48"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4770,7 +4770,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~22"></span>
+              <span class="anchor" id="variable-val~54"></span>
               real(kind=single_k),
             </td>
 <td>intent(in)</td>
@@ -4785,7 +4785,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~67"></span>
+              <span class="anchor" id="variable-l~172"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4800,7 +4800,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~19"></span>
+              <span class="anchor" id="variable-thandle~40"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -4815,7 +4815,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~15"></span>
+              <span class="anchor" id="variable-key~33"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4825,12 +4825,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_real.html#variable-key~15" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_real.html#variable-key~33" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~15"></span>
+              <span class="anchor" id="variable-pos~33"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4840,7 +4840,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_real.html#variable-pos~15" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_real.html#variable-pos~33" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -4870,7 +4870,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~23"></span>
+              <span class="anchor" id="variable-val~55"></span>
               real(kind=double_k),
             </td>
 <td>intent(in)</td>
@@ -4885,7 +4885,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~68"></span>
+              <span class="anchor" id="variable-l~173"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -4900,7 +4900,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~20"></span>
+              <span class="anchor" id="variable-thandle~41"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -4915,7 +4915,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~16"></span>
+              <span class="anchor" id="variable-key~34"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -4925,12 +4925,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_double.html#variable-key~16" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_double.html#variable-key~34" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~16"></span>
+              <span class="anchor" id="variable-pos~34"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -4940,7 +4940,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_double.html#variable-pos~16" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_double.html#variable-pos~34" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -4970,7 +4970,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~24"></span>
+              <span class="anchor" id="variable-val~56"></span>
               integer(kind=int_k),
             </td>
 <td>intent(in)</td>
@@ -4985,7 +4985,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~69"></span>
+              <span class="anchor" id="variable-l~174"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5000,7 +5000,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~21"></span>
+              <span class="anchor" id="variable-thandle~42"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5015,7 +5015,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~17"></span>
+              <span class="anchor" id="variable-key~35"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -5025,12 +5025,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_integer.html#variable-key~17" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_integer.html#variable-key~35" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~17"></span>
+              <span class="anchor" id="variable-pos~35"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -5040,7 +5040,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_integer.html#variable-pos~17" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_integer.html#variable-pos~35" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -5070,7 +5070,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~25"></span>
+              <span class="anchor" id="variable-val~57"></span>
               integer(kind=long_k),
             </td>
 <td>intent(in)</td>
@@ -5085,7 +5085,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~70"></span>
+              <span class="anchor" id="variable-l~175"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5100,7 +5100,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~22"></span>
+              <span class="anchor" id="variable-thandle~43"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5115,7 +5115,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~18"></span>
+              <span class="anchor" id="variable-key~36"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -5125,12 +5125,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to look for.</p><a href="../proc/set_table_long.html#variable-key~18" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to look for.</p><a href="../proc/set_table_long.html#variable-key~36" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~18"></span>
+              <span class="anchor" id="variable-pos~36"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -5140,7 +5140,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_long.html#variable-pos~18" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to look for in the table.</p><a href="../proc/set_table_long.html#variable-pos~36" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -5170,7 +5170,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~26"></span>
+              <span class="anchor" id="variable-val~58"></span>
               logical,
             </td>
 <td>intent(in)</td>
@@ -5185,7 +5185,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~71"></span>
+              <span class="anchor" id="variable-l~176"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5200,7 +5200,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~23"></span>
+              <span class="anchor" id="variable-thandle~44"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5215,7 +5215,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~19"></span>
+              <span class="anchor" id="variable-key~37"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -5225,12 +5225,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to set.</p><a href="../proc/set_table_logical.html#variable-key~19" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to set.</p><a href="../proc/set_table_logical.html#variable-key~37" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~19"></span>
+              <span class="anchor" id="variable-pos~37"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -5240,7 +5240,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to set in the table.</p><a href="../proc/set_table_logical.html#variable-pos~19" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to set in the table.</p><a href="../proc/set_table_logical.html#variable-pos~37" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -5270,7 +5270,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~27"></span>
+              <span class="anchor" id="variable-val~59"></span>
               character(len=*),
             </td>
 <td>intent(in)</td>
@@ -5285,7 +5285,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~72"></span>
+              <span class="anchor" id="variable-l~177"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5300,7 +5300,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~24"></span>
+              <span class="anchor" id="variable-thandle~45"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5315,7 +5315,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~20"></span>
+              <span class="anchor" id="variable-key~38"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -5325,12 +5325,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to set.</p><a href="../proc/set_table_string.html#variable-key~20" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to set.</p><a href="../proc/set_table_string.html#variable-key~38" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~20"></span>
+              <span class="anchor" id="variable-pos~38"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -5340,7 +5340,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to set in the table.</p><a href="../proc/set_table_string.html#variable-pos~20" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to set in the table.</p><a href="../proc/set_table_string.html#variable-pos~38" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -5370,7 +5370,7 @@ the Lua script.</p>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~28"></span>
+              <span class="anchor" id="variable-val~60"></span>
               type(c_ptr),
             </td>
 <td>intent(in)</td>
@@ -5385,7 +5385,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~73"></span>
+              <span class="anchor" id="variable-l~178"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5400,7 +5400,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~25"></span>
+              <span class="anchor" id="variable-thandle~46"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -5415,7 +5415,7 @@ the Lua script.</p>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-key~21"></span>
+              <span class="anchor" id="variable-key~39"></span>
               character(len=*),
             </td>
 <td>intent(in),</td>
@@ -5425,12 +5425,12 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>key</strong></td>
             <td>
-<p>Name of the entry to set.</p><a href="../proc/set_table_userdata.html#variable-key~21" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Name of the entry to set.</p><a href="../proc/set_table_userdata.html#variable-key~39" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-pos~21"></span>
+              <span class="anchor" id="variable-pos~39"></span>
               integer,
             </td>
 <td>intent(in),</td>
@@ -5440,7 +5440,7 @@ the Lua script.</p>
             <td>::</td>
             <td><strong>pos</strong></td>
             <td>
-<p>Position of the entry to set in the table.</p><a href="../proc/set_table_userdata.html#variable-pos~21" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>Position of the entry to set in the table.</p><a href="../proc/set_table_userdata.html#variable-pos~39" class="pull-right"><emph>Read more&hellip;</emph></a>
             </td>
         </tr>
     </tbody>
@@ -5471,7 +5471,7 @@ into the Lua context.</p><a href="../proc/create_1darray_real.html" class="pull-
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~74"></span>
+              <span class="anchor" id="variable-l~179"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5486,7 +5486,7 @@ into the Lua context.</p><a href="../proc/create_1darray_real.html" class="pull-
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~26"></span>
+              <span class="anchor" id="variable-thandle~47"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -5501,7 +5501,7 @@ into the Lua context.</p><a href="../proc/create_1darray_real.html" class="pull-
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~29"></span>
+              <span class="anchor" id="variable-val~61"></span>
               real(kind=single_k),
             </td>
 <td>intent(in)</td>
@@ -5542,7 +5542,7 @@ into the Lua context.</p><a href="../proc/create_1darray_double.html" class="pul
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-l~75"></span>
+              <span class="anchor" id="variable-l~180"></span>
               type(<a href='../type/flu_state.html'>flu_State</a>)
             </td>
 <td></td>
@@ -5557,7 +5557,7 @@ into the Lua context.</p><a href="../proc/create_1darray_double.html" class="pul
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-thandle~27"></span>
+              <span class="anchor" id="variable-thandle~48"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -5572,7 +5572,7 @@ into the Lua context.</p><a href="../proc/create_1darray_double.html" class="pul
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-val~30"></span>
+              <span class="anchor" id="variable-val~62"></span>
               real(kind=double_k),
             </td>
 <td>intent(in)</td>
@@ -5609,13 +5609,13 @@ into the Lua context.</p><a href="../proc/create_1darray_double.html" class="pul
             <p>
               Aotus
  was developed by University of Siegen<br>              &copy; 2024 
-<br /><small>2a2b7066101f</small></p>
+<br /><small>73a51b98c0d7</small></p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-11-09T15:12:20.958032             </p>
+ on 2024-11-09T15:16:54.619490             </p>
           </div>
         </div>
         <br>
