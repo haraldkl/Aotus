@@ -27,7 +27,7 @@ jobs:
           python-version: '3.13'
 
       - name: Install Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@v2
 
       - name: Install FORD
         run: |
