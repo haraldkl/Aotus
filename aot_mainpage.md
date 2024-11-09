@@ -4,7 +4,7 @@ src_dir: source
 src_dir: LuaFortran
 page_dir: doc_pages
 output_dir: docu
-project_website: https://geb.inf.tu-dresden.de/apes-suite/pages/aotus.html
+project_website: https://apes-suite.github.io/pages/aotus
 graph: true
 display: public
 display: protected
@@ -37,7 +37,7 @@ scripts as configuration files in Fortran applications.
 *This library is released under a simplified MIT licence,
  please have a look into the LICENSE file for details.*
 
-Aotus is part of the [APES suite](https://geb.inf.tu-dresden.de/apes-suite/).
+Aotus is part of the [APES suite](https://apes-suite.github.io/).
 
 
 How To Build
@@ -184,7 +184,7 @@ Note, that this requires
 [FORD to be installed](https://github.com/Fortran-FOSS-Programmers/ford/wiki/Installation)
 beforehand.
 This documentation is also online available at
-[our server](https://geb.inf.tu-dresden.de/doxy/aotus/).
+[our server](https://apes-suite.github.io/aotus/).
 
 ### Example
 
