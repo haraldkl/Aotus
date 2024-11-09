@@ -116,7 +116,7 @@ def subconf(conf):
     append_aotmodpaths(conf)
     conf.load('waf_unit_test')
 
-    conf.env.fordurl_aotus = 'https://geb.inf.tu-dresden.de/doxy/aotus/'
+    conf.env.fordurl_aotus = 'https://apes-suite.github.io/aotus/'
 
     # Load the C compiler information
     conf.setenv('cenv',conf.env)
