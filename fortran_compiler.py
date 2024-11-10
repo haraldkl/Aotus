@@ -273,10 +273,14 @@ def set_fc_flags(conf, flagset, osflags=None):
     for fs in flagset:
         myflags += fcopts[fcname, fs]
         # Add the sanitize option to the debug flags for gfortran >= 4.8
+        # On recent Linux systems with ASLR, there seem to be issues
+        # with the address sanitizer.
+        # See https://github.com/actions/runner-images/issues/9524
+        # To my understanding newer versions of GCC should be fixed in
+        # that respect, hence we bump the version for which to use the
+        # sanitizer to 14 (actual support started back in 4.8)
         if (fs == 'debug') and (fcname == 'GFORTRAN'):
-            if ( (int(conf.env.FC_VERSION[0]) == 4)
-                 and (int(conf.env.FC_VERSION[1]) >= 8)
-                 or int(conf.env.FC_VERSION[0]) > 4):
+            if int(conf.env.FC_VERSION[0]) > 13:
                 myflags += ['-fsanitize=address']
 
 
